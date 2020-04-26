@@ -40,7 +40,7 @@ ENEMIGOS = ["", ""];
 
 //IA - CONFIGURACION
 DESACTIVAR_IA_DE_GRUPO = 1; // 0 Permite la IA del Grupo de los jugadores, 1 la desactiva.
-DESACTIVAR_TODO_BLUFOR = 0; // 0 Permite la IA del Blufor, 1 la desactiva.
+DESACTIVAR_TODO_BLUFOR = 1; // 0 Permite la IA del Blufor, 1 la desactiva.
 DIFICULTAD_IA_PERSONALIZADA = 0;
 AIMING_ACCURACY = 0.01; //precision de apuntado
 AIMING_SHAKE = 0.99; 	//dispersión de apuntado

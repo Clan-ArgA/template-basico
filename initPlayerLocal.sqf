@@ -26,8 +26,8 @@ if (hasInterface) then {
   [player,"arga_ing_medico"] call BIS_fnc_setUnitInsignia;
 };
 
+player disableAI "MOVE";
 player action ["SwitchWeapon", player, player, 100];
-player disableAI "move";
 player setUnitPos "middle";
 enableEngineArtillery false;
 

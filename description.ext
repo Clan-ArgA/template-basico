@@ -48,16 +48,6 @@ class CfgFunctions {
   };
 };
 
-class CfgSounds {
-	sounds[] = {};
-  class effect_intro
-	{
-	name = "effect_intro";
-	sound[] = {"sounds\effect_intro.ogg", 1, 1};
-	titles[] = {};
-	};
-};
-
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
