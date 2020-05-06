@@ -2,17 +2,18 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-params [["_state", 0], ["_marker", "LIGHTSOURCE"], ["_distance", 800], ["_types", ["Lamps_Base_F","PowerLines_base_F","Land_PowerPoleWooden_L_F"]]];
-private _countTypes = (count _types);
-private _lamps = "";
+params [["_unit", player], "_rol", ["_uniform", "arga_u_mbosque"], ["_helmet", "arga_cas_mbosque"], ["_vest", "arga_c_mbosque"], ["_backPack", "arga_m_mbosque_p"], ["_backPackLittle", "arga_m_mbosque_a"]];
 
-{
-	_lamps = getMarkerPos _marker nearObjects [_x, _distance];
-	sleep 1;
-	{ 
-		_x setDamage _state;
-	} forEach _lamps;
-} forEach _types;
+if (!local _unit) exitWith {};
+
+_unit call MANDI_fnc_clearEquipment;
+
+_unit forceAddUniform _uniform;
+_unit addVest _vest;
+
+if (! isNil "_rol") then {
+    [_unit, _helmet, _backPack, _backPackLittle] execVM _rol;
+};
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

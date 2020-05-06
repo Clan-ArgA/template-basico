@@ -5,7 +5,7 @@
 private _colorAuthor = getMissionConfigValue ["COLOR_AUTOR", "#76a8f7"];
 private _logo = getMissionConfigValue ["IMG_LOGO", "imgs\logo.paa"];
 
-params["_recursos", "_enemigos", "_objetivos", "_mision", "_extractodeInteligencia", "_situacion", "_info", "_editores"];
+params["_recursos", "_enemigos", "_objetivos", "_situation", "_extractodeInteligencia", "_storySituation", "_info", "_editores"];
 
 player createDiaryRecord["Diary", ["Editores", "<br/><p align='center'><font color='"+_colorAuthor+"' size='28'>"+_editores+"</font></p><br/><img image= '"+_logo+"' width='323' height='323'/><br/>"]];
 
@@ -19,16 +19,17 @@ player createDiaryRecord["Diary", ["Fuerzas Enemigas", ([_enemigos, true] call M
 
 player createDiaryRecord["Diary", ["Objetivos", ([_objetivos, true] call MANDI_fnc_makeInfo)]];
 
-if((_extractodeInteligencia select 0) != "")then{
+if((_extractodeInteligencia select 0) != "") then {
   player createDiaryRecord["Diary", ["Extracto de Inteligencia", ([_extractodeInteligencia, false] call MANDI_fnc_makeInfo)]];
 };
 
-if((_mision select 0) != "")then{
-  player createDiaryRecord["Diary", ["Misi"+toString[243]+"n", ([_mision, false] call MANDI_fnc_makeInfo)]];
+if((_situation select 0) != "") then {
+  player createDiaryRecord["Diary", ["Situaci"+toString[243]+"n", ([_situation, false] call MANDI_fnc_makeInfo)]];
 };
 
-player createDiaryRecord["Diary", ["Situaci"+toString[243]+"n", ([_situacion, false] call MANDI_fnc_makeInfo)]];
-
+if((_storySituation select 0) != "") then {
+  player createDiaryRecord["Diary", ["Situaci"+toString[243]+"n hist"+toString[243]+"rica", ([_storySituation, false] call MANDI_fnc_makeInfo)]];
+};
 player createDiaryRecord["Diary", ["Informaci"+toString[243]+"n", ([_info, true] call MANDI_fnc_makeInfo)]];
 
 true;

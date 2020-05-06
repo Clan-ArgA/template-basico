@@ -1,3 +1,7 @@
+/*******************************************************************************
+                          Exportado por |ArgA|Ignacio
+*******************************************************************************/
+
 //Compile important functions for this script.
 VCOM_DRIVE_DEBUG = 0;
 VCOM_fnc_VehicleDetection = compile preprocessFile "functions\fnc_vehicleDetection.sqf";
@@ -26,3 +30,7 @@ VCOM_fnc_IsDriver = compile preprocessFile "functions\fnc_IsDriver.sqf";
     sleep 5;
   };
 };
+
+/*******************************************************************************
+                          Exportado por |ArgA|Ignacio
+*******************************************************************************/

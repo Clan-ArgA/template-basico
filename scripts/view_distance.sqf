@@ -42,11 +42,11 @@ while {true} do {
             };
         } forEach allMapMarkers;
 
-        if (viewDistance == _defaultDistance && _inArea) then {
+        if (viewDistance != _inAreaDistance && _inArea) then {
             setViewDistance _inAreaDistance;
         };
 
-        if (viewDistance == _inAreaDistance && !_inArea) then {
+        if (viewDistance != _defaultDistance && !_inArea) then {
             setViewDistance _defaultDistance;
         };
     };

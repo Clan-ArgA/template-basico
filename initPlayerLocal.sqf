@@ -18,12 +18,12 @@ if (hasInterface) then {
     [] execVM "scripts\intro_2.sqf";
   };
   removeGoggles player; //arga_rhs_pm_negro
-  if(_initialGoggles != "")then{
+  if(_initialGoggles != "") then {
     player addGoggles _initialGoggles;
   };
   private _isMedic = player getVariable ["ace_medical_medicClass", 0];
   private _ing = if (_isMedic > 0) then { "arga_ing_medico" } else { "arga_ing_arga" };
-  [player,"arga_ing_medico"] call BIS_fnc_setUnitInsignia;
+  [player, _ing] call BIS_fnc_setUnitInsignia;
 };
 
 player disableAI "MOVE";

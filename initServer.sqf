@@ -14,8 +14,6 @@ private _commanding = getMissionConfigValue ["COMMANDING", 0.75];
 private _disableGroupIA = getMissionConfigValue ["DESACTIVAR_IA_DE_GRUPO", 1];
 private _disableBluforIA = getMissionConfigValue ["DESACTIVAR_TODO_BLUFOR", 0];
 
-//[] execVM "scripts\fuera_luces.sqf";
-
 if(_customSkillsIA == 1)then{
     {
         if (!(isPlayer  _x))then

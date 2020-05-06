@@ -1,3 +1,7 @@
+/*******************************************************************************
+                          Exportado por |ArgA|Ignacio
+*******************************************************************************/
+
 enableSaving[false,false];enableTeamswitch false;////Comment: Not relevant line
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
@@ -64,3 +68,7 @@ _civ doMove _HP;//Orders the civilian to move to the building position
 _civ removeAllEventHandlers "FiredNear";}];};
 }forEach allUnits-switchableUnits-playableUnits
 };
+
+/*******************************************************************************
+                          Exportado por |ArgA|Ignacio
+*******************************************************************************/
