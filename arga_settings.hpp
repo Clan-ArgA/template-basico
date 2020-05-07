@@ -17,7 +17,7 @@ IMG_LOGO = "imgs\logo.paa"              // Nota: Las imagenes deberian estar en
 COLOR_AUTOR = "#76a8f7";                // formato .paa y en proporcion 2x1 (1024x512)
 ES_CAMPANIA = 0;                        // tamaño logo: 323px x 323px
 NOMBRE_CAMPANIA = "";
-INTRO = 2                               // Intros: 1 y 2. Para desactivar: 0
+INTRO = 2;                              // Intros: 1 y 2. Para desactivar: 0
 MAX_DIST_VISION = 4000;
 DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1; // Equipamiento guardado en arsenal virtual
 
