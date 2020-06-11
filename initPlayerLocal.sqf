@@ -6,6 +6,9 @@ private _distanciaVision = getMissionConfigValue ["MAX_DIST_VISION", 4000];
 private _initialGoggles =  getMissionConfigValue ["GAFAS_INICIALES", ""];
 private _disableCustomLoadout =  getMissionConfigValue ["DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO", 1];
 private _intro = getMissionConfigValue ["INTRO", 2];
+// Vultur
+private _enableArtilleryComputer = getMissionConfigValue ["PERMITIR_COMPUTADORA_ARTILLERIA", true];
+
 
 if (hasInterface) then {
   [_distanciaVision, 800] execVM "scripts\view_distance.sqf";
@@ -29,7 +32,7 @@ if (hasInterface) then {
 player disableAI "MOVE";
 player action ["SwitchWeapon", player, player, 100];
 player setUnitPos "middle";
-enableEngineArtillery false;
+enableEngineArtillery _enableArtilleryComputer;
 
 // Deshabilita las opciones de Cargar y Guardar Equipo en el arsenal
 if(_disableCustomLoadout == 1)then{
