@@ -2,7 +2,7 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-[player, ""] remoteExec "MAC_fnc_switchMove";
+[player, ""] remoteExec ["MAC_fnc_switchMove", 0];
 player removeAction standup;
 
 /*******************************************************************************

@@ -4,7 +4,7 @@
 
 params ["_chair", "_unit"];
 
-[_unit, "Crew"] remoteExec "MAC_fnc_switchMove";
+[_unit, "Crew"] remoteExec ["MAC_fnc_switchMove", 0];
 
 _unit setPos (getPos _chair);
 _unit setDir ((getDir _chair) - 180);
