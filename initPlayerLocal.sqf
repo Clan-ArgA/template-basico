@@ -8,7 +8,7 @@ private _disableCustomLoadout =  getMissionConfigValue ["DESACTIVAR_EQUIPAMIENTO
 private _intro = getMissionConfigValue ["INTRO", 2];
 // Vultur
 private _enableArtilleryComputer = getMissionConfigValue ["PERMITIR_COMPUTADORA_ARTILLERIA", true];
-
+// TODO Ver por que sale un string y no un bolean
 
 if (hasInterface) then {
   [_distanciaVision, 800] execVM "scripts\view_distance.sqf";
@@ -32,7 +32,7 @@ if (hasInterface) then {
 player disableAI "MOVE";
 player action ["SwitchWeapon", player, player, 100];
 player setUnitPos "middle";
-enableEngineArtillery _enableArtilleryComputer;
+enableEngineArtillery (_enableArtilleryComputer == "true");
 
 // Deshabilita las opciones de Cargar y Guardar Equipo en el arsenal
 if(_disableCustomLoadout == 1)then{
