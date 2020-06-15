@@ -6,7 +6,7 @@ params [["_unit", player]];
 
 removeAllWeapons _unit;
 removeAllItems _unit;
-removeAllAssignedItems _unit;
+//removeAllAssignedItems _unit;  //Evito que remueva la radio
 removeUniform _unit;
 removeVest _unit;
 removeBackpack _unit;

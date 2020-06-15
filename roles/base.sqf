@@ -6,17 +6,7 @@ params [["_unit", player], "_rol", ["_uniform", "arga_u_mbosque"], ["_helmet", "
 
 if (!local _unit) exitWith {};
 
-//_unit call MANDI_fnc_clearEquipment;
-
-// "Remove existing items";
-removeAllWeapons _unit;
-removeAllItems _unit;
-// //removeAllAssignedItems _unit; //Remueve la radio
-removeUniform _unit;
-removeVest _unit;
-removeBackpack _unit;
-removeHeadgear _unit;
-removeGoggles _unit;
+_unit call MANDI_fnc_clearEquipment;
 
 _unit forceAddUniform _uniform;
 _unit addVest _vest;
