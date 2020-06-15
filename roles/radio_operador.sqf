@@ -47,9 +47,10 @@ _unit addItemToBackpack "Laserbatteries";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ACE_Altimeter";
-_unit linkItem "tf_anprc152_1";
+//_unit linkItem "tf_anprc152_1";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Rick|Sdo
 *******************************************************************************/
+_unit action ["SwitchWeapon", _unit, _unit, 100];

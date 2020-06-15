@@ -53,9 +53,10 @@ _unit addItemToBackpack "APERSMineDispenser_Mag";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
-_unit linkItem "tf_anprc152_11";
+//_unit linkItem "tf_anprc152_11";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Veck|Cbo¹
 *******************************************************************************/
+_unit action ["SwitchWeapon", _unit, _unit, 100];
