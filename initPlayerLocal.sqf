@@ -59,7 +59,7 @@ if ((_enableAutomaticRole == "true")) then {
 
     //default { player execVM "roles\fusilero.sqf"; };
   };
-  [_rol] execVM "scripts\init_roles.sqf"
+  [objNull, _rol] execVM "scripts\init_roles.sqf"
 };
 
 player disableAI "MOVE";
