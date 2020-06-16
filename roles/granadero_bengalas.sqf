@@ -13,7 +13,6 @@ if (!local _unit) exitWith {};
 _unit addBackpack _back;
 _unit addHeadgear _helmet;
 
-comment "Add weapons";
 _unit addWeapon "rhs_weap_hk416d145_m320";
 _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
 _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR_3d";
@@ -22,10 +21,8 @@ _unit addPrimaryWeaponItem "1Rnd_HE_Grenade_shell";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
-comment "Add binoculars";
 _unit addWeapon "Rangefinder";
 
-comment "Add items to containers";
 for "_i" from 1 to 8 do {_unit addItemToUniform "ACE_packingBandage";};
 for "_i" from 1 to 8 do {_unit addItemToUniform "ACE_elasticBandage";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_CableTie";};
@@ -39,8 +36,6 @@ _unit addItemToUniform "ACE_EarPlugs";
 _unit addItemToUniform "ACE_IR_Strobe_Item";
 _unit addItemToVest "ACE_HuntIR_monitor";
 
-//_unit addHeadgear "arga_cas_mbosque";
-
 for "_i" from 1 to 6 do {_unit addItemToVest "HandGrenade";};
 _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";
 for "_i" from 1 to 18 do {_unit addItemToVest "UGL_FlareWhite_F";};
@@ -48,11 +43,12 @@ for "_i" from 1 to 10 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_S
 for "_i" from 1 to 34 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 12 do {_unit addItemToBackpack "UGL_FlareWhite_F";};
 
-comment "Add items";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ACE_Altimeter";
-//_unit linkItem "tf_anprc152_8";
 _unit linkItem "ACE_NVG_Wide";
 
-_unit action ["SwitchWeapon", _unit, _unit, 100];
+/*******************************************************************************
+                          Realizado por |ArgA|Ignacio
+						  Rol por       |ArgA|Vultur|Cbo¹
+*******************************************************************************/

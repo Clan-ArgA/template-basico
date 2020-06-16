@@ -52,10 +52,8 @@ for "_i" from 1 to 5 do {_unit addItemToBackpack "SmokeShellBlue";};
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ACE_Altimeter";
-//_unit linkItem "tf_anprc152_2";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Labrador|Cbo¹
 *******************************************************************************/
-_unit action ["SwitchWeapon", _unit, _unit, 100];

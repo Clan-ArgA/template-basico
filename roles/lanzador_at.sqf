@@ -42,10 +42,8 @@ for "_i" from 1 to 2 do {_unit addItemToBackpack "RPG32_HE_F";};
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
-//_unit linkItem "tf_anprc152_1";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Nico|Cpt
 *******************************************************************************/
-_unit action ["SwitchWeapon", _unit, _unit, 100];

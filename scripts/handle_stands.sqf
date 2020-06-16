@@ -2,8 +2,16 @@
                           Realizado por |ArgA|MandI
 *******************************************************************************/
 
-[player, ""] remoteExec ["MAC_fnc_switchMove"];
-player removeAction standup;
+params [["_allStands", []]];
+
+private _rol = "";
+
+{
+	_rol = _x getVariable ["MANDI_STAND_ROL", ""];
+	if (_rol != "") then {
+		[_x, _rol] call MANDI_fnc_setStand;
+	};
+} forEach _allStands;
 
 /*******************************************************************************
                           Realizado por |ArgA|MandI

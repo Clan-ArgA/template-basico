@@ -48,11 +48,9 @@ _unit addGoggles "G_Aviator";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
-//_unit linkItem "tf_anprc152_1";
 _unit linkItem "ItemGPS";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Nico|Cpt
 *******************************************************************************/
-_unit action ["SwitchWeapon", _unit, _unit, 100];

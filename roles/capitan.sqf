@@ -53,4 +53,3 @@ _unit linkItem "ItemGPS";
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Nico|Cpt
 *******************************************************************************/
-_unit action ["SwitchWeapon", _unit, _unit, 100];

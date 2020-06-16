@@ -55,4 +55,3 @@ _unit linkItem "ACE_Altimeter";
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Labrador|Cbo¹
 *******************************************************************************/
-_unit action ["SwitchWeapon", _unit, _unit, 100];
