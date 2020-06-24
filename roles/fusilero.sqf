@@ -41,6 +41,11 @@ for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_JHP";};
 for "_i" from 1 to 9 do {_unit addItemToBackpack "rhsusf_20Rnd_762x51_m993_Mag";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "SmokeShellBlue";};
 
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ACE_Altimeter";
+
+
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Ignacio

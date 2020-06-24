@@ -2,7 +2,8 @@
                           Realizado por |ArgA|MandI
 *******************************************************************************/
 
-params ["_unit", ["_rolList", []]];
+//TODO crear funcion que obtenga esta lista
+params [["_unit", player], ["_rolList", []]];
 
 private _rol = _unit getVariable ["MANDI_ROL", ""];
 
@@ -22,3 +23,15 @@ _rol;
 /*******************************************************************************
                           Realizado por |ArgA|MandI
 *******************************************************************************/
+
+/*
+    [
+        ["rol", codigo],
+        ["rol", codigo],
+        ["rol", codigo],
+        ["rol", codigo],
+        ["rol", codigo],
+        ["rol", codigo],
+    ]
+
+*/

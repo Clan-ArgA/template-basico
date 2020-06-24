@@ -13,6 +13,8 @@ private _enableArtilleryComputer = getMissionConfigValue ["PERMITIR_COMPUTADORA_
 private _enableAutomaticRole = getMissionConfigValue ["PERMITIR_ROL_AUTOMATICO", true];
 private _rol = "";
 
+setTerrainGrid 25;
+
 if (hasInterface) then {
   MANDI_ENABLE_DIST = true;
   [_distanciaVision, 800] execVM "scripts\view_distance.sqf";

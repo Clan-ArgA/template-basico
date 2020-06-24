@@ -56,6 +56,8 @@ if(_disableBluforIA == 1) then {
 
 execVM "scripts\init_objs_server.sqf";
 
+execVM "scripts\init_vcom_driving.sqf";
+
 execVM "scripts\smart_tank\smart.sqf";
 
 /*******************************************************************************
