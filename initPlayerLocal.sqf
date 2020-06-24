@@ -27,6 +27,7 @@ if (hasInterface) then {
   private _isMedic = player getVariable ["ace_medical_medicClass", 0];
   private _ing = if (_isMedic > 0) then { "arga_ing_medico" } else { "arga_ing_arga" };
   [player, _ing] call BIS_fnc_setUnitInsignia;
+  execVM "scripts\setBriefing.sqf";
 };
 
 if ((_enableAutomaticRole == "true")) then {
@@ -64,13 +65,14 @@ if ((_enableAutomaticRole == "true")) then {
   [objNull, _rol] execVM "scripts\init_roles.sqf"
 };
 
+doStop player;
 player disableAI "MOVE";
 player action ["SwitchWeapon", player, player, 100];
 player setUnitPos "middle";
 enableEngineArtillery (_enableArtilleryComputer == "true");
 
 // Deshabilita las opciones de Cargar y Guardar Equipo en el arsenal
-if(_disableCustomLoadout == 1)then{
+if(_disableCustomLoadout == 1) then {
   [missionNamespace, "arsenalOpened", {
     disableSerialization;
     params ["_display"];

@@ -60,6 +60,15 @@ execVM "scripts\init_vcom_driving.sqf";
 
 execVM "scripts\smart_tank\smart.sqf";
 
+
+addMissionEventHandler ["HandleDisconnect",
+{
+	params ["_unit", "_id", "_uid", "_name"];
+  [_unit, "disconnect"] execVM "scripts\db\querys\write_log.sqf";
+  false;
+}];
+
+
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
