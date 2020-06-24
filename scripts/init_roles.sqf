@@ -2,7 +2,7 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-params [["_box", objNull], , ["_rol", ""]];
+params [["_box", objNull],["_rol", ""]];
 
 if(isNil "_box") exitWith {};
 
