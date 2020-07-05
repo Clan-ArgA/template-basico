@@ -37,8 +37,14 @@ class CfgFunctions {
       class setStand {
         file = "functions\fnc_setStand.sqf";
       };
-      class getRol {
-        file = "functions\fnc_getRol.sqf";
+      class getRole {
+        file = "functions\fnc_getRole.sqf";
+      };
+      class getState {
+        file = "functions\fnc_getState.sqf";
+      };
+      class trim {
+        file = "functions\fnc_trim.sqf";
       };
     };
   };
