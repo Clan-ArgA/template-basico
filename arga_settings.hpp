@@ -2,13 +2,14 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-#define NAME "Op. "                     // Colocar nombre de mision
+#define NAME Op.                        // Colocar nombre de mision
+#define VERSION v1                      // Versión de la misión
 #define IMAGE "imgs\portada.paa"        // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                  // Colocar descripcion de la mision entre las comillas
 
 author = "Arga";                        // Editor (Pone tu nombre)
 onLoadName = NAME;	                    // Nombre de carga
-briefingName = NAME;                    // Nombre en briefing
+briefingName = NAME + VERSION;          // Nombre en briefing
 onLoadMission = DESCRIPTION;            // Pie de carga
 overviewText = DESCRIPTION;             // Pie en seleccion de mision
 overviewPicture = IMAGE;                // Imagen en seleccion de mision
@@ -21,7 +22,7 @@ INTRO = 2;                              // Intros: 1 y 2. Para desactivar: 0
 MAX_DIST_VISION = 4000;
 DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1; // Equipamiento guardado en arsenal virtual
 PERMITIR_COMPUTADORA_ARTILLERIA = 1;  // Habilita computadora artilleria poner true. Para que no aparezca poner false
-PERMITIR_ROL_AUTOMATICO = 1;
+PERMITIR_ROL_AUTOMATICO = 0;
 
 //EQUIPAMIENTO
 // Camuflajes disponibles:          Tipos disponibles:
