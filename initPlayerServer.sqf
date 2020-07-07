@@ -15,6 +15,11 @@ sleep 5;
 if (isDedicated) then {
     [[_playerUnit]] call compile preprocessFileLineNumbers "scripts\db\querys\write_alternative_role.sqf";
     [_playerUnit, "connected"] execVM "scripts\db\querys\write_log.sqf";
+
+    _playerUnit addEventHandler ["Killed", {
+        params ["_unit", "_killer", "_instigator", "_useEffects"];
+        [[_unit], "info"] execVM "scripts\db\querys\write_log.sqf";
+    }];
 };
 
 /*******************************************************************************
