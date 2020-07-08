@@ -120,10 +120,12 @@ if (_logType == "info") then {
 	} forEach _unitList;
 };
 
-if (_logType == "disconnected") then {
+if (_logType == "disconnected" or _logType == "killed" or _logType == "respawn") then {
 	private _uid = _unit select 0;
 	private _name = _unit select 1;
 	_unit = _unit select 2;
+	# TODO verificar si la instrucción de abajo funciona al tener el _unit de los dos lados de la igualdad
+	#_unit params["_uid","_name","_unit"];
 
 	_query = "INSERT INTO log (`log_type_id`, `player_name`, `player_uid`, `player_state_id`, `mission_name`, `mission_time`) VALUES";
 

@@ -18,7 +18,12 @@ if (isDedicated) then {
 
     _playerUnit addEventHandler ["Killed", {
         params ["_unit", "_killer", "_instigator", "_useEffects"];
-        [[_unit], "info"] execVM "scripts\db\querys\write_log.sqf";
+        [[_unit], "killed"] execVM "scripts\db\querys\write_log.sqf";
+    }];
+
+    _playerUnit addEventHandler ["Respawn", {
+        params ["_unit", "_corpse"];
+        [[_unit], "respawn"] execVM "scripts\db\querys\write_log.sqf";
     }];
 };
 
