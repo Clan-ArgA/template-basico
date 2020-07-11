@@ -2,8 +2,9 @@
                           Realizado por |ArgA|MandI
 *******************************************************************************/
 
-[player, ""] remoteExec ["MAC_fnc_switchMove"];
-player removeAction standup;
+params [["_intro", 3]];
+
+call compile format ["addMissionEventHandler ['PreloadFinished', {[] execVM 'scripts\intro_%1.sqf';}];", _intro];
 
 /*******************************************************************************
                           Realizado por |ArgA|MandI

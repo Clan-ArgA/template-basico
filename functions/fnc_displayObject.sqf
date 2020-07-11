@@ -2,8 +2,10 @@
                           Realizado por |ArgA|MandI
 *******************************************************************************/
 
-[player, ""] remoteExec ["MAC_fnc_switchMove"];
-player removeAction standup;
+params ["_object", "_state"];
+
+_object enableSimulationGlobal _state;
+_object hideObjectGlobal !_state;
 
 /*******************************************************************************
                           Realizado por |ArgA|MandI

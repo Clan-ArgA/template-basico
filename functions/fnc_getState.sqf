@@ -1,18 +1,17 @@
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|MandI
 *******************************************************************************/
 
 params [["_unit", player]];
 
-removeAllWeapons _unit;
-removeAllItems _unit;
-//removeAllAssignedItems _unit;  //Evito que remueva la radio
-removeUniform _unit;
-removeVest _unit;
-removeBackpack _unit;
-removeHeadgear _unit;
-removeGoggles _unit;
+private _state = "alive"; 
+ 
+if (!(alive _unit) || _unit getvariable ["ACE_isUnconscious", false]) then { 
+ _state = "kia"; 
+}; 
+
+_state;
 
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|MandI
 *******************************************************************************/

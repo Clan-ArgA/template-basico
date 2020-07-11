@@ -1,5 +1,5 @@
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|MandI
 *******************************************************************************/
 
 private _defaultDistance = _this select 0;
@@ -29,11 +29,11 @@ if (getMarkerType "vision" != "Empty") exitWith {
 while {true} do {
     _inArea = false;
     _inAircraft = false;
-    if( !(isNull objectParent player) ) then {
+    if( !(isNull objectParent player) && MANDI_ENABLE_DIST) then {
         _vehiclePlayer = vehicle player;
         _inAircraft = _vehiclePlayer isKindOf "Helicopter" || _vehiclePlayer isKindOf "Plane";
     };
-    if (!_inAircraft) then {
+    if (!_inAircraft && MANDI_ENABLE_DIST) then {
         {
             if ((getMarkerType _x != "Empty") && ((getMarkerColor _x) == _color) && !_inArea) then {
                 if (player inArea _x)then{
@@ -50,12 +50,12 @@ while {true} do {
             setViewDistance _defaultDistance;
         };
     };
-    if (viewDistance != _maxDistance && _inAircraft) then {
+    if (viewDistance != _maxDistance && _inAircraft && MANDI_ENABLE_DIST) then {
         setViewDistance _maxDistance;
     };
     sleep 5;
 };
 
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|MandI
 *******************************************************************************/

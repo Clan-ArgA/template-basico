@@ -35,15 +35,13 @@ for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_EarPlugs";
 _unit addItemToUniform "ACE_IR_Strobe_Item";
 _unit addItemToVest "ACE_HuntIR_monitor";
+
 for "_i" from 1 to 6 do {_unit addItemToVest "HandGrenade";};
-for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";
-for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
-for "_i" from 1 to 9 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
+for "_i" from 1 to 18 do {_unit addItemToVest "UGL_FlareWhite_F";};
 for "_i" from 1 to 10 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";};
-for "_i" from 1 to 42 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
-_unit addHeadgear "arga_cas_mbosque";
+for "_i" from 1 to 34 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
+for "_i" from 1 to 12 do {_unit addItemToBackpack "UGL_FlareWhite_F";};
 
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
