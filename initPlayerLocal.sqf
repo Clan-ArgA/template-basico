@@ -20,7 +20,9 @@ if (hasInterface) then {
   MANDI_ENABLE_DIST = true;
   [_distanciaVision, 800] execVM "scripts\view_distance.sqf";
   execVM "scripts\check_view.sqf";
-  [_intro] execVM "scripts\init_intro.sqf";
+  if (_intro != 0) then {
+    [_intro] execVM "scripts\init_intro.sqf";
+  };
   removeGoggles player; //arga_rhs_pm_negro
   if(_initialGoggles != "") then {
     player addGoggles _initialGoggles;
@@ -66,10 +68,6 @@ if ((_enableAutomaticRole)) then {
   [objNull, _rol] execVM "scripts\init_roles.sqf"
 };
 
-doStop player;
-player disableAI "MOVE";
-player action ["SwitchWeapon", player, player, 100];
-player setUnitPos "middle";
 enableEngineArtillery (_enableArtilleryComputer);
 
 // Deshabilita el movimiento de la IA para todas las IA que 
@@ -77,22 +75,24 @@ enableEngineArtillery (_enableArtilleryComputer);
 if(_disableGroupIA) then {
   private _units = units (group player);
   {
-    if(local _x) then {
+    if (local _x && !isPlayer _x) then {
       doStop _x;
       _x disableAI "MOVE";
       _x action ["SwitchWeapon", _x, _x, 100];
-      _x setUnitPos "middle";
+      // _x enableSimulationGlobal false;
+      // _x hideObjectGlobal true;
     };
   }foreach _units;
 };
 
 if (_disableBluforIA) then {
   {
-    if(side _x == west && local _x) then {
+    if (side _x == west && local _x && !isPlayer _x) then {
       doStop _x;
       _x disableAI "MOVE";
       _x action ["SwitchWeapon", _x, _x, 100];
-      _x setUnitPos "middle";
+      // _x enableSimulationGlobal false;
+      // _x hideObjectGlobal true;
     };
   }foreach allUnits;
 };
@@ -108,6 +108,12 @@ if(_disableCustomLoadout) then {
     } forEach [44151, 44150, 44146, 44147, 44148, 44149, 44346];
   }] call BIS_fnc_addScriptedEventHandler;
 };
+
+doStop player;
+player disableAI "MOVE";
+player action ["SwitchWeapon", player, player, 100];
+// player enableSimulationGlobal true;
+// player hideObjectGlobal false;
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
