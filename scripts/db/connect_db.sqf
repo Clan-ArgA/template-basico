@@ -7,7 +7,7 @@ if (!isDedicated) exitWith { };
 params ["_query"];
 
 // Llamamos a la db
-call compile preprocessFileLineNumbers "scripts\db\source\oo_extdb3.sqf";
+call MIV_fnc_oo_extdb3;
 
 private _extdb3 = "new" call OO_EXTDB3;
 ["setIniSectionDatabase", "Database"] call _extdb3;

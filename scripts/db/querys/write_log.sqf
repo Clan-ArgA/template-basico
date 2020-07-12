@@ -1,5 +1,5 @@
 /*******************************************************************************
-                          Realizado por |ArgA|MIV
+                             Realizado por |ArgA|MIV
 *******************************************************************************/
 
 /*
@@ -45,7 +45,7 @@ if (typeName _unit != "ARRAY") then {
 
 [format ["UNITLIST: %1", str _unitList]] call BIS_fnc_logFormat;
 
-private _roleList = call compile preprocessFileLineNumbers "scripts\db\querys\get_role_list.sqf";
+private _roleList = call MIV_fnc_get_role_list;
 private ["_role", "_query", "_valuesQuery", "_values", "_role", "_state", "_id"];
 private _querys = [];
 
@@ -60,7 +60,7 @@ private _querys = [];
 	_valuesQuery = if (typeName _role == "SCALAR") then { "(%1, (SELECT id from log_type WHERE name = '%2'), '%3', '%4', (SELECT id from player_state WHERE name = '%5'), '%6', %7, %8, '%9');" } else { "(%1, (SELECT id from log_type WHERE name = '%2'), '%3', '%4', (SELECT id from player_state WHERE name = '%5'), '%6', (SELECT id from role WHERE code = '%7'), %8, '%9');" };
 	_query = if (_logType == "info") then { "REPLACE" + _query } else { "INSERT" + _query };
 	
-	_id = if (_logType == "info") then { _uid call compile preprocessFileLineNumbers "scripts\db\querys\get_info_log_id.sqf" } else { "NULL" };
+	_id = if (_logType == "info") then { _uid call MIV_fnc_get_info_log_id } else { "NULL" };
 
 	_values = format [
 		_valuesQuery,
@@ -82,9 +82,9 @@ private _querys = [];
 [format ["QUERYS: %1", str _querys]] call BIS_fnc_logFormat;
 
 if (count _querys > 0) then {
-	_querys call compile preprocessFileLineNumbers "scripts\db\connect_db.sqf";
+	_querys call MIV_fnc_connect_db;
 };
 
 /*******************************************************************************
-                          Realizado por |ArgA|MIV
+                             Realizado por |ArgA|MIV
 *******************************************************************************/

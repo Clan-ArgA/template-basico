@@ -10,7 +10,7 @@ private _query = "SELECT id from `arga-log`.log where player_uid = '%1' and log_
 
 _query = format [_query, _uid, _uid, missionName];
 
-private _log_id = _query call compile preprocessFileLineNumbers "scripts\db\connect_db.sqf";
+private _log_id = _query call MIV_fnc_connect_db;
 
 if (count _log_id > 0) then {
 	_log_id = (_log_id select 0) select 0;

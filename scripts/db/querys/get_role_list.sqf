@@ -4,7 +4,7 @@
 if (!isDedicated) exitWith { };
 
 // Llamamos a la db
-call compile preprocessFileLineNumbers "scripts\db\source\oo_extdb3.sqf";
+call MIV_fnc_oo_extdb3;
 
 //sleep 2;
 

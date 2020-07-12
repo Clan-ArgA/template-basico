@@ -4,6 +4,8 @@
 
 if (!isDedicated) exitWith { };
 
+execVM "scripts\spawn_fnc.sqf";
+
 addMissionEventHandler ["HandleDisconnect", {
     params ["_unit", "_id", "_uid", "_name"];
     [[[_uid, _name, _unit]], "disconnected"] execVM "scripts\db\querys\write_log.sqf";

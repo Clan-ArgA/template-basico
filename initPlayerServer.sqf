@@ -9,7 +9,7 @@ waitUntil { time > 0 };
 sleep 5;
 
 if (isDedicated) then {
-    [[_playerUnit]] call compile preprocessFileLineNumbers "scripts\db\querys\write_alternative_role.sqf";
+    [[_playerUnit]] call MIV_fnc_write_alternative_role;
     [_playerUnit, "connected"] execVM "scripts\db\querys\write_log.sqf";
     _playerUnit setVariable ["MANDI_IS_PLAYER", true];
 };
