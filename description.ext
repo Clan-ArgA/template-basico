@@ -51,6 +51,13 @@ class CfgFunctions {
       };
     };
   };
+  class MIV {
+    class general {
+      class log {
+        file = "functions\fnc_log.sqf";
+      };
+    };
+  };
   class MAC {
     class general {
       class switchMove{
