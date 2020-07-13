@@ -46,6 +46,9 @@ class CfgFunctions {
       class trim {
         file = "functions\fnc_trim.sqf";
       };
+      class formatDate {
+        file = "functions\fnc_formatDate.sqf";
+      };
     };
   };
   class MAC {
