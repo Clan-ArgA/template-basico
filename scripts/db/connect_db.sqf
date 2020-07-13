@@ -14,10 +14,10 @@ private _extdb3 = "new" call OO_EXTDB3;
 ["setDatabaseName", "arga-log"] call _extdb3;
 ["setQueryType", "SQL"] call _extdb3;
 _result = "connect" call _extdb3;
-[format ["CONNECTION: %1", str _result]] call BIS_fnc_logFormat;
+[format ["CONNECTION: %1", str _result]] call MIV_fnc_log;
 /////////////////////
 
-[format ["QUERY: %1", str _query]] call BIS_fnc_logFormat;
+[format ["QUERY: %1", str _query]] call MIV_fnc_log;
 
 private ["_result", "_response"];
 
@@ -25,13 +25,13 @@ if (typeName _query == "ARRAY") then {
     _result = [];
     {
         _response = ["executeQuery", _x] call _extdb3;
-        [format ["RESULT: %1", str _response]] call BIS_fnc_logFormat;
+        [format ["RESULT: %1", str _response]] call MIV_fnc_log;
         _result pushBack _response;
     } forEach _query;
 } else {
     _result = ["executeQuery", _query] call _extdb3;
 
-    [format ["RESULT: %1", str _result]] call BIS_fnc_logFormat;
+    [format ["RESULT: %1", str _result]] call MIV_fnc_log;
 };
 
 _result;

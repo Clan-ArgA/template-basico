@@ -13,20 +13,20 @@ private _extdb3 = "new" call OO_EXTDB3;
 ["setDatabaseName", "arga-log"] call _extdb3;
 ["setQueryType", "SQL"] call _extdb3;
 _result = "connect" call _extdb3;
-[format ["CONNECTION: %1", str _result]] call BIS_fnc_logFormat;
+[format ["CONNECTION: %1", str _result]] call MIV_fnc_log;
 /////////////////////
 
 private _query = "SELECT code, name, id FROM role;";
 
 private _roleList = ["executeQuery", _query] call _extdb3;
 
-[format ["ROLE_LIST: %1", str _roleList]] call BIS_fnc_logFormat;
+[format ["ROLE_LIST: %1", str _roleList]] call MIV_fnc_log;
 
 private _query = "SELECT role.code, alt.name, alt.id FROM role_alternative_name as alt LEFT JOIN role as role on alt.role_id = role.id;";
 
 private _alternativeList = ["executeQuery", _query] call _extdb3;
 
-[format ["ALT LIST: %1", str _alternativeList]] call BIS_fnc_logFormat;
+[format ["ALT LIST: %1", str _alternativeList]] call MIV_fnc_log;
 
 (_roleList + _alternativeList);
 

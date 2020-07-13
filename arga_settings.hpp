@@ -17,6 +17,7 @@ MAX_DIST_VISION = 4000;
 DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1;  // Equipamiento guardado en arsenal virtual
 PERMITIR_COMPUTADORA_ARTILLERIA = 1;        // Habilita computadora artilleria poner true. Para que no aparezca poner false
 PERMITIR_ROL_AUTOMATICO = 0;                // Habilita la carga de rol al entrar a la misión por descripción de rol
+DEBUG = 0                                   // Habilita el modo debug
 
 //EQUIPAMIENTO
 // Camuflajes disponibles:          Tipos disponibles:
@@ -55,8 +56,8 @@ ENEMIGOS = ["", ""];
 ////////////////////////////////////////////////////////////////////////////////
 
 //IA - CONFIGURACION
-DESACTIVAR_IA_DE_GRUPO = 1; // 0 Permite la IA del Grupo de los jugadores, 1 la desactiva.
-DESACTIVAR_TODO_BLUFOR = 1; // 0 Permite la IA del Blufor, 1 la desactiva.
+DESACTIVAR_IA_DE_GRUPO = 1; // 0 No desactiva la IA del Grupo de los jugadores, 1 la desactiva.
+DESACTIVAR_TODO_BLUFOR = 1; // 0 No desactiva la IA del Blufor, 1 la desactiva.
 DIFICULTAD_IA_PERSONALIZADA = 0;
 AIMING_ACCURACY = 0.01; //precision de apuntado
 AIMING_SHAKE = 0.99; 	//dispersión de apuntado
