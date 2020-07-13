@@ -40,6 +40,8 @@ if (typeName _unit != "ARRAY") then {
 	};
 };
 
+_unitList call MIV_fnc_log;
+
 private _roleList = call MIV_fnc_get_role_list;
 private ["_role", "_query", "_valuesQuery", "_values", "_role", "_state", "_id", "_logInfo", "_createdAt"];
 private _querys = [];
@@ -83,6 +85,8 @@ private _querys = [];
 	_querys pushBack ([_query, _values] joinString " ");
 
 } forEach _unitList;
+
+_querys call MIV_fnc_log;
 
 if (count _querys > 0) then {
 	_querys call MIV_fnc_connect_db;
