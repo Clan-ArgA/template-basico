@@ -4,13 +4,13 @@
 
 if (!isDedicated) exitWith { };
 
-execVM "scripts\spawn_fnc.sqf";
+execVM "scripts\db\spawn_fnc.sqf";
 
 addMissionEventHandler ["HandleDisconnect", {
     params ["_unit", "_id", "_uid", "_name"];
     [[[_uid, _name, _unit]], "disconnected"] execVM "scripts\db\querys\write_log.sqf";
-    _unit enableSimulationGlobal false;
-    _unit hideObjectGlobal true;
+    // _unit enableSimulationGlobal false;
+    // _unit hideObjectGlobal true;
     true;
 }];
 

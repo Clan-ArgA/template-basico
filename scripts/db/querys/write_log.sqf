@@ -11,10 +11,9 @@ params [["_unit", []], ["_logType", "connected"]];
 
 if (!isDedicated) exitWith { };
 
-[format ["UNIT: %1, ,LOGTYPE: %2", str _unit, str _logType]] call BIS_fnc_logFormat;
 
-//Aca transformar _unit a una lista si no lo es
-//[ ["_uid", "_name", "_unit"] ]
+// Aca transformar _unit a una lista si no lo es
+// [ ["_uid", "_name", "_unit"] ]
 
 private _unitList = [];
 
@@ -41,10 +40,8 @@ if (typeName _unit != "ARRAY") then {
 	};
 };
 
-[format ["UNITLIST: %1", str _unitList]] call BIS_fnc_logFormat;
-
 private _roleList = call MIV_fnc_get_role_list;
-private ["_role", "_query", "_valuesQuery", "_values", "_role", "_state", "_id"];
+private ["_role", "_query", "_valuesQuery", "_values", "_role", "_state", "_id", "_logInfo", "_createdAt"];
 private _querys = [];
 
 {
@@ -54,11 +51,20 @@ private _querys = [];
 	_role = [_unit, _roleList] call MANDI_fnc_getRole;
 	_state = _unit call MANDI_fnc_getState;
 
-	_query = if (typeName _role == "SCALAR") then { " INTO log (`id`, `log_type_id`, `player_name`, `player_uid`, `player_state_id`, `mission_name`, `role_alternative_name_id`, `mission_time`, `server_name`) VALUES" } else { " INTO log (`id`, `log_type_id`, `player_name`, `player_uid`, `player_state_id`, `mission_name`, `role_id`, `mission_time`, `server_name`) VALUES" };
-	_valuesQuery = if (typeName _role == "SCALAR") then { "(%1, (SELECT id from log_type WHERE name = '%2'), '%3', '%4', (SELECT id from player_state WHERE name = '%5'), '%6', %7, %8, '%9');" } else { "(%1, (SELECT id from log_type WHERE name = '%2'), '%3', '%4', (SELECT id from player_state WHERE name = '%5'), '%6', (SELECT id from role WHERE code = '%7'), %8, '%9');" };
+	_query = if (typeName _role == "SCALAR") then { " INTO log (`id`, `log_type_id`, `player_name`, `player_uid`, `player_state_id`, `mission_name`, `role_alternative_name_id`, `mission_time`, `server_name`, `createdAt`) VALUES" } else { " INTO log (`id`, `log_type_id`, `player_name`, `player_uid`, `player_state_id`, `mission_name`, `role_id`, `mission_time`, `server_name`, `createdAt`) VALUES" };
+	_valuesQuery = if (typeName _role == "SCALAR") then { "(%1, (SELECT id from log_type WHERE name = '%2'), '%3', '%4', (SELECT id from player_state WHERE name = '%5'), '%6', %7, %8, '%9', %10);" } else { "(%1, (SELECT id from log_type WHERE name = '%2'), '%3', '%4', (SELECT id from player_state WHERE name = '%5'), '%6', (SELECT id from role WHERE code = '%7'), %8, '%9', %10);" };
 	_query = if (_logType == "info") then { "REPLACE" + _query } else { "INSERT" + _query };
 	
-	_id = if (_logType == "info") then { _uid call MIV_fnc_get_info_log_id } else { "NULL" };
+	_id = "NULL";
+	_createdAt = "NOW()";
+	
+	if (_logType == "info") then {
+		_logInfo = _uid call MIV_fnc_get_info_log;
+		if (count _logInfo > 0 ) then {
+			_id = _logInfo select 0;
+			_createdAt = format["'%1'", ([_logInfo select 1] call MANDI_fnc_formatDate)];
+		};
+	}; 
 
 	_values = format [
 		_valuesQuery,
@@ -70,14 +76,13 @@ private _querys = [];
 		missionName,
 		_role,
 		time,
-		serverName
+		serverName,
+		_createdAt
 	];
 
 	_querys pushBack ([_query, _values] joinString " ");
 
 } forEach _unitList;
-
-[format ["QUERYS: %1", str _querys]] call BIS_fnc_logFormat;
 
 if (count _querys > 0) then {
 	_querys call MIV_fnc_connect_db;
