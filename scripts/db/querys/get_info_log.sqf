@@ -2,25 +2,21 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-params ["_uid","_nameField"];
+params ["_uid"];
 
 if (!isDedicated) exitWith { };
 
-private _query = "SELECT '%1' from `arga-log`.log where player_uid = '%2' and log_type_id = 3 and id > (SELECT id from `arga-log`.log WHERE log_type_id = (select id from `arga-log`.log_type where name = 'mission_begin') AND mission_name = '%3' ORDER BY id DESC LIMIT 1) ORDER BY id DESC LIMIT 1;";
+private _query = "SELECT id, createdAt from `arga-log`.log where player_uid = '%1' and log_type_id = (select id from `arga-log`.log_type where name = 'info') and id > (SELECT id from `arga-log`.log WHERE log_type_id = (select id from `arga-log`.log_type where name = 'mission_begin') AND mission_name = '%2' AND server_name = '%3' ORDER BY id DESC LIMIT 1) ORDER BY id DESC LIMIT 1;";
 
-_query = format [_query, _nameField, _uid, missionName];
+_query = format [_query, _uid, missionName, serverName];
 
-[format ["query: %1", str _query]] call BIS_fnc_logFormat;
+private _log_info = _query call compile preprocessFileLineNumbers "scripts\db\connect_db.sqf";
 
-private _log_id = _query call MIV_fnc_connect_db;
-
-if (count _log_id > 0) then {
-	_log_id = (_log_id select 0) select 0;
-} else {
-	_log_id = "NULL";
+if (count _log_info > 0) then {
+	_log_info = (_log_info select 0);
 };
 
-_log_id;
+_log_info;
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV
