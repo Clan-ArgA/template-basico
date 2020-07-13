@@ -3,10 +3,8 @@
 *******************************************************************************/
 
 /*
-
 Recibe una unidad (o player) un array de players o un array con el formato [ ["_uid", "_name", "_unit"] ]
 Además recibe una string indicando el logType
-
 */
 
 params [["_unit", []], ["_logType", "connected"]];
