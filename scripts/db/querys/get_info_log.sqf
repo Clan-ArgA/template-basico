@@ -10,7 +10,7 @@ private _query = "SELECT '%1' from `arga-log`.log where player_uid = '%2' and lo
 
 _query = format [_query, _nameField, _uid, missionName];
 
-[format [">_query: %1", str _query]] call BIS_fnc_logFormat;
+[format ["query: %1", str _query]] call BIS_fnc_logFormat;
 
 private _log_id = _query call MIV_fnc_connect_db;
 
