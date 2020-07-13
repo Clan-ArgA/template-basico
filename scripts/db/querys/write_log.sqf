@@ -13,10 +13,9 @@ params [["_unit", []], ["_logType", "connected"]];
 
 if (!isDedicated) exitWith { };
 
-[format ["UNIT: %1, ,LOGTYPE: %2", str _unit, str _logType]] call BIS_fnc_logFormat;
 
-//Aca transformar _unit a una lista si no lo es
-//[ ["_uid", "_name", "_unit"] ]
+// Aca transformar _unit a una lista si no lo es
+// [ ["_uid", "_name", "_unit"] ]
 
 private _unitList = [];
 
@@ -43,8 +42,6 @@ if (typeName _unit != "ARRAY") then {
 	};
 };
 
-[format ["UNITLIST: %1", str _unitList]] call BIS_fnc_logFormat;
-
 private _roleList = call MIV_fnc_get_role_list;
 private ["_role", "_query", "_valuesQuery", "_values", "_role", "_state", "_id", "_logInfo", "_createdAt"];
 private _querys = [];
@@ -65,7 +62,6 @@ private _querys = [];
 	
 	if (_logType == "info") then {
 		_logInfo = _uid call MIV_fnc_get_info_log;
-		[format ["LOGINFO: %1", str _logInfo]] call BIS_fnc_logFormat;
 		if (count _logInfo > 0 ) then {
 			_id = _logInfo select 0;
 			_createdAt = format["'%1'", ([_logInfo select 1] call MANDI_fnc_formatDate)];
@@ -89,8 +85,6 @@ private _querys = [];
 	_querys pushBack ([_query, _values] joinString " ");
 
 } forEach _unitList;
-
-[format ["QUERYS: %1", str _querys]] call BIS_fnc_logFormat;
 
 if (count _querys > 0) then {
 	_querys call MIV_fnc_connect_db;

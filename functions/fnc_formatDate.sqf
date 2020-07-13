@@ -8,8 +8,6 @@
 */
 params ["_date"];
 
-[format ["DATE: %1", str _date]] call BIS_fnc_logFormat;
-
 if (count _date > 0) then {
 	private _format = ["%1-%2-%3 %4:%5:%6"];
 	_format append _date;
