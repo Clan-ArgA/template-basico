@@ -64,7 +64,7 @@ execVM "scripts\init_vcom_driving.sqf";
 
 execVM "scripts\smart_tank\smart.sqf";
 
-if (isDedicated) then {
+if ((getMissionConfigValue ["ENABLE_LOG_SYSTEM", 0] == 1)) then {
   execVM "scripts\db\init_log_system.sqf";
 };
 

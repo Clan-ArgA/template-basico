@@ -9,7 +9,7 @@ Además recibe una string indicando el logType
 
 params [["_unit", []], ["_logType", "connected"]];
 
-if (!isDedicated) exitWith { };
+if (!(getMissionConfigValue ["ENABLE_LOG_SYSTEM", 0] == 1)) exitWith { };
 
 
 // Aca transformar _unit a una lista si no lo es
@@ -40,8 +40,6 @@ if (typeName _unit != "ARRAY") then {
 	};
 };
 
-_unitList call MIV_fnc_log;
-
 private _roleList = call MIV_fnc_get_role_list;
 private ["_role", "_query", "_valuesQuery", "_values", "_role", "_state", "_id", "_logInfo", "_createdAt"];
 private _querys = [];
@@ -56,7 +54,7 @@ private _querys = [];
 	_query = if (typeName _role == "SCALAR") then { " INTO log (`id`, `log_type_id`, `player_name`, `player_uid`, `player_state_id`, `mission_name`, `role_alternative_name_id`, `mission_time`, `server_name`, `createdAt`) VALUES" } else { " INTO log (`id`, `log_type_id`, `player_name`, `player_uid`, `player_state_id`, `mission_name`, `role_id`, `mission_time`, `server_name`, `createdAt`) VALUES" };
 	_valuesQuery = if (typeName _role == "SCALAR") then { "(%1, (SELECT id from log_type WHERE name = '%2'), '%3', '%4', (SELECT id from player_state WHERE name = '%5'), '%6', %7, %8, '%9', %10);" } else { "(%1, (SELECT id from log_type WHERE name = '%2'), '%3', '%4', (SELECT id from player_state WHERE name = '%5'), '%6', (SELECT id from role WHERE code = '%7'), %8, '%9', %10);" };
 	_query = if (_logType == "info") then { "REPLACE" + _query } else { "INSERT" + _query };
-	
+
 	_id = "NULL";
 	_createdAt = "NOW()";
 	
@@ -85,8 +83,6 @@ private _querys = [];
 	_querys pushBack ([_query, _values] joinString " ");
 
 } forEach _unitList;
-
-_querys call MIV_fnc_log;
 
 if (count _querys > 0) then {
 	_querys call MIV_fnc_connect_db;

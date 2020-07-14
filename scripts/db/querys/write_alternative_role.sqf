@@ -4,7 +4,7 @@
 
 params [["_units", allPlayers]];
 
-if (!isDedicated) exitWith { };
+if (!(getMissionConfigValue ["ENABLE_LOG_SYSTEM", 0] == 1)) exitWith { };
 
 private ["_query", "_description", "_newValue"];
 private _values =  " ";
