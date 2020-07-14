@@ -4,7 +4,7 @@
 
 params [["_strData", []]];
 
-if (!getMissionConfigValue ["DEBUG", 0]) exitWith { };
+if (!(getMissionConfigValue ["DEBUG", 0] == 1)) exitWith { };
 
 private _data = missionName;
 
