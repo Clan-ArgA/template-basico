@@ -8,7 +8,12 @@ if (!(getMissionConfigValue ["DEBUG", 0] == 1)) exitWith { };
 
 private _data = missionName;
 
+if(typeName _strData != "ARRAY") then {
+    _strData = [_strData];
+};
+
 _strData = _strData apply {if (typeName _x != "STRING") then { str _x } else { _x }};
+
 {
 	_data = _data + " " + _x;	
 } forEach _strData;
