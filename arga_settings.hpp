@@ -19,6 +19,7 @@ PERMITIR_COMPUTADORA_ARTILLERIA = 1;        // Habilita computadora artilleria p
 PERMITIR_ROL_AUTOMATICO = 0;                // Habilita la carga de rol al entrar a la misión por descripción de rol
 DEBUG = 1;                                  // Habilita el modo debug
 ENABLE_LOG_SYSTEM = 1;                      // Habilita el sistema de log
+ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;       // Habilita el sistema de log sólo si el servidor es dedicado (requiere ENABLE_LOG_SYSTEM = 1)
 
 //EQUIPAMIENTO
 // Camuflajes disponibles:          Tipos disponibles:
