@@ -16,7 +16,7 @@ INTRO = 2;                                  // Intros: 1 y 2. Para desactivar: 0
 MAX_DIST_VISION = 4000;
 DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1;  // Equipamiento guardado en arsenal virtual
 PERMITIR_COMPUTADORA_ARTILLERIA = 1;        // Habilita computadora artilleria poner true. Para que no aparezca poner false
-PERMITIR_ROL_AUTOMATICO = 0;                // Habilita la carga de rol al entrar a la misión por descripción de rol
+PERMITIR_ROL_AUTOMATICO = 1;                // Habilita la carga de rol al entrar a la misión por descripción de rol
 DEBUG = 1;                                  // Habilita el modo debug
 ENABLE_LOG_SYSTEM = 1;                      // Habilita el sistema de log
 
