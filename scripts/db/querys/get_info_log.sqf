@@ -4,7 +4,7 @@
 
 params ["_uid"];
 
-if (!(getMissionConfigValue ["ENABLE_LOG_SYSTEM", 0] == 1)) exitWith { };
+if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
 private _query = "SELECT id, createdAt from `arga-log`.log where player_uid = '%1' and log_type_id = (select id from `arga-log`.log_type where name = 'info') and id > (SELECT id from `arga-log`.log WHERE log_type_id = (select id from `arga-log`.log_type where name = 'mission_begin') AND mission_name = '%2' AND server_name = '%3' ORDER BY id DESC LIMIT 1) ORDER BY id DESC LIMIT 1;";
 

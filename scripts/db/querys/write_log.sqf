@@ -9,7 +9,7 @@ Además recibe una string indicando el logType
 
 params [["_unit", []], ["_logType", "connected"]];
 
-if (!(getMissionConfigValue ["ENABLE_LOG_SYSTEM", 0] == 1)) exitWith { };
+if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
 
 // Aca transformar _unit a una lista si no lo es

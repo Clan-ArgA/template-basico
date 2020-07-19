@@ -2,7 +2,7 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-if (!(getMissionConfigValue ["ENABLE_LOG_SYSTEM", 0] == 1)) exitWith { };
+if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
 execVM "scripts\db\spawn_fnc.sqf";
 

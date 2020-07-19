@@ -56,6 +56,9 @@ class CfgFunctions {
       class log {
         file = "functions\fnc_log.sqf";
       };
+      class isLogSystemEnabled {
+        file = "functions\fnc_isLogSystemEnabled.sqf";
+      };
     };
   };
   class MAC {

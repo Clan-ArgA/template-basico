@@ -4,7 +4,7 @@
 
 params [["_missionState", "mission_end"]];
 
-if (!(getMissionConfigValue ["ENABLE_LOG_SYSTEM", 0] == 1)) exitWith { };
+if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
 private ["_query", "_values"];
 
