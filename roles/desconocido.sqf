@@ -10,9 +10,19 @@ private _back = if (_useBigBackPack) then {_backPack} else {_backPackLittle};
 
 if (!local _unit) exitWith {};
 
-//_unit addBackpack _back;
-//_unit addHeadgear _helmet;
+comment "Remove existing items";
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
 removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
+
+_unit forceAddUniform "U_C_ConstructionCoverall_Red_F";
+_unit addHeadgear "rhs_xmas_antlers";
+
 
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "adv_aceSplint_splint";};
