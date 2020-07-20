@@ -2,9 +2,9 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
-
 execVM "scripts\db\spawn_fnc.sqf";
+
+if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
 addMissionEventHandler ["HandleDisconnect", {
     params ["_unit", "_id", "_uid", "_name"];

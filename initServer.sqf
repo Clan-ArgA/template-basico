@@ -64,6 +64,8 @@ execVM "scripts\init_vcom_driving.sqf";
 
 execVM "scripts\smart_tank\smart.sqf";
 
+ //["MIV_fnc_isLogSystemEnabled: ",  call MIV_fnc_isLogSystemEnabled] call MIV_fnc_log;
+
 if (call MIV_fnc_isLogSystemEnabled) then {
   execVM "scripts\db\init_log_system.sqf";
 };

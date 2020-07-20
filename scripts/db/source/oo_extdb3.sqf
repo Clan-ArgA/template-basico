@@ -18,6 +18,8 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 	*/
 
+	if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
+	
 	#include "oop.h"
 
 	CLASS("OO_EXTDB3")
