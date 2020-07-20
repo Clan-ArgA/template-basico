@@ -9,7 +9,6 @@ private _intro = getMissionConfigValue ["INTRO", 2];
 private _disableGroupIA = getMissionConfigValue ["DESACTIVAR_IA_DE_GRUPO", 1] == 1;
 private _disableBluforIA = getMissionConfigValue ["DESACTIVAR_TODO_BLUFOR", 0] == 1;
 private _enableArtilleryComputer = getMissionConfigValue ["PERMITIR_COMPUTADORA_ARTILLERIA",  1] == 1;
-private _enableAutomaticRole = getMissionConfigValue ["PERMITIR_ROL_AUTOMATICO",  1] == 1;
 
 setTerrainGrid 25;
 
