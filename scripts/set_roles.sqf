@@ -10,6 +10,7 @@ private _roleList = if ((call MIV_fnc_isLogSystemEnabled)) then {call MIV_fnc_ge
 private _role = [player, _roleList] call MANDI_fnc_getRole;
 
 if (typeName _role != "STRING") then {_role = "desconocido"};
+if (_role == "desconocido" && isDedicated) then { _role = "fusilero"};
 
 _role = 'roles\' + _role + '.sqf';
 
