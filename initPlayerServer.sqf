@@ -1,7 +1,7 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-private _enableAutomaticRole = getMissionConfigValue ["PERMITIR_ROL_AUTOMATICO",  1] == 1;
+private _enableAutomaticRole = getMissionConfigValue ["ACTIVAR_ROL_AUTOMATICO",  1] == 1;
 
 params ["_playerUnit", "_didJIP"];
 
