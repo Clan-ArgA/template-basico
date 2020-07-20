@@ -1,8 +1,8 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-
-if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {};
+//["Funcion: ", !(call MIV_fnc_isLogSystemEnabled)] call MIV_fnc_log;
+if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {[]};
 
 // Llamamos a la db
 call MIV_fnc_oo_extdb3;

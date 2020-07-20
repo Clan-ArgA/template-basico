@@ -7,6 +7,11 @@ private _enableLogSystemOnlyDedicated = getMissionConfigValue ["ENABLE_LOG_SYSTE
 
 (_enableLogSystem && (!_enableLogSystemOnlyDedicated || isDedicated && _enableLogSystemOnlyDedicated));
 
+/*["_enableLogSystem: ", _enableLogSystem] call MIV_fnc_log;
+["_enableLogSystemOnlyDedicated: ", _enableLogSystemOnlyDedicated] call MIV_fnc_log;
+["isDedicated: ", isDedicated] call MIV_fnc_log;
+["logica: ", (_enableLogSystem && (!_enableLogSystemOnlyDedicated || isDedicated && _enableLogSystemOnlyDedicated))] call MIV_fnc_log;
+*/
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/

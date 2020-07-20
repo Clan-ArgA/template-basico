@@ -1,10 +1,16 @@
 /*******************************************************************************
-                          Realizado por |ArgA|MandI
+                            Realizado por |ArgA|MIV
 *******************************************************************************/
 
-params [["_unit", player], ["_roleList", []]];
+private _defaultRoleList = parseSimpleArray getMissionConfigValue ["AUXILIAR_ROLE_LIST", '[]'];
+
+params [["_unit", player], ["_roleList", _defaultRoleList]];
+
+if (count(_roleList) == 0) then { _roleList = _defaultRoleList};
 
 private _role = _unit getVariable ["MANDI_ROL", "desconocido"]; 
+
+systemChat format['_role %1',_role];
 
 if (typeName _role != "SCALAR") then {
     if (_role == "desconocido" && !isNil "_unit") then { 
@@ -33,7 +39,7 @@ if (typeName _role != "SCALAR") then {
 _role;
 
 /*******************************************************************************
-                          Realizado por |ArgA|MandI
+                            Realizado por |ArgA|MIV
 *******************************************************************************/
 
 /*
