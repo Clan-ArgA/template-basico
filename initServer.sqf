@@ -68,6 +68,8 @@ execVM "scripts\smart_tank\smart.sqf";
 
 execVM "scripts\db\init_log_system.sqf";
 
+if (!isDedicated) then {execVM "scripts\check_roles.sqf"};
+
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/

@@ -29,7 +29,6 @@ if (typeName _role != "SCALAR") then {
                     if (_description == _roleName) then {
                         _role = _code;
                         _unit setVariable ["MANDI_ROL", _code];
-                        
                     };
                 } forEach _roleList;
             };

@@ -17,6 +17,8 @@ MAX_DIST_VISION = 4000;
 DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1;  // Equipamiento guardado en arsenal virtual
 ACTIVAR_COMPUTADORA_ARTILLERIA = 1;         // Habilita computadora artilleria poner true. Para que no aparezca poner false
 ACTIVAR_ROL_AUTOMATICO = 1;                 // Habilita la carga de rol al entrar a la misión por descripción de rol
+                                            // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
+                                            
 DEBUG = 1;                                  // Habilita el modo debug
 ENABLE_LOG_SYSTEM = 1;                      // Habilita el sistema de log
 ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;       // Habilita el sistema de log sólo si el servidor es dedicado (requiere ENABLE_LOG_SYSTEM = 1)
