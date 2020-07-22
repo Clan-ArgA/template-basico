@@ -2,7 +2,7 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-[[player, "respawn"], "scripts\db\querys\write_log.sqf"] remoteExec ["BIS_fnc_execVM", 2, false];
+call compile preprocessFile "core\events\onPlayerRespawn.sqf";
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

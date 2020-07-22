@@ -6,7 +6,7 @@ params [["_stand", objNull], ["_rol", ""]];
 
 if(!isNull _stand) then {
 
-	private _img = format ["imgs\%1.paa", _rol];
+	private _img = format ["core\imgs\%1.paa", _rol];
 	private _var = "";
 	private _value = "";
 	private _notFound = false;

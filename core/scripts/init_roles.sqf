@@ -50,31 +50,31 @@ if (_camoColor != "no editar") then {
 };
 
 if (_rol != "") then {
-    [player, _rol, _uniform, _helmet, _vest, _backPack, _backPackLittle] execVM "roles\base.sqf";
+    [player, _rol, _uniform, _helmet, _vest, _backPack, _backPackLittle] execVM "core\roles\base.sqf";
 };
 
 private _roles = [
-    ["Ametrallador M240", "roles\ametrallador_m240.sqf"], 
-    ["Ametrallador M249", "roles\ametrallador_m249.sqf"], 
-    ["Capitán", "roles\capitan.sqf"],
-    ["Enfermero", "roles\enfermero.sqf"], 
-    ["Francotirador", "roles\francotirador.sqf"], 
-    ["Fusilero", "roles\fusilero.sqf"],
-    ["Fusilero RA", "roles\fusilero_ra.sqf"], 
-    ["Granadero", "roles\granadero.sqf"],
-    ["Granadero Bengalas", "roles\granadero_bengalas.sqf"], 
-    ["Ingeniero", "roles\ingeniero.sqf"],  
-    ["Lanzador AA", "roles\lanzador_aa.sqf"], 
-    ["Lanzador AT", "roles\lanzador_at.sqf"],
-    ["Líder", "roles\lider_peloton.sqf"], 
-    ["Médico de Combate", "roles\medico_combate.sqf"], 
-    ["Médico", "roles\medico.sqf"], 
-    ["Observador", "roles\observador.sqf"], 
-    ["Piloto", "roles\piloto.sqf"], 
-    ["Radio Operador", "roles\radio_operador.sqf"],
-    ["Teniente", "roles\teniente.sqf"],
-    ["Tirador FAL", "roles\tirador_fal.sqf"],
-    ["Tirador MK11", "roles\tirador_mk11.sqf"]
+    ["Ametrallador M240", "core\roles\ametrallador_m240.sqf"], 
+    ["Ametrallador M249", "core\roles\ametrallador_m249.sqf"], 
+    ["Capitán", "core\roles\capitan.sqf"],
+    ["Enfermero", "core\roles\enfermero.sqf"], 
+    ["Francotirador", "core\roles\francotirador.sqf"], 
+    ["Fusilero", "core\roles\fusilero.sqf"],
+    ["Fusilero RA", "core\roles\fusilero_ra.sqf"], 
+    ["Granadero", "core\roles\granadero.sqf"],
+    ["Granadero Bengalas", "core\roles\granadero_bengalas.sqf"], 
+    ["Ingeniero", "core\roles\ingeniero.sqf"],  
+    ["Lanzador AA", "core\roles\lanzador_aa.sqf"], 
+    ["Lanzador AT", "core\roles\lanzador_at.sqf"],
+    ["Líder", "core\roles\lider_peloton.sqf"], 
+    ["Médico de Combate", "core\roles\medico_combate.sqf"], 
+    ["Médico", "core\roles\medico.sqf"], 
+    ["Observador", "core\roles\observador.sqf"], 
+    ["Piloto", "core\roles\piloto.sqf"], 
+    ["Radio Operador", "core\roles\radio_operador.sqf"],
+    ["Teniente", "core\roles\teniente.sqf"],
+    ["Tirador FAL", "core\roles\tirador_fal.sqf"],
+    ["Tirador MK11", "core\roles\tirador_mk11.sqf"]
 ];
 
 removeAllActions _box;
@@ -85,7 +85,7 @@ removeAllActions _box;
             private _rol =  (_arguments select 0);
             private _params = [_caller, (_rol select 1)];
             _params append (_arguments select 1);
-            _params execVM "roles\base.sqf";
+            _params execVM "core\roles\base.sqf";
             hint format ["Rol: %1", _rol select 0]; 
         }, [_x, _equipment], 1.5, true, true, "","true", 4, false, "", ""  
     ];

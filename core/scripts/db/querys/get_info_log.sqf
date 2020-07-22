@@ -10,7 +10,7 @@ private _query = "SELECT id, createdAt from `arga-log`.log where player_uid = '%
 
 _query = format [_query, _uid, missionName, serverName];
 
-private _log_info = _query call compile preprocessFileLineNumbers "scripts\db\connect_db.sqf";
+private _log_info = _query call compile preprocessFileLineNumbers "core\scripts\db\connect_db.sqf";
 
 if (count _log_info > 0) then {
 	_log_info = (_log_info select 0);

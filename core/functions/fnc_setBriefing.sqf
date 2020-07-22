@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 private _colorAuthor = getMissionConfigValue ["COLOR_AUTOR", "#76a8f7"];
-private _logo = getMissionConfigValue ["IMG_LOGO", "imgs\logo.paa"];
+private _logo = getMissionConfigValue ["IMG_LOGO", "core\imgs\logo.paa"];
 
 params["_recursos", "_enemigos", "_objetivos", "_situation", "_extractodeInteligencia", "_storySituation", "_info", "_editores"];
 

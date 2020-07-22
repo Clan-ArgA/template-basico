@@ -4,7 +4,7 @@
 
 #define NAME Op. Template Basico            // Colocar nombre de mision (un espacio despues de Op. y sin comillas ni nada)
 #define VERSION v0.3.3                      // Versión de la misión
-#define IMAGE "imgs\portada.paa"            // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
+#define IMAGE "imgs\portada.paa"            // Colocar nombre y extension de la imagen de portada, ej "core\imgs\portada.jpg"
 #define DESCRIPTION ""                      // Colocar descripcion de la mision entre las comillas
 
 author = "Arga";                            // Editor (Pone tu nombre)

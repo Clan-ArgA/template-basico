@@ -28,7 +28,7 @@ _values = _values + ";";
 
 _query = [_query, _values] joinString " ";
 
-_query execVM "scripts\db\connect_db.sqf";
+_query execVM "core\scripts\db\connect_db.sqf";
 
 
 /*******************************************************************************
