@@ -8,7 +8,17 @@ params [["_unit", player], ["_roleList", _defaultRoleList]];
 
 if (count(_roleList) == 0) then { _roleList = _defaultRoleList};
 
-private _role = _unit getVariable ["MANDI_ROL", "desconocido"]; 
+private _role = _unit getVariable ["MANDI_ROL", "desconocido"];
+
+/*
+ Detectar si en roleDescription esta el tag #nc, segun el resultado, setear
+ el atributo MIV_NO_CHANGE al valor correspondiente en la unidad.
+
+ Si el tag #nc esta presente, quitarlo de la string de comparación. (_description)
+ (checkear que el tag pueda estar al principio, final, medio, cualquier lado. y quitarlo bien.)
+
+ Detectar esta variable (con default False) en la funcion que setea el rol y actuar como corresponda.
+*/
 
 if (typeName _role != "SCALAR") then {
     if (_role == "desconocido" && !isNil "_unit") then { 
