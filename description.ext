@@ -59,6 +59,9 @@ class CfgFunctions {
       class isLogSystemEnabled {
         file = "core\functions\fnc_isLogSystemEnabled.sqf";
       };
+      class replaceInString {
+        file = "core\functions\fnc_replaceInString.sqf";
+      };
     };
   };
   class MAC {

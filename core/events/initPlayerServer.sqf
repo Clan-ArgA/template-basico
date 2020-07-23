@@ -16,7 +16,7 @@ if (call MIV_fnc_isLogSystemEnabled) then {
 };
 
 if ((_enableAutomaticRole)) then {
-  execVM "core\scripts\set_roles.sqf"
+  execVM "core\scripts\set_role.sqf"
 };
 
 /*******************************************************************************

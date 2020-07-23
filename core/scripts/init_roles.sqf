@@ -2,7 +2,7 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-params [["_box", objNull],["_rol", ""]];
+params [["_box", objNull],["_role", ""]];
 
 if(isNil "_box") exitWith {};
 
@@ -49,14 +49,14 @@ if (_camoColor != "no editar") then {
     _equipment = [_uniform, _helmet, _vest, _backPack, _backPackLittle];
 };
 
-if (_rol != "") then {
-    [player, _rol, _uniform, _helmet, _vest, _backPack, _backPackLittle] execVM "core\roles\base.sqf";
+if (_role != "") then {
+    [player, _role, _uniform, _helmet, _vest, _backPack, _backPackLittle] execVM "core\roles\base.sqf";
 };
 
 private _roles = [
     ["Ametrallador M240", "core\roles\ametrallador_m240.sqf"], 
     ["Ametrallador M249", "core\roles\ametrallador_m249.sqf"], 
-    ["Capitán", "core\roles\capitan.sqf"],
+    ["Capitán", "core\roles\lider.sqf"],
     ["Enfermero", "core\roles\enfermero.sqf"], 
     ["Francotirador", "core\roles\francotirador.sqf"], 
     ["Fusilero", "core\roles\fusilero.sqf"],
@@ -72,7 +72,7 @@ private _roles = [
     ["Observador", "core\roles\observador.sqf"], 
     ["Piloto", "core\roles\piloto.sqf"], 
     ["Radio Operador", "core\roles\radio_operador.sqf"],
-    ["Teniente", "core\roles\teniente.sqf"],
+    ["Teniente", "core\roles\sub_lider.sqf"],
     ["Tirador FAL", "core\roles\tirador_fal.sqf"],
     ["Tirador MK11", "core\roles\tirador_mk11.sqf"]
 ];
@@ -82,11 +82,11 @@ removeAllActions _box;
 {
     _box addAction ["<t color='#ffffff'>" + (_x select 0) + "</t>", {  
             params ["_target", "_caller", "_actionId", "_arguments"];
-            private _rol =  (_arguments select 0);
-            private _params = [_caller, (_rol select 1)];
+            private _role =  (_arguments select 0);
+            private _params = [_caller, (_role select 1)];
             _params append (_arguments select 1);
             _params execVM "core\roles\base.sqf";
-            hint format ["Rol: %1", _rol select 0]; 
+            hint format ["Rol: %1", _role select 0]; 
         }, [_x, _equipment], 1.5, true, true, "","true", 4, false, "", ""  
     ];
 } forEach _roles;   
