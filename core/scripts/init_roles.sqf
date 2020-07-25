@@ -16,31 +16,22 @@ private _backPack = "";
 private _backPackLittle = "";
 
 if (_camoColor == "personalizado") then {
-    _uniform = getMissionConfigValue ["UNIFORME_PERSONALIZADO", "arga_u_mbosque"];
-    _helmet = getMissionConfigValue ["CASCO_PERSONALIZADO", "arga_cas_mbosque"];
-    _vest = getMissionConfigValue ["CHALECO_PERSONALIZADO", "arga_c_mbosque"];
-    _backPack = getMissionConfigValue ["MOCHILA_PERSONALIZADO", "arga_m_mbosque_p"];
-    _backPackLittle = getMissionConfigValue ["MOCHILA_CHICA_PERSONALIZADO", "arga_m_mbosque_A"];
+    _uniform = getMissionConfigValue ["UNIFORME_PERSONALIZADO", "arga_u_gen3_bosque_marpat"];
+    _helmet = getMissionConfigValue ["CASCO_PERSONALIZADO", "arga_cas_combate_bosque_marpat"];
+    _vest = getMissionConfigValue ["CHALECO_PERSONALIZADO", "arga_c_pesado_bosque_marpat"];
+    _backPack = getMissionConfigValue ["MOCHILA_PERSONALIZADO", "arga_m_petate_bosque_marpat"];
+    _backPackLittle = getMissionConfigValue ["MOCHILA_CHICA_PERSONALIZADO", "arga_m_asalto_bosque_marpat"];
 };
 
-if (_camoType == "multicam" && _camoColor != "personalizado") then {
-    if (_camoColor == "desierto") then {
-        _camoColor = "desert";
+if (_camoColor != "personalizado" && _camoColor != "no editar") then {
+    _uniform = format ["arga_u_gen3_%1_%2", _camoColor, _camoType];
+    if (_camoColor == "negro") then {
+        _camoType = "liso";
     };
-    _uniform = format ["arga_u_m%1", _camoColor];
-    _helmet = format ["arga_cas_m%1", _camoColor];
-    _vest = format ["arga_c_m%1", _camoColor];
-    _backPack = format ["arga_m_m%1_p", _camoColor];
-    _backPackLittle = format ["arga_m_m%1_a", _camoColor];
-};
-
-if (_camoType == "marpat" && _camoColor != "personalizado") then {
-    _camoColor = [_camoColor, 0, 0] call BIS_fnc_trimString;
-    _uniform = format ["arga_u_%1marpat", _camoColor];
-    _helmet = format ["arga_cas_%1marpat", _camoColor];
-    _vest = format ["arga_c_%1marpat", _camoColor];
-    _backPack = format ["arga_m_%1marpat_p", _camoColor];
-    _backPackLittle = format ["arga_m_%1marpat_a", _camoColor];
+    _helmet = format ["arga_cas_combate_%1_%2", _camoColor, _camoType];
+    _vest = format ["arga_c_pesado_%1_%2", _camoColor, _camoType];
+    _backPack = format ["arga_m_petate_%1_%2", _camoColor, _camoType];
+    _backPackLittle = format ["arga_m_asalto_%1_%2", _camoColor, _camoType];
 };
 
 private _equipment = [];

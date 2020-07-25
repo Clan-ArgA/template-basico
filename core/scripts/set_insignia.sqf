@@ -28,7 +28,6 @@ private _enableAutomatiEnsign = getMissionConfigValue ["ACTIVAR_INSIGNIA_AUTOMAT
 private _ensignIR             = getMissionConfigValue ["INSIGNIA_IR",  0] == 1;
 
 
-
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/

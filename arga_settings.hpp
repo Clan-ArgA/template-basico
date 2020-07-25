@@ -7,7 +7,7 @@
 #define IMAGE "imgs\portada.paa"            // Colocar nombre y extension de la imagen de portada, ej "core\imgs\portada.jpg"
 #define DESCRIPTION ""                      // Colocar descripcion de la mision entre las comillas
 
-author = "|ArgA|";                          // Editor (Pone tu nombre)
+author = "ArgA";                            // Editor (Pone tu nombre)
 IMG_LOGO = "imgs\logo.paa";                 // Nota: Las imagenes deberian estar en
 COLOR_AUTOR = "#76a8f7";                    // formato .paa y en proporcion 2x1 (1024x512)
 ES_CAMPANIA = 0;                            // tamaño logo: 323px x 323px
@@ -16,7 +16,7 @@ INTRO = 2;                                  // Intros: 1 y 2. Para desactivar: 0
 MAX_DIST_VISION = 4000;
 DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1;  // Equipamiento guardado en arsenal virtual
 ACTIVAR_COMPUTADORA_ARTILLERIA = 1;         // Habilita computadora artilleria poner true. Para que no aparezca poner false
-ACTIVAR_ROL_AUTOMATICO = 0;                 // Habilita la carga de rol al entrar a la misión por descripción de rol
+ACTIVAR_ROL_AUTOMATICO = 1;                 // Habilita la carga de rol al entrar a la misión por descripción de rol
                                             // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
 ACTIVAR_INSIGNIA_AUTOMATICO = 1;            // Añadir a arga_settings
 INSIGNIA_IR = 0;                            // establece si las insignias son IR o normales
@@ -29,7 +29,8 @@ ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;       // Habilita el sistema de log sólo 
 // Camuflajes disponibles:          Tipos disponibles:
 //      - Bosque                        - Multicam 
 //      - Desierto                      - Marpat
-//      - Selva
+//      - Selva                         - Liso
+//      - Negro
 //
 //      - Personalizado (se debe ingresar mas abajo la clase del uniforme, chaleco, casco y mochila)
 //      - No editar (no se le modificara ninguna de las 4 cosas al jugador, solo arma y equipo interno)
@@ -37,7 +38,7 @@ ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;       // Habilita el sistema de log sólo 
 //        Las opciones Personalizada y No editar pueden llevar a comportamientos inesperados.
 //        Por lo que el editor queda a cargo de checkear y revisar el correcto funcionamiento.
 
-CAMUFLAJE = ["Desierto", "Marpat"];
+CAMUFLAJE = ["Negro", "Multicam"];
 GAFAS_INICIALES = "";
 UNIFORME_PERSONALIZADO = "";
 CASCO_PERSONALIZADO = "";
