@@ -2,25 +2,30 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-params [[_unit, player]];
-private _roleDescriptionArray = (toLower roleDescription leader _unit) splitString "@";
+//params [["_unit", player]]];
+params ["_unit"];
+private ["_roleDescriptionArray","_platoon"];
 
-if (count(_roleDescriptionArray) < 2) exitWith {
+_roleDescriptionArray = (toLower roleDescription leader _unit) splitString "@"; 
+//["_roleDescriptionArrayles:", _roleDescriptionArray] call MIV_fnc_log;
+
+if (count(_roleDescriptionArray) >= 2) then {
 	
+	_platoon  = (_roleDescriptionArray) select 1;
+	_platoon = _platoon call MANDI_fnc_trim;
+
+	if ((_platoon isEqualTo "condor") || (_platoon isEqualTo "cóndor")) then {
+		_platoon = 'condor';
+	};
+
+	if (_platoon isEqualTo "yaguar" || _platoon isEqualTo "yaguarete" || _platoon isEqualTo "yaguareté") then {
+		_platoon = 'yaguar';
+	};
+
+} else {
+	_platoon = groupId group player;
 };
-
-private _platoon  = (_roleDescription) select 1;
-_platoon = _platoon call MANDI_fnc_trim;
-
-
-if (["condor", _platoon] call BIS_fnc_inString || "cóndor", _platoon] call BIS_fnc_inString) then {
-	_platoon = 'condor';
-};
-
-if (["yaguar", _platoon] call BIS_fnc_inString || "yaguarete", _platoon] call BIS_fnc_inString || "yaguareté", _platoon] call BIS_fnc_inString) then {
-	_platoon = 'yaguar';
-};
-
+//["_platoon return:", _platoon] call MIV_fnc_log;
 _platoon
 
 /*******************************************************************************

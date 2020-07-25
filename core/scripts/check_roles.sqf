@@ -4,6 +4,9 @@
 
 if (isDedicated) exitWith {};
 
+private _enableAutomaticRole = getMissionConfigValue ["ACTIVAR_ROL_AUTOMATICO",  1] == 1;
+if (!_enableAutomaticRole) exitWith {};
+
 private _role = '';
 private _defaultRoleList = parseSimpleArray getMissionConfigValue ["AUXILIAR_ROLE_LIST", '[]'];
 private _badRoles = '';
