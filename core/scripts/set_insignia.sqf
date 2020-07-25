@@ -24,6 +24,11 @@
     donde los posibles resultados son ["condor", "yaguar", "", nombrePersonalizado]
 */
 
+private _enableAutomatiEnsign = getMissionConfigValue ["ACTIVAR_INSIGNIA_AUTOMATICO",  1] == 1;
+private _ensignIR             = getMissionConfigValue ["INSIGNIA_IR",  0] == 1;
+
+
+
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
