@@ -41,7 +41,7 @@ if (_camoColor != "no editar") then {
 };
 
 if (_role != "") then {
-    [player, _role, _uniform, _helmet, _vest, _backPack, _backPackLittle] execVM "core\roles\base.sqf";
+    [player, _role, _uniform, _helmet, _vest, _backPack, _backPackLittle] call compile preprocessFile "core\roles\base.sqf";
 };
 
 private _roles = [

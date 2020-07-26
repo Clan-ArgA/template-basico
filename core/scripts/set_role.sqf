@@ -11,7 +11,7 @@ if (!_maintainRole) then {
     if (_role == "desconocido" && isDedicated) then { _role = "fusilero"};
     if (_role == "desconocido" && !isDedicated) then { hint "Rol desconocido\nRevisar nombre de rol\nUd. no posee equípo de combate"};
     _role = format['core\roles\%1.sqf',_role];
-    [objNull, _role] execVM "core\scripts\init_roles.sqf";    
+    [objNull, _role] call compile preprocessFile "core\scripts\init_roles.sqf";    
 };
 
 

@@ -24,30 +24,30 @@
     donde los posibles resultados son ["condor", "yaguar", "", nombrePersonalizado]
 */
 
-private _enableAutomatiEnsign = getMissionConfigValue ["ACTIVAR_INSIGNIA_AUTOMATICO",  1] == 1;
-private _ensignIR             = getMissionConfigValue ["INSIGNIA_IR",  0] == 1;
+private _enableAutomatiEnsign   = getMissionConfigValue ["ACTIVAR_INSIGNIA_AUTOMATICO",  1] == 1;
+private _ensignIR               = getMissionConfigValue ["INSIGNIA_IR",  0] == 1;
+private _availableInsigniaTypes = parseSimpleArray getMissionConfigValue ["AVAILABLE_INSIGNIA_TYPES", '[]'];
+
+if (!_enableAutomatiEnsign) exitWith {};
 
 params [["_unit", player]];
 
-private _group = [_unit] call compile preprocessFileLineNumbers "core\scripts\get_group.sqf";
-
 private _isMedic = _unit getVariable ["ace_medical_medicClass", 0];
+if (_isMedic == 1) exitWith { [_unit, 'arga_in_visible_medico'] call BIS_fnc_setUnitInsignia; };
 
-private _ensign = if (_ensignIR) then {"arga_in_ir_arga"} else {"arga_in_visible_arga"};
+private _group = [_unit] call compile preprocessFile "core\scripts\get_group.sqf";
 
-if (!_ensignIR) then {
-    if (_group == "condor") then {_ensign = "arga_in_visible_condor"};
-    if (_group == "yaguar") then {_ensign = "arga_in_visible_yaguar"};
-} else {
-    if (_group == "condor") then {_ensign = "arga_in_ir_condor"};
-    if (_group == "yaguar") then {_ensign = "arga_in_ir_yaguar"};
-};
+private _insignia = if (_ensignIR) then {"arga_in_ir_"} else {"arga_in_visible_"};
 
-_ensign = if (_isMedic > 0) then { "arga_in_visible_medico" } else { _ensign };
+private _insigniaType='';
 
-[_unit, _ensign] call BIS_fnc_setUnitInsignia;
+_insigniaType = ( _availableInsigniaTypes select {_group isEqualTo _x} )select 0;
+_insigniaType = if (isNil "_insigniaType") then {'arga'} else {_insigniaType};
+_insignia = format['%1%2',_insignia,_insigniaType];
 
-//["_ensign:", _ensign] call MIV_fnc_log;
+//hint _insignia;
+
+[_unit, _insignia] call BIS_fnc_setUnitInsignia;
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
