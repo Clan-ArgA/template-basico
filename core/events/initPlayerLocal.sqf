@@ -23,9 +23,7 @@ if (hasInterface) then {
   if(_initialGoggles != "") then {
     player addGoggles _initialGoggles;
   };
-  private _isMedic = player getVariable ["ace_medical_medicClass", 0];
-  private _ing = if (_isMedic > 0) then { "arga_ing_medico" } else { "arga_ing_arga" };
-  [player, _ing] call BIS_fnc_setUnitInsignia;
+
   execVM "core\scripts\setBriefing.sqf";
 };
 

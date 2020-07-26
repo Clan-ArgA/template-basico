@@ -19,6 +19,8 @@ if ((_enableAutomaticRole)) then {
   execVM "core\scripts\set_role.sqf"
 };
 
+private _ensign = [player] execVM "core\scripts\set_insignia.sqf";
+
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/

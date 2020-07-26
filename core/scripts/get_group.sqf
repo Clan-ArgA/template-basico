@@ -2,12 +2,12 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-//params [["_unit", player]]];
-params ["_unit"];
+params [["_unit", player]];
+
 private ["_roleDescriptionArray","_platoon"];
 
 _roleDescriptionArray = (toLower roleDescription leader _unit) splitString "@"; 
-//["_roleDescriptionArrayles:", _roleDescriptionArray] call MIV_fnc_log;
+["_roleDescriptionArrayles:", _roleDescriptionArray] call MIV_fnc_log;
 
 if (count(_roleDescriptionArray) >= 2) then {
 	
@@ -23,11 +23,12 @@ if (count(_roleDescriptionArray) >= 2) then {
 	};
 
 } else {
-	_platoon = groupId group player;
+	_platoon = groupId group _unit;
 };
-//["_platoon return:", _platoon] call MIV_fnc_log;
+
 _platoon
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
+//["_platoon return:", _platoon] call MIV_fnc_log;
