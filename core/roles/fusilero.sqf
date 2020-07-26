@@ -3,7 +3,7 @@
 						  Rol por       |ArgA|Ignacio
 *******************************************************************************/
 
-params [["_unit", player], ["_helmet", "arga_cas_mbosque"], ["_backPack", "arga_m_mbosque_p"], ["_backPackLittle", "arga_m_mbosque_a"]];
+params [["_unit", player], ["_helmet", "arga_cas_combate_bosque_marpat"], ["_backPack", "arga_m_petate_bosque_marpat"], ["_backPackLittle", "arga_m_asalto_bosque_marpat"]];
 
 private _useBigBackPack = false;
 private _back = if (_useBigBackPack) then {_backPack} else {_backPackLittle};
