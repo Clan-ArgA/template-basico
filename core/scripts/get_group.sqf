@@ -23,7 +23,7 @@ if (count(_roleDescriptionArray) >= 2) then {
 	};
 
 } else {
-	_platoon = groupId group _unit;
+	_platoon = toLower groupId group _unit;
 };
 
 _platoon
