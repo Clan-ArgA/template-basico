@@ -18,6 +18,10 @@ if (!_keepRole) then {
     
     private _unitRoleEquipment = [player, _role];
     _unitRoleEquipment append _equipment;
+
+    /* Esto tiene que ser un remoteExec a un script nuevo que llame al core\roles\base y a las dos lineas señaladas en
+       el script initPlayerServer (este llamado primero y las otras dos lineas despues, el llamado en el otro script
+       hacelo tal cual lo haces aca)*/
     _unitRoleEquipment call compile preprocessFile "core\roles\base.sqf";
 
 };

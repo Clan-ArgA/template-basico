@@ -15,9 +15,12 @@ if (call MIV_fnc_isLogSystemEnabled) then {
     _playerUnit setVariable ["MANDI_IS_PLAYER", true];
 };
 
+
 if ((_enableAutomaticRole)) then {
   call compile preprocessFile "core\scripts\set_role.sqf";
 };
+
+/* Mover estas dos lineas al script nuevo*/ 
 _playerUnit action ["SwitchWeapon", _playerUnit, _playerUnit, 100];
 
 _playerUnit call MIV_fnc_setInsignia;
