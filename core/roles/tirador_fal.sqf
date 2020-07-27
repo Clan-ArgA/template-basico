@@ -48,7 +48,6 @@ _unit addItemToBackpack "Laserdesignator";
 _unit addItemToBackpack "Laserbatteries";
 for "_i" from 1 to 5 do {_unit addItemToBackpack "acfaa_20Rndfal_762x51_T";};
 for "_i" from 1 to 12 do {_unit addItemToBackpack "10Rnd_338_Mag";};
-_unit addHeadgear "arga_cas_dmarpat";
 
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";

@@ -11,6 +11,7 @@ private _back = "tf_rt1523g_big_bwmod";
 if (!local _unit) exitWith {};
 
 _unit addBackpack _back;
+_unit addHeadgear _helmet;
 
 _unit addWeapon "ACFAA_FAMCA";
 _unit addPrimaryWeaponItem "rhsusf_acc_su230_mrds";
@@ -41,7 +42,6 @@ for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellYellow";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellRed";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellGreen";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "HandGrenade";};
-_unit addHeadgear "arga_bo_cta";
 
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";

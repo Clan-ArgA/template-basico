@@ -17,10 +17,10 @@ if (call MIV_fnc_isLogSystemEnabled) then {
 
 if ((_enableAutomaticRole)) then {
   call compile preprocessFile "core\scripts\set_role.sqf";
-  _playerUnit action ["SwitchWeapon", _playerUnit, _playerUnit, 100];
 };
+_playerUnit action ["SwitchWeapon", _playerUnit, _playerUnit, 100];
 
-_playerUnit call compile preprocessFile "core\scripts\set_insignia.sqf";
+_playerUnit call MIV_fnc_setInsignia;
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

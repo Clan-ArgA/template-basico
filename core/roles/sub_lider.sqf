@@ -11,6 +11,7 @@ private _back = "tf_rt1523g_big_bwmod";
 if (!local _unit) exitWith {};
 
 _unit addBackpack _back;
+_unit addHeadgear _helmet;
 
 _unit addWeapon "ACFAA_FAMCA";
 _unit addPrimaryWeaponItem "rhsusf_acc_g33_xps3";
@@ -34,16 +35,16 @@ _unit addItemToVest "ACE_HuntIR_monitor";
 _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";
 for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 7 do {_unit addItemToVest "ACE_20Rnd_762x51_M118LR_Mag";};
-_unit addItemToBackpack _helmet;
+//_unit addItemToBackpack _helmet;
 _unit addItemToBackpack "G_Tactical_Black";
 for "_i" from 1 to 6 do {_unit addItemToBackpack "ACE_20Rnd_762x51_M118LR_Mag";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellYellow";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellRed";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellGreen";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "HandGrenade";};
-_unit addHeadgear "arga_bo_tte";
+//_unit addHeadgear "arga_bo_tte";
 removeGoggles _unit;
-_unit addGoggles "G_Aviator";
+//_unit addGoggles "G_Aviator";
 
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";

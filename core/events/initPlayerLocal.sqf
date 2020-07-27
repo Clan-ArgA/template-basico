@@ -71,7 +71,7 @@ if(_disableCustomLoadout) then {
 doStop player;
 player disableAI "MOVE";
 
-player action ["SwitchWeapon", player, player, 100];
+//player action ["SwitchWeapon", player, player, 100];
 
 // player enableSimulationGlobal true;
 // player hideObjectGlobal false;

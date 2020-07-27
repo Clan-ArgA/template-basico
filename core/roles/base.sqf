@@ -7,7 +7,7 @@ params [["_unit", player], "_role", ["_uniform", "arga_u_gen3_bosque_marpat"], [
 if (!local _unit) exitWith {};
 
 private _unitInsignia = [_unit] call BIS_fnc_getUnitInsignia;
-[_unitInsignia] call MIV_fnc_log;
+//["_unitInsignia: ",_unitInsignia] call MIV_fnc_log;
 
 _unit call MANDI_fnc_clearEquipment;
 
@@ -18,7 +18,9 @@ if (! isNil "_role") then {
     [_unit, _helmet, _backPack, _backPackLittle] call compile preprocessFile  _role;
 };
 
-[[_unit, _unitInsignia] call BIS_fnc_setUnitInsignia] call MIV_fnc_log;
+private _result = [_unit, _unitInsignia] call BIS_fnc_setUnitInsignia;
+
+//["BIS_fnc_setUnitInsignia: ",_result] call MIV_fnc_log;
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

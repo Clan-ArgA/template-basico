@@ -42,8 +42,9 @@ for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 9 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 for "_i" from 1 to 10 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";};
-for "_i" from 1 to 42 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
-_unit addHeadgear "arga_cas_combate_bosque_marpat";
+//for "_i" from 1 to 42 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
+for "_i" from 1 to 29 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
+for "_i" from 1 to 10 do {_unit addItemToBackpack "rhs_mag_M397_HET";};
 
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";

@@ -12,7 +12,13 @@ if (typeName _strData != "ARRAY") then {
     _strData = [_strData];
 };
 
-_strData = _strData apply {if (typeName _x != "STRING") then { str _x } else { _x }};
+_strData = _strData apply {
+                        if (isNil "_x") then {
+                            "isNil";
+                        } else {
+                            if (typeName _x != "STRING") then { str _x } else { _x };
+                        };
+                    };
 
 {
 	_data = _data + " " + _x;
