@@ -71,6 +71,9 @@ class CfgFunctions {
       class getRoleCode {
         file = "core\functions\fnc_getRoleCode.sqf";
       };
+      class getEquipment {
+        file = "core\functions\fnc_getEquipment.sqf";
+      };
     };
   };
   class MAC {

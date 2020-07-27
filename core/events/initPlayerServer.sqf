@@ -14,7 +14,7 @@ if (call MIV_fnc_isLogSystemEnabled) then {
     [_playerUnit, "connected"] execVM "core\scripts\db\querys\write_log.sqf";
     _playerUnit setVariable ["MANDI_IS_PLAYER", true];
 };
-["_enableAutomaticRole:",_enableAutomaticRole] call MIV_fnc_log;
+
 if ((_enableAutomaticRole)) then {
   call compile preprocessFile "core\scripts\set_role.sqf";
 };
@@ -25,3 +25,4 @@ _playerUnit call MIV_fnc_setInsignia;
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
+// ["_enableAutomaticRole:",_enableAutomaticRole] call MIV_fnc_log;
