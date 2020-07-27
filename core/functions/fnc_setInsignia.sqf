@@ -38,7 +38,7 @@ if (_isMedic == 1) exitWith { [_unit, 'arga_in_visible_medico'] call BIS_fnc_set
 private _group = [_unit] call compile preprocessFile "core\functions\fnc_getGroup.sqf";
 
 //private _group = [_unit] call MIV_fnc_getGroup;
-["Insignia/_platoon:", _group] call MIV_fnc_log;
+//["Insignia/_platoon:", _group] call MIV_fnc_log;
 
 private _insignia = if (_ensignIR) then {"arga_in_ir_"} else {"arga_in_visible_"};
 

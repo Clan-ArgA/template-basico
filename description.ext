@@ -68,6 +68,9 @@ class CfgFunctions {
       class setInsignia {
         file = "core\functions\fnc_setInsignia.sqf";
       };
+      class getRoleCode {
+        file = "core\functions\fnc_getRoleCode.sqf";
+      };
     };
   };
   class MAC {

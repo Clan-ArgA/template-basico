@@ -1,13 +1,12 @@
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                             Realizado por |ArgA|MIV
 *******************************************************************************/
-
-params [["_box", objNull],["_role", ""]];
-
-if(isNil "_box") exitWith {};
 
 private _camo = parseSimpleArray getMissionConfigValue ["CAMUFLAJE", ["Bosque", "Multicam"]];
 private _camoColor = toLower (_camo select 0);
+
+if (_camoColor == "no editar") exitWith { [] };
+
 private _camoType = toLower (_camo select 1);
 private _uniform = "";
 private _helmet = "";
@@ -34,54 +33,8 @@ if (_camoColor != "personalizado" && _camoColor != "no editar") then {
     _backPackLittle = format ["arga_m_asalto_%1_%2", _camoColor, _camoType];
 };
 
-private _equipment = [];
-
-if (_camoColor != "no editar") then {
-    _equipment = [_uniform, _helmet, _vest, _backPack, _backPackLittle];
-};
-
-if (_role != "") then {
-    [player, _role, _uniform, _helmet, _vest, _backPack, _backPackLittle] call compile preprocessFile "core\roles\base.sqf";
-};
-
-private _roles = [
-    ["Ametrallador M240", "core\roles\ametrallador_m240.sqf"], 
-    ["Ametrallador M249", "core\roles\ametrallador_m249.sqf"], 
-    ["Capitán", "core\roles\lider.sqf"],
-    ["Enfermero", "core\roles\enfermero.sqf"], 
-    ["Francotirador", "core\roles\francotirador.sqf"], 
-    ["Fusilero", "core\roles\fusilero.sqf"],
-    ["Fusilero RA", "core\roles\fusilero_ra.sqf"], 
-    ["Granadero", "core\roles\granadero.sqf"],
-    ["Granadero Bengalas", "core\roles\granadero_bengalas.sqf"], 
-    ["Ingeniero", "core\roles\ingeniero.sqf"],  
-    ["Lanzador AA", "core\roles\lanzador_aa.sqf"], 
-    ["Lanzador AT", "core\roles\lanzador_at.sqf"],
-    ["Líder", "core\roles\lider_peloton.sqf"], 
-    ["Médico de Combate", "core\roles\medico_combate.sqf"], 
-    ["Médico", "core\roles\medico.sqf"], 
-    ["Observador", "core\roles\observador.sqf"], 
-    ["Piloto", "core\roles\piloto.sqf"], 
-    ["Radio Operador", "core\roles\radio_operador.sqf"],
-    ["Teniente", "core\roles\sub_lider.sqf"],
-    ["Tirador FAL", "core\roles\tirador_fal.sqf"],
-    ["Tirador MK11", "core\roles\tirador_mk11.sqf"]
-];
-
-removeAllActions _box;
-
-{
-    _box addAction ["<t color='#ffffff'>" + (_x select 0) + "</t>", {  
-            params ["_target", "_caller", "_actionId", "_arguments"];
-            private _role =  (_arguments select 0);
-            private _params = [_caller, (_role select 1)];
-            _params append (_arguments select 1);
-            _params execVM "core\roles\base.sqf";
-            hint format ["Rol: %1", _role select 0]; 
-        }, [_x, _equipment], 1.5, true, true, "","true", 4, false, "", ""  
-    ];
-} forEach _roles;   
+[_uniform, _helmet, _vest, _backPack, _backPackLittle];
 
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                             Realizado por |ArgA|MIV
 *******************************************************************************/

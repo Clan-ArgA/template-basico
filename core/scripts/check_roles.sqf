@@ -12,13 +12,15 @@ private _defaultRoleList = parseSimpleArray getMissionConfigValue ["AUXILIAR_ROL
 private _badRoles = '';
 private _noChangeRoles = '';
 private _hintString = '';
-private _maintainRole = False;
+private _keepRole = False;
 
 {
 	_role = [_x, _defaultRoleList] call MANDI_fnc_getRole;
-	_maintainRole = _x getVariable ["MIV_MAINTAIN_ROLE", false];
-	if ((typeName _role != "STRING" || _role == "desconocido") && !_maintainRole) then {_badRoles = format['%1%2\n',_badRoles, roleDescription _x]};
-	if (_maintainRole) then {_noChangeRoles = format['%1%2\n',_noChangeRoles, roleDescription _x]};
+	_keepRole = _x getVariable ["MIV_KEEP_ROLE", false];
+	if ((typeName _role != "STRING" || _role == "desconocido") && !_keepRole) then {
+		_badRoles = format['%1%2\n',_badRoles, roleDescription _x]
+	};
+	if (_keepRole) then {_noChangeRoles = format['%1%2\n',_noChangeRoles, roleDescription _x]};
 } foreach playableUnits;
 if (count(_badRoles) > 0) then {
 	_hintString = format['ROLES DESCONOCIDOS:\n%1\n',_badRoles];
