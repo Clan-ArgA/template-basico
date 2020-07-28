@@ -2,7 +2,12 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-private _roleList = call MIV_fnc_get_role_list;
+//private _roleList = call MIV_fnc_get_role_list;
+
+params ["_roleList"];
+
+["_roleList2:",_roleList] call MIV_fnc_log;
+
 private _role = [player, _roleList] call MANDI_fnc_getRole;
 private _keepRole = player getVariable ["MIV_KEEP_ROLE", false];
 private _equipment = [];
@@ -23,6 +28,16 @@ if (!_keepRole) then {
        el script initPlayerServer (este llamado primero y las otras dos lineas despues, el llamado en el otro script
        hacelo tal cual lo haces aca)*/
     _unitRoleEquipment call compile preprocessFile "core\roles\base.sqf";
+
+    //init_objs_server
+    //[[_allStands], "core\scripts\handle_stands.sqf"] remoteExec ["BIS_fnc_execVM", 0, false];
+
+    //de 6 en adelante pasa a la nueva funcion
+
+    /* Mover estas dos lineas al script nuevo*/ 
+    _playerUnit action ["SwitchWeapon", _playerUnit, _playerUnit, 100];
+
+    _playerUnit call MIV_fnc_setInsignia;
 
 };
 
