@@ -17,6 +17,10 @@ if (! isNil "_role") then {
     [_unit, _helmet, _backPack, _backPackLittle] call compile preprocessFile _role;
 };
 
+if(_initialGoggles != "") then {
+    _unit addGoggles _initialGoggles;
+};
+
 [_unit, _unitInsignia] call BIS_fnc_setUnitInsignia;
 
 /*******************************************************************************

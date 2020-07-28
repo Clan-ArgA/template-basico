@@ -2,28 +2,32 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-#define NAME Op. Template Basico            // Colocar nombre de mision (un espacio despues de Op. y sin comillas ni nada)
-#define VERSION v0.3.3                      // Versión de la misión
-#define IMAGE "imgs\portada.paa"            // Colocar nombre y extension de la imagen de portada, ej "core\imgs\portada.jpg"
-#define DESCRIPTION ""                      // Colocar descripcion de la mision entre las comillas
+#define NAME "Op. Template Basico"                  // Colocar nombre de mision
+#define COMPLETE_NAME "Op. Template Basico v0.8.0"  // Nombre y versión de la misión
+#define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "core\imgs\portada.jpg"
+#define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
-author = "ArgA";                            // Editor (Pone tu nombre)
-IMG_LOGO = "imgs\logo.paa";                 // Nota: Las imagenes deberian estar en
-COLOR_AUTOR = "#76a8f7";                    // formato .paa y en proporcion 2x1 (1024x512)
-ES_CAMPANIA = 0;                            // tamaño logo: 323px x 323px
+author = "ArgA";                                    // Editor (Pone tu nombre)
+IMG_LOGO = "imgs\logo.paa";                         // Nota: Las imagenes deberian estar en
+COLOR_AUTOR = "#76a8f7";                            // formato .paa y en proporcion 2x1 (1024x512)
+ES_CAMPANIA = 0;                                    // tamaño logo: 323px x 323px
 NOMBRE_CAMPANIA = "";
-INTRO = 2;                                  // Intros: 1 y 2. Para desactivar: 0
+INTRO_PERSONALIZADA = 0;                            // 1 Si la deseas cargar una intro personalizada (propia)
+                                                    // y en el parametro INTRO la dirección del archivo entre comillas
+                                                    // EJ. INTRO_PERSONALIZADA = 1; INTRO = "scripts\intro_propia.sqf";
+INTRO = 2;                                          // Intros: 1 y 2. Para desactivar: 0
 MAX_DIST_VISION = 4000;
-DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1;  // Equipamiento guardado en arsenal virtual
-ACTIVAR_COMPUTADORA_ARTILLERIA = 1;         // Habilita computadora artilleria poner true. Para que no aparezca poner false
-ACTIVAR_ROL_AUTOMATICO = 1;                 // Habilita la carga de rol al entrar a la misión por descripción de rol
-                                            // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
-ACTIVAR_INSIGNIA_AUTOMATICO = 1;            // Añadir a arga_settings
-INSIGNIA_IR = 0;                            // establece si las insignias son IR o normales
+MIN_DIST_VISION = 800;
+DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1;          // Equipamiento guardado en arsenal virtual
+ACTIVAR_COMPUTADORA_ARTILLERIA = 1;                 // Habilita computadora artilleria poner true. Para que no aparezca poner false
+ACTIVAR_ROL_AUTOMATICO = 0;                         // Habilita la carga de rol al entrar a la misión por descripción de rol
+                                                    // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
+ACTIVAR_INSIGNIA_AUTOMATICO = 1;                    // Añadir a arga_settings
+INSIGNIA_IR = 0;                                    // establece si las insignias son IR o normales
                                             
-DEBUG = 1;                                  // Habilita el modo debug
-ENABLE_LOG_SYSTEM = 1;                      // Habilita el sistema de log
-ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;       // Habilita el sistema de log sólo si el servidor es dedicado (requiere ENABLE_LOG_SYSTEM = 1)
+DEBUG = 1;                                          // Habilita el modo debug
+ENABLE_LOG_SYSTEM = 1;                              // Habilita el sistema de log
+ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;               // Habilita el sistema de log sólo si el servidor es dedicado (requiere ENABLE_LOG_SYSTEM = 1)
 
 //EQUIPAMIENTO
 // Camuflajes disponibles:          Tipos disponibles:
@@ -78,7 +82,7 @@ COMMANDING = 0.75; 		//liderazgo
 
 /* Modificar desde los define arriba de todo, no tocar directamente */
 onLoadName = NAME;	                        // Nombre de carga
-briefingName = NAME VERSION;                // Nombre en briefing
+briefingName = COMPLETE_NAME;               // Nombre en briefing
 onLoadMission = DESCRIPTION;                // Pie de carga
 overviewText = DESCRIPTION;                 // Pie en seleccion de mision
 overviewPicture = IMAGE;                    // Imagen en seleccion de mision

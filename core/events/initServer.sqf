@@ -60,15 +60,9 @@ if (_disableBluforIA == 1) then {
 
 execVM "core\scripts\init_objs_server.sqf";
 
-execVM "core\scripts\init_vcom_driving.sqf";
-
-execVM "core\scripts\smart_tank\smart.sqf";
-
-//["MIV_fnc_isLogSystemEnabled: ",  call MIV_fnc_isLogSystemEnabled] call MIV_fnc_log;
-
 execVM "core\scripts\db\init_log_system.sqf";
 
-if (!isDedicated) then {execVM "core\scripts\check_roles.sqf"};
+if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

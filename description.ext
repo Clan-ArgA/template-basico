@@ -83,16 +83,6 @@ class CfgFunctions {
       };
     };
   };
-  class VCOM {
-    class general {
-      class isDriver{
-        file = "core\functions\fnc_isDriver.sqf";
-      };
-      class vehicleDetection{
-        file = "core\functions\fnc_vehicleDetection.sqf";
-      };
-    };
-  };
 };
 
 /*******************************************************************************

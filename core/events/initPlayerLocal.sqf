@@ -2,10 +2,10 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-private _distanciaVision = getMissionConfigValue ["MAX_DIST_VISION", 4000];
+private _maxDistanciaVision = getMissionConfigValue ["MAX_DIST_VISION", 4000];
+private _minDistanciaVision = getMissionConfigValue ["MIN_DIST_VISION", 800];
 private _initialGoggles =  getMissionConfigValue ["GAFAS_INICIALES", ""];
 private _disableCustomLoadout =  getMissionConfigValue ["DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO", 1] == 1;
-private _intro = getMissionConfigValue ["INTRO", 2];
 private _disableGroupIA = getMissionConfigValue ["DESACTIVAR_IA_DE_GRUPO", 1] == 1;
 private _disableBluforIA = getMissionConfigValue ["DESACTIVAR_TODO_BLUFOR", 0] == 1;
 private _enableArtilleryComputer = getMissionConfigValue ["ACTIVAR_COMPUTADORA_ARTILLERIA",  1] == 1;
@@ -14,17 +14,14 @@ setTerrainGrid 25;
 
 if (hasInterface) then {
   MANDI_ENABLE_DIST = true;
-  [_distanciaVision, 800] execVM "core\scripts\view_distance.sqf";
+  [_maxDistanciaVision, _minDistanciaVision] execVM "core\scripts\view_distance.sqf";
   execVM "core\scripts\check_view.sqf";
-  if (_intro != 0) then {
-    [_intro] execVM "core\scripts\init_intro.sqf";
-  };
+  execVM "core\scripts\init_intro.sqf";
+  execVM "core\scripts\setBriefing.sqf";
   removeGoggles player; //arga_rhs_pm_negro
   if(_initialGoggles != "") then {
     player addGoggles _initialGoggles;
   };
-
-  execVM "core\scripts\setBriefing.sqf";
 };
 
 enableEngineArtillery (_enableArtilleryComputer);
@@ -70,7 +67,6 @@ if(_disableCustomLoadout) then {
 
 doStop player;
 player disableAI "MOVE";
-
 player action ["SwitchWeapon", player, player, 100];
 
 // player enableSimulationGlobal true;
