@@ -21,6 +21,8 @@ _insigniaType = ( _availableInsigniaTypes select {_group isEqualTo _x} ) select 
 _insigniaType = if (isNil "_insigniaType") then {'arga'} else {_insigniaType};
 _insignia = format['%1%2',_insignia,_insigniaType];
 
+[_unit, ""] call BIS_fnc_setUnitInsignia;
+
 [_unit, _insignia] call BIS_fnc_setUnitInsignia;
 
 /*******************************************************************************

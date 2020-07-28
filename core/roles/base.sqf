@@ -4,9 +4,9 @@
 
 params [["_unit", player], "_role", ["_uniform", "arga_u_gen3_bosque_marpat"], ["_helmet", "arga_cas_combate_bosque_marpat"], ["_vest", "arga_c_pesado_bosque_marpat"], ["_backPack", "arga_m_petate_bosque_marpat"], ["_backPackLittle", "arga_m_asalto_bosque_marpat"]];
 
-if (!local _unit) exitWith {};
+private _initialGoggles =  getMissionConfigValue ["GAFAS_INICIALES", ""];
 
-private _unitInsignia = [_unit] call BIS_fnc_getUnitInsignia;
+if (!local _unit) exitWith {};
 
 _unit call MANDI_fnc_clearEquipment;
 
@@ -21,8 +21,7 @@ if(_initialGoggles != "") then {
     _unit addGoggles _initialGoggles;
 };
 
-[_unit, _unitInsignia] call BIS_fnc_setUnitInsignia;
-
+_unit call MIV_fnc_setInsignia;
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/

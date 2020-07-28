@@ -18,6 +18,7 @@ if (hasInterface) then {
   execVM "core\scripts\check_view.sqf";
   execVM "core\scripts\init_intro.sqf";
   execVM "core\scripts\setBriefing.sqf";
+  call MIV_fnc_setInsignia;
   removeGoggles player; //arga_rhs_pm_negro
   if(_initialGoggles != "") then {
     player addGoggles _initialGoggles;
