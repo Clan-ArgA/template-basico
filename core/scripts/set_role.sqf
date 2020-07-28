@@ -35,9 +35,9 @@ if (!_keepRole) then {
     //de 6 en adelante pasa a la nueva funcion
 
     /* Mover estas dos lineas al script nuevo*/ 
-    _playerUnit action ["SwitchWeapon", _playerUnit, _playerUnit, 100];
+    player action ["SwitchWeapon", player, player, 100];
 
-    _playerUnit call MIV_fnc_setInsignia;
+    player call MIV_fnc_setInsignia;
 
 };
 
