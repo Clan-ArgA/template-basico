@@ -2,12 +2,20 @@
                             Realizado por |ArgA|MIV
 *******************************************************************************/
 
-params ["_unit","_description"];
+params ["_fileName"];
 
-_unit setVariable ["MIV_KEEP_ROLE", ["#nc", _description] call BIS_fnc_inString];
-_description = [_description, "#nc", ""] call MIV_fnc_replaceInString;
+private _existsFile = True;
+private _fileLoaded = "";
 
-_description;
+try{
+	_fileLoaded = loadFile _fileName; }
+catch{ 
+	_existsFile = False;
+};
+
+if (_fileLoaded == "") then { _existsFile = False; };
+
+_existsFile
 
 /*******************************************************************************
                             Realizado por |ArgA|MIV

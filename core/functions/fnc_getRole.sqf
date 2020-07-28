@@ -5,17 +5,13 @@
 private _defaultRoleList = parseSimpleArray getMissionConfigValue ["AUXILIAR_ROLE_LIST", '[]'];
 
 params [["_unit", player], ["_roleList", _defaultRoleList]];
-/*{
-    ["_roleList 1:", _x] call MIV_fnc_log;
-} forEach _roleList;
-*/
+
 if (count(_roleList) == 0) then { _roleList = _defaultRoleList};
 
 private _role = _unit getVariable ["MANDI_ROL", "desconocido"];
 
 if (typeName _role != "SCALAR") then {
     if (_role == "desconocido" && !isNil "_unit") then { 
-        //private ["_code", "_roleName", "_description"];
         private ["_description"];
         _description = ((toLower roleDescription _unit) splitString "@") select 0;
         if (!isNil "_description") then {
@@ -33,6 +29,11 @@ _role;
 /*******************************************************************************
                             Realizado por |ArgA|MIV
 *******************************************************************************/
+
+/*{
+    ["_roleList 1:", _x] call MIV_fnc_log;
+} forEach _roleList;
+*/
 
 /*
  Detectar si en roleDescription esta el tag #nc, segun el resultado, setear

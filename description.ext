@@ -77,6 +77,9 @@ class CfgFunctions {
       class parseRole {
         file = "core\functions\fnc_parseRole.sqf";
       };
+      class fileExists {
+        file = "core\functions\fnc_fileExists.sqf";
+      };
     };
   };
   class MAC {
