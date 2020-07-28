@@ -20,48 +20,66 @@ class CfgFunctions {
   class MANDI {
     class general {
       class setBriefing {
-        file = "functions\fnc_setBriefing.sqf";
+        file = "core\functions\fnc_setBriefing.sqf";
       };
       class makeInfo {
-        file = "functions\fnc_makeInfo.sqf";
+        file = "core\functions\fnc_makeInfo.sqf";
       };
       class clearEquipment {
-        file = "functions\fnc_clearEquipment.sqf";
+        file = "core\functions\fnc_clearEquipment.sqf";
       };
       class getObjects_server {
-        file = "functions\fnc_getObjects_server.sqf";
+        file = "core\functions\fnc_getObjects_server.sqf";
       };
       class displayObject {
-        file = "functions\fnc_displayObject.sqf";
+        file = "core\functions\fnc_displayObject.sqf";
       };
       class setStand {
-        file = "functions\fnc_setStand.sqf";
+        file = "core\functions\fnc_setStand.sqf";
       };
       class getRole {
-        file = "functions\fnc_getRole.sqf";
+        file = "core\functions\fnc_getRole.sqf";
       };
       class getState {
-        file = "functions\fnc_getState.sqf";
+        file = "core\functions\fnc_getState.sqf";
       };
       class trim {
-        file = "functions\fnc_trim.sqf";
+        file = "core\functions\fnc_trim.sqf";
+      };
+      class formatDate {
+        file = "core\functions\fnc_formatDate.sqf";
+      };
+    };
+  };
+  class MIV {
+    class general {
+      class log {
+        file = "core\functions\fnc_log.sqf";
+      };
+      class isLogSystemEnabled {
+        file = "core\functions\fnc_isLogSystemEnabled.sqf";
+      };
+      class replaceInString {
+        file = "core\functions\fnc_replaceInString.sqf";
+      };
+      class getGroup {
+        file = "core\functions\fnc_getGroup.sqf";
+      };
+      class setInsignia {
+        file = "core\functions\fnc_setInsignia.sqf";
+      };
+      class getRoleCode {
+        file = "core\functions\fnc_getRoleCode.sqf";
+      };
+      class getEquipment {
+        file = "core\functions\fnc_getEquipment.sqf";
       };
     };
   };
   class MAC {
     class general {
       class switchMove{
-        file = "functions\fnc_switchMove.sqf";
-      };
-    };
-  };
-  class VCOM {
-    class general {
-      class isDriver{
-        file = "functions\fnc_isDriver.sqf";
-      };
-      class vehicleDetection{
-        file = "functions\fnc_vehicleDetection.sqf";
+        file = "core\functions\fnc_switchMove.sqf";
       };
     };
   };
