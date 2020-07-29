@@ -23,7 +23,13 @@ ACTIVAR_COMPUTADORA_ARTILLERIA = 1;                 // Habilita computadora arti
 ACTIVAR_ROL_AUTOMATICO = 0;                         // Habilita la carga de rol al entrar a la misión por descripción de rol
                                                     // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
 ACTIVAR_INSIGNIA_AUTOMATICO = 1;                    // Añadir a arga_settings
-INSIGNIA_IR = 0;                                    // establece si las insignias son IR o normales
+INSIGNIA_IR = 0;                                    // Establece si las insignias son IR o normales
+ACTIVAR_RECOLECTOR_BASURA = 1;                      // Activa la funcion que borra las IAs muertas y vehículos destruidos. 1: Activado, 2: Desactivado
+RB_TIEMPO_ESPERA_HOMBRES = 120;                     // Tiempo en segundos de espera para eliminar soldados enemigos. 0 Desactiva el borrado de enemigos
+RB_TIEMPO_ESPERA_VEHICULOS = 70;                    // Tiempo en segundos de espera para eliminar vehículos enemigos. 0 Desactiva el borrado de vehículos
+RB_TIEMPO_ESPERA_BLINDADOS = 70;                    // Tiempo en segundos de espera para eliminar blindados enemigos. 0 Desactiva el borrado de blindados
+RB_TIEMPO_ESPERA_AEREOS = 70;                       // Tiempo en segundos de espera para eliminar aereos enemigos. 0 Desactiva el borrado de aereos
+RB_DISTANCIA_JUGADORES = 200;                       // Distancia en metros a los jugadores a partir de la cual se borra. 0 desactiva el borrado por distancia
 
 /* 
 EQUIPAMIENTO
