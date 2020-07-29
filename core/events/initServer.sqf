@@ -66,8 +66,6 @@ execVM "core\scripts\init_garbage_collector.sqf";
 
 if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };
 
-
-
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/

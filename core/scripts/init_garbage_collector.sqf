@@ -4,9 +4,10 @@
 
 _unitIA =  allUnits select {!isPlayer _x};
 _unitIa append vehicles;
+
+/* Que no le ponga el eventHanddler si no esta activado el garbage collector para este tipo de objeto en el arga_settings */
 {
 	_x addeventhandler ["Killed", {_this execVM "core\scripts\garbage_collector.sqf"}];
-	
 } forEach _unitIA;
 
 /*******************************************************************************

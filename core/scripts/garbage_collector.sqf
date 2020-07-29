@@ -2,7 +2,7 @@
                             Realizado por |ArgA|MIV
 *******************************************************************************/
 
-
+/* No seas pajero, cambiale el nombre*/
 private _enableAutomaticRole = getMissionConfigValue ["ACTIVAR_RECOLECTOR_BASURA",  1] == 1;
 
 if (!_enableAutomaticRole) exitWith {};
@@ -19,7 +19,7 @@ private _minimunDistance = getMissionConfigValue ["RB_DISTANCIA_JUGADORES", 0];
 private _enemyUnitArray  = ["MAN","CAR","TANK","AIR"];
 private _waitTimeArray   = [_waitTimeMan,_waitTimeVehicle,_waitTimeArmor,_waitTimeAir];
 private _position        = GetPosAsl _enemyUnit;
-private _deleteUnit      = False;
+private _deleteUnit      = false;
 
 _position params["_coordX","_coordY","_coordZ"];
 
@@ -29,7 +29,7 @@ _waitTime = 20;
 	if (_enemyUnit isKindOf _x) exitWith {
 		if ((_waitTimeArray select _forEachIndex) != 0) then {
 			_waitTime   = _waitTimeArray select _forEachIndex;
-			_deleteUnit = True;
+			_deleteUnit = true;
 			if (_x == "MAN") then { _isMan = true };
 		};
 	};
