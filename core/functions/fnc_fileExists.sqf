@@ -4,16 +4,16 @@
 
 params ["_fileName"];
 
-private _existsFile = True;
+private _existsFile = true;
 private _fileLoaded = "";
 
 try{
 	_fileLoaded = loadFile _fileName; }
 catch{ 
-	_existsFile = False;
+	_existsFile = false;
 };
 
-if (_fileLoaded == "") then { _existsFile = False; };
+if (_fileLoaded == "") then { _existsFile = false; };
 
 _existsFile
 

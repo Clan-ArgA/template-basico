@@ -12,7 +12,7 @@ private _defaultRoleList = parseSimpleArray getMissionConfigValue ["AUXILIAR_ROL
 private _badRoles = '';
 private _noChangeRoles = '';
 private _hintString = '';
-private _keepRole = False;
+private _keepRole = false;
 
 {
 	_role = [_x, _defaultRoleList] call MANDI_fnc_getRole;

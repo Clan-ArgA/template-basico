@@ -2,14 +2,29 @@
                             Realizado por |ArgA|MIV
 *******************************************************************************/
 
-_unitIA =  allUnits select {!isPlayer _x};
-_unitIa append vehicles;
+if (getMissionConfigValue ["ACTIVAR_RECOLECTOR_BASURA",  1] == 0) exitWith {};
 
-/* Que no le ponga el eventHanddler si no esta activado el garbage collector para este tipo de objeto en el arga_settings */
+private _unitIA = [];
+private _waitingTimeName = ["RB_TIEMPO_ESPERA_VEHICULOS","RB_TIEMPO_ESPERA_BLINDADOS", "RB_TIEMPO_ESPERA_AEREOS"];
+private _enemyUnitType   = ["CAR","TANK","AIR"];
+
+if (getMissionConfigValue ["RB_TIEMPO_ESPERA_HOMBRES", 0] != 0) then {
+    _unitIA append (allUnits select {!isPlayer _x});
+    // _unitIA append (allUnits-allPlayers);
+};
+
 {
-	_x addeventhandler ["Killed", {_this execVM "core\scripts\garbage_collector.sqf"}];
+    if (getMissionConfigValue [_x, 0] != 0) then {
+        _unitIA append vehicles select {_x isKindOf _enemyUnitType select _foreachIndex};
+    };    
+    
+} forEach _waitingTimeName;
+
+{
+    _x addeventhandler ["Killed", {_this execVM "core\scripts\garbage_collector.sqf"}];
 } forEach _unitIA;
 
 /*******************************************************************************
                             Realizado por |ArgA|MIV
 *******************************************************************************/
+//[_unitIA] call MIV_fnc_log;

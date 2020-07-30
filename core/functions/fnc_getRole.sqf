@@ -42,7 +42,7 @@ _role;
  Si el tag #nc esta presente, quitarlo de la string de comparación. (_description)
  (checkear que el tag pueda estar al principio, final, medio, cualquier lado. y quitarlo bien.)
 
- Detectar esta variable (con default False) en la funcion que setea el rol y actuar como corresponda.
+ Detectar esta variable (con default false) en la funcion que setea el rol y actuar como corresponda.
 */
 
 /*
