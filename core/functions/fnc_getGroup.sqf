@@ -6,7 +6,7 @@ private _argaPlatoonList = parseSimpleArray getMissionConfigValue ["ARGA_PLATOON
 
 params [["_unit", player]];
 
-private ["_roleDescriptionArray","_platoon"];
+private ["_roleDescriptionArray","_platoon","_argaPlatoon"];
 
 _roleDescriptionArray = (toLower roleDescription leader _unit) splitString "@"; 
 

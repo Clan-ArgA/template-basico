@@ -2,10 +2,9 @@
                             Realizado por |ArgA|MIV
 *******************************************************************************/
 
-/* No seas pajero, cambiale el nombre*/
-private _enableAutomaticRole = getMissionConfigValue ["ACTIVAR_RECOLECTOR_BASURA",  1] == 1;
+private _enableGarbageCollector = getMissionConfigValue ["ACTIVAR_RECOLECTOR_BASURA",  1] == 1;
 
-if (!_enableAutomaticRole) exitWith {};
+if (!_enableGarbageCollector) exitWith {};
 
 params ["_enemyUnit"];
 
@@ -38,10 +37,11 @@ _waitTime = 20;
 if (_deleteUnit) then {
 	waitUntil { (velocity _enemyUnit select 0) + (velocity _enemyUnit select 1) + (velocity _enemyUnit select 2) == 0 };
 
-	sleep _waitTime;
 	if (_minimunDistance != 0 ) then {
 		waitUntil {	count(allPlayers select {sleep 5; (_position distance _x) < _minimunDistance }) == 0 };
 	};
+
+	sleep _waitTime;
 
 	if (_isMan) then {
 		_enemyUnit SetPosASL [_coordX, _coordY, 0];

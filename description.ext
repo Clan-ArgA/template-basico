@@ -80,6 +80,10 @@ class CfgFunctions {
       class fileExists {
         file = "core\functions\fnc_fileExists.sqf";
       };
+      class removeAccentMark {
+        file = "core\functions\fnc_removeAccentMark.sqf";
+      };
+      
     };
   };
   class MAC {
