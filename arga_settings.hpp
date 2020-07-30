@@ -67,12 +67,19 @@ RECURSOS = ["", ""];
 ENEMIGOS = ["", ""];
 ////////////////////////////////////////////////////////////////////////////////
 
+/* Borrado de IAs enemigas muertas y vehículos destruidos */
 ACTIVAR_RECOLECTOR_BASURA = 1;                      // Activa la funcion que borra las IAs muertas y vehículos destruidos. 1: Activado, 0: Desactivado
 RB_TIEMPO_ESPERA_HOMBRES = 120;                     // Tiempo en segundos de espera para eliminar soldados enemigos. 0 Desactiva el borrado de enemigos
 RB_TIEMPO_ESPERA_VEHICULOS = 0;                     // Tiempo en segundos de espera para eliminar vehículos enemigos. 0 Desactiva el borrado de vehículos
 RB_TIEMPO_ESPERA_BLINDADOS = 0;                     // Tiempo en segundos de espera para eliminar blindados enemigos. 0 Desactiva el borrado de blindados
 RB_TIEMPO_ESPERA_AEREOS = 0;                        // Tiempo en segundos de espera para eliminar aereos enemigos. 0 Desactiva el borrado de aereos
 RB_DISTANCIA_JUGADORES = 200;                       // Distancia en metros a los jugadores a partir de la cual se borra. 0 desactiva el borrado por distancia
+////////////////////////////////////////////////////////////////////////////////
+
+/* Camuflaje */
+ACTIVAR_COEFICIENTES_CAMUFLAJE = 0;                 // 1 Activa esta función. 0 la desactiva.
+COEFICIENTE_AUDICION = 1;                           // Valores menores hacen al jugador mas difícil de escuchar. Valores decimales ente 0 y 1.
+COEFICIENTE_CAMUFLAJE = 1;                          // Valores menores hacen al jugador mas difícil de detectar. Valores decimales ente 0 y 1.
 ////////////////////////////////////////////////////////////////////////////////
 
 /* IA - CONFIGURACION */
@@ -89,7 +96,8 @@ RELOAD_SPEED = 0.25; 	                            //velocidad de recarga
 COMMANDING = 0.75; 		                            //liderazgo
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Modificar desde los define arriba de todo, no tocar directamente */
+/* Modificar desde los define que estan arriba de todo.
+NO TOCAR LO QUE ESTA ABAJO DE ESTA LINEA             */
 onLoadName = NAME;	                                // Nombre de carga
 briefingName = COMPLETE_NAME;                       // Nombre en briefing
 onLoadMission = DESCRIPTION;                        // Pie de carga
