@@ -15,8 +15,9 @@ if (typeName _role != "SCALAR") then {
         private ["_description"];
         _description = ((toLower roleDescription _unit) splitString "@") select 0;
         if (!isNil "_description") then {
-            _description = [_unit, _description] call MIV_fnc_parseRole;
-            _role   =   [_description,_roleList] call MIV_fnc_getRoleCode;
+            _description =    [_unit, _description] call MIV_fnc_parseRole;
+            _role        = [_description,_roleList] call MIV_fnc_getRoleCode;
+            _role        =                    _role call MIV_fnc_removeAccentMark;
             if (_role != "") then{
                 _unit setVariable ["MANDI_ROL", _role];
             };

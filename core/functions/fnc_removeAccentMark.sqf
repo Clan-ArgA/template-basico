@@ -13,6 +13,7 @@ private _parseString = "";
 	_character = toString [_x];
 	_vowel = (( _vowelsArray select {_character in (_x select 1) } ) select 0) select 0;
 	_parseString = format["%1%2",_parseString,  if (isNil "_vowel") then {_character} else {_vowel}];
+	
 } forEach toArray _string;
 
 _parseString

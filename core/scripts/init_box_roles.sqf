@@ -18,7 +18,6 @@ private ["_roleCode", "_rolePath","_role"];
     
     _roleCode = [toLower _role, []] call MIV_fnc_getRoleCode;
     _rolePath = format ['core\roles\%1.sqf', _roleCode];
-    ["_roleCode:",_roleCode] call MIV_fnc_log;
 	
 	_box addAction ["<t color='#ffffff'>" + _x + "</t>", {  
             params ["_target", "_caller", "_actionId", "_arguments"];

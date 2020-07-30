@@ -19,7 +19,7 @@ private _position        = GetPosAsl _enemyUnit;
 private _deleteUnit      = false;
 
 _position params["_coordX","_coordY","_coordZ"];
-hint 'activado';
+
 _isMan = false;
 //_waitTime = 300;
 {
