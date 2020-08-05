@@ -93,9 +93,11 @@ class CfgFunctions {
     };
   };
   class TOV {
+    class general {
       class SimpleConvoy {
         file = "core\functions\fnc_SimpleConvoy.sqf";
       };
+    }
   };
 };
 
