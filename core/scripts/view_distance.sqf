@@ -50,7 +50,7 @@ while {true} do {
             setViewDistance _defaultDistance;
         };
     };
-    if (viewDistance != _maxDistance && _inAircraft && MANDI_ENABLE_DIST) then {
+    if (viewDistance != _maxDistance && _inAircraft && MANDI_ENABLE_DIST && assignedVehicleRole player select 0 != "cargo") then {
         setViewDistance _maxDistance;
     };
     sleep 5;
@@ -59,3 +59,8 @@ while {true} do {
 /*******************************************************************************
                           Realizado por |ArgA|MandI
 *******************************************************************************/
+
+//vehicle player isKindOf "helicopter" && assignedVehicleRole player select 0 != "cargo"
+//https://forums.bohemia.net/forums/topic/222871-check-if-player-is-in-a-specific-turret/
+
+//https://forums.bohemia.net/forums/topic/151732-b2-scripts/
