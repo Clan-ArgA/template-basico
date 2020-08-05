@@ -83,7 +83,6 @@ class CfgFunctions {
       class removeAccentMark {
         file = "core\functions\fnc_removeAccentMark.sqf";
       };
-      
     };
   };
   class MAC {
@@ -92,6 +91,11 @@ class CfgFunctions {
         file = "core\functions\fnc_switchMove.sqf";
       };
     };
+  };
+  class TOV {
+      class SimpleConvoy {
+        file = "core\functions\fnc_SimpleConvoy.sqf";
+      };
   };
 };
 
