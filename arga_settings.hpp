@@ -109,7 +109,7 @@ loadScreen = IMAGE;                                 // Imagen en carga
 /* Log system */
 DEBUG = 1;                                          // Habilita el modo debug
 ENABLE_LOG_SYSTEM = 1;                              // Habilita el sistema de log
-ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;               // Habilita el sistema de log sólo si el servidor es dedicado (requiere ENABLE_LOG_SYSTEM = 1)
+ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 0;               // Habilita el sistema de log sólo si el servidor es dedicado (requiere ENABLE_LOG_SYSTEM = 1)
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Listas auxiliares */
