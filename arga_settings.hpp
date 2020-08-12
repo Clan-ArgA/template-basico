@@ -54,6 +54,7 @@ BRIEFING
     Cada elemento del array es un parrafo
     Ejemplo: ["Primer parrafo", "Segundo parrafo"] 
 */
+ACTIVAR_BRIEFING = 1;
 CARACTER = "No Oficial";
 HORARIO = "";
 FECHA = "";
