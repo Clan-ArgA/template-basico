@@ -27,28 +27,30 @@ _loadout        = _loadout        joinString "\\n\\n";
 _enemyForces    = _enemyForces    joinString "\\n\\n";
 
 private _missionsValues = [
-                            ["mission",_mission],
-                            ["date",_date],
-                            ["time",_time],
-                            ["mode",_mode],
-                            ["weather",_weather],
-                            ["location",_location],
-                            ["isCampaign",_isCampaign],
-                            ["campaignName",_campaignName],
-                            ["briefing",[
+                            ["mission", _mission],
+                            ["mode", _mode],
+                            ["isCampaign",_ isCampaign],
+                            ["campaignName", _campaignName],
+                            ["briefing", [
                                             ["situation", _situation],
-                                            ["storySituation",_storySituation],
-                                            ["intelligence",_intelligence],
-                                            ["objectives",_objectives],
-                                            ["loadout",_loadout],
-                                            ["enemyForces",_enemyForces]
-                                        ]
+                                            ["storySituation", _storySituation],
+                                            ["intelligence", _intelligence],
+                                            ["objectives", _objectives],
+                                            ["loadout", _loadout],
+                                            ["enemyForces", _enemyForces],
+                                            ["weather", _weather],
+                                            ["location", _location],
+                                            ["date", _date],
+                                            ["time", _time]
+                                         ]
                             ],
-                            ["author",_author],
-                            ["worldName",_worldName]
+                            ["author", _author],
+                            ["worldName", _worldName]
                           ];
 
-[_missionsValues] call MIV_fnc_create_jsonObject;
+private _result  = [_missionsValues] call MIV_fnc_create_jsonObject;
+
+[_result, "'", "\'"] call MIV_fnc_replaceInString;
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

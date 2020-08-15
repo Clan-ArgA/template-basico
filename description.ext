@@ -84,7 +84,7 @@ class CfgFunctions {
         file = "core\functions\fnc_removeAccentMark.sqf";
       };
       class create_jsonObject {
-        file = "core\functions\create_jsonObject.sqf";
+        file = "core\functions\fnc_create_jsonObject.sqf";
       };
     };
   };
