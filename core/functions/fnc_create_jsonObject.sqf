@@ -13,9 +13,9 @@ private _dataResult   = [];
 } forEach _dataArray;
 
 _dataResult = format ["{%1}",(_dataResult joinString ",")];
-_dataResult
 
- 
+_dataResult;
+
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
