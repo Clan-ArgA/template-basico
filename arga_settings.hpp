@@ -118,6 +118,7 @@ AUXILIAR_ROLE_LIST = [["lider","Líder",34],["sub_lider","Sub Líder",35],["lide
 ARGA_PLATOON_LIST = [["condor",["condor","cóndor"]],["yaguar",["yaguar","yaguarete","yaguareté"]]];
 AVAILABLE_INSIGNIA_TYPES = ["arga","condor","yaguar","medico"];
 BOX_ROLE_LIST = ["Ametrallador M240","Ametrallador M249","Capitan","Enfermero","Francotirador","Fusilero","Fusilero RA","Granadero","Granadero c/Bengalas","Ingeniero","Lanzador AA","Lanzador AT","Líder","Médico de Combate","Médico","Observador","Piloto","Radio Operador","Teniente","Tirador FAL","Tirador MK11"];
+STAFF_ROLE = [["Nico","Lanzador AT"],["Jhon","Ametrallador"],["Cero","Tirador fal"],["Camello","Lanzador AT"],["Maxi","Ametrallador"],["Choqqo","Ingeniero"],["Ignacio","Ametrallador"],["Paco","Granadero"],["Zorro","Granadero"],["Maxtor","Ametrallador"],["Vultur","Granadero"],["Veck","Ingeniero"],["Ranquel","Médico"],["Labrador","Médico"],["Locofer","Ingeniero"],["Lince","Ametrallador"],["Joaco","Tirador fal"],["Shaggy","Granadero"],["Timor","Ingeniero"],["Axel","Ametrallador"],["Night","Médico"],["Heiz","Ametrallador"],["Guille","Tirador fal"],["Rodo","Ingeniero"],["Vigua","Ametrallador"],["Roke","Lanzador AT"],["Jaairo","Tirador fal"],["Kalam","Ingeniero"],["Fix","Lanzador AT"],["Juani","Ametrallador"],["Huaiqui","Granadero"],["Matias","Ingeniero"],["Soda","Ingeniero"],["Tinga","Ingeniero"],["Akin","Ingeniero"]];
 ////////////////////////////////////////////////////////////////////////////////
 
 /*******************************************************************************
