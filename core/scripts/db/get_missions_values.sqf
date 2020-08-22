@@ -29,7 +29,7 @@ _enemyForces    = _enemyForces    joinString "\\n\\n";
 private _missionsValues = [
                             ["mission", _mission],
                             ["mode", _mode],
-                            ["isCampaign",_ isCampaign],
+                            ["isCampaign", _isCampaign],
                             ["campaignName", _campaignName],
                             ["briefing", [
                                             ["situation", _situation],
