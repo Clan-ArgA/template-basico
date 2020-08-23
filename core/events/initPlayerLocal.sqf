@@ -78,8 +78,7 @@ if (_enablestealthCoef) then {
   player setUnitTrait ["camouflageCoef  ",_camouflageCoef];
 };
 
-// player enableSimulationGlobal true;
-// player hideObjectGlobal false;
+// player allowDamage true;
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
