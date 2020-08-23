@@ -78,8 +78,11 @@ if (_enablestealthCoef) then {
   player setUnitTrait ["camouflageCoef  ",_camouflageCoef];
 };
 
-// player enableSimulationGlobal true;
-// player hideObjectGlobal false;
+player setVehicleInit "this disableAI 'PATH';this disableAI 'MOVE';this allowDamage false;this action ['SwitchWeapon', this, this, 100];"
+
+sleep 5;
+
+player allowDamage true;
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
