@@ -2,7 +2,11 @@
                           Realizado por |ArgA|MandI
 *******************************************************************************/
 
-params [ ["_unit", objNull, [objNull]]];
+params ["_unit"];
+
+if (isNIl "_unit") exitWith { };
+
+if (!isPlayer _unit) exitWith { };
 
 _unit disableAI "PATH";
 _unit disableAI "MOVE";
