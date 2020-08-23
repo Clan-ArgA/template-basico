@@ -100,7 +100,7 @@ class CfgFunctions {
 class Extended_InitPost_EventHandlers {
     class CAManBase {
         class initpost_units {
-            serverInit = "[_this] call compile preprocessFileLineNumbers 'core\scripts\init_man.sqf'";
+            init = "[_this] call compile preprocessFileLineNumbers 'core\scripts\init_man.sqf'";
         };
     };
 };
