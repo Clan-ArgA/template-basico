@@ -8,8 +8,7 @@ if (isNil "_unit") exitWith { };
 
 if (!isPlayer _unit) exitWith { };
 
-_unit disableAI "PATH";
-_unit disableAI "MOVE";
+_unit disableAI "ALL";
 _unit allowDamage false;
 _unit action ["SwitchWeapon", _unit, _unit, 100];
 

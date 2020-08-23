@@ -78,7 +78,7 @@ if (_enablestealthCoef) then {
   player setUnitTrait ["camouflageCoef  ",_camouflageCoef];
 };
 
-player setVehicleInit "this disableAI 'PATH';this disableAI 'MOVE';this allowDamage false;this action ['SwitchWeapon', this, this, 100];"
+player setVehicleInit "this disableAI 'ALL';this allowDamage false;this action ['SwitchWeapon', this, this, 100];"
 
 sleep 5;
 
