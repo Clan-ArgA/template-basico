@@ -4,8 +4,8 @@
 
 params ["_roleList"];
 
-private _role = [player, _roleList] call MANDI_fnc_getRole;
-private _keepRole = player getVariable ["MIV_KEEP_ROLE", false];
+private _role      = [player, _roleList] call MANDI_fnc_getRole;
+private _keepRole  = player getVariable ["MIV_KEEP_ROLE", false];
 private _equipment = [];
 
 if (!_keepRole) then {

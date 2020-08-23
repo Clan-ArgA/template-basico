@@ -23,7 +23,7 @@ if(_initialGoggles != "") then {
 
 _unit call MIV_fnc_setInsignia;
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizadoor |ArgA|Ignacio
 *******************************************************************************/
 
 //["_role: ",_role] call MIV_fnc_log;

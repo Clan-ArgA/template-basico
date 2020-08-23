@@ -41,7 +41,7 @@ if (typeName _unit != "ARRAY") then {
 };
 
 private _roleList = call MIV_fnc_get_role_list;
-private ["_role", "_query", "_valuesQuery", "_values", "_role", "_state", "_id", "_logInfo", "_createdAt"];
+private ["_role", "_query", "_valuesQuery", "_values", "_state", "_id", "_logInfo", "_createdAt"];
 private _querys = [];
 
 {

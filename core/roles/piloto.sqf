@@ -30,7 +30,7 @@ for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_elasticBandage";};
 for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_packingBandage";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "adv_aceSplint_splint";};
 _unit addItemToUniform "ACE_EarPlugs";
-_unit addItemToVest "ACE_DAGR";
+//_unit addItemToVest "ACE_DAGR";
 _unit addItemToVest "ACE_microDAGR";
 _unit addItemToVest "ACE_MapTools";
 _unit addItemToVest "ACE_Flashlight_XL50";

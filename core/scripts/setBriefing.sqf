@@ -1,17 +1,20 @@
 ﻿/*******************************************************************************
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
+
+if (getMissionConfigValue ["ACTIVAR_BRIEFING", 1] != 1) exitWith { };
+
 private _mode = getMissionConfigValue ["CARACTER", "No oficial"];
 private _time = getMissionConfigValue ["HORARIO", ""];
 private _date = getMissionConfigValue ["FECHA", ""];
 private _weather = getMissionConfigValue ["CLIMA", ""];
 private _location = getMissionConfigValue ["UBICACION", ""];
-private _situation = getMissionConfigValue ["SITUACION", ""];
-private _storySituation = getMissionConfigValue ["SITUACION_HISTORICA", ""];
-private _intelligence = getMissionConfigValue ["EXTRACTO_INTELIGENCIA", ""];
-private _objectives = getMissionConfigValue ["OBJETIVOS", []];
-private _loadout = getMissionConfigValue ["RECURSOS", []];
-private _enemyForces = getMissionConfigValue ["ENEMIGOS", []];
+private _situation = getMissionConfigValue ["SITUACION", "[]"];
+private _storySituation = getMissionConfigValue ["SITUACION_HISTORICA", "[]"];
+private _intelligence = getMissionConfigValue ["EXTRACTO_INTELIGENCIA", "[]"];
+private _objectives = getMissionConfigValue ["OBJETIVOS", "[]"];
+private _loadout = getMissionConfigValue ["RECURSOS", "[]"];
+private _enemyForces = getMissionConfigValue ["ENEMIGOS", "[]"];
 private _author = getMissionConfigValue ["author", "ArgA"];
 
 private _info = [

@@ -27,9 +27,10 @@ private ["_code", "_roleName"];
 private _role = "";
 
 _description = _description call MANDI_fnc_trim;
+_description = _description call MIV_fnc_removeAccentMark;
 {  
 	_code = _x select 0;  
-	_roleName = _x select 1;
+	_roleName = (_x select 1) call MIV_fnc_removeAccentMark;
 	
 	// Si no tiene rol asignado elegimos el ID del rol alternativo
 	if (_code == "") then {

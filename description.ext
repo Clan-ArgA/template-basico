@@ -74,6 +74,18 @@ class CfgFunctions {
       class getEquipment {
         file = "core\functions\fnc_getEquipment.sqf";
       };
+      class parseRole {
+        file = "core\functions\fnc_parseRole.sqf";
+      };
+      class fileExists {
+        file = "core\functions\fnc_fileExists.sqf";
+      };
+      class removeAccentMark {
+        file = "core\functions\fnc_removeAccentMark.sqf";
+      };
+      class create_jsonObject {
+        file = "core\functions\fnc_create_jsonObject.sqf";
+      };
     };
   };
   class MAC {
@@ -83,6 +95,14 @@ class CfgFunctions {
       };
     };
   };
+};
+
+class Extended_InitPost_EventHandlers {
+    class CAManBase {
+        class initpost_units {
+            init = "_this call compile preprocessFileLineNumbers 'core\scripts\init_man.sqf'";
+        };
+    };
 };
 
 /*******************************************************************************

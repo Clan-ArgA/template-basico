@@ -2,16 +2,16 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-private _camo = parseSimpleArray getMissionConfigValue ["CAMUFLAJE", ["Bosque", "Multicam"]];
+private _camo      = parseSimpleArray getMissionConfigValue ["CAMUFLAJE", ["Bosque", "Multicam"]];
 private _camoColor = toLower (_camo select 0);
 
 if (_camoColor == "no editar") exitWith { [] };
 
-private _camoType = toLower (_camo select 1);
-private _uniform = "";
-private _helmet = "";
-private _vest = "";
-private _backPack = "";
+private _camoType       = toLower (_camo select 1);
+private _uniform        = "";
+private _helmet         = "";
+private _vest           = "";
+private _backPack       = "";
 private _backPackLittle = "";
 
 if (_camoColor == "personalizado") then {
