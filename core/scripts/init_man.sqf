@@ -4,7 +4,7 @@
 
 params ["_unit"];
 
-if (isNIl "_unit") exitWith { };
+if (isNil "_unit") exitWith { };
 
 if (!isPlayer _unit) exitWith { };
 
