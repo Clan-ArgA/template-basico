@@ -78,6 +78,8 @@ if (_enablestealthCoef) then {
   player setUnitTrait ["camouflageCoef  ",_camouflageCoef];
 };
 
+[player, "lider"] execVM "core\scripts\setup_ACRE2_radios.sqf";
+
 // player allowDamage true;
 
 /*******************************************************************************
