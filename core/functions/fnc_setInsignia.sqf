@@ -11,7 +11,7 @@ if (!_enableAutomatiEnsign) exitWith {};
 params [["_unit", player]];
 
 private _isMedic = _unit getVariable ["ace_medical_medicClass", 0];
-if (_isMedic == 1) exitWith { [_unit, 'arga_in_visible_medico'] call BIS_fnc_setUnitInsignia; };
+if (_isMedic > 0) exitWith { [_unit, 'arga_in_visible_medico'] call BIS_fnc_setUnitInsignia; };
 
 private _group        = [_unit] call MIV_fnc_getGroup;
 private _insignia     = if (_ensignIR) then {"arga_in_ir_"} else {"arga_in_visible_"};
