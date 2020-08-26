@@ -26,6 +26,8 @@ ACTIVAR_ROL_AUTOMATICO = 0;                         // Habilita la carga de rol 
 ACTIVAR_INSIGNIA_AUTOMATICO = 1;                    // Añadir a arga_settings
 INSIGNIA_IR = 0;                                    // Establece si las insignias son IR o normales
 
+ACTIVAR_SETUP_PERSONALIZADO_RADIOS = 1;             // Activa el setup de las radios de ACRE2. 1: activado, 0:desactivado
+
 /* 
 EQUIPAMIENTO
     Camuflajes disponibles:          Tipos disponibles:
@@ -119,6 +121,8 @@ ARGA_PLATOON_LIST = [["condor",["condor","cóndor"]],["yaguar",["yaguar","yaguar
 AVAILABLE_INSIGNIA_TYPES = ["arga","condor","yaguar","medico"];
 BOX_ROLE_LIST = ["Ametrallador M240","Ametrallador M249","Capitan","Enfermero","Francotirador","Fusilero","Fusilero RA","Granadero","Granadero c/Bengalas","Ingeniero","Lanzador AA","Lanzador AT","Líder","Médico de Combate","Médico","Observador","Piloto","Radio Operador","Teniente","Tirador FAL","Tirador MK11"];
 STAFF_ROLE = [["Nico","Lanzador AT"],["Jhon","Ametrallador"],["Cero","Tirador fal"],["Camello","Lanzador AT"],["Maxi","Ametrallador"],["Choqqo","Ingeniero"],["Ignacio","Ametrallador"],["Paco","Granadero"],["Zorro","Granadero"],["Maxtor","Ametrallador"],["Vultur","Granadero"],["Veck","Ingeniero"],["Ranquel","Médico"],["Labrador","Médico"],["Locofer","Ingeniero"],["Lince","Ametrallador"],["Joaco","Tirador fal"],["Shaggy","Granadero"],["Timor","Ingeniero"],["Axel","Ametrallador"],["Night","Médico"],["Heiz","Ametrallador"],["Guille","Tirador fal"],["Rodo","Ingeniero"],["Vigua","Ametrallador"],["Roke","Lanzador AT"],["Jaairo","Tirador fal"],["Kalam","Ingeniero"],["Fix","Lanzador AT"],["Juani","Ametrallador"],["Huaiqui","Granadero"],["Matias","Ingeniero"],["Soda","Ingeniero"],["Tinga","Ingeniero"],["Akin","Ingeniero"]];
+RADIO_CHANNEL_NAME = [["ACRE_PRC152",[[4, "AEREO"],[5, "INTERNA MANDO"],[6, "COMANDANCIA"],[7, "CONDOR"],[8, "YAGUARETE"],[9, "CONVOY"],[10, "MEDICOS"]]],["ACRE_PRC117F",[[4, "AEREO"],[5, "INTERNA MANDO"],[6, "COMANDANCIA"],[7, "CONDOR"],[8, "YAGUARETE"],[9, "CONVOY"],[10, "MEDICOS"]]]];
+RADIO_CHANNEL_SETUP = [["lider",[["ACRE_PRC117F",6],["ACRE_PRC152",6],["ACRE_PRC343",5]]],["sub_lider",[["ACRE_PRC117F",6],["ACRE_PRC152",6],["ACRE_PRC343",5]]],["lider_condor",[["ACRE_PRC117F",6],["ACRE_PRC152",7],["ACRE_PRC343",5]]], ["lider_condor_1",[["ACRE_PRC152",7],["ACRE_PRC343",1]]],["lider_condor_2",[["ACRE_PRC152",7],["ACRE_PRC343",2]]], ["lider_yaguarete",[["ACRE_PRC117F",6],["ACRE_PRC152",8],["ACRE_PRC343",5]]], ["lider_yaguarete_1",[["ACRE_PRC152",8],["ACRE_PRC343",1]]], ["lider_yaguarete_2",[["ACRE_PRC152",8],["ACRE_PRC343",2]]], ["lider_yaguarete_3",[["ACRE_PRC152",8],["ACRE_PRC343",3]]]];
 ////////////////////////////////////////////////////////////////////////////////
 
 /*******************************************************************************
