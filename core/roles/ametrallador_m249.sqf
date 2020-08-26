@@ -22,23 +22,9 @@ _unit addPrimaryWeaponItem "rhsusf_acc_kac_grip_saw_bipod";
 _unit addWeapon "hgun_ACPC2_F";
 _unit addHandgunItem "9Rnd_45ACP_Mag";
 
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_epinephrine";};
-_unit addItemToUniform "ACE_MapTools";
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_morphine";};
-_unit addItemToUniform "ACE_EntrenchingTool";
-for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
-_unit addItemToUniform "ACE_EarPlugs";
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-for "_i" from 1 to 9 do {_unit addItemToUniform "ACE_packingBandage";};
-for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_elasticBandage";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "adv_aceSplint_splint";};
 for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote";};
 _unit addItemToBackpack "SmokeShellBlue";
 for "_i" from 1 to 6 do {_unit addItemToBackpack "rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote";};
-
-_unit linkItem "ItemMap";
-_unit linkItem "ItemCompass";
-_unit linkItem "ACE_Altimeter";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

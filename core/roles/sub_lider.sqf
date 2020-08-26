@@ -21,16 +21,6 @@ _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
 _unit addWeapon "Rangefinder";
 
-for "_i" from 1 to 8 do {_unit addItemToUniform "ACE_packingBandage";};
-for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_morphine";};
-for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_epinephrine";};
-_unit addItemToUniform "ACE_MapTools";
-for "_i" from 1 to 3 do {_unit addItemToUniform "adv_aceSplint_splint";};
-_unit addItemToUniform "ACE_EarPlugs";
-for "_i" from 1 to 8 do {_unit addItemToUniform "ACE_elasticBandage";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_CableTie";};
-_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";
 _unit addItemToVest "ACE_HuntIR_monitor";
 _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";
 for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShellBlue";};
@@ -44,12 +34,6 @@ for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellGreen";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "HandGrenade";};
 //_unit addHeadgear "arga_bo_tte";
 removeGoggles _unit;
-//_unit addGoggles "G_Aviator";
-
-_unit linkItem "ItemMap";
-_unit linkItem "ItemCompass";
-_unit linkItem "ItemWatch";
-//_unit linkItem "ItemGPS";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

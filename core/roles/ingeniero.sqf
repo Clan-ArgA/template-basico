@@ -24,18 +24,6 @@ _unit addWeapon "ACE_VMH3";
 _unit addMagazine "Laserbatteries";
 _unit addWeapon "Laserdesignator_02";
 
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_morphine";};
-for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_elasticBandage";};
-for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_packingBandage";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_epinephrine";};
-_unit addItemToUniform "ACE_EntrenchingTool";
-_unit addItemToUniform "ACE_MapTools";
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "adv_aceSplint_splint";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-_unit addItemToUniform "ACE_EarPlugs";
-_unit addItemToUniform "ACE_Flashlight_MX991";
-_unit addItemToUniform "ACE_M26_Clacker";
 _unit addItemToVest "MineDetector";
 _unit addItemToVest "ACE_SpraypaintRed";
 for "_i" from 1 to 4 do {_unit addItemToVest "ACE_20Rnd_762x51_M993_AP_Mag";};
@@ -49,10 +37,6 @@ _unit addItemToBackpack "ACE_DefusalKit";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 _unit addItemToBackpack "SatchelCharge_Remote_Mag";
 _unit addItemToBackpack "APERSMineDispenser_Mag";
-
-_unit linkItem "ItemMap";
-_unit linkItem "ItemCompass";
-_unit linkItem "ItemWatch";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

@@ -25,21 +25,6 @@ _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
 _unit addWeapon "ACE_Vector";
 
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "adv_aceSplint_splint";};
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_packingBandage";};
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_morphine";};
-_unit addItemToUniform "ACE_MapTools";
-_unit addItemToUniform "ACE_Flashlight_XL50";
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_epinephrine";};
-_unit addItemToUniform "ACE_EntrenchingTool";
-_unit addItemToUniform "ACE_EarPlugs";
-for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
-for "_i" from 1 to 6 do {_unit addItemToUniform "ACE_elasticBandage";};
-_unit addItemToUniform "ACE_IR_Strobe_Item";
-_unit addItemToUniform "ACE_Kestrel4500";
-_unit addItemToUniform "ACE_ATragMX";
-_unit addItemToUniform "ACE_microDAGR";
 for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 7 do {_unit addItemToVest "acfaa_20Rndfal_762x51_T";};
@@ -48,10 +33,6 @@ _unit addItemToBackpack "Laserdesignator";
 _unit addItemToBackpack "Laserbatteries";
 for "_i" from 1 to 5 do {_unit addItemToBackpack "acfaa_20Rndfal_762x51_T";};
 for "_i" from 1 to 12 do {_unit addItemToBackpack "10Rnd_338_Mag";};
-
-_unit linkItem "ItemMap";
-_unit linkItem "ItemCompass";
-_unit linkItem "ACE_Altimeter";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
