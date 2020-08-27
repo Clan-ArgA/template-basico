@@ -2,7 +2,7 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-remoteExecprivate _customSkillsIA  = getMissionConfigValue ["DIFICULTAD_IA_PERSONALIZADA", 1];
+private _customSkillsIA  = getMissionConfigValue ["DIFICULTAD_IA_PERSONALIZADA", 1];
 private _aimingAccuracy  = getMissionConfigValue ["AIMING_ACCURACY", 0.01];
 private _aimingShake     = getMissionConfigValue ["AIMING_SHAKE", 0.99];
 private _aimingSpeed     = getMissionConfigValue ["AIMING_SPEED", 0.1];
@@ -66,7 +66,6 @@ execVM "core\scripts\db\init_log_system.sqf";
 execVM "core\scripts\init_garbage_collector.sqf";
 
 if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };
-
 
 if (_enableAcreSetup) then {
   //execVM "core\scripts\setup_ACRE2_displays.sqf";
