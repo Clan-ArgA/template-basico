@@ -27,7 +27,7 @@ if (_enableAutomaticRole) then {
 };
 
 if (_enableAcreSetup) then {
-  private _role = [player, _roleList] call MANDI_fnc_getRole;
+  private _role = [_playerUnit, _roleList] call MANDI_fnc_getRole;
   [[_playerUnit,_role],"core\scripts\setup_ACRE2_channels.sqf"] remoteExec ["BIS_fnc_execVM", owner _playerUnit, false]; 
 };
 
