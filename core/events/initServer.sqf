@@ -2,17 +2,18 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-private _customSkillsIA = getMissionConfigValue ["DIFICULTAD_IA_PERSONALIZADA", 1];
-private _aimingAccuracy = getMissionConfigValue ["AIMING_ACCURACY", 0.01];
-private _aimingShake = getMissionConfigValue ["AIMING_SHAKE", 0.99];
-private _aimingSpeed = getMissionConfigValue ["AIMING_SPEED", 0.1];
-private _spotDistance = getMissionConfigValue ["SPOT_DISTANCE", 0.2];
-private _spotTime = getMissionConfigValue ["SPOT_TIME", 0.5];
-private _courage = getMissionConfigValue ["COURAGE", 0.25];
-private _reloadSpeed = getMissionConfigValue ["RELOAD_SPEED", 0.25];
-private _commanding = getMissionConfigValue ["COMMANDING", 0.75];
-private _disableGroupIA = getMissionConfigValue ["DESACTIVAR_IA_DE_GRUPO", 1];
+remoteExecprivate _customSkillsIA  = getMissionConfigValue ["DIFICULTAD_IA_PERSONALIZADA", 1];
+private _aimingAccuracy  = getMissionConfigValue ["AIMING_ACCURACY", 0.01];
+private _aimingShake     = getMissionConfigValue ["AIMING_SHAKE", 0.99];
+private _aimingSpeed     = getMissionConfigValue ["AIMING_SPEED", 0.1];
+private _spotDistance    = getMissionConfigValue ["SPOT_DISTANCE", 0.2];
+private _spotTime        = getMissionConfigValue ["SPOT_TIME", 0.5];
+private _courage         = getMissionConfigValue ["COURAGE", 0.25];
+private _reloadSpeed     = getMissionConfigValue ["RELOAD_SPEED", 0.25];
+private _commanding      = getMissionConfigValue ["COMMANDING", 0.75];
+private _disableGroupIA  = getMissionConfigValue ["DESACTIVAR_IA_DE_GRUPO", 1];
 private _disableBluforIA = getMissionConfigValue ["DESACTIVAR_TODO_BLUFOR", 0];
+private _enableAcreSetup = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 
 if(_customSkillsIA == 1) then {
     {
@@ -66,7 +67,11 @@ execVM "core\scripts\init_garbage_collector.sqf";
 
 if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };
 
-execVM "core\scripts\setup_ACRE2_displays.sqf";
+
+if (_enableAcreSetup) then {
+  //execVM "core\scripts\setup_ACRE2_displays.sqf";
+  [[],"core\scripts\setup_ACRE2_displays.sqf"] remoteExec ["BIS_fnc_execVM", 0, false]; 
+};
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
