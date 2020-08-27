@@ -68,7 +68,6 @@ execVM "core\scripts\init_garbage_collector.sqf";
 if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };
 
 if (_enableAcreSetup) then {
-  //execVM "core\scripts\setup_ACRE2_displays.sqf";
   [[],"core\scripts\setup_ACRE2_displays.sqf"] remoteExec ["BIS_fnc_execVM", 0, false]; 
 };
 

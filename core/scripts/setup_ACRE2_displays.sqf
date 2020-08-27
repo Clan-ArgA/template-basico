@@ -19,7 +19,7 @@ private _channel            = '';
         _channelNumber = _x select 0;
         _channelText   = _x select 1;
         _description = (( _channelNameInRadio select {_radioType isEqualTo (_x select 0)} ) select 0) select 1;
-        [_radioType,_channelNumber,_description, _channelText] call MIV_fnc_log;
+        //[_radioType,_channelNumber,_description, _channelText] call MIV_fnc_log;
         if (!isNil "_description") then {
             [_radioType, "default", _channelNumber, _description, _channelText] call acre_api_fnc_setPresetChannelField;
         };

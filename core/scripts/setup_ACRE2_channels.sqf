@@ -16,7 +16,10 @@ if (!hasInterface || {player != _unit}) exitWith {false};
 
 waitUntil { ([] call acre_api_fnc_isInitialized) };
 
+["_role",_role] call MIV_fnc_log;
+["_setupRadioChanel",_setupRadioChanel] call MIV_fnc_log;
 _defaultRadioChannel = (( _setupRadioChanel select {_role isEqualTo (_x select 0)} ) select 0 ) select 1;
+["_defaultRadioChannel",_defaultRadioChannel] call MIV_fnc_log;
 
 if (!isNil "_defaultRadioChannel") then {
     {
