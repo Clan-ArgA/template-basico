@@ -14,6 +14,7 @@ if (typeName _role != "SCALAR") then {
     if (_role == "desconocido" && !isNil "_unit") then { 
         private ["_description"];
         _description = ((toLower roleDescription _unit) splitString "@") select 0;
+        ["GR_description :", _description] call MIV_fnc_log;
         if (!isNil "_description") then {
             _description =    [_unit, _description] call MIV_fnc_parseRole;
             _role        = [_description,_roleList] call MIV_fnc_getRoleCode;

@@ -18,7 +18,7 @@ if (call MIV_fnc_isLogSystemEnabled) then {
     _playerUnit setVariable ["MANDI_IS_PLAYER", true];
 };
 
-if (_enableAutomaticRole || _enableAutomaticRole) then {
+if (_enableAutomaticRole || _enableAcreSetup) then {
   _roleList = call MIV_fnc_get_role_list;
 };
 
@@ -28,6 +28,7 @@ if (_enableAutomaticRole) then {
 
 if (_enableAcreSetup) then {
   private _role = [_playerUnit, _roleList] call MANDI_fnc_getRole;
+  ["IPS_role",_role] call MIV_fnc_log;
   [[_playerUnit,_role],"core\scripts\setup_ACRE2_channels.sqf"] remoteExec ["BIS_fnc_execVM", owner _playerUnit, false]; 
 };
 
