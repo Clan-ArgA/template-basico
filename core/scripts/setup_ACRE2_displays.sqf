@@ -6,7 +6,6 @@ private _enableAcreSetup   = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO
 
 if (!_enableAcreSetup) exitWith {};
 
-//private _argaPlatoonList    = parseSimpleArray getMissionConfigValue ["ARGA_PLATOON_LIST", '[]'];
 private _radioChannelName   = parseSimpleArray getMissionConfigValue ["RADIO_CHANNEL_NAME", '[]'];
 private _fixedChannelName   = parseSimpleArray getMissionConfigValue ["FIXED_CHANNEL_NAME", '[]'];
 private _channelNameInRadio = [["ACRE_PRC152","description"],["ACRE_PRC117F","name"]];

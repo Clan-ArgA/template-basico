@@ -3,10 +3,10 @@
 *******************************************************************************/
 
 private _enableAcreSetup   = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
-private _argaPlatoonList = parseSimpleArray getMissionConfigValue ["ARGA_PLATOON_LIST", '[]'];
 
 if (!_enableAcreSetup) exitWith {};
 
+private _argaPlatoonList  = parseSimpleArray getMissionConfigValue ["ARGA_PLATOON_LIST", '[]'];
 private _setupRadioChanel = parseSimpleArray getMissionConfigValue ["RADIO_CHANNEL_SETUP", '[]'];
 private _radioType        = '';
 private _channel          = '';
@@ -16,16 +16,18 @@ private _hasRadio         = false;
 params ["_unit", "_role"];
 
 _hasRadio = [_unit] call acre_api_fnc_hasRadio;
+//TODO Chequear que pasa si no tiene una de las radios
 
 if (!hasInterface || {player != _unit} || !_hasRadio) exitWith {false};
 
 waitUntil { ([] call acre_api_fnc_isInitialized) };
 
-_platoon = _unit call MIV_fnc_getGroup;
+_platoon = [leader _unit] call MIV_fnc_getGroup;
 
-//TODO revisar implemtación
-if (_platoon == 'condor' || _platoon == 'yaguar' ) then {
-    _role = format["%1@%2",_role,_platoon];
+_argaPlatoon = (( _argaPlatoonList select {_platoon in (_x select 1) } ) select 0) select 0;
+
+if (!isNil "_argaPlatoon") then {
+    _role = format["%1@%2",_role,_argaPlatoon]
 };
 
 _defaultRadioChannel = (( _setupRadioChanel select {_role isEqualTo (_x select 0)} ) select 0 ) select 1;
