@@ -17,7 +17,7 @@ if (! isNil "_role") then {
     [_unit, _helmet, _backPack, _backPackLittle] call compile preprocessFile _role;
 };
 
-//call compile preprocessFileLineNumbers 'core\roles\uniform.sqf';
+call compile preprocessFileLineNumbers 'core\roles\uniform.sqf';
 
 if(_initialGoggles != "") then {
     _unit addGoggles _initialGoggles;
