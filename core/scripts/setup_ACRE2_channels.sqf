@@ -39,7 +39,7 @@ if (!isNil "_defaultRadioChannel") then {
         };
     } forEach _defaultRadioChannel;
 } else {
-    if ([_unit, "ACRE_PRC148"] call acre_api_fnc_hasKindOfRadio) then {
+    if ([_unit, "ACRE_PRC343"] call acre_api_fnc_hasKindOfRadio) then {
         [(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 10] call acre_api_fnc_setRadioChannel;
     };
 };
