@@ -16,7 +16,6 @@ private _hasRadio         = false;
 params ["_unit", "_role"];
 
 _hasRadio = [_unit] call acre_api_fnc_hasRadio;
-//TODO Chequear que pasa si no tiene una de las radios
 
 if (!hasInterface || {player != _unit} || !_hasRadio) exitWith {false};
 
@@ -35,10 +34,14 @@ if (!isNil "_defaultRadioChannel") then {
     {
         _radioType = _x select 0;
         _channel   = _x select 1;
-        [[_radioType] call acre_api_fnc_getRadioByType, _channel] call acre_api_fnc_setRadioChannel;
+        if ([_unit, _radioType] call acre_api_fnc_hasKindOfRadio) then {
+            [[_radioType] call acre_api_fnc_getRadioByType, _channel] call acre_api_fnc_setRadioChannel;
+        };
     } forEach _defaultRadioChannel;
 } else {
-    [(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 10] call acre_api_fnc_setRadioChannel;
+    if ([_unit, "ACRE_PRC148"] call acre_api_fnc_hasKindOfRadio) then {
+        [(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 10] call acre_api_fnc_setRadioChannel;
+    };
 };
 
 /*******************************************************************************
