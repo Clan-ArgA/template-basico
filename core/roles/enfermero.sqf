@@ -21,7 +21,8 @@ _unit addPrimaryWeaponItem "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
-for "_i" from 1 to 5 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";};
+_unit addItemToVest "ACE_EntrenchingTool";
+for "_i" from 1 to 4 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";};
 for "_i" from 1 to 4 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";};
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
