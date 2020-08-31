@@ -23,7 +23,6 @@ if (!hasInterface || {player != _unit} || !_hasRadio) exitWith {false};
 waitUntil { ([] call acre_api_fnc_isInitialized) };
 
 _platoon = [leader _unit] call MIV_fnc_getGroup;
-
 _argaPlatoon = (( _argaPlatoonList select {_platoon in (_x select 1) } ) select 0) select 0;
 
 if (!isNil "_argaPlatoon") then {

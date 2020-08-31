@@ -15,7 +15,7 @@ NOMBRE_CAMPANIA = "";
 INTRO_PERSONALIZADA = 0;                            // 1 Si la deseas cargar una intro personalizada (propia)
                                                     // y en el parametro INTRO la dirección del archivo entre comillas
                                                     // EJ. INTRO_PERSONALIZADA = 1; INTRO = "scripts\intro_propia.sqf";
-INTRO = 2;                                          // Intros: 1 y 2. Para desactivar: 0
+INTRO = 0;                                          // Intros: 1 y 2. Para desactivar: 0
 
 MAX_DIST_VISION = 4000;
 MIN_DIST_VISION = 800;
