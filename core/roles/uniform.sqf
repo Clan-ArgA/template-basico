@@ -1,7 +1,7 @@
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
-COLOCAR_GPS
+
 private _allowGPS = getMissionConfigValue ["COLOCAR_GPS",  1] == 1;
 
 _unit addItemToUniform "ACRE_PRC343";
