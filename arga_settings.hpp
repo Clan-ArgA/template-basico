@@ -25,7 +25,7 @@ ACTIVAR_ROL_AUTOMATICO = 0;                         // Habilita la carga de rol 
                                                     // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
 COLOCAR_GPS = 1;                                    // Agrega GPS vanilla en rol automático o caja. 1: agrega, 0: remueve
 
-ACTIVAR_INSIGNIA_AUTOMATICO = 1;                    // Añadir a arga_settings
+ACTIVAR_INSIGNIA_AUTOMATICO = 0;                    // Añadir a arga_settings
 INSIGNIA_IR = 0;                                    // Establece si las insignias son IR o normales
 
 ACTIVAR_SETUP_PERSONALIZADO_RADIOS = 1;             // Activa el setup de las radios de ACRE2. 1: activado, 0: desactivado
