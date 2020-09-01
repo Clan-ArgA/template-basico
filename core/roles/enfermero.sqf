@@ -22,10 +22,12 @@ _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
 _unit addItemToVest "ACE_EntrenchingTool";
+_unit addItemToVest "ACRE_PRC152";
 for "_i" from 1 to 4 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";};
 for "_i" from 1 to 4 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";};
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShellBlue";};
-for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
+
 for "_i" from 1 to 23 do {_unit addItemToBackpack "ACE_elasticBandage";};
 for "_i" from 1 to 23 do {_unit addItemToBackpack "ACE_packingBandage";};
 for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_tourniquet";};
