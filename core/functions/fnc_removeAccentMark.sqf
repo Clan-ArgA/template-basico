@@ -18,7 +18,7 @@ private _parseString = "";
 	
 } forEach toArray _string;
 
-_parseString
+_parseString;
 
 /*******************************************************************************
                             Realizado por |ArgA|MIV

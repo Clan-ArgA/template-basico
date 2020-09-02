@@ -16,10 +16,12 @@ if (typeName _role != "SCALAR") then {
         _description = ((toLower roleDescription _unit) splitString "@") select 0;
         //["GR_description :", _description] call MIV_fnc_log;
         if (!isNil "_description") then {
-            _description =    [_unit, _description] call MIV_fnc_parseRole;
-            _role        = [_description,_roleList] call MIV_fnc_getRoleCode;
-            _role        =                    _role call MIV_fnc_removeAccentMark;
-            if (_role != "") then{
+            _description = [_unit, _description] call MIV_fnc_parseRole;
+            _role        = [_description, _roleList] call MIV_fnc_getRoleCode;
+            _role        =  _role call MIV_fnc_removeAccentMark;
+            if (isNil "_role") exitWith { "" };
+            if (typeName _role != "STRING") exitWith { "" };
+            if (_role != "") then {
                 _unit setVariable ["MANDI_ROL", _role];
             };
         };
