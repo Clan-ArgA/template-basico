@@ -19,8 +19,8 @@ if (typeName _role != "SCALAR") then {
             _description = [_unit, _description] call MIV_fnc_parseRole;
             _role        = [_description, _roleList] call MIV_fnc_getRoleCode;
             _role        =  _role call MIV_fnc_removeAccentMark;
-            if (isNil "_role") exitWith { "" };
-            if (typeName _role != "STRING") exitWith { "" };
+            if (isNil "_role") exitWith { "_role is nil" call MIV_fnc_log; "" };
+            if (typeName _role != "STRING") exitWith { ["ROLE:", _role, "UNIT:",_unit] call MIV_fnc_log; "" };
             if (_role != "") then {
                 _unit setVariable ["MANDI_ROL", _role];
             };
