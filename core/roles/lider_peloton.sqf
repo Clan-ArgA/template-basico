@@ -22,7 +22,7 @@ _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 _unit addMagazine "Laserbatteries";
 _unit addWeapon "Laserdesignator_01_khk_F";
 
-_unit addItemToVest "ACE_DAGR";
+//_unit addItemToVest "ACE_DAGR";
 _unit addItemToVest "ACRE_PRC152";
 _unit addItemToVest "HandGrenade";
 _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";
