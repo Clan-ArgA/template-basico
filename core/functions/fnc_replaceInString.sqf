@@ -5,6 +5,7 @@
 // https://forums.bohemia.net/forums/topic/216673-quick-stringreplace/?tab=comments#comment-3290402
 
 params["_str", "_find", "_replace"];
+
 private["_return", "_len", "_pos"];
 
 if (!(_find isEqualType [])) then {

@@ -22,19 +22,6 @@ _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
 _unit addWeapon "Rangefinder";
-
-for "_i" from 1 to 8 do {_unit addItemToUniform "ACE_packingBandage";};
-for "_i" from 1 to 8 do {_unit addItemToUniform "ACE_elasticBandage";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_CableTie";};
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_morphine";};
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_epinephrine";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "adv_aceSplint_splint";};
-_unit addItemToUniform "ACE_EntrenchingTool";
-_unit addItemToUniform "ACE_Flashlight_XL50";
-_unit addItemToUniform "ACE_MapTools";
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_tourniquet";};
-_unit addItemToUniform "ACE_EarPlugs";
-_unit addItemToUniform "ACE_IR_Strobe_Item";
 _unit addItemToVest "ACE_HuntIR_monitor";
 
 for "_i" from 1 to 6 do {_unit addItemToVest "HandGrenade";};
@@ -44,9 +31,6 @@ for "_i" from 1 to 10 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_S
 for "_i" from 1 to 34 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 12 do {_unit addItemToBackpack "UGL_FlareWhite_F";};
 
-_unit linkItem "ItemMap";
-_unit linkItem "ItemCompass";
-_unit linkItem "ACE_Altimeter";
 _unit linkItem "ACE_NVG_Wide";
 
 /*******************************************************************************

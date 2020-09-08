@@ -20,23 +20,10 @@ _unit addPrimaryWeaponItem "rhsusf_100Rnd_762x51";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_epinephrine";};
-for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_morphine";};
-_unit addItemToUniform "ACE_EntrenchingTool";
-for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "adv_aceSplint_splint";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_elasticBandage";};
-_unit addItemToUniform "ACE_EarPlugs";
-for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_packingBandage";};
 for "_i" from 1 to 4 do {_unit addItemToVest "rhsusf_100Rnd_762x51_m62_tracer";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51_m62_tracer";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellBlue";};
-
-_unit linkItem "ItemMap";
-_unit linkItem "ItemCompass";
-_unit linkItem "ACE_Altimeter";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

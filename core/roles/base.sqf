@@ -17,6 +17,8 @@ if (! isNil "_role") then {
     [_unit, _helmet, _backPack, _backPackLittle] call compile preprocessFile _role;
 };
 
+call compile preprocessFileLineNumbers 'core\roles\uniform.sqf';
+
 if(_initialGoggles != "") then {
     _unit addGoggles _initialGoggles;
 };
@@ -25,6 +27,3 @@ _unit call MIV_fnc_setInsignia;
 /*******************************************************************************
                           Realizadoor |ArgA|Ignacio
 *******************************************************************************/
-
-//["_role: ",_role] call MIV_fnc_log;
-//["BIS_fnc_setUnitInsignia: ",_result] call MIV_fnc_log;
