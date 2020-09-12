@@ -24,13 +24,14 @@ if(_initialGoggles != "") then {
     _unit addGoggles _initialGoggles;
 };
 
+_unit call MIV_fnc_setInsignia;
+
+sleep 5;
+
 if (_enableAcreSetup) then {
-  execVM "core\scripts\setup_ACRE2_displays.sqf";
+  [_unit, _role] execVM "core\scripts\setup_ACRE2_channels.sqf";
 };
 
-[_unit, _role] execVM "core\scripts\setup_ACRE2_channels.sqf";
-
-_unit call MIV_fnc_setInsignia;
 /*******************************************************************************
                           Realizadoor |ArgA|Ignacio
 *******************************************************************************/
