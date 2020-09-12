@@ -2,6 +2,8 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
+if (!hasInterface ) exitWith {false};
+
 private _enableAcreSetup   = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 
 if (!_enableAcreSetup) exitWith {};
@@ -17,7 +19,19 @@ params ["_unit", "_role"];
 
 _hasRadio = [_unit] call acre_api_fnc_hasRadio;
 
-if (!hasInterface || {player != _unit} || !_hasRadio) exitWith {false};
+if (!isServer) exitWith {
+    [[player],"core\scripts\setup_ACRE2_channels.sqf"] remoteExec ["BIS_fnc_execVM", 0, false]; 
+};
+
+if (isServer) exitWith {
+    private _roleList = call MIV_fnc_get_role_list;
+    private _role = [player, _roleList] call MANDI_fnc_getRole;
+    [[player, _role],"core\scripts\setup_ACRE2_channels.sqf"] remoteExec ["BIS_fnc_execVM", owner _playerUnit, false]; 
+};
+
+if ( {player != _unit} || !_hasRadio) exitWith {false};
+
+
 
 waitUntil { ([] call acre_api_fnc_isInitialized) };
 
