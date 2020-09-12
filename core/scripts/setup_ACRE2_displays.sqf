@@ -19,9 +19,8 @@ private _channelCompare     = '';
 	_platoon append [_x call MIV_fnc_getGroup];
 
 } foreach playableUnits;
-_platoon = _platoon arrayIntersect _platoon;
 
-[_radioChannelName] call MIV_fnc_log;
+_platoon = _platoon arrayIntersect _platoon;
 
 {
     _radioType             = _x select 0;
@@ -39,23 +38,29 @@ _platoon = _platoon arrayIntersect _platoon;
         private _fixedName     = '';
         
         _channeArray append [_channelNumber];
-        _fixedName = (_fixedChannelName select {(toLower _channelText) in (toLower _x)}) select 0 ;
-        
+        _fixedName = (_fixedChannelName select {(toLower _channelText) in (toLower _x)}) select 0;
         if (isNil "_fixedName") then {
             _argaPlatoon = (( _argaPlatoonList select {(tolower _channelText) in (_x select 1) } ) select 0) select 0;
-            _channelCompare = (_platoon select {(toLower _argaPlatoon) in (toLower _x) } select 0);
+            _channelCompare = (_extraPlatoons select {(toLower _argaPlatoon) in (toLower _x) } select 0);
             if (isNil "_channelCompare" ) then { 
-                _channelText = _platoon select _platoonNumber;
-                _platoonNumber = _platoonNumber + 1;
-                _extraPlatoons = _extraPlatoons - [_channelText];
+                if (count(_extraPlatoons) > _platoonNumber) then {
+                    _channelText = _extraPlatoons select _platoonNumber;
+                    _platoonNumber = _platoonNumber + 1;
+                    if (!isNil "_channelText") then {
+                        _extraPlatoons = _extraPlatoons - [_channelText];
+                    };
+                } else {
+                    _channelText = nil;
+                };
+            } else {
+                if (!isNil "_argaPlatoon" ) then { 
+                    _extraPlatoons = _extraPlatoons - [_argaPlatoon];
+                };
             };
-            if (!isNil "_argaPlatoon" ) then { 
-                _extraPlatoons = _extraPlatoons - [_argaPlatoon];
-            };
+                
         };
 
-        [_radioType, "default", _channelNumber, _description, _channelText] call MIV_fnc_log;
-        if (!isNil "_description") then {
+        if (!isNil "_description" && !isNil "_channelText") then {
             [_radioType, "default", _channelNumber, _description, _channelText] call acre_api_fnc_setPresetChannelField;
         };       
         
