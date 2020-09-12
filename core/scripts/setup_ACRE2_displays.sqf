@@ -2,8 +2,6 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-if (!isDedicated) exitWith {};
-
 private _enableAcreSetup   = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 
 if (!_enableAcreSetup) exitWith {};
@@ -22,6 +20,8 @@ private _channelCompare     = '';
 
 } foreach playableUnits;
 _platoon = _platoon arrayIntersect _platoon;
+
+[_radioChannelName] call MIV_fnc_log;
 
 {
     _radioType             = _x select 0;
@@ -54,6 +54,7 @@ _platoon = _platoon arrayIntersect _platoon;
             };
         };
 
+        [_radioType, "default", _channelNumber, _description, _channelText] call MIV_fnc_log;
         if (!isNil "_description") then {
             [_radioType, "default", _channelNumber, _description, _channelText] call acre_api_fnc_setPresetChannelField;
         };       

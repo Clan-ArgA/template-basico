@@ -31,9 +31,11 @@ if (!isNil "_argaPlatoon") then {
 _defaultRadioChannel = (( _setupRadioChanel select {_role isEqualTo (_x select 0)} ) select 0 ) select 1;
 
 if (!isNil "_defaultRadioChannel") then {
+
     {
         _radioType = _x select 0;
         _channel   = _x select 1;
+
         if ([_unit, _radioType] call acre_api_fnc_hasKindOfRadio) then {
             [[_radioType] call acre_api_fnc_getRadioByType, _channel] call acre_api_fnc_setRadioChannel;
         };

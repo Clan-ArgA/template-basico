@@ -2,15 +2,13 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-#include "core\private_settings.hpp"
-#include "arga_settings.hpp"
-#include "core\pre_description.hpp"
-
-class CfgFunctions {
-  #include "core\functions.hpp"
+class Extended_InitPost_EventHandlers {
+    class CAManBase {
+        class initpost_units {
+            init = "_this call compile preprocessFileLineNumbers 'core\scripts\init_man.sqf'";
+        };
+    };
 };
-
-#include "core\post_description.hpp"
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV
