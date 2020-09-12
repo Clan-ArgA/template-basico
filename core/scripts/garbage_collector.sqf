@@ -42,6 +42,10 @@ if (_deleteUnit) then {
 
 	sleep _waitTime;
 
+	if (_minimunDistance != 0 ) then {
+		waitUntil {	count(allPlayers select {sleep 5; (_position distance _x) < _minimunDistance }) == 0 };
+	};
+
 	if (_isMan) then {
 		_enemyUnit SetPosASL [_coordX, _coordY, 0];
 		hidebody _enemyUnit;

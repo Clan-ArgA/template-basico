@@ -6,8 +6,8 @@
 params [["_unit", player], ["_helmet", "arga_cas_combate_bosque_marpat"], ["_backPack", "arga_m_petate_bosque_marpat"], ["_backPackLittle", "arga_m_asalto_bosque_marpat"]];
 
 private _useBigBackPack = false;
-private _back = "tf_rt1523g_black";
-_helmet = "arga_bo_pilot";
+private _back = if (_useBigBackPack) then {_backPack} else {_backPackLittle};
+_helmet = "arga_cas_helicoptero_abierto";
 
 if (!local _unit) exitWith {};
 
@@ -23,8 +23,9 @@ _unit addWeapon "rhsusf_weap_m9";
 _unit addHandgunItem "rhsusf_mag_15Rnd_9x19_JHP";
 _unit addItemToVest "ACE_microDAGR";
 _unit addItemToVest "ACE_MapTools";
-_unit addItemToVest "ACE_Flashlight_XL50";
+_unit addItemToVest "ACRE_PRC152";
 for "_i" from 1 to 5 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_JHP";};
+_unit addItemToBackpack "ACRE_PRC117F";
 _unit addItemToBackpack "arga_h_norm";
 _unit addItemToBackpack "arga_ca_bomber";
 

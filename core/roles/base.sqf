@@ -4,6 +4,7 @@
 
 params [["_unit", player], "_role", ["_uniform", "arga_u_gen3_bosque_marpat"], ["_helmet", "arga_cas_combate_bosque_marpat"], ["_vest", "arga_c_pesado_bosque_marpat"], ["_backPack", "arga_m_petate_bosque_marpat"], ["_backPackLittle", "arga_m_asalto_bosque_marpat"]];
 
+private _enableAcreSetup = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 private _initialGoggles =  getMissionConfigValue ["GAFAS_INICIALES", ""];
 
 if (!local _unit) exitWith {};
@@ -24,6 +25,13 @@ if(_initialGoggles != "") then {
 };
 
 _unit call MIV_fnc_setInsignia;
+
+sleep 5;
+
+if (_enableAcreSetup) then {
+  [_unit, _role] execVM "core\scripts\setup_ACRE2_channels.sqf";
+};
+
 /*******************************************************************************
                           Realizadoor |ArgA|Ignacio
 *******************************************************************************/

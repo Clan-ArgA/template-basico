@@ -2,3 +2,4 @@
 *.sqm
 debug.log
 .vscode
+.history
