@@ -14,8 +14,9 @@ _unit call MANDI_fnc_clearEquipment;
 _unit forceAddUniform _uniform;
 _unit addVest _vest;
 
-if (! isNil "_role") then {
-    [_unit, _helmet, _backPack, _backPackLittle] call compile preprocessFile _role;
+if (!isNil "_role") then {
+  private _rolePath = format ['core\roles\%1.sqf', _role];
+  [_unit, _helmet, _backPack, _backPackLittle] call compile preprocessFileLineNumbers _rolePath;
 };
 
 call compile preprocessFileLineNumbers 'core\roles\uniform.sqf';
@@ -29,7 +30,7 @@ _unit call MIV_fnc_setInsignia;
 sleep 5;
 
 if (_enableAcreSetup) then {
-  [_unit, _role] execVM "core\scripts\setup_ACRE2_channels.sqf";
+  [[_unit,_role],"core\scripts\setup_ACRE2_channels.sqf"] remoteExec ["BIS_fnc_execVM", owner _unit, false];
 };
 
 /*******************************************************************************

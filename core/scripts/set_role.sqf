@@ -11,9 +11,7 @@ private _equipment = [];
 if (!_keepRole) then {
     if (typeName _role != "STRING") then {_role = "desconocido"};
     if (_role == "desconocido" &&  isDedicated) then { _role = "fusilero"};
-    if (_role == "desconocido" && !isDedicated) then { hint "Rol desconocido\nRevisar nombre de rol\nUd. No posee equípo de combate"};
-    
-    _role = format['core\roles\%1.sqf',_role];
+    if (_role == "desconocido" && !isDedicated) then { hint "Rol desconocido\nRevisar nombre de rol\nNo posee equípo de combate"};
     
     _equipment = call MIV_fnc_getEquipment;
     
@@ -31,3 +29,4 @@ if (!_keepRole) then {
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
+//["Rol:",_role] call MIV_fnc_log;
