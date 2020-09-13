@@ -1,7 +1,7 @@
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
-
+["SAC Primer linea"] call MIV_fnc_log;
 if (!hasInterface ) exitWith {false};
 
 private _enableAcreSetup   = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
