@@ -17,6 +17,8 @@ private _hasRadio         = false;
 
 params ["_unit", "_role"];
 
+["SAC",_unit,_role] call MIV_fnc_log;
+
 _hasRadio = [_unit] call acre_api_fnc_hasRadio;
 
 if ( player != _unit || !_hasRadio) exitWith {false};
@@ -31,6 +33,7 @@ if (!isNil "_argaPlatoon") then {
 _defaultRadioChannel = (( _setupRadioChanel select {_role isEqualTo (_x select 0)} ) select 0 ) select 1;
 
 if (!isNil "_defaultRadioChannel") then {
+    ["SAC","_defaultRadioChannel",_defaultRadioChannel] call MIV_fnc_log;
     {
         _radioType = _x select 0;
         _channel   = _x select 1;
@@ -40,6 +43,7 @@ if (!isNil "_defaultRadioChannel") then {
         };
     } forEach _defaultRadioChannel;
 } else {
+    ["SAC","_defaultRadioChannel isNil"] call MIV_fnc_log;
     if ([_unit, "ACRE_PRC343"] call acre_api_fnc_hasKindOfRadio) then {
         [(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 10] call acre_api_fnc_setRadioChannel;
     };

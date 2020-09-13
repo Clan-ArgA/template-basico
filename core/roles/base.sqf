@@ -30,6 +30,7 @@ _unit call MIV_fnc_setInsignia;
 sleep 5;
 
 if (_enableAcreSetup) then {
+  ["Base",_unit,_role] call MIV_fnc_log;
   [[_unit,_role],"core\scripts\setup_ACRE2_channels.sqf"] remoteExec ["BIS_fnc_execVM", owner _unit, false];
 };
 
