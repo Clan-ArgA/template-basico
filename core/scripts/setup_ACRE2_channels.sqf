@@ -19,6 +19,7 @@ private _hasRadio         = false;
 private _isBox            = _unit getVariable ["MIV_IS_BOX", false];
 
 ["SAC",_unit,_role] call MIV_fnc_log;
+["SAC _isBox",_isBox] call MIV_fnc_log;
 
 _hasRadio = [_unit] call acre_api_fnc_hasRadio;
 
