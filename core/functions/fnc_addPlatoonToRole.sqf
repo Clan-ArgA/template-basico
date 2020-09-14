@@ -1,14 +1,21 @@
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
-  
-params ["_playerUnit"];
 
-private _roleList = call MIV_fnc_get_role_list;
-private _role = [_playerUnit, _roleList] call MANDI_fnc_getRole;
-[[_playerUnit,_role],"core\scripts\setup_ACRE2_channels.sqf"] remoteExec ["BIS_fnc_execVM", owner _playerUnit, false];
+params ["_unit", "_role"];
+
+private _argaPlatoonList = parseSimpleArray getMissionConfigValue ["ARGA_PLATOON_LIST", '[]'];
+
+_platoon = [leader _unit] call MIV_fnc_getGroup;
+
+private _argaPlatoon = (( _argaPlatoonList select {_platoon in (_x select 1) } ) select 0) select 0;
+if (!isNil "_argaPlatoon") then {
+	_role = format["%1@%2",_role,_argaPlatoon]
+};
+
+_role
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
-//[_playerUnit,_role] call MIV_fnc_log;
+//["APTR _platoon:", _platoon] call MIV_fnc_log;

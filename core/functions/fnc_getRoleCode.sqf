@@ -1,30 +1,14 @@
 /*******************************************************************************
                             Realizado por |ArgA|MIV
 *******************************************************************************/
-/*
-	roleDescription, roleList -> String or Number
 
-	Recibe una string en crudo de un rol y una lista de roles con el formato
-
-	[
-		["role_code_1", "Role 1", 1],
-		["", "Role 2", 2],
-		["role_code_3", "Role 3", 3],
-		["role_code_4", "Role 4", 4]
-	]
-
-	Devuelve el role_code o el id si el primero no se encuentra.
-*/
-
+private ["_code", "_roleName"];
+private _role            = "";
 private _defaultRoleList = parseSimpleArray getMissionConfigValue ["AUXILIAR_ROLE_LIST", '[]'];
 
 params ["_description", ["_roleList", _defaultRoleList]];
 
 if (count(_roleList) == 0) then { _roleList = _defaultRoleList};
-
-private ["_code", "_roleName"];
-
-private _role = "";
 
 _description = _description call MANDI_fnc_trim;
 _description = _description call MIV_fnc_removeAccentMark;

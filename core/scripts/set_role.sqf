@@ -13,9 +13,8 @@ if (!_keepRole) then {
     if (_role == "desconocido" &&  isDedicated) then { _role = "fusilero"};
     if (_role == "desconocido" && !isDedicated) then { hint "Rol desconocido\nRevisar nombre de rol\nNo posee equípo de combate"};
     
-    _equipment = call MIV_fnc_getEquipment;
-    
     private _unitRoleEquipment = [player, _role];
+    _equipment = call MIV_fnc_getEquipment;
     _unitRoleEquipment append _equipment;
 
     _unitRoleEquipment call compile preprocessFile "core\roles\base.sqf";
@@ -29,4 +28,4 @@ if (!_keepRole) then {
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
-//["Rol:",_role] call MIV_fnc_log;
+//["SR Rol:",_role] call MIV_fnc_log;
