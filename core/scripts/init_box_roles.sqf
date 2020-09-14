@@ -24,7 +24,8 @@ private ["_roleCode","_role"];
             private _params = [_caller, (_role select 1)];
             _params append (_arguments select 1);
             _params execVM "core\roles\base.sqf";
-            hint format ["Rol: %1", _role select 0]; 
+            hint format ["Rol: %1", _role select 0];
+            _caller setVariable ["MIV_IS_BOX", true];
         }, [[_role, _roleCode], _equipment], 1.5, true, true, "","true", 4, false, "", ""
     ];
 } forEach _boxRoleList;
@@ -34,3 +35,4 @@ private ["_roleCode","_role"];
 *******************************************************************************/
 //["_roleCode:",_roleCode] call MIV_fnc_log;
 //["_arguments:",_arguments] call MIV_fnc_log;
+//["_params:",_params] call MIV_fnc_log;

@@ -8,14 +8,15 @@ private _enableAcreSetup   = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO
 
 if (!_enableAcreSetup) exitWith {};
 
+params ["_unit", "_role"];
+
 private _argaPlatoonList  = parseSimpleArray getMissionConfigValue ["ARGA_PLATOON_LIST", '[]'];
 private _setupRadioChanel = parseSimpleArray getMissionConfigValue ["RADIO_CHANNEL_SETUP", '[]'];
 private _radioType        = '';
 private _channel          = '';
 private _platoon          = '';
 private _hasRadio         = false;
-
-params ["_unit", "_role"];
+private _isBox            = _unit getVariable ["MIV_IS_BOX", false];
 
 ["SAC",_unit,_role] call MIV_fnc_log;
 
@@ -25,10 +26,12 @@ if ( player != _unit || !_hasRadio) exitWith {false};
 
 waitUntil { ([] call acre_api_fnc_isInitialized) };
 
-_platoon = [leader _unit] call MIV_fnc_getGroup;
-_argaPlatoon = (( _argaPlatoonList select {_platoon in (_x select 1) } ) select 0) select 0;
-if (!isNil "_argaPlatoon") then {
-    _role = format["%1@%2",_role,_argaPlatoon]
+if (!_isBox) then {
+    _platoon = [leader _unit] call MIV_fnc_getGroup;
+    _argaPlatoon = (( _argaPlatoonList select {_platoon in (_x select 1) } ) select 0) select 0;
+    if (!isNil "_argaPlatoon") then {
+        _role = format["%1@%2",_role,_argaPlatoon]
+    };
 };
 ["SAC Rol:",_role] call MIV_fnc_log;
 _defaultRadioChannel = (( _setupRadioChanel select {_role isEqualTo (_x select 0)} ) select 0 ) select 1;
