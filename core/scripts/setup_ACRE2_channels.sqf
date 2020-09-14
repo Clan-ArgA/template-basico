@@ -1,7 +1,7 @@
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
-["SAC Primer linea"] call MIV_fnc_log;
+
 if (!hasInterface ) exitWith {false};
 
 private _enableAcreSetup   = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
@@ -30,6 +30,7 @@ _argaPlatoon = (( _argaPlatoonList select {_platoon in (_x select 1) } ) select 
 if (!isNil "_argaPlatoon") then {
     _role = format["%1@%2",_role,_argaPlatoon]
 };
+["SAC Rol:",_role] call MIV_fnc_log;
 _defaultRadioChannel = (( _setupRadioChanel select {_role isEqualTo (_x select 0)} ) select 0 ) select 1;
 
 if (!isNil "_defaultRadioChannel") then {
