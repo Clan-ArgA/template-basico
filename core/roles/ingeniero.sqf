@@ -24,7 +24,6 @@ _unit addWeapon "ACE_VMH3";
 _unit addMagazine "Laserbatteries";
 _unit addWeapon "Laserdesignator_02";
 
-_unit addItemToVest "MineDetector";
 _unit addItemToVest "ACE_SpraypaintRed";
 _unit addItemToVest "ACE_EntrenchingTool";
 for "_i" from 1 to 4 do {_unit addItemToVest "ACE_20Rnd_762x51_M993_AP_Mag";};

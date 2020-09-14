@@ -24,7 +24,6 @@ _unit addWeapon "ACE_VMH3";
 _unit addMagazine "Laserbatteries";
 _unit addWeapon "Laserdesignator_02";
 
-_unit addItemToVest "MineDetector";
 _unit addItemToVest "ACE_SpraypaintRed";
 _unit addItemToVest "ACE_EntrenchingTool";
 _unit addItemToVest "ACRE_PRC152";
