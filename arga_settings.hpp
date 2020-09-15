@@ -19,7 +19,7 @@ INTRO = 0;                                          // Intros: 1 y 2. Para desac
 
 MAX_DIST_VISION = 2500;
 MIN_DIST_VISION = 800;                              // Distancia de visión reducida por marcador
-DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 0;          // Equipamiento guardado en arsenal virtual. 0: activado, 1: desactivado
+DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1;          // Equipamiento guardado en arsenal virtual. 0: activado, 1: desactivado
 ACTIVAR_COMPUTADORA_ARTILLERIA = 1;                 // Habilita computadora artilleria poner 1. Para que no aparezca poner 0
 ACTIVAR_ROL_AUTOMATICO = 0;                         // Habilita la carga de rol al entrar a la misión por descripción de rol
                                                     // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
