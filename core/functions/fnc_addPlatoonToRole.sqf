@@ -18,4 +18,5 @@ _role
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
-//["APTR _platoon:", _platoon] call MIV_fnc_log;
+//["[APTR] _platoon:", _platoon] call MIV_fnc_log;
+//["[APTR] Role:", _role] call MIV_fnc_log;
