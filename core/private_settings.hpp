@@ -8,6 +8,8 @@ TEMPLATE_VERSION = "0.9.4";
 DEBUG = 1;                                          // Habilita el modo debug
 ENABLE_LOG_SYSTEM = 1;                              // Habilita el sistema de log
 ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;               // Habilita el sistema de log sólo si el servidor es dedicado (requiere ENABLE_LOG_SYSTEM = 1)
+SHOW_FPS_MAP = 1;                                   // Habilita mostrar fps en mapa del servidor y los headless client.
+SHOW_FPS_LOG = 1;                                   // Habilita loguear fps en rpts del servidor y los headless client.
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Listas auxiliares */

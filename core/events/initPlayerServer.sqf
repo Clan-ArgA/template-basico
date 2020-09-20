@@ -8,8 +8,6 @@ params ["_playerUnit", "_didJIP"];
 
 waitUntil { time > 5 };
 
-//sleep 5;
-
 if (call MIV_fnc_isLogSystemEnabled) then {
     [[_playerUnit]] call MIV_fnc_write_alternative_role;
     [_playerUnit, "connected"] execVM "core\scripts\db\querys\write_log.sqf";
@@ -25,8 +23,8 @@ if (_enableAcreSetup) then {
   [_playerUnit] execVM "core\scripts\init_ACRE2_channels.sqf";
 };
 
+execVM "core\scripts\show_fps.sqf";
+
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-// ["_enableAutomaticRole:",_enableAutomaticRole] call MIV_fnc_log;
- //["_roleList:",_roleList] call MIV_fnc_log;
