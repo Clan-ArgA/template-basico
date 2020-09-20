@@ -75,8 +75,10 @@ if (!isServer) then {
 	};
 };
 
+private ["_myfpsmarker"];
+
 if (_enableShowFpsMap) then {
-	private _myfpsmarker = createMarker [format ["fpsmarker%1", _sourcestr], [0, -500 - (500 * _position)]];
+	_myfpsmarker = createMarker [format ["fpsmarker%1", _sourcestr], [0, -500 - (500 * _position)]];
 	_myfpsmarker setMarkerType "mil_start";
 	_myfpsmarker setMarkerSize [0.7, 0.7];
 };
