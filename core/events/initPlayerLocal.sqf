@@ -27,9 +27,34 @@ if (hasInterface) then {
   if(_initialGoggles != "") then {
     player addGoggles _initialGoggles;
   };
-};
 
-enableEngineArtillery (_enableArtilleryComputer);
+  // Deshabilita las opciones de Cargar y Guardar Equipo en el arsenal
+  if(_disableCustomLoadout) then {
+    [missionNamespace, "arsenalOpened", {
+      disableSerialization;
+      params ["_display"];
+      _display displayAddEventHandler ["keydown", "_this select 3"];
+      {
+        (_display displayCtrl _x) ctrlShow false
+      } forEach [44151, 44150, 44146, 44147, 44148, 44149, 44346];
+    }] call BIS_fnc_addScriptedEventHandler;
+  };
+
+  doStop player;
+  player disableAI "MOVE";
+  player action ["SwitchWeapon", player, player, 100];
+
+  if (_enablestealthCoef) then {
+    player setUnitTrait ["audibleCoef ",_hearingCoef];
+    player setUnitTrait ["camouflageCoef  ",_camouflageCoef];
+  };
+
+  if (_enableAcreSetup) then {
+    execVM "core\scripts\setup_ACRE2_displays.sqf";
+  };
+
+  enableEngineArtillery (_enableArtilleryComputer);
+};
 
 // Deshabilita el movimiento de la IA para todas las IA que 
 // esten en el mismo grupo que un jugador humano
@@ -40,8 +65,6 @@ if(_disableGroupIA) then {
       doStop _x;
       _x disableAI "MOVE";
       _x action ["SwitchWeapon", _x, _x, 100];
-      // _x enableSimulationGlobal false;
-      // _x hideObjectGlobal true;
     };
   }foreach _units;
 };
@@ -52,35 +75,12 @@ if (_disableBluforIA) then {
       doStop _x;
       _x disableAI "MOVE";
       _x action ["SwitchWeapon", _x, _x, 100];
-      // _x enableSimulationGlobal false;
-      // _x hideObjectGlobal true;
     };
   }foreach allUnits;
 };
 
-// Deshabilita las opciones de Cargar y Guardar Equipo en el arsenal
-if(_disableCustomLoadout) then {
-  [missionNamespace, "arsenalOpened", {
-    disableSerialization;
-    params ["_display"];
-    _display displayAddEventHandler ["keydown", "_this select 3"];
-    {
-      (_display displayCtrl _x) ctrlShow false
-    } forEach [44151, 44150, 44146, 44147, 44148, 44149, 44346];
-  }] call BIS_fnc_addScriptedEventHandler;
-};
-
-doStop player;
-player disableAI "MOVE";
-player action ["SwitchWeapon", player, player, 100];
-
-if (_enablestealthCoef) then {
-  player setUnitTrait ["audibleCoef ",_hearingCoef];
-  player setUnitTrait ["camouflageCoef  ",_camouflageCoef];
-};
-
-if (_enableAcreSetup) then {
-  execVM "core\scripts\setup_ACRE2_displays.sqf";
+if(!(hasInterface || isDedicated)) then {
+    execVM "core\scripts\show_fps.sqf";
 };
 
 /*******************************************************************************
