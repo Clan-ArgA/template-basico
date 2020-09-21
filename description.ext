@@ -10,6 +10,11 @@ class CfgFunctions {
   #include "core\functions.hpp"
 };
 
+class CfgSounds {
+	sounds[] = {};
+  #include "core\sounds.hpp"
+};
+
 #include "core\post_description.hpp"
 
 /*******************************************************************************

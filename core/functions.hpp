@@ -71,6 +71,9 @@ class MANDI {
       class create_jsonObject {
         file = "core\functions\fnc_create_jsonObject.sqf";
       };
+      class addPlatoonToRole {
+        file = "core\functions\fnc_addPlatoonToRole.sqf";
+      };
     };
   };
   class MAC {

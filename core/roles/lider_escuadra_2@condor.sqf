@@ -26,6 +26,7 @@ _unit addWeapon "Laserdesignator_02";
 
 _unit addItemToVest "ACE_SpraypaintRed";
 _unit addItemToVest "ACE_EntrenchingTool";
+_unit addItemToVest "ACRE_PRC152";
 for "_i" from 1 to 4 do {_unit addItemToVest "ACE_20Rnd_762x51_M993_AP_Mag";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 2 do {_unit addItemToVest "20Rnd_762x51_Mag";};

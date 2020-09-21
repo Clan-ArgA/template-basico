@@ -24,6 +24,8 @@ if (_allowGPS) then {
     _unit linkItem "ItemGPS";
 };
 
+//_unit linkItem "ACE_NVG_Wide";
+
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
