@@ -79,7 +79,9 @@ if (_disableBluforIA) then {
   }foreach allUnits;
 };
 
+["[InitPlayerLocal Previo] 1 linea"] call MIV_fnc_log;
 if(!(hasInterface || isDedicated)) then {
+    ["[InitPlayerLocal if] 1 linea"] call MIV_fnc_log;
     execVM "core\scripts\show_fps.sqf";
 };
 

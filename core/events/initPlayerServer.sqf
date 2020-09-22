@@ -22,7 +22,7 @@ if (_enableAutomaticRole) then {
 if (_enableAcreSetup) then {
   [_playerUnit] execVM "core\scripts\init_ACRE2_channels.sqf";
 };
-
+["[InitPlayerServer] 1 linea"] call MIV_fnc_log;
 execVM "core\scripts\show_fps.sqf";
 
 /*******************************************************************************
