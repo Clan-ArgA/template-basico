@@ -1,12 +1,12 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-["[SHOW_FPS] 1 linea"] call MIV_fnc_log;
+
 private _enableShowFpsMap = getMissionConfigValue ["SHOW_FPS_MAP",  1] == 1;
 private _enableShowFpsLog = getMissionConfigValue ["SHOW_FPS_LOG",  1] == 1;
 
 if (!_enableShowFpsMap && !_enableShowFpsLog) exitWith { };
-["[SHOW_FPS] linea 9"] call MIV_fnc_log;
+
 private _sourcestr = "Server";
 private _position = 0;
 
@@ -78,7 +78,7 @@ if (!isServer) then {
 private ["_myfpsmarker"];
 
 if (_enableShowFpsMap) then {
-	["[SHOW_FPS] if _enableShowFpsMap true"] call MIV_fnc_log;
+	
 	_myfpsmarker = createMarker [format ["fpsmarker%1", _sourcestr], [0, -500 - (500 * _position)]];
 	_myfpsmarker setMarkerType "mil_start";
 	_myfpsmarker setMarkerSize [0.7, 0.7];
@@ -94,7 +94,6 @@ while {true} do {
 	if (_humanPlayers > 1) then { _playerText = "players"};
 
 	if (_enableShowFpsMap) then {
-		["[SHOW_FPS] if _enableShowFpsMap true (2)"] call MIV_fnc_log;
 		_myfpsmarker setMarkerColor "ColorGREEN";
 		if (_myfps < 30) then {_myfpsmarker setMarkerColor "ColorYELLOW";};
 		if (_myfps < 20) then {_myfpsmarker setMarkerColor "ColorORANGE";};
@@ -105,13 +104,11 @@ while {true} do {
 	private _textForCSV = format [",%1,%2,%3,%4,%5", _sourcestr, (round (_myfps * 100.0)) / 100.0, _localgroups, _localunits,_humanPlayers];
 
 	if (_enableShowFpsLog) then {
-		["[SHOW_FPS] if _enableShowFpsLog true"] call MIV_fnc_log;
 		//["FPS_DEBUG_COUNT", _text] call MIV_fnc_log;
 		["FPS_DEBUG_CSV", _textForCSV] call MIV_fnc_log;
 	};
 
 	if (_enableShowFpsMap) then {
-		["[SHOW_FPS] if _enableShowFpsMap true (3)"] call MIV_fnc_log;
 		_myfpsmarker setMarkerText _text;
 	};
 
