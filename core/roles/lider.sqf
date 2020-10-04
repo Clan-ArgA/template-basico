@@ -11,7 +11,7 @@ private _back = if (_useBigBackPack) then {_backPack} else {_backPackLittle};
 if (!local _unit) exitWith {};
 
 _unit addBackpack _back;
-_unit addHeadgear _helmet;
+_unit addHeadgear "arga_g_bo_capitan";
 
 _unit addWeapon "ACFAA_FAMCA";
 _unit addPrimaryWeaponItem "rhsusf_acc_su230_mrds";
