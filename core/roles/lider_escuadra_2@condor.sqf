@@ -1,5 +1,5 @@
 /*******************************************************************************
-                          Realizado por MIV
+                          Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Labrador|Cbo¹
 *******************************************************************************/
 
@@ -17,12 +17,10 @@ _unit addHeadgear _helmet;
 
 _unit addWeapon "ACFAA_FAMCA";
 _unit addPrimaryWeaponItem "muzzle_snds_b";
-_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR_3d";
+_unit addPrimaryWeaponItem "rhsusf_acc_g33_xps3";
 _unit addPrimaryWeaponItem "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
-_unit addWeapon "Rangefinder";
-
 _unit addItemToVest "ACE_EntrenchingTool";
 _unit addItemToVest "ACRE_PRC152";
 for "_i" from 1 to 8 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";};
@@ -42,7 +40,10 @@ for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_EarPlugs";};
 for "_i" from 1 to 5 do {_unit addItemToBackpack "SmokeShellBlue";};
 
 
+
+
+
 /*******************************************************************************
-                          Realizado por MIV
+                          Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Labrador|Cbo¹
 *******************************************************************************/
