@@ -74,6 +74,9 @@ class MANDI {
       class addPlatoonToRole {
         file = "core\functions\fnc_addPlatoonToRole.sqf";
       };
+      class getClusters {
+        file = "core\functions\fnc_getClusters.sqf";
+      };
     };
   };
   class MAC {

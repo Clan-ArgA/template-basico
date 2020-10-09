@@ -19,7 +19,7 @@ ARGA_PLATOON_LIST = [["condor",["condor","cóndor"]],["yaguar",["yaguar","yaguar
 
 AVAILABLE_INSIGNIA_TYPES = ["arga","condor","yaguar","medico"];
 
-BOX_ROLE_LIST = ["Ametrallador M240","Ametrallador M249","Capitán","Enfermero","Francotirador","Fusilero","Fusilero RA","Granadero","Granadero c/Bengalas","Ingeniero","Lanzador AA","Lanzador AT","Líder","Líder Pelotón","Líder Escuadra","Líder Escuadra 1","Líder Escuadra 2","Líder Escuadra 3","Médico","Médico de Combate","Observador","Piloto","Radio Operador","Teniente","Tirador FAL","Tirador MK11"];
+BOX_ROLE_LIST = ["Capitán","Teniente","Líder","Sub Líder","Líder Pelotón","Líder Escuadra","Líder Escuadra 1","Líder Escuadra 2","Líder Escuadra 3","Ametrallador M240","Ametrallador M249","Francotirador","Fusilero","Fusilero RA","Granadero","Granadero c/Bengalas","Ingeniero","Lanzador AA","Lanzador AT","Observador","Piloto","Radio Operador","Tirador FAL","Tirador MK11","Médico","Médico de Combate","Enfermero"];
 
 RADIO_CHANNEL_NAME  = [["ACRE_PRC152",[[4, "AEREO"],[5, "INTERNA MANDO"],[6, "COMANDANCIA"],[7, "CONDOR"],[8, "YAGUARETE"],[9, "CONVOY"],[10, "MEDICOS"]]],["ACRE_PRC117F",[[4, "AEREO"],[5, "INTERNA MANDO"],[6, "COMANDANCIA"],[7, "CONDOR"],[8, "YAGUARETE"],[9, "CONVOY"],[10, "MEDICOS"]]]];
 FIXED_CHANNEL_NAME  = ["AEREO","INTERNA MANDO","COMANDANCIA","CONVOY","MEDICOS"];

@@ -1,5 +1,5 @@
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|MIV
 *******************************************************************************/
 
 private _customSkillsIA  = getMissionConfigValue ["DIFICULTAD_IA_PERSONALIZADA", 1];
@@ -67,6 +67,8 @@ execVM "core\scripts\init_garbage_collector.sqf";
 
 if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };
 
+execVM "core\scripts\show_fps.sqf";
+
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|MIV
 *******************************************************************************/

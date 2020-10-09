@@ -78,6 +78,7 @@ if (!isServer) then {
 private ["_myfpsmarker"];
 
 if (_enableShowFpsMap) then {
+	
 	_myfpsmarker = createMarker [format ["fpsmarker%1", _sourcestr], [0, -500 - (500 * _position)]];
 	_myfpsmarker setMarkerType "mil_start";
 	_myfpsmarker setMarkerSize [0.7, 0.7];
@@ -100,11 +101,11 @@ while {true} do {
 	};
 
 	private _text = format ["%1: %2 fps, %3 local groups, %4 local units, %5 %6", _sourcestr, (round (_myfps * 100.0)) / 100.0, _localgroups, _localunits,_humanPlayers,_playerText];
-	private _textExcel = format [",%1,%2,%3,%4,%5", _sourcestr, (round (_myfps * 100.0)) / 100.0, _localgroups, _localunits,_humanPlayers];
+	private _textForCSV = format [",%1,%2,%3,%4,%5", _sourcestr, (round (_myfps * 100.0)) / 100.0, _localgroups, _localunits,_humanPlayers];
 
 	if (_enableShowFpsLog) then {
-		["FPS_DEBUG_COUNT", _text] call MIV_fnc_log;
-		["FPS_DEBUG_EXCEL", _textExcel] call MIV_fnc_log;
+		//["FPS_DEBUG_COUNT", _text] call MIV_fnc_log;
+		["FPS_DEBUG_CSV", _textForCSV] call MIV_fnc_log;
 	};
 
 	if (_enableShowFpsMap) then {
