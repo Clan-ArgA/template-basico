@@ -2,7 +2,7 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-TEMPLATE_VERSION = "0.9.6";
+TEMPLATE_VERSION = "0.9.7";
 
 /* Log system */
 DEBUG = 1;                                          // Habilita el modo debug
