@@ -33,7 +33,6 @@ for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellOrange";};
 _unit addItemToBackpack "ACRE_PRC117F";
 for "_i" from 1 to 10 do {_unit addItemToBackpack "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";};
-_unit linkItem "ACE_NVG_Wide";
 
 /*******************************************************************************
                           Realizado por |ArgA|Vultur|Cbo¹

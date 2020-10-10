@@ -3,6 +3,7 @@
 *******************************************************************************/
 
 private _allowGPS = getMissionConfigValue ["COLOCAR_GPS",  1] == 1;
+private _allowNV  = getMissionConfigValue ["VISION_NOCTURNA",  1] == 1;
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToUniform "ACE_EarPlugs";
@@ -23,9 +24,9 @@ _unit linkItem "ACE_Altimeter";
 if (_allowGPS) then {
     _unit linkItem "ItemGPS";
 };
-
-//_unit linkItem "ACE_NVG_Wide";
-
+if (_allowNV) then {
+    _unit linkItem "ACE_NVG_Wide";
+};
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV

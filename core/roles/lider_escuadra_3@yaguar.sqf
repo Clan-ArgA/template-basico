@@ -33,7 +33,6 @@ for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 _unit addItemToBackpack "rhsusf_acc_omega9k";
 _unit addItemToBackpack "acc_flashlight_pistol";
-//_unit addItemToBackpack "ACE_NVG_Wide";
 for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";};
 for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Chemlight_HiGreen";};
 for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Chemlight_HiRed";};
