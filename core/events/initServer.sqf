@@ -2,6 +2,8 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
+ALREADY_CONNECTED_PLAYERS = [];
+
 private _customSkillsIA  = getMissionConfigValue ["DIFICULTAD_IA_PERSONALIZADA", 1];
 private _aimingAccuracy  = getMissionConfigValue ["AIMING_ACCURACY", 0.01];
 private _aimingShake     = getMissionConfigValue ["AIMING_SHAKE", 0.99];

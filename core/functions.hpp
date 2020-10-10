@@ -77,6 +77,12 @@ class MANDI {
       class getClusters {
         file = "core\functions\fnc_getClusters.sqf";
       };
+      class wasPlayerConnected {
+        file = "core\functions\fnc_wasPlayerConnected.sqf";
+      };
+      class addUIDtoList {
+        file = "core\functions\fnc_addUIDtoList.sqf";
+      };
     };
   };
   class MAC {
