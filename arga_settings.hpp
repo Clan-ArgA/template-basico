@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 #define NAME "Op. Template Basico"                  // Colocar nombre de mision
-#define COMPLETE_NAME "Op. Template Basico v0.9.7"  // Nombre y versión de la misión
+#define COMPLETE_NAME "Op. Template Basico v0.9.8"  // Nombre y versión de la misión
 #define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 

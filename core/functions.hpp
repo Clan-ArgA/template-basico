@@ -83,6 +83,10 @@ class MANDI {
       class addUIDtoList {
         file = "core\functions\fnc_addUIDtoList.sqf";
       };
+      class countAlivePlayers {
+        file = "core\functions\fnc_countAlivePlayers.sqf";
+      };
+      
     };
   };
   class MAC {
