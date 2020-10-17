@@ -22,18 +22,8 @@ for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_epinephrine";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_CableTie";};
 
 _unit linkItem "ItemMap";
-/*
-private _test = str _group;
-[_test select 0] call MIV_fnc_log;
-/*for "_i" from 0 to (count _test)-1 do {
-    ["[str group:]",_test select _i] call MIV_fnc_log;
-};*/
 
-
-//[str _group,str _group == "condor",typeName (str _group) ] call MIV_fnc_log;
-
-
-if ((str _group) == "condor") then {
+if (_group == "condor") then {
     _watch = "ACE_Altimeter";
 };
 
