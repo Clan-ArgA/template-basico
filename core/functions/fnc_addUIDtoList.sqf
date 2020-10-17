@@ -2,11 +2,13 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
+if (!isServer) exitWith { };
+
 params["_player"];
 
 private _playerUID = getPlayerUID _player;
 
-ALREADY_CONNECTED_PLAYERS append [_playerUID];
+MIV_ALREADY_CONNECTED_PLAYERS append [_playerUID];
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV

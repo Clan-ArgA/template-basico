@@ -2,11 +2,9 @@
                           Realizado por |ArgA|MandI
 *******************************************************************************/
 
-params[["_playerUnit",player]];
+if (!hasInterface) exitWith { };
 
-if (isNil "_playerUnit" || !hasInterface) exitWith { };
-
-private _wasConnected = [_playerUnit] call MIV_fnc_wasPlayerConnected;
+private _wasConnected = [player] call MIV_fnc_wasPlayerConnected;
 
 if (!_wasConnected) then {
     private _intro = getMissionConfigValue ["INTRO", 2];
