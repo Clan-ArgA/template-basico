@@ -19,18 +19,18 @@ INTRO = 0;                                          // Intros: 1 y 2. Para desac
 
 MAX_DIST_VISION = 2500;
 MIN_DIST_VISION = 800;                              // Distancia de visión reducida por marcador
-DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 0;          // Equipamiento guardado en arsenal virtual. 0: activado, 1: desactivado
-ACTIVAR_COMPUTADORA_ARTILLERIA = 1;                 // Habilita computadora artilleria poner 1. Para que no aparezca poner 0
+EQUIPAMIENTO_PERSONALIZADO = 0;                     // Equipamiento guardado en arsenal virtual. 1: Permite, 0: No Permite.
+COMPUTADORA_ARTILLERIA = 1;                         // Computadora artilleria. Habilita: 1. Desabilita: 0.
 ACTIVAR_ROL_AUTOMATICO = 0;                         // Habilita la carga de rol al entrar a la misión por descripción de rol
                                                     // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
-COLOCAR_GPS = 1;                                    // Agrega GPS vanilla en rol automático o caja. 1: agrega, 0: remueve
+GPS = 1;                                            // Agrega GPS vanilla en rol automático o caja. 1: agrega, 0: remueve
 VISION_NOCTURNA = 0;                                // Agrega visión nocturna panorámica en rol automático o caja. 1: agrega, 0: remueve
 TIPO_VN = "ACE_NVG_Wide";                           // Tipo de la visión nocturna que se va a agregar en rol automático o caja.
 
-ACTIVAR_INSIGNIA_AUTOMATICO = 1;                    // Añade insignias por pelotón o médicas. 1: Añade, 0: No Añade
+INSIGNIA_AUTOMATICA = 1;                            // Añade insignias por pelotón o médicas. 1: Añade, 0: No Añade
 INSIGNIA_IR = 0;                                    // Establece si las insignias son IR (1) o normales (0).
 
-ACTIVAR_SETUP_PERSONALIZADO_RADIOS = 1;             // Activa el setup de las radios de ACRE2. 1: activado, 0: desactivado
+SETUP_PERSONALIZADO_RADIOS = 1;                     // Activa el setup de las radios de ACRE2. 1: activado, 0: desactivado
 
 
 /* 
@@ -61,7 +61,7 @@ BRIEFING
     Cada elemento del array es un parrafo
     Ejemplo: ["Primer parrafo", "Segundo parrafo"] 
 */
-ACTIVAR_BRIEFING = 1;
+BRIEFING = 1;                                       // 1: Muestra, 0: No muestra
 CARACTER = "No Oficial";
 HORARIO = "";
 FECHA = "";
@@ -76,7 +76,7 @@ ENEMIGOS = ["", ""];
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Borrado de IAs enemigas muertas y vehículos destruidos */
-ACTIVAR_RECOLECTOR_BASURA = 1;                      // Activa la funcion que borra las IAs muertas y vehículos destruidos. 1: Activado, 0: Desactivado
+RECOLECTOR_BASURA = 1;                              // Activa la funcion que borra las IAs muertas y vehículos destruidos. 1: Activado, 0: Desactivado
 RB_TIEMPO_ESPERA_HOMBRES = 120;                     // Tiempo en segundos de espera para eliminar soldados enemigos. 0 Desactiva el borrado de enemigos
 RB_TIEMPO_ESPERA_VEHICULOS = 0;                     // Tiempo en segundos de espera para eliminar vehículos enemigos. 0 Desactiva el borrado de vehículos
 RB_TIEMPO_ESPERA_BLINDADOS = 0;                     // Tiempo en segundos de espera para eliminar blindados enemigos. 0 Desactiva el borrado de blindados
@@ -85,23 +85,23 @@ RB_DISTANCIA_JUGADORES = 200;                       // Distancia en metros a los
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Camuflaje */
-ACTIVAR_COEFICIENTES_CAMUFLAJE = 0;                 // 1 Activa esta función. 0 la desactiva.
+COEFICIENTES_CAMUFLAJE = 0;                         // 1: Activada. 0: Desactivada.
 COEFICIENTE_AUDICION = 1;                           // Valores menores hacen al jugador mas difícil de escuchar. Valores decimales ente 0 y 1.
 COEFICIENTE_CAMUFLAJE = 1;                          // Valores menores hacen al jugador mas difícil de detectar. Valores decimales ente 0 y 1.
 ////////////////////////////////////////////////////////////////////////////////
 
 /* IA - CONFIGURACION */
-DESACTIVAR_IA_DE_GRUPO = 1;                         // 0 No desactiva la IA del Grupo de los jugadores, 1 la desactiva.
-DESACTIVAR_TODO_BLUFOR = 1;                         // 0 No desactiva la IA del Blufor, 1 la desactiva.
-DIFICULTAD_IA_PERSONALIZADA = 0;
-AIMING_ACCURACY = 0.01;                             //precision de apuntado
-AIMING_SHAKE = 0.99; 	                            //dispersión de apuntado
-AIMING_SPEED = 0.1; 	                            //velocidad de apuntado
-SPOT_DISTANCE = 0.3; 	                            //distancia de avistamiento
-SPOT_TIME = 0.5; 		                            //tiempo de avistamiento
-COURAGE = 0.25; 		                            //coraje
-RELOAD_SPEED = 0.25; 	                            //velocidad de recarga
-COMMANDING = 0.75; 		                            //liderazgo
+IA_DE_GRUPO = 0;                                    // 1: No desactiva la IA del Grupo de los jugadores, 0: la desactiva.
+IA_BLUFOR = 0;                                      // 1: No desactiva la IA Blufor, 0: la desactiva.
+DIFICULTAD_IA_PERSONALIZADA = 0;                    // 1: Activada. 0: Desactivada.
+AIMING_ACCURACY = 0.01;                             // Precision de apuntado
+AIMING_SHAKE = 0.99; 	                            // Dispersión de apuntado
+AIMING_SPEED = 0.1; 	                            // Velocidad de apuntado
+SPOT_DISTANCE = 0.3; 	                            // Distancia de avistamiento
+SPOT_TIME = 0.5; 		                            // Tiempo de avistamiento
+COURAGE = 0.25; 		                            // Coraje
+RELOAD_SPEED = 0.25; 	                            // Velocidad de recarga
+COMMANDING = 0.75; 		                            // Liderazgo
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Modificar desde los define que estan arriba de todo.

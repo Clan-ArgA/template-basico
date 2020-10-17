@@ -1,8 +1,18 @@
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
+// El nombre de _functionName debe ser el nombre de la funcion completo (MIV_fnc_setInsignia). 
+// Si es script el camino completo ("core\scripts\init_intro.sqf")
+
+
+//wasFuntionCalled
+
+params ["_uid","_functionName"];
 
 if (!isServer) exitWith { };
+
+//TODO Chequear que MIV_ALREADY_CONNECTED_PLAYERS exista
+// si no existe devuelvo false
 
 params["_unit"];
 
@@ -14,6 +24,8 @@ if (_playerUID in MIV_ALREADY_CONNECTED_PLAYERS) then {
 };
 
 _isUIDInList
+
+//return true o false
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV

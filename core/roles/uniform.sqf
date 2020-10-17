@@ -2,7 +2,7 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-private _allowGPS = getMissionConfigValue ["COLOCAR_GPS",  1] == 1;
+private _allowGPS = getMissionConfigValue ["GPS",  1] == 1;
 private _allowNV  = getMissionConfigValue ["VISION_NOCTURNA",  1] == 1;
 private _NVClass  = getMissionConfigValue ["TIPO_VN",  "ACE_NVG_Wide"];
 private _group    = [_unit] call MIV_fnc_getGroup;

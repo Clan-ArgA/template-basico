@@ -2,7 +2,7 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-private _enableAutomatiEnsign   = getMissionConfigValue ["ACTIVAR_INSIGNIA_AUTOMATICO",  1] == 1;
+private _enableAutomatiEnsign   = getMissionConfigValue ["INSIGNIA_AUTOMATICA",  1] == 1;
 private _ensignIR               = getMissionConfigValue ["INSIGNIA_IR",  0] == 1;
 private _availableInsigniaTypes = parseSimpleArray getMissionConfigValue ["AVAILABLE_INSIGNIA_TYPES", '[]'];
 
@@ -31,7 +31,7 @@ _insignia = format['%1%2',_insignia,_insigniaType];
 //["Insignia/_platoon:", _group] call MIV_fnc_log;
 
 /*
-    ACTIVAR_INSIGNIA_AUTOMATICO = 1;    // Añadir a arga_settings
+    INSIGNIA_AUTOMATICA = 1;    // Añadir a arga_settings
     INSIGNIA_IR = 0;                    // establece si las insignias son IR o normales
 
     Setee la insignia de condor o yaguar (revisar caso con y sil tilde), en caso de
