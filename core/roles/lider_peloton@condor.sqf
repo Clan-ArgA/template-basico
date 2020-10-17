@@ -22,11 +22,11 @@ _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 _unit addMagazine "Laserbatteries";
 _unit addWeapon "Laserdesignator_01_khk_F";
 
-//_unit addItemToVest "ACE_DAGR";
+_unit addItemToVest "ACE_HuntIR_monitor";
 _unit addItemToVest "ACRE_PRC152";
 _unit addItemToVest "HandGrenade";
 _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";
-for "_i" from 1 to 7 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";};
+for "_i" from 1 to 6 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";};
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellOrange";};
 
