@@ -2,8 +2,8 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-TEMPLATE_VERSION = "0.9.9";
-TEMPLATE_LAST_UPDATE_DATE = "17-10-2020"; //Pasar al json del mission begin
+TEMPLATE_VERSION     = "0.9.9";
+TEMPLATE_LAST_UPDATE = "17-10-2020";
 
 /* Log system */
 DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Desabilita.

@@ -19,6 +19,7 @@ private _enemyForces     = parseSimpleArray getMissionConfigValue ["ENEMIGOS", "
 private _author          = getMissionConfigValue ["author", "ArgA"];
 private _worldName       = worldName;
 private _templateVersion = getMissionConfigValue ["TEMPLATE_VERSION", "0.0.0"];
+private _templateData    = getMissionConfigValue ["TEMPLATE_LAST_UPDATE", "00-00-0000"];
 
 _situation      = _situation      joinString "\\n\\n";
 _storySituation = _storySituation joinString "\\n\\n";
@@ -47,7 +48,8 @@ private _missionsValues = [
   ],
   ["author", _author],
   ["worldName", _worldName],
-  ["templateVersion", _templateVersion]
+  ["templateVersion", _templateVersion],
+  ["templateData", _templateData]
 ];
 
 private _result  = [_missionsValues] call MIV_fnc_create_jsonObject;
