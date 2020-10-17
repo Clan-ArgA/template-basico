@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 #define NAME "Op. Template Basico"                  // Colocar nombre de mision
-#define COMPLETE_NAME "Op. Template Basico v0.9.8"  // Nombre y versión de la misión
+#define COMPLETE_NAME "Op. Template Basico v0.9.9"  // Nombre y versión de la misión
 #define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
@@ -15,7 +15,7 @@ NOMBRE_CAMPANIA = "";
 INTRO_PERSONALIZADA = 0;                            // 1 Si la deseas cargar una intro personalizada (propia)
                                                     // y en el parametro INTRO la dirección del archivo entre comillas
                                                     // EJ. INTRO_PERSONALIZADA = 1; INTRO = "scripts\intro_propia.sqf";
-INTRO = 0;                                          // Intros: 1 y 2. Para desactivar: 0
+INTRO = 1;                                          // Intros: 1 y 2. Para desactivar: 0
 
 MAX_DIST_VISION = 2500;
 MIN_DIST_VISION = 800;                              // Distancia de visión reducida por marcador

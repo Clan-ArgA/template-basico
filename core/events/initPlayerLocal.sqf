@@ -20,7 +20,7 @@ if (hasInterface) then {
   MANDI_ENABLE_DIST = true;
   [_maxDistanciaVision, _minDistanciaVision] execVM "core\scripts\view_distance.sqf";
   execVM "core\scripts\check_view.sqf";
-  execVM "core\scripts\init_intro.sqf";
+  [player] execVM "core\scripts\init_intro.sqf";
   execVM "core\scripts\setBriefing.sqf";
   call MIV_fnc_setInsignia;
   removeGoggles player;
