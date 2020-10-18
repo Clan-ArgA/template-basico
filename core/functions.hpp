@@ -77,11 +77,11 @@ class MANDI {
       class getClusters {
         file = "core\functions\fnc_getClusters.sqf";
       };
-      class wasPlayerConnected {
-        file = "core\functions\fnc_wasPlayerConnected.sqf";
+      class wasFuntionCalled {
+        file = "core\functions\fnc_wasFuntionCalled.sqf";
       };
-      class addUIDtoList {
-        file = "core\functions\fnc_addUIDtoList.sqf";
+      class setFuntionCalled {
+        file = "core\functions\fnc_setFuntionCalled.sqf";
       };
       class countAlivePlayers {
         file = "core\functions\fnc_countAlivePlayers.sqf";

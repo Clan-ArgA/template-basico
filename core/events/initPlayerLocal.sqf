@@ -13,6 +13,7 @@ private _enablestealthCoef       = getMissionConfigValue ["COEFICIENTES_CAMUFLAJ
 private _hearingCoef             = getMissionConfigValue ["COEFICIENTE_AUDICION", 1];
 private _camouflageCoef          = getMissionConfigValue ["COEFICIENTE_CAMUFLAJE", 1];
 private _enableAcreSetup         = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
+private _functionWasCalled       = [player,"core\scripts\init_intro.sqf"] call MIV_fnc_wasFuntionCalled;
 
 setTerrainGrid 25;
 
@@ -21,9 +22,12 @@ if (hasInterface) then {
   [_maxDistanciaVision, _minDistanciaVision] execVM "core\scripts\view_distance.sqf";
   execVM "core\scripts\check_view.sqf";
   
-  //TODO comprobar si se ejecuto previamente. Si no se ejecuto la llamo
-  execVM "core\scripts\init_intro.sqf";
-  //Si la llamo agregarla a la lista de ejecutadas
+  ["IPL: _functionWasCalled",_functionWasCalled,player] call MIV_fnc_Log;
+
+  if (!_functionWasCalled) then {
+    execVM "core\scripts\init_intro.sqf";
+    [[player,"core\scripts\init_intro.sqf"],"core\functions\fnc_setFuntionCalled.sqf"] remoteExec ["BIS_fnc_execVM", 2, false];
+  };
   
   execVM "core\scripts\setBriefing.sqf";
   call MIV_fnc_setInsignia;

@@ -2,7 +2,7 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-MIV_ALREADY_CONNECTED_PLAYERS = [];
+MIV_CALLED_FUNCTIONS = [];
 
 private _customSkillsIA  = getMissionConfigValue ["DIFICULTAD_IA_PERSONALIZADA", 1] == 1;
 private _aimingAccuracy  = getMissionConfigValue ["AIMING_ACCURACY", 0.01];
