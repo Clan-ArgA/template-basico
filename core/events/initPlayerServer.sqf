@@ -4,7 +4,7 @@
 
 params ["_playerUnit", "_didJIP"];
 
-private _enableAutomaticRole = getMissionConfigValue ["ACTIVAR_ROL_AUTOMATICO",  1] == 1;
+private _enableAutomaticRole = getMissionConfigValue ["ROL_AUTOMATICO",  1] == 1;
 private _enableAcreSetup     = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 private _functionWasCalled   = [_playerUnit,"core\scripts\set_role.sqf"] call MIV_fnc_wasFuntionCalled;
 
