@@ -21,8 +21,6 @@ if (hasInterface) then {
   MANDI_ENABLE_DIST = true;
   [_maxDistanciaVision, _minDistanciaVision] execVM "core\scripts\view_distance.sqf";
   execVM "core\scripts\check_view.sqf";
-  
-  ["IPL: _functionWasCalled",_functionWasCalled,player] call MIV_fnc_Log;
 
   if (!_functionWasCalled) then {
     execVM "core\scripts\init_intro.sqf";

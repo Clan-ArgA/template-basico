@@ -6,17 +6,17 @@
 
 params ["_playerUnit","_functionName"];
 
-if (isNil "MIV_CALLED_FUNCTIONS") exitWith { ["WPC0:",_playerUnit,_functionName,"MIV_CALLED_FUNCTIONS es Nil"] call MIV_fnc_Log; };
+if (isNil "MIV_CALLED_FUNCTIONS") exitWith {  };
 
 private _playerUID      = getPlayerUID _playerUnit;
 private _searchForUID   = MIV_CALLED_FUNCTIONS select {_playerUID in _x};
 
-["WPC1:",_playerUnit,_functionName,_searchForUID] call MIV_fnc_Log;
+//["WPC1:",_playerUnit,_functionName,_searchForUID] call MIV_fnc_Log;
 
 if (isNil "_searchForUID" || count _searchForUID == 0) exitWith {false};
 
 private _functionSearch = _searchForUID select {_functionName in (_x select 1)};
-["WPC2:",_playerUnit,_functionName,_functionSearch] call MIV_fnc_Log;
+//["WPC2:",_playerUnit,_functionName,_functionSearch] call MIV_fnc_Log;
 
 if (!isNil "_functionSearch" && count _functionSearch > 0) exitWith {true};
 

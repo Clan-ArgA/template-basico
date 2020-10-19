@@ -15,22 +15,22 @@ NOMBRE_CAMPANIA = "";
 INTRO_PERSONALIZADA = 0;                            // 1 Si la deseas cargar una intro personalizada (propia)
                                                     // y en el parametro INTRO la dirección del archivo entre comillas
                                                     // EJ. INTRO_PERSONALIZADA = 1; INTRO = "scripts\intro_propia.sqf";
-INTRO = 2;                                          // Intros: 1 y 2. Para desactivar: 0
+INTRO = 0;                                          // Intros: 1 y 2. Para desactivar: 0
 
 MAX_DIST_VISION = 2500;
-MIN_DIST_VISION = 800;                              // Distancia de visión reducida por marcador
-EQUIPAMIENTO_PERSONALIZADO = 1;                     // Equipamiento guardado en arsenal virtual. 1: Permite, 0: No Permite.
-COMPUTADORA_ARTILLERIA = 1;                         // Computadora artilleria. Habilita: 1. Desabilita: 0.
-ROL_AUTOMATICO = 0;                                 // 1: Habilita la carga de rol al entrar a la misión por descripción de rol. 0: Desabilita
-                                                    // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
-GPS = 1;                                            // Agrega GPS vanilla en rol automático o caja. 1: agrega, 0: remueve
-VISION_NOCTURNA = 0;                                // Agrega visión nocturna panorámica en rol automático o caja. 1: agrega, 0: remueve
+MIN_DIST_VISION = 800;                              // Distancia de visión reducida por marcador.
+EQUIPAMIENTO_PERSONALIZADO = 0;                     // 1: Permite cargar equipamiento guardado en arsenal virtual, 0: No Permite.
+COMPUTADORA_ARTILLERIA = 1;                         // 1: Habilita computadora artilleria,0: Desabilita.
+ROL_AUTOMATICO = 0;                                 // 1: Habilita la carga de rol al entrar a la misión por descripción de rol. 0: Desabilita.
+                                                    // Para verificar que los roles automáticos estan bien escritos activar todas las IAs y entrar.
+GPS = 1;                                            // 1: Agrega GPS vanilla en rol automático o caja, 0: Remueve.
+VISION_NOCTURNA = 0;                                // 1: Agrega visión nocturna panorámica en rol automático o caja, 0: Remueve.
 TIPO_VN = "ACE_NVG_Wide";                           // Tipo de la visión nocturna que se va a agregar en rol automático o caja.
 
-INSIGNIA_AUTOMATICA = 1;                            // Añade insignias por pelotón o médicas. 1: Añade, 0: No Añade
-INSIGNIA_IR = 0;                                    // Establece si las insignias son IR (1) o normales (0).
+INSIGNIA_AUTOMATICA = 1;                            // 1: Añade insignias por pelotón o médicas, 0: No Añade.
+INSIGNIA_IR = 0;                                    // 1: Coloca insignias IR, 2: Insignias normales.
 
-SETUP_PERSONALIZADO_RADIOS = 1;                     // Activa el setup de las radios de ACRE2. 1: activado, 0: desactivado
+SETUP_PERSONALIZADO_RADIOS = 1;                     // 1: Activa el setup de las radios de ACRE2, 0: Desactiva.
 
 
 /* 
@@ -76,7 +76,7 @@ ENEMIGOS = ["", ""];
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Borrado de IAs enemigas muertas y vehículos destruidos */
-RECOLECTOR_BASURA = 1;                              // Activa la funcion que borra las IAs muertas y vehículos destruidos. 1: Activado, 0: Desactivado
+RECOLECTOR_BASURA = 1;                              // 1: Activa la funcion que borra las IAs muertas y vehículos destruidos, 0: Desactivado
 RB_TIEMPO_ESPERA_HOMBRES = 120;                     // Tiempo en segundos de espera para eliminar soldados enemigos. 0 Desactiva el borrado de enemigos
 RB_TIEMPO_ESPERA_VEHICULOS = 0;                     // Tiempo en segundos de espera para eliminar vehículos enemigos. 0 Desactiva el borrado de vehículos
 RB_TIEMPO_ESPERA_BLINDADOS = 0;                     // Tiempo en segundos de espera para eliminar blindados enemigos. 0 Desactiva el borrado de blindados
