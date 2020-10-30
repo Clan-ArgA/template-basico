@@ -6,7 +6,9 @@ params ["_playerUnit","_functionName"];
 
 if (!isServer) exitWith { };
 
-if (isNil "MIV_CALLED_FUNCTIONS") exitWith { };
+if (isNil "MIV_CALLED_FUNCTIONS") then {
+    MIV_CALLED_FUNCTIONS = [];
+};
 
 private _index     = -1;
 private _playerUID = getPlayerUID _playerUnit;
@@ -18,25 +20,23 @@ private _playerUID = getPlayerUID _playerUnit;
 
 } forEach MIV_CALLED_FUNCTIONS;
 
-//["SFC1:",_playerUnit,_functionName,_index] call MIV_fnc_Log;
-
 if (_index == -1) exitWith {
     MIV_CALLED_FUNCTIONS append [[_playerUID,[_functionName]]];
     publicVariable "MIV_CALLED_FUNCTIONS";
-    //["SFC2:",_playerUnit,_functionName,MIV_CALLED_FUNCTIONS] call MIV_fnc_Log;
 };
 
 private _functionSearch = MIV_CALLED_FUNCTIONS select _index select 1 select {_functionName in _x};
 
-//["SFC3:",_playerUnit,_functionName,_functionSearch] call MIV_fnc_Log;
-
 if (isNil "_functionSearch" || count _functionSearch == 0) exitWith {
     MIV_CALLED_FUNCTIONS select _index select 1 append [_functionName];
     publicVariable "MIV_CALLED_FUNCTIONS";
-    //["SFC4:",_playerUnit,_functionName,MIV_CALLED_FUNCTIONS] call MIV_fnc_Log;
 };
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 //["WPC2:",_functionSearch] call MIV_fnc_Log;
+//["SFC1:",_playerUnit,_functionName,_index] call MIV_fnc_Log;
+//["SFC2:",_playerUnit,_functionName,MIV_CALLED_FUNCTIONS] call MIV_fnc_Log;
+//["SFC3:",_playerUnit,_functionName,_functionSearch] call MIV_fnc_Log;
+//["SFC4:",_playerUnit,_functionName,MIV_CALLED_FUNCTIONS] call MIV_fnc_Log;
