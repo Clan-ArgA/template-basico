@@ -2,8 +2,8 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-TEMPLATE_VERSION     = "0.9.10";
-TEMPLATE_LAST_UPDATE = "30-10-2020";
+TEMPLATE_VERSION     = "0.9.11";
+TEMPLATE_LAST_UPDATE = "09-11-2020";
 
 /* Log system */
 DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Desabilita.
@@ -33,3 +33,7 @@ ROLES_NEEDING_PLATOON = ["lider_peloton","lider_escuadra_1","lider_escuadra_2","
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
+
+/*
+    TODO: ESCRIBIR LOS TODO 
+*/
