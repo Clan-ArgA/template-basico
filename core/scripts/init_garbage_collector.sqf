@@ -2,7 +2,7 @@
                             Realizado por |ArgA|MIV
 *******************************************************************************/
 
-if (getMissionConfigValue ["ACTIVAR_RECOLECTOR_BASURA",  1] == 0) exitWith {};
+if (getMissionConfigValue ["RECOLECTOR_BASURA",  1] == 0) exitWith {};
 
 private _unitIA = [];
 private _waitingTimeName = ["RB_TIEMPO_ESPERA_VEHICULOS","RB_TIEMPO_ESPERA_BLINDADOS", "RB_TIEMPO_ESPERA_AEREOS"];

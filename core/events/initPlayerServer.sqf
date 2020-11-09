@@ -1,10 +1,12 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-private _enableAutomaticRole = getMissionConfigValue ["ACTIVAR_ROL_AUTOMATICO",  1] == 1;
-private _enableAcreSetup     = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 
 params ["_playerUnit", "_didJIP"];
+
+private _enableAutomaticRole = getMissionConfigValue ["ROL_AUTOMATICO",  1] == 1;
+private _enableAcreSetup     = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
+private _functionWasCalled   = [_playerUnit,"core\scripts\set_role.sqf"] call MIV_fnc_wasFuntionCalled;
 
 waitUntil { time > 5 };
 
@@ -14,9 +16,12 @@ if (call MIV_fnc_isLogSystemEnabled) then {
     _playerUnit setVariable ["MANDI_IS_PLAYER", true];
 };
 
-if (_enableAutomaticRole) then {
-  private _roleList = call MIV_fnc_get_role_list;
-  [[_roleList],"core\scripts\set_role.sqf"] remoteExec ["BIS_fnc_execVM", owner _playerUnit, false];
+if (!_functionWasCalled) then {
+  if (_enableAutomaticRole) then {
+    private _roleList = call MIV_fnc_get_role_list;
+    [[_roleList],"core\scripts\set_role.sqf"] remoteExec ["BIS_fnc_execVM", owner _playerUnit, false];
+    [_playerUnit,"core\scripts\set_role.sqf"] call MIV_fnc_setFuntionCalled;
+  };
 };
 
 if (_enableAcreSetup) then {

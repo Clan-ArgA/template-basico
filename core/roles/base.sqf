@@ -6,7 +6,7 @@ params [["_unit", player], "_role", ["_uniform", "arga_u_gen3_bosque_marpat"], [
 
 if (!local _unit) exitWith {};
 
-private _enableAcreSetup     = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
+private _enableAcreSetup     = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 private _initialGoggles      = getMissionConfigValue ["GAFAS_INICIALES", ""];
 private _rolesNeedingPlatoon = parseSimpleArray getMissionConfigValue ["ROLES_NEEDING_PLATOON", '[]'];
 private _roleInList          = "";

@@ -2,14 +2,15 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-TEMPLATE_VERSION = "0.9.6";
+TEMPLATE_VERSION     = "0.9.10";
+TEMPLATE_LAST_UPDATE = "30-10-2020";
 
 /* Log system */
-DEBUG = 1;                                          // Habilita el modo debug
-ENABLE_LOG_SYSTEM = 1;                              // Habilita el sistema de log
-ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;               // Habilita el sistema de log sólo si el servidor es dedicado (requiere ENABLE_LOG_SYSTEM = 1)
-SHOW_FPS_MAP = 1;                                   // Habilita mostrar fps en mapa del servidor y los headless client.
-SHOW_FPS_LOG = 1;                                   // Habilita loguear fps en rpts del servidor y los headless client.
+DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Desabilita.
+LOG_SYSTEM = 1;                                     // 1: Habilita el sistema de log, 0: Desabilita.
+LOG_SYSTEM_ONLY_DEDICATED = 1;                      // 1: Habilita el sistema de log sólo si el servidor es dedicado (requiere LOG_SYSTEM = 1), 0: Desabilita.
+FPS_MAP = 1;                                        // 1: Muestra fps en mapa del servidor y los headless client, 0: Desabilita.
+FPS_LOG = 1;                                        // 1: Habilita loguear fps en rpts del servidor y los headless client, 0: Desabilita.
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Listas auxiliares */
@@ -32,7 +33,3 @@ ROLES_NEEDING_PLATOON = ["lider_peloton","lider_escuadra_1","lider_escuadra_2","
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-
-// No Borrar
-// STAFF_ROLE = [["Nico","Lanzador AT"],["Jhon","Ametrallador"],["Cero","Tirador fal"],["Camello","Lanzador AT"],["Maxi","Ametrallador"],["Choqqo","Ingeniero"],["Ignacio","Ametrallador"],["Paco","Granadero"],["Zorro","Granadero"],["Maxtor","Ametrallador"],["Vultur","Granadero"],["Veck","Ingeniero"],["Ranquel","Médico"],["Labrador","Médico"],["Locofer","Ingeniero"],["Lince","Ametrallador"],["Joaco","Tirador fal"],["Shaggy","Granadero"],["Timor","Ingeniero"],["Axel","Ametrallador"],["Night","Médico"],["Heiz","Ametrallador"],["Guille","Tirador fal"],["Rodo","Ingeniero"],["Vigua","Ametrallador"],["Roke","Lanzador AT"],["Jaairo","Tirador fal"],["Kalam","Ingeniero"],["Fix","Lanzador AT"],["Juani","Ametrallador"],["Huaiqui","Granadero"],["Matias","Ingeniero"],["Soda","Ingeniero"],["Tinga","Ingeniero"],["Akin","Ingeniero"]];
-////////////////////////////////////////////////////////////////////////////////

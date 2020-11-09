@@ -2,8 +2,8 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-private _enableShowFpsMap = getMissionConfigValue ["SHOW_FPS_MAP",  1] == 1;
-private _enableShowFpsLog = getMissionConfigValue ["SHOW_FPS_LOG",  1] == 1;
+private _enableShowFpsMap = getMissionConfigValue ["FPS_MAP",  1] == 1;
+private _enableShowFpsLog = getMissionConfigValue ["FPS_LOG",  1] == 1;
 
 if (!_enableShowFpsMap && !_enableShowFpsLog) exitWith { };
 

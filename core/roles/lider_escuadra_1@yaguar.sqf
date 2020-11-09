@@ -45,8 +45,6 @@ _unit addItemToBackpack "ACE_HandFlare_White";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "IEDUrbanSmall_Remote_Mag";};
 _unit addItemToBackpack "IEDLandSmall_Remote_Mag";
 
-//_unit linkItem "ACE_NVG_Wide";
-
 /*******************************************************************************
                           Realizado por |ArgA|Vultur|Cbo¹
                           Rol por       |ArgA|JuanMa|Sto¹

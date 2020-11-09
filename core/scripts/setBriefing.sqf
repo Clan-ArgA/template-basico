@@ -2,7 +2,7 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-if (getMissionConfigValue ["ACTIVAR_BRIEFING", 1] != 1) exitWith { };
+if (getMissionConfigValue ["BRIEFING", 1] != 1) exitWith { };
 
 private _mode = getMissionConfigValue ["CARACTER", "No oficial"];
 private _time = getMissionConfigValue ["HORARIO", ""];

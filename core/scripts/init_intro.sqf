@@ -2,6 +2,8 @@
                           Realizado por |ArgA|MandI
 *******************************************************************************/
 
+if (!hasInterface) exitWith { };
+
 private _intro = getMissionConfigValue ["INTRO", 2];
 private _playIntro = (str getMissionConfigValue ["INTRO", 2]) != "0";
 private _introPersonalizada = getMissionConfigValue ["INTRO_PERSONALIZADA", 0] == 1;

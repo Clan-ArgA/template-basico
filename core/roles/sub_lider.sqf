@@ -27,7 +27,6 @@ _unit addWeapon "Rangefinder";
 _unit addItemToVest "ACE_HuntIR_monitor";
 _unit addItemToVest "ACRE_PRC152";
 
-
 _unit addItemToVest "ACE_plasmaIV_500";
 _unit addItemToVest "ACE_salineIV_500";
 _unit addItemToVest "ACE_bloodIV_500";

@@ -2,7 +2,7 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-private _enableAcreSetup   = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
+private _enableAcreSetup   = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 
 if (!_enableAcreSetup) exitWith {};
 

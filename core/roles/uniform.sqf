@@ -2,7 +2,11 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-private _allowGPS = getMissionConfigValue ["COLOCAR_GPS",  1] == 1;
+private _allowGPS = getMissionConfigValue ["GPS",  1] == 1;
+private _allowNV  = getMissionConfigValue ["VISION_NOCTURNA",  1] == 1;
+private _NVClass  = getMissionConfigValue ["TIPO_VN",  "ACE_NVG_Wide"];
+private _group    = [_unit] call MIV_fnc_getGroup;
+private _watch    = "ItemWatch";
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToUniform "ACE_EarPlugs";
@@ -18,14 +22,19 @@ for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_epinephrine";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_CableTie";};
 
 _unit linkItem "ItemMap";
+
+if (_group == "condor") then {
+    _watch = "ACE_Altimeter";
+};
+
 _unit linkItem "ItemCompass";
-_unit linkItem "ACE_Altimeter";
+_unit linkItem _watch;
 if (_allowGPS) then {
     _unit linkItem "ItemGPS";
 };
-
-//_unit linkItem "ACE_NVG_Wide";
-
+if (_allowNV) then {
+    _unit linkItem _NVClass;
+};
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV

@@ -2,7 +2,7 @@
                             Realizado por |ArgA|MIV
 *******************************************************************************/
 
-if (getMissionConfigValue ["ACTIVAR_RECOLECTOR_BASURA",  1] == 0) exitWith {};
+if (getMissionConfigValue ["RECOLECTOR_BASURA",  1] == 0) exitWith {};
 
 params ["_enemyUnit"];
 
