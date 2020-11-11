@@ -2,8 +2,8 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-TEMPLATE_VERSION     = "0.9.11";
-TEMPLATE_LAST_UPDATE = "09-11-2020";
+TEMPLATE_VERSION     = "0.9.12";
+TEMPLATE_LAST_UPDATE = "11-11-2020";
 
 /* Log system */
 DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Desabilita.

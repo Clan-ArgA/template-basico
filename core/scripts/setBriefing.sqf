@@ -15,7 +15,7 @@ private _intelligence = getMissionConfigValue ["EXTRACTO_INTELIGENCIA", "[]"];
 private _objectives = getMissionConfigValue ["OBJETIVOS", "[]"];
 private _loadout = getMissionConfigValue ["RECURSOS", "[]"];
 private _enemyForces = getMissionConfigValue ["ENEMIGOS", "[]"];
-private _author = getMissionConfigValue ["author", "ArgA"];
+private _author = getMissionConfigValue ["AUTHOR", "ArgA"];
 
 private _info = [
     "Caracter: " + _mode,
