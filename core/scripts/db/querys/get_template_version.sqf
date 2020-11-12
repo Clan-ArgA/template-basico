@@ -17,19 +17,13 @@ _result = "connect" call _extdb3;
 //["CONNECTION: ", _result] call MIV_fnc_log;
 /////////////////////
 
-private _query = "SELECT code, name, id FROM role;";
+private _query = "SELECT version_number, version_date FROM version_template ORDER BY id ASC LIMIT 1;";
 
-private _roleList = ["executeQuery", _query] call _extdb3;
+private _versionList = ["executeQuery", _query] call _extdb3;
 
-//["ROLE_LIST: ", _roleList] call MIV_fnc_log;
+//["VERSION_LIST: ", _versionList] call MIV_fnc_log;
 
-private _query = "SELECT role.code, alt.name, alt.id FROM role_alternative_name as alt LEFT JOIN role as role on alt.role_id = role.id;";
-
-private _alternativeList = ["executeQuery", _query] call _extdb3;
-
-// [format ["ALT LIST: %1", str _alternativeList]] call MIV_fnc_log;
-
-(_roleList + _alternativeList);
+_versionList select 0;
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

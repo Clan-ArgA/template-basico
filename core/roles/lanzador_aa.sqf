@@ -16,16 +16,17 @@ _unit addHeadgear _helmet;
 _unit addWeapon "ACFAA_FAMCA";
 _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 _unit addPrimaryWeaponItem "acfaa_20Rndfal_762x51";
-_unit addWeapon "rhs_weap_igla";
+_unit addWeapon "rhs_weap_fim92";
+_unit addSecondaryWeaponItem "rhs_fim92_mag";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
 _unit addWeapon "Rangefinder";
 _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";
-for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
-for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
+for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 8 do {_unit addItemToVest "ACE_20Rnd_762x51_M118LR_Mag";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_9k38_rocket";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_fim92_mag";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_20Rnd_762x51_Mag_Tracer";};
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

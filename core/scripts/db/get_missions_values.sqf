@@ -46,7 +46,7 @@ private _missionsValues = [
       ["time", _time]
     ]
   ],
-  ["AUTHOR", _author],
+  ["author", _author],
   ["worldName", _worldName],
   ["templateVersion", _templateVersion],
   ["templateData", _templateData]

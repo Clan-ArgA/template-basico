@@ -2,7 +2,7 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-call compile preprocessFile "core\events\onPlayerRespawn.sqf";
+call compile preprocessFileLineNumbers "core\events\onPlayerRespawn.sqf";
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

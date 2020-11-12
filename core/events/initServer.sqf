@@ -72,6 +72,8 @@ if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };
 
 execVM "core\scripts\show_fps.sqf";
 
+//execVM "core\scripts\check_template_version.sqf";
+
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
