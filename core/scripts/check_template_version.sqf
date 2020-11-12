@@ -9,6 +9,9 @@ private _reviewerUID     = parseSimpleArray getMissionConfigValue ["REVIEWER_UID
 private _floatDataDB     = 0;
 private _floatData       = 0;
 private _versionDB       = call compile preprocessFileLineNumbers "core\scripts\db\querys\get_template_version.sqf";
+
+if (count _versionDB == 0) exitWith { };
+
 private _dataDB          = [(_versionDB select 1) select 0, (_versionDB select 1) select 1, (_versionDB select 1) select 2, 0, 0];
 private _dataTemplate    = _templateData splitString "-";
 private _intVersion      = [_templateVersion]call MIV_fnc_versionToNumber;
