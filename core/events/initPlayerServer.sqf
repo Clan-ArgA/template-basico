@@ -28,6 +28,8 @@ if (_enableAcreSetup) then {
   [_playerUnit] execVM "core\scripts\init_ACRE2_channels.sqf";
 };
 
+execVM "core\scripts\check_template_version.sqf";
+
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/

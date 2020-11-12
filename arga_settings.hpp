@@ -8,7 +8,7 @@
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
 AUTHOR = "ArgA";                                    // Editor (Pone tu nombre)
-AUTHOR_UID = [""];                                  // Colocar entre las comillas el numero que aparece en la lista de abajo. Si son mas de un autor poner con la forma ["nro 1", "nro 2"]
+AUTHOR_UID = [];                                    // Colocar entre las comillas el numero que aparece en la lista de abajo. Si son mas de un autor poner con la forma ["nro 1", "nro 2"]
                                                     // Axel: 76561198869072681, Camello: 76561198197706543, Ignacio: 76561198026915573, Joaco: 76561198090717772, Maxi: 76561198091139370, Maxtor: 76561198824233052, Nico: 76561198077670923, Night: 76561198090664588, Nogo: 76561198849038806, Ñato: 76561199027826936, Paco: 76561198030163544, Peta: 76561198279642154, Roke: 76561198883929795, Shaggy: 76561198030188168, Soda: 76561198122043854, Vultur: 76561198010777357, Zorro: 76561198027580786
 
 IMG_LOGO = "imgs\logo.paa";                         // Nota: Las imagenes deberian estar en

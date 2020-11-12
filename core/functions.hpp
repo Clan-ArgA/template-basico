@@ -86,7 +86,9 @@ class MANDI {
       class countAlivePlayers {
         file = "core\functions\fnc_countAlivePlayers.sqf";
       };
-      
+      class versionToNumber {
+        file = "core\functions\fnc_versionToNumber.sqf";
+      };
     };
   };
   class MAC {
