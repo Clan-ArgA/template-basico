@@ -29,16 +29,14 @@ removeVest _unit;
 _unit addVest "V_PlateCarrierIAGL_oli";
 
 _unit addItemToVest "ACE_EntrenchingTool";
-_unit addItemToVest "ACE_Flashlight_XL50";
 _unit addItemToVest "MineDetector";
 _unit addItemToVest "ACE_M26_Clacker";
 _unit addItemToVest "ACE_DefusalKit";
-_unit addItemToVest "ACRE_PRC343";
-_unit addItemToVest "ACRE_PRC152";
 for "_i" from 1 to 4 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShellBlue";};
+for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_blue";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk3a2";};
+_unit addItemToVest "acfaa_20Rndfal_762x51";
 _unit addItemToBackpack "ACE_wirecutter";
 _unit addItemToBackpack "ToolKit";
 for "_i" from 1 to 4 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
