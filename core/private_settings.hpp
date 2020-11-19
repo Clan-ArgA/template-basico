@@ -8,7 +8,7 @@ TEMPLATE_LAST_UPDATE = "2020-11-19";                // Escribir la fecha en form
 /* Log system */
 DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Desabilita.
 LOG_SYSTEM = 1;                                     // 1: Habilita el sistema de log, 0: Desabilita.
-LOG_SYSTEM_ONLY_DEDICATED = 0;                      // 1: Habilita el sistema de log sólo si el servidor es dedicado (requiere LOG_SYSTEM = 1), 0: Desabilita.
+LOG_SYSTEM_ONLY_DEDICATED = 1;                      // 1: Habilita el sistema de log sólo si el servidor es dedicado (requiere LOG_SYSTEM = 1), 0: Desabilita.
 FPS_MAP = 1;                                        // 1: Muestra fps en mapa del servidor y los headless client, 0: Desabilita.
 FPS_LOG = 1;                                        // 1: Habilita loguear fps en archivo rpt del servidor y los headless client, 0: Desabilita.
 FPS_DB = 1;                                         // 1: Habilita loguear fps en la base de datos del servidor y los headless client, 0: Desabilita.
