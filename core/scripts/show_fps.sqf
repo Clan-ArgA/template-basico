@@ -114,7 +114,7 @@ while {true} do {
 		_myfpsmarker setMarkerText _text;
 	};
 
-	if (_enableShowFpsDB && _count == 0) then {
+	if (_enableShowFpsDB && _count == 3) then {
 		[_sourcestr, _fps, _localgroups, _localunits,_humanPlayers] execVM "core\scripts\db\querys\write_fps.sqf";
 	};
 
