@@ -8,8 +8,6 @@ private _position = getPosATL player;
 
 if (_position select 2 < _minimunAltutudeActivationHALO) exitWith { };
 
-sleep 5;
-
 player linkItem "ACE_Altimeter";
 
 private _inv = name player;// Get Unique name for Unit's loadout.

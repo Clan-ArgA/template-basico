@@ -9,6 +9,7 @@ if (!local _unit) exitWith {};
 private _enableAcreSetup     = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 private _initialGoggles      = getMissionConfigValue ["GAFAS_INICIALES", ""];
 private _rolesNeedingPlatoon = parseSimpleArray getMissionConfigValue ["ROLES_NEEDING_PLATOON", '[]'];
+private _enableHALO          = getMissionConfigValue ["HALO",  1] == 1;
 private _roleInList          = "";
 private _roleWithPlatoon     = _role;
 private _scuadLeader = [["lider_escuadra",["lider_escuadra_1","lider_escuadra_2","lider_escuadra_3","lider_escuadra_4","lider_escuadra_5"]],["sublider_escuadra",["sublider_escuadra_1","sublider_escuadra_2","sublider_escuadra_3","sublider_escuadra_4","sublider_escuadra_5"]]];
@@ -46,6 +47,10 @@ if(_initialGoggles != "") then {
 };
 
 _unit call MIV_fnc_setInsignia;
+
+if (_enableHALO) then {
+  ["core\scripts\halo.sqf"] remoteExec ["BIS_fnc_execVM", owner _unit, false];
+};
 
 sleep 5;
 

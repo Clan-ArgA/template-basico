@@ -87,7 +87,7 @@ if (_disableBluforIA) then {
 };
 
 if (_enableHALO) then {
-  execVM "core\scripts\halo.sqf";
+  execVM  "core\scripts\halo.sqf";
 };
 
 if(!(hasInterface || isDedicated)) then {
