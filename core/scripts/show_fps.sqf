@@ -2,13 +2,15 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-private _enableShowFpsMap = getMissionConfigValue ["FPS_MAP",  1] == 1;
-private _enableShowFpsLog = getMissionConfigValue ["FPS_LOG",  1] == 1;
+private _enableShowFpsMap = getMissionConfigValue ["FPS_MAP", 1] == 1;
+private _enableShowFpsLog = getMissionConfigValue ["FPS_LOG", 1] == 1;
+private _enableShowFpsDB  = getMissionConfigValue ["FPS_DB",  1] == 1;
 
 if (!_enableShowFpsMap && !_enableShowFpsLog) exitWith { };
 
 private _sourcestr = "Server";
 private _position = 0;
+private _count = 0;
 
 if (!isServer) then {
 	if (!isNil "HC1") then {
@@ -100,16 +102,26 @@ while {true} do {
 		if (_myfps < 10) then {_myfpsmarker setMarkerColor "ColorRED";};
 	};
 
-	private _text = format ["%1: %2 fps, %3 local groups, %4 local units, %5 %6", _sourcestr, (round (_myfps * 100.0)) / 100.0, _localgroups, _localunits,_humanPlayers,_playerText];
-	private _textForCSV = format [",%1,%2,%3,%4,%5", _sourcestr, (round (_myfps * 100.0)) / 100.0, _localgroups, _localunits,_humanPlayers];
+	private _fps        = round _myfps;
+	private _text       = format ["%1: %2 fps, %3 local groups, %4 local units, %5 %6", _sourcestr, _fps, _localgroups, _localunits,_humanPlayers,_playerText];
+	private _textForCSV = format [",%1,%2,%3,%4,%5", _sourcestr, _fps, _localgroups, _localunits,_humanPlayers];
 
 	if (_enableShowFpsLog) then {
-		//["FPS_DEBUG_COUNT", _text] call MIV_fnc_log;
 		["FPS_DEBUG_CSV", _textForCSV] call MIV_fnc_log;
 	};
 
 	if (_enableShowFpsMap) then {
 		_myfpsmarker setMarkerText _text;
+	};
+
+	if (_enableShowFpsDB && _count == 0) then {
+		[_sourcestr, _fps, _localgroups, _localunits,_humanPlayers] execVM "core\scripts\db\querys\write_fps.sqf";
+	};
+
+	_count = _count + 1;
+
+	if (_count > 3) then {
+		_count = 0;
 	};
 
 	sleep 15;
