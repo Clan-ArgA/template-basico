@@ -115,7 +115,7 @@ while {true} do {
 	};
 
 	if (_enableShowFpsDB && _count == 3) then {
-		[_sourcestr, _fps, _localgroups, _localunits,_humanPlayers] execVM "core\scripts\db\querys\write_fps.sqf";
+		["info", _sourcestr, _fps, _localgroups, _localunits,_humanPlayers] execVM "core\scripts\db\querys\write_fps.sqf";
 	};
 
 	_count = _count + 1;

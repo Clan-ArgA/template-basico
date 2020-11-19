@@ -2,16 +2,17 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-params ["_sourcestr", "_fps", "_localgroups", "_localunits","_humanPlayers"];
+params [["_logType", "info"], "_sourcestr", "_fps", "_localgroups", "_localunits","_humanPlayers"];
 
 if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
 private ["_query", "_values"];
 
-_query = "INSERT INTO fps (`source`, `fps`, `local_groups`, `local_units`, `players`, `mission_name`, `server_name`) VALUES";
+_query = "INSERT INTO fps (`log_type_id`,`source`, `fps`, `local_groups`, `local_units`, `players`, `mission_name`, `server_name`) VALUES";
 
 _values = format [
-	"('%1', %2, %3, %4, %5, '%6', '%7');",
+	"((SELECT id from log_type WHERE name = '%1'), %2, %3, %4, %5, '%6', '%7', '%8');",
+	_logType,
 	_sourcestr,
 	_fps,
 	_localgroups,
