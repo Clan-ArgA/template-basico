@@ -34,7 +34,7 @@ _values = format [
 	"((SELECT id from log_type WHERE name = '%1'), '%2', '%3');",
 	_missionState,
 	missionName,
-	serverName,
+	serverName
 ];
 
 _query = [_query, _values] joinString " ";
