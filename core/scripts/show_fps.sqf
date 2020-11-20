@@ -11,6 +11,9 @@ if (!_enableShowFpsMap && !_enableShowFpsLog) exitWith { };
 private _sourcestr = "Server";
 private _position = 0;
 private _count = 0;
+private _sumFPS = 0;
+
+waitUntil {time > 300};
 
 if (!isServer) then {
 	if (!isNil "HC1") then {
@@ -114,14 +117,16 @@ while {true} do {
 		_myfpsmarker setMarkerText _text;
 	};
 
+	_sumFPS = _sumFPS + _fps;
 	if (_enableShowFpsDB && _count == 3) then {
-		["info", _sourcestr, _fps, _localgroups, _localunits,_humanPlayers] execVM "core\scripts\db\querys\write_fps.sqf";
+		["info", _sourcestr, round (_sumFPS/4), _localgroups, _localunits,_humanPlayers] execVM "core\scripts\db\querys\write_fps.sqf";
 	};
 
 	_count = _count + 1;
 
 	if (_count > 3) then {
-		_count = 0;
+		_count  = 0;
+		_sumFPS = 0;
 	};
 
 	sleep 15;
