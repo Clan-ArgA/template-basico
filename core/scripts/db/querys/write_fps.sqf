@@ -6,6 +6,8 @@ params [["_logType", "info"], "_sourcestr", "_fps", "_localgroups", "_localunits
 
 if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
+if (isNil "_sourcestr") exitWith { };
+
 private ["_query", "_values"];
 
 _query = "INSERT INTO fps (`log_type_id`,`source`, `fps`, `local_groups`, `local_units`, `players`, `mission_name`, `server_name`) VALUES";
