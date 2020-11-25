@@ -29,7 +29,7 @@ ROL_AUTOMATICO = 0;                                 // 1: Habilita la carga de r
 GPS = 1;                                            // 1: Agrega GPS vanilla en rol automático o caja, 0: Remueve.
 VISION_NOCTURNA = 0;                                // 1: Agrega visión nocturna panorámica en rol automático o caja, 0: Remueve.
 TIPO_VN = "ACE_NVG_Wide";                           // Tipo de visión nocturna que se va a agregar en rol automático o caja.
-HALO = 1;                                           // 1: Guarda en contenido de la mochila y pone un paracaidas en la unidad al inicio de la misión. Al tocar tierra se vuelve a poner la mochila automáticamente. 0: Desactiva
+HALO = 0;                                           // 1: Guarda en contenido de la mochila y pone un paracaidas en la unidad al inicio de la misión. Al tocar tierra se vuelve a poner la mochila automáticamente. 0: Desactiva
 HALO_ALTURA_MINIMA_ACTIVACION = 1000;               // Altura en metros mínima que se le pone un paracaidas si HALO esta activado. Todas las unidades por debajo de esa altura no reciben paracaidas al inicio
 
 INSIGNIA_AUTOMATICA = 1;                            // 1: Añade insignias por pelotón o médicas, 0: No Añade.
@@ -52,7 +52,8 @@ EQUIPAMIENTO
          Las opciones Personalizada y No editar pueden llevar a comportamientos inesperados.
          Por lo que el editor queda a cargo de checkear y revisar el correcto funcionamiento.
 */
-CAMUFLAJE = ["Negro", "Multicam"];
+//CAMUFLAJE = ["Negro", "Multicam"];
+CAMUFLAJE = ["Bosque", "Multicam"];
 GAFAS_INICIALES = "";
 UNIFORME_PERSONALIZADO = "";
 CASCO_PERSONALIZADO = "";
