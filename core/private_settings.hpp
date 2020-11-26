@@ -2,8 +2,8 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-TEMPLATE_VERSION     = "0.9.13";
-TEMPLATE_LAST_UPDATE = "2020-11-19";                // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día
+TEMPLATE_VERSION     = "0.9.14";
+TEMPLATE_LAST_UPDATE = "2020-11-26";                // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día
 
 /* Log system */
 DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Desabilita.
@@ -12,6 +12,7 @@ LOG_SYSTEM_ONLY_DEDICATED = 1;                      // 1: Habilita el sistema de
 FPS_MAP = 1;                                        // 1: Muestra fps en mapa del servidor y los headless client, 0: Desabilita.
 FPS_LOG = 0;                                        // 1: Habilita loguear fps en archivo rpt del servidor y los headless client, 0: Desabilita.
 FPS_DB = 1;                                         // 1: Habilita loguear fps en la base de datos del servidor y los headless client, 0: Desabilita.
+FPS_IDLE_TIME = 30                                  // Tiempo en segundos que tarde en iniciar la medición de los FPS
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Listas auxiliares */

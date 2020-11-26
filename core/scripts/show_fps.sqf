@@ -5,6 +5,7 @@
 private _enableShowFpsMap = getMissionConfigValue ["FPS_MAP", 1] == 1;
 private _enableShowFpsLog = getMissionConfigValue ["FPS_LOG", 1] == 1;
 private _enableShowFpsDB  = getMissionConfigValue ["FPS_DB",  1] == 1;
+private _fpsIdleTime      = getMissionConfigValue ["FPS_IDLE_TIME",  180];
 
 if (!_enableShowFpsMap && !_enableShowFpsLog) exitWith { };
 
@@ -13,7 +14,7 @@ private _position = 0;
 private _count = 0;
 private _sumFPS = 0;
 
-waitUntil {time > 180};
+waitUntil {time > _fpsIdleTime};
 
 if (!isServer) then {
 	if (!isNil "HC1") then {
