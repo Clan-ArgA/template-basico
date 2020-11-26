@@ -5,79 +5,23 @@
 private _enableShowFpsMap = getMissionConfigValue ["FPS_MAP", 1] == 1;
 private _enableShowFpsLog = getMissionConfigValue ["FPS_LOG", 1] == 1;
 private _enableShowFpsDB  = getMissionConfigValue ["FPS_DB",  1] == 1;
-private _fpsIdleTime      = getMissionConfigValue ["FPS_IDLE_TIME",  180];
+private _fpsIdleTime      = getMissionConfigValue ["FPS_IDLE_TIME",  60];
 
 if (!_enableShowFpsMap && !_enableShowFpsLog) exitWith { };
 
 private _sourcestr = "Server";
 private _position = 0;
+private _hcData = [];
 private _count = 0;
 private _sumFPS = 0;
 
 waitUntil {time > _fpsIdleTime};
 
 if (!isServer) then {
-	if (!isNil "HC1") then {
-		if (!isNull HC1) then {
-			if (local HC1) then {
-				_sourcestr = "HC1";
-				_position = 1;
-			};
-		};
-	};
-
-	if (!isNil "HC2") then {
-		if (!isNull HC2) then {
-			if (local HC2) then {
-				_sourcestr = "HC2";
-				_position = 2;
-			};
-		};
-	};
-
-	if (!isNil "HC3") then {
-		if (!isNull HC3) then {
-			if (local HC3) then {
-				_sourcestr = "HC3";
-				_position = 3;
-			};
-		};
-	};
-
-	if (!isNil "hc") then {
-		if (!isNull hc) then {
-			if (local hc) then {
-				_sourcestr = "hc";
-				_position = 1;
-			};
-		};
-	};
-
-	if (!isNil "hc1") then {
-		if (!isNull hc1) then {
-			if (local hc1) then {
-				_sourcestr = "hc1";
-				_position = 1;
-			};
-		};
-	};
-
-	if (!isNil "hc2") then {
-		if (!isNull hc2) then {
-			if (local hc2) then {
-				_sourcestr = "hc2";
-				_position = 2;
-			};
-		};
-	};
-
-	if (!isNil "hc3") then {
-		if (!isNull hc3) then {
-			if (local hc3) then {
-				_sourcestr = "hc3";
-				_position = 3;
-			};
-		};
+	_hcData = call MIV_fnc_HCData;
+	if (!isNil "_hcData" ) then {
+		_sourcestr = _hcData select 0;
+		_position  = _hcData select 1;
 	};
 };
 

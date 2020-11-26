@@ -89,6 +89,9 @@ class MANDI {
       class versionToNumber {
         file = "core\functions\fnc_versionToNumber.sqf";
       };
+      class HCData {
+        file = "core\functions\fnc_HCData.sqf";
+      };
     };
   };
   class MAC {
