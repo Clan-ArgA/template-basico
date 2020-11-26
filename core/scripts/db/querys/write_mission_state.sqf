@@ -28,11 +28,12 @@ _query = [_query, _values] joinString " ";
 
 _query execVM "core\scripts\db\connect_db.sqf";
 
-_query = "INSERT INTO fps (`log_type_id`, `mission_name`, `server_name`) VALUES";
+_query = "INSERT INTO fps (`log_type_id`,`source`, `mission_name`, `server_name`) VALUES";
 
 _values = format [
-	"((SELECT id from log_type WHERE name = '%1'), '%2', '%3');",
+	"((SELECT id from log_type WHERE name = '%1'), '%2', '%3', '%4');",
 	_missionState,
+	'Server',
 	missionName,
 	serverName
 ];
