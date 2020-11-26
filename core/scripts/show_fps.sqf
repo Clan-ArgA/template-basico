@@ -93,6 +93,7 @@ while {true} do {
 	private _myfps = diag_fps;
 	private _localgroups = {local _x} count allGroups;
 	private _localunits = {local _x} count (allUnits select {simulationEnabled _x});
+	//TODO Ver si ponemos esto -> (allPlayers select {alive _x}) en lugar de --> allPlayers en la linea anterior
 	private _headlessClients = entities "HeadlessClient_F";
 	private _humanPlayers = count (allPlayers - _headlessClients);
 	private _playerText = "player";
