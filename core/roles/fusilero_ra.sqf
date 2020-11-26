@@ -23,9 +23,9 @@ _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
 for "_i" from 1 to 10 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk262_Stanag";};
-for "_i" from 1 to 6 do {_unit addItemToBackpack "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";};
-for "_i" from 1 to 9 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
-_unit addItemToBackpack "ACE_EntrenchingTool";
+for "_i" from 1 to 10 do {_unit addItemToBackpack "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";};
+for "_i" from 1 to 10 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
+
 
 /*******************************************************************************
                           Realizado por |ArgA|Vultur|Cbo¹

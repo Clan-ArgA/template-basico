@@ -7,7 +7,7 @@ private _location = getMissionConfigValue ["UBICACION", ""];
 private _time = getMissionConfigValue ["HORARIO", ""];
 private _isCampaign = getMissionConfigValue ["ES_CAMPANIA", 0];
 private _campaignName = getMissionConfigValue ["NOMBRE_CAMPANIA", ""];
-private _author = getMissionConfigValue ["author", "ArgA"];
+private _author = getMissionConfigValue ["AUTHOR", "ArgA"];
 
 titleCut ["", "BLACK FADED", 999];
 

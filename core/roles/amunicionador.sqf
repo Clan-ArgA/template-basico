@@ -1,6 +1,6 @@
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
-						  Rol por       |ArgA|Ignacio
+						  Rol por       |ArgA|Axel|Cbo
 *******************************************************************************/
 
 params [["_unit", player], ["_helmet", "arga_cas_combate_bosque_marpat"], ["_backPack", "arga_m_petate_bosque_marpat"], ["_backPackLittle", "arga_m_asalto_bosque_marpat"]];
@@ -13,22 +13,22 @@ if (!local _unit) exitWith {};
 _unit addBackpack _back;
 _unit addHeadgear _helmet;
 
-_unit addWeapon "ACFAA_FAMCA";
-_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
-_unit addPrimaryWeaponItem "acfaa_20Rndfal_762x51";
-_unit addWeapon "rhs_weap_fim92";
-_unit addSecondaryWeaponItem "rhs_fim92_mag";
+_unit addWeapon "rhs_weap_hk416d145";
+_unit addPrimaryWeaponItem "rhsusf_acc_SF3P556";
+_unit addPrimaryWeaponItem "rhsusf_acc_su230_mrds";
+_unit addPrimaryWeaponItem "150Rnd_556x45_Drum_Mag_F";
+_unit addPrimaryWeaponItem "rhsusf_acc_grip1";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
-_unit addWeapon "Rangefinder";
-_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";
-for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShellBlue";};
-for "_i" from 1 to 8 do {_unit addItemToVest "ACE_20Rnd_762x51_M118LR_Mag";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_fim92_mag";};
-for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_20Rnd_762x51_Mag_Tracer";};
+_unit addItemToVest "ACE_SpareBarrel";
+for "_i" from 1 to 8 do {_unit addItemToVest "SmokeShellBlue";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
+_unit addItemToVest "150Rnd_556x45_Drum_Mag_F";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_mag_100Rnd_556x45_M855A1_cmag";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "rhsusf_200rnd_556x45_mixed_box";};
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
-						  Rol por       |ArgA|Ignacio
+						  Rol por       |ArgA|Axel|Cbo
 *******************************************************************************/

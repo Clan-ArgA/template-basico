@@ -7,7 +7,7 @@ private _location = getMissionConfigValue ["UBICACION", ""];
 private _time = getMissionConfigValue ["HORARIO", ""];
 private _isCampaign = getMissionConfigValue ["ES_CAMPANIA", 0];
 private _campaignName = getMissionConfigValue ["NOMBRE_CAMPANIA", ""];
-private _author = getMissionConfigValue ["author", "ArgA"];
+private _author = getMissionConfigValue ["AUTHOR", "ArgA"];
 
 private _posicion = getPos player;
 private _x1 = _posicion select 0;

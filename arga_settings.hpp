@@ -3,11 +3,14 @@
 *******************************************************************************/
 
 #define NAME "Op. Template Basico"                  // Colocar nombre de mision
-#define COMPLETE_NAME "Op. Template Basico v0.9.10" // Nombre y versión de la misión
+#define COMPLETE_NAME "Op. Template Basico v0.9.13" // Nombre y versión de la misión
 #define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
-author = "ArgA";                                    // Editor (Pone tu nombre)
+AUTHOR = "ArgA";                                    // Editor (Pone tu nombre)
+AUTHOR_UID = [];                                    // Colocar entre las comillas el numero que aparece en la lista de abajo. Si son mas de un autor poner con la forma ["nro 1", "nro 2"]
+                                                    // Axel: 76561198869072681, Camello: 76561198197706543, Ignacio: 76561198026915573, Joaco: 76561198090717772, Maxi: 76561198091139370, Maxtor: 76561198824233052, Nico: 76561198077670923, Night: 76561198090664588, Nogo: 76561198849038806, Ñato: 76561199027826936, Paco: 76561198030163544, Peta: 76561198279642154, Roke: 76561198883929795, Shaggy: 76561198030188168, Soda: 76561198122043854, Vultur: 76561198010777357, Zorro: 76561198027580786
+
 IMG_LOGO = "imgs\logo.paa";                         // Nota: Las imagenes deberian estar en
 COLOR_AUTOR = "#76a8f7";                            // formato .paa y en proporcion 2x1 (1024x512)
 ES_CAMPANIA = 0;                                    // tamaño logo: 323px x 323px
@@ -25,7 +28,9 @@ ROL_AUTOMATICO = 0;                                 // 1: Habilita la carga de r
                                                     // Para verificar que los roles automáticos estan bien escritos activar todas las IAs y entrar.
 GPS = 1;                                            // 1: Agrega GPS vanilla en rol automático o caja, 0: Remueve.
 VISION_NOCTURNA = 0;                                // 1: Agrega visión nocturna panorámica en rol automático o caja, 0: Remueve.
-TIPO_VN = "ACE_NVG_Wide";                           // Tipo de la visión nocturna que se va a agregar en rol automático o caja.
+TIPO_VN = "ACE_NVG_Wide";                           // Tipo de visión nocturna que se va a agregar en rol automático o caja.
+HALO = 0;                                           // 1: Guarda en contenido de la mochila y pone un paracaidas en la unidad al inicio de la misión. Al tocar tierra se vuelve a poner la mochila automáticamente. 0: Desactiva
+HALO_ALTURA_MINIMA_ACTIVACION = 1000;               // Altura en metros mínima que se le pone un paracaidas si HALO esta activado. Todas las unidades por debajo de esa altura no reciben paracaidas al inicio
 
 INSIGNIA_AUTOMATICA = 1;                            // 1: Añade insignias por pelotón o médicas, 0: No Añade.
 INSIGNIA_IR = 0;                                    // 1: Coloca insignias IR, 2: Insignias normales.
@@ -47,7 +52,8 @@ EQUIPAMIENTO
          Las opciones Personalizada y No editar pueden llevar a comportamientos inesperados.
          Por lo que el editor queda a cargo de checkear y revisar el correcto funcionamiento.
 */
-CAMUFLAJE = ["Negro", "Multicam"];
+//CAMUFLAJE = ["Negro", "Multicam"];
+CAMUFLAJE = ["Bosque", "Multicam"];
 GAFAS_INICIALES = "";
 UNIFORME_PERSONALIZADO = "";
 CASCO_PERSONALIZADO = "";

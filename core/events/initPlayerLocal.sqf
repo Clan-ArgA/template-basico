@@ -13,6 +13,7 @@ private _enablestealthCoef       = getMissionConfigValue ["COEFICIENTES_CAMUFLAJ
 private _hearingCoef             = getMissionConfigValue ["COEFICIENTE_AUDICION", 1];
 private _camouflageCoef          = getMissionConfigValue ["COEFICIENTE_CAMUFLAJE", 1];
 private _enableAcreSetup         = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
+private _enableHALO              = getMissionConfigValue ["HALO",  1] == 1;
 private _functionWasCalled       = [player,"core\scripts\init_intro.sqf"] call MIV_fnc_wasFuntionCalled;
 
 setTerrainGrid 25;
@@ -83,6 +84,10 @@ if (_disableBluforIA) then {
       _x action ["SwitchWeapon", _x, _x, 100];
     };
   }foreach allUnits;
+};
+
+if (_enableHALO) then {
+  execVM  "core\scripts\halo.sqf";
 };
 
 if(!(hasInterface || isDedicated)) then {

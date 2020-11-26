@@ -17,7 +17,7 @@ if (!_keepRole) then {
     _equipment = call MIV_fnc_getEquipment;
     _unitRoleEquipment append _equipment;
 
-    _unitRoleEquipment call compile preprocessFile "core\roles\base.sqf";
+    _unitRoleEquipment call compile preprocessFileLineNumbers "core\roles\base.sqf";
 
     player action ["SwitchWeapon", player, player, 100];
 
