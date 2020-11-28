@@ -5,15 +5,13 @@
 private _enableShowFpsMap = getMissionConfigValue ["FPS_MAP", 1] == 1;
 private _enableShowFpsLog = getMissionConfigValue ["FPS_LOG", 1] == 1;
 private _enableShowFpsDB  = getMissionConfigValue ["FPS_DB",  1] == 1;
-private _fpsIdleTime      = getMissionConfigValue ["FPS_IDLE_TIME",  60];
+private _fpsIdleTime      = getMissionConfigValue ["FPS_IDLE_TIME",  30];
 
 if (!_enableShowFpsMap && !_enableShowFpsLog) exitWith { };
 
 private _sourcestr = "Server";
 private _position = 0;
 private _hcData = [];
-private _count = 0;
-private _sumFPS = 0;
 
 waitUntil {time > _fpsIdleTime};
 
@@ -63,22 +61,14 @@ while {true} do {
 		_myfpsmarker setMarkerText _text;
 	};
 
-	_sumFPS = _sumFPS + _fps;
-	if (_enableShowFpsDB && _count == 3) then {
+	if (_enableShowFpsDB) then {
 		if (isServer) then {
-			["info", _sourcestr, round (_sumFPS/4), _localgroups, _localunits,_totalunits,_humanPlayers] execVM "core\scripts\db\querys\write_fps.sqf";
+			["info", _sourcestr, _fps, _localgroups, _localunits,_totalunits,_humanPlayers] execVM "core\scripts\db\querys\write_fps.sqf";
 		} else {
-			["info", _sourcestr, round (_sumFPS/4), _localgroups, _localunits,_totalunits,_humanPlayers] call MIV_fnc_log;
-			[["info", _sourcestr, round (_sumFPS/4), _localgroups, _localunits,_totalunits,_humanPlayers],"core\scripts\db\querys\write_fps.sqf"] remoteExec ["BIS_fnc_execVM", 2, false];
+			["info", _sourcestr, _fps, _localgroups, _localunits,_totalunits,_humanPlayers] call MIV_fnc_log;
+			[["info", _sourcestr, _fps, _localgroups, _localunits,_totalunits,_humanPlayers],"core\scripts\db\querys\write_fps.sqf"] remoteExec ["BIS_fnc_execVM", 2, false];
 		};
 		
-	};
-
-	_count = _count + 1;
-
-	if (_count > 3) then {
-		_count  = 0;
-		_sumFPS = 0;
 	};
 
 	sleep 15;
