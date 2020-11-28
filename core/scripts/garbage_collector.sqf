@@ -18,7 +18,7 @@ private _waitTimeArray   = [_waitTimeMan,_waitTimeVehicle,_waitTimeArmor,_waitTi
 private _position        = GetPosAsl _enemyUnit;
 private _deleteUnit      = false;
 
-_position params["_coordX","_coordY","_coordZ"];
+_position params ["_coordX","_coordY","_coordZ"];
 
 _isMan = false;
 //_waitTime = 300;
@@ -50,6 +50,7 @@ if (_deleteUnit) then {
 		_enemyUnit SetPosASL [_coordX, _coordY, 0];
 		hidebody _enemyUnit;
 	};
+
 	deletevehicle _enemyUnit;
 };
 
