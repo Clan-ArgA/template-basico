@@ -4,8 +4,8 @@
 
 private _templateVersion = getMissionConfigValue ["TEMPLATE_VERSION", "0.0.0"];
 private _templateData    = getMissionConfigValue ["TEMPLATE_LAST_UPDATE", "00-00-0000"];
-private _authorUID       = parseSimpleArray getMissionConfigValue ["AUTHOR_UID", []];
-private _reviewerUID     = parseSimpleArray getMissionConfigValue ["REVIEWER_UID", []];
+private _authorUID       = parseSimpleArray getMissionConfigValue ["AUTHOR_UID", "[]"];
+private _reviewerUID     = parseSimpleArray getMissionConfigValue ["REVIEWER_UID", "[]"];
 private _floatDataDB     = 0;
 private _floatData       = 0;
 private _versionDB       = call compile preprocessFileLineNumbers "core\scripts\db\querys\get_template_version.sqf";
