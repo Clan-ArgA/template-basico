@@ -39,6 +39,28 @@ INSIGNIA_IR = 0;                                    // 1: Coloca insignias IR, 2
 
 SETUP_PERSONALIZADO_RADIOS = 1;                     // 1: Activa el setup de las radios de ACRE2, 0: Desactiva.
 
+/*
+     Temas correción de color: (Colocar entre las comillas)
+
+     - Realista
+     - Apocalipsis
+     - Nightstalkers
+     - OFP_Gamma
+     - Otoño_Dorado
+     - Africa
+     - Afghan
+     - Medio_Oriente
+     - Realidad_Marrón
+     - Escala_Grises
+     - Frío
+     - Apocalipsis
+     - Invierno_Azul
+     - Invierno_Blanco
+     - Mediterraneo
+     - Post_Soviético
+*/
+CORRECION_COLOR = 0;                                // 1: Activa la correción de color, 0: Desactiva.
+TEMA_CORRECCION_COLOR = "Nightstalkers";
 
 /* 
 EQUIPAMIENTO
