@@ -2,9 +2,9 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-private _isBriefingActivate = getMissionConfigValue ["BRIEFING", 1] == 1;
+private _isBriefingActivate = getMissionConfigValue ["BRIEFING", 1];
 
-if (!_isBriefingActivate) exitWith { false };
+if (_isBriefingActivate == 0) exitWith { false };
 
 private _mode = getMissionConfigValue ["CARACTER", "No oficial"];
 private _time = getMissionConfigValue ["HORARIO", ""];

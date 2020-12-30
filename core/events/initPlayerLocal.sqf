@@ -15,6 +15,7 @@ private _camouflageCoef          = getMissionConfigValue ["COEFICIENTE_CAMUFLAJE
 private _enableAcreSetup         = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 private _enableHALO              = getMissionConfigValue ["HALO",  1] == 1;
 private _functionWasCalled       = [player,"core\scripts\init_intro.sqf"] call MIV_fnc_wasFuntionCalled;
+private _colorCorrection         = getMissionConfigValue ["CORRECION_COLOR",  0] == 1; 
 
 setTerrainGrid 25;
 
@@ -93,6 +94,11 @@ if (_enableHALO) then {
 if(!(hasInterface || isDedicated)) then {
     execVM "core\scripts\show_fps.sqf";
 };
+
+if(_colorCorrection) then {
+    execVM "core\scripts\init_correction_color.sqf";
+};
+
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV

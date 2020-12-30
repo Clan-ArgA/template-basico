@@ -3,13 +3,15 @@
 *******************************************************************************/
 
 #define NAME "Op. Template Basico"                  // Colocar nombre de mision
-#define COMPLETE_NAME "Op. Template Basico v0.9.14" // Nombre y versión de la misión
+#define COMPLETE_NAME "Op. Template Basico v0.9.16" // Nombre y versión de la misión
 #define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
+CARACTER = "No Oficial";                            // Tipos válidos: "Oficial", "No Oficial", "Entrenamiento", "Entrenamiento reclutas", "Entrenamiento rol", "Persistentes", "TVT"
+
 author = "ArgA";                                    // Editor (Pone tu nombre)
 AUTHOR_UID = [];                                    // Colocar entre las comillas el numero que aparece en la lista de abajo. Si son mas de un autor poner con la forma ["nro 1", "nro 2"]
-                                                    // Axel: 76561198869072681, Camello: 76561198197706543, Ignacio: 76561198026915573, Joaco: 76561198090717772, Maxi: 76561198091139370, Maxtor: 76561198824233052, Nico: 76561198077670923, Night: 76561198090664588, Nogo: 76561198849038806, Ñato: 76561199027826936, Paco: 76561198030163544, Peta: 76561198279642154, Roke: 76561198883929795, Shaggy: 76561198030188168, Soda: 76561198122043854, Vultur: 76561198010777357, Zorro: 76561198027580786
+                                                    // Axel: "76561198869072681", Camello: "76561198197706543", Ignacio: "76561198026915573", Joaco: "76561198090717772", Maxi: "76561198091139370", Maxtor: "76561198824233052", Nico: "76561198077670923", Night: "76561198090664588", Nogo: "76561198849038806", Ñato: "76561199027826936", Paco: "76561198030163544", Peta: "76561198279642154", Roke: "76561198883929795", Shaggy: "76561198030188168", Soda: "76561198122043854", Vultur: "76561198010777357", Zorro: "76561198027580786"
 
 IMG_LOGO = "imgs\logo.paa";                         // Nota: Las imagenes deberian estar en
 COLOR_AUTOR = "#76a8f7";                            // formato .paa y en proporcion 2x1 (1024x512)
@@ -37,6 +39,28 @@ INSIGNIA_IR = 0;                                    // 1: Coloca insignias IR, 2
 
 SETUP_PERSONALIZADO_RADIOS = 1;                     // 1: Activa el setup de las radios de ACRE2, 0: Desactiva.
 
+/*
+     Temas correción de color: (Colocar entre las comillas)
+
+     - Realista
+     - Apocalipsis
+     - Nightstalkers
+     - OFP_Gamma
+     - Otoño_Dorado
+     - Africa
+     - Afghan
+     - Medio_Oriente
+     - Realidad_Marrón
+     - Escala_Grises
+     - Frío
+     - Apocalipsis
+     - Invierno_Azul
+     - Invierno_Blanco
+     - Mediterraneo
+     - Post_Soviético
+*/
+CORRECION_COLOR = 0;                                // 1: Activa la correción de color, 0: Desactiva.
+TEMA_CORRECCION_COLOR = "Nightstalkers";
 
 /* 
 EQUIPAMIENTO
@@ -68,13 +92,12 @@ BRIEFING
     Ejemplo: ["Primer parrafo", "Segundo parrafo"] 
 */
 BRIEFING = 1;                                       // 1: Muestra, 0: No muestra
-CARACTER = "No Oficial";
 HORARIO = "";
 FECHA = "";
 CLIMA = "";
 UBICACION = "";
-SITUACION = [""];               
-SITUACION_HISTORICA = [""];     
+SITUACION_HISTORICA = [""];
+SITUACION = [""];
 EXTRACTO_INTELIGENCIA = [""];
 OBJETIVOS = ["", ""];
 RECURSOS = ["", ""];
@@ -83,11 +106,11 @@ ENEMIGOS = ["", ""];
 
 /* Borrado de IAs enemigas muertas y vehículos destruidos */
 RECOLECTOR_BASURA = 1;                              // 1: Activa la funcion que borra las IAs muertas y vehículos destruidos, 0: Desactivado
-RB_TIEMPO_ESPERA_HOMBRES = 10;                     // Tiempo en segundos de espera para eliminar soldados enemigos. 0 Desactiva el borrado de enemigos
+RB_TIEMPO_ESPERA_HOMBRES = 120;                     // Tiempo en segundos de espera para eliminar soldados enemigos. 0 Desactiva el borrado de enemigos
 RB_TIEMPO_ESPERA_VEHICULOS = 0;                     // Tiempo en segundos de espera para eliminar vehículos enemigos. 0 Desactiva el borrado de vehículos
 RB_TIEMPO_ESPERA_BLINDADOS = 0;                     // Tiempo en segundos de espera para eliminar blindados enemigos. 0 Desactiva el borrado de blindados
 RB_TIEMPO_ESPERA_AEREOS = 0;                        // Tiempo en segundos de espera para eliminar aereos enemigos. 0 Desactiva el borrado de aereos
-RB_DISTANCIA_JUGADORES = 200;                       // Distancia en metros a los jugadores a partir de la cual se borra. 0 desactiva el borrado por distancia
+RB_DISTANCIA_JUGADORES = 0;                         // Distancia en metros a los jugadores a partir de la cual se borra. 0 desactiva el borrado por distancia
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Camuflaje */

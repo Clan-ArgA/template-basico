@@ -20,6 +20,7 @@ private _author          = getMissionConfigValue ["AUTHOR", "ArgA"];
 private _worldName       = worldName;
 private _templateVersion = getMissionConfigValue ["TEMPLATE_VERSION", "0.0.0"];
 private _templateData    = getMissionConfigValue ["TEMPLATE_LAST_UPDATE", "00-00-0000"];
+private _saveReport      = getMissionConfigValue ["SAVE_REPORT", 1] == 1;
 
 _situation      = _situation      joinString "\\n\\n";
 _storySituation = _storySituation joinString "\\n\\n";
@@ -49,7 +50,8 @@ private _missionsValues = [
   ["author", _author],
   ["worldName", _worldName],
   ["templateVersion", _templateVersion],
-  ["templateData", _templateData]
+  ["templateData", _templateData],
+  ["saveReport", _saveReport]
 ];
 
 private _result  = [_missionsValues] call MIV_fnc_create_jsonObject;
