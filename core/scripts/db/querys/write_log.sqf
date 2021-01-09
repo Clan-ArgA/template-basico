@@ -7,9 +7,11 @@ Recibe una unidad (o player) un array de players o un array con el formato [ ["_
 Además recibe una string indicando el logType
 */
 
+private _isplayerLogEnabled = getMissionConfigValue ["PLAYERS_LOG", 1] == 1;
+
 params [["_unit", []], ["_logType", "connected"]];
 
-if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
+if (!(call MIV_fnc_isLogSystemEnabled) || (!_isplayerLogEnabled)) exitWith { };
 
 
 // Aca transformar _unit a una lista si no lo es

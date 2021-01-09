@@ -2,16 +2,17 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-TEMPLATE_VERSION     = "0.9.16";
-TEMPLATE_LAST_UPDATE = "2020-12-20";                // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
+TEMPLATE_VERSION     = "0.9.17";
+TEMPLATE_LAST_UPDATE = "2020-1-9";                // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
 
 /* Log system */
-DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Desabilita.
-LOG_SYSTEM = 1;                                     // 1: Habilita el sistema de log, 0: Desabilita.
-LOG_SYSTEM_ONLY_DEDICATED = 1;                      // 1: Habilita el sistema de log sólo si el servidor es dedicado (requiere LOG_SYSTEM = 1), 0: Desabilita.
-FPS_MAP = 1;                                        // 1: Muestra fps en mapa del servidor y los headless client, 0: Desabilita.
-FPS_LOG = 0;                                        // 1: Habilita loguear fps en archivo rpt del servidor y los headless client, 0: Desabilita.
-FPS_DB = 1;                                         // 1: Habilita loguear fps en la base de datos del servidor y los headless client, 0: Desabilita.
+DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Deshabilita.
+LOG_SYSTEM = 1;                                     // 1: Habilita el sistema de log, 0: Deshabilita.
+LOG_SYSTEM_ONLY_DEDICATED = 1;                      // 1: Habilita el sistema de log sólo si el servidor es dedicado (requiere LOG_SYSTEM = 1), 0: Deshabilita.
+PLAYERS_LOG = 1;                                    // 1: Habilita el log de los jugadores (deshabilitar solo para persistentes). 0: Deshabilita 
+FPS_MAP = 1;                                        // 1: Muestra fps en mapa del servidor y los headless client, 0: Deshabilita.
+FPS_LOG = 0;                                        // 1: Habilita loguear fps en archivo rpt del servidor y los headless client, 0: Deshabilita.
+FPS_DB = 1;                                         // 1: Habilita loguear fps en la base de datos del servidor y los headless client, 0: Deshabilita.
 FPS_IDLE_TIME = 30;                                 // Tiempo en segundos que tarde en iniciar la medición de los FPS.
 SAVE_REPORT = 1;                                    // 1: Escribe true en el json de la mision. 0: Escribe false
 ////////////////////////////////////////////////////////////////////////////////
