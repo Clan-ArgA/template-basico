@@ -17,7 +17,7 @@ _unit addWeapon "rhs_weap_hk416d145_m320";
 _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
 _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR_3d";
 _unit addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-_unit addPrimaryWeaponItem "1Rnd_HE_Grenade_shell";
+_unit addPrimaryWeaponItem "rhs_mag_M397_HET";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 

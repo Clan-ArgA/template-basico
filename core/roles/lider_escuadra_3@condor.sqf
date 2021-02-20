@@ -14,24 +14,21 @@ _unit addBackpack _back;
 _unit addHeadgear _helmet;
 
 _unit addWeapon "ACFAA_FAMCA";
-_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR_3d";
-_unit addPrimaryWeaponItem "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
+_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
+_unit addPrimaryWeaponItem "acfaa_20Rndfal_762x51";
+_unit addWeapon "launch_RPG32_F";
+_unit addSecondaryWeaponItem "RPG32_F";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
-_unit addMagazine "Laserbatteries";
-_unit addWeapon "Laserdesignator_01_khk_F";
-
-//_unit addItemToVest "ACE_DAGR";
-_unit addItemToVest "ACRE_PRC152";
-_unit addItemToVest "HandGrenade";
+_unit addWeapon "Rangefinder";
 _unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";
-for "_i" from 1 to 7 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";};
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShellBlue";};
-for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellOrange";};
-
-for "_i" from 1 to 11 do {_unit addItemToBackpack "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";};
-for "_i" from 1 to 12 do {_unit addItemToBackpack "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";};
+_unit addItemToVest "ACRE_PRC152";
+for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
+for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
+for "_i" from 1 to 8 do {_unit addItemToVest "ACE_20Rnd_762x51_M118LR_Mag";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "RPG32_F";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "RPG32_HE_F";};
 
 /*******************************************************************************
                           Realizado por |ArgA|Vultur|Cbo¹
