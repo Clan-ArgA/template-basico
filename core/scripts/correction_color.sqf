@@ -77,6 +77,13 @@ if (_colorTheme == 'Escala_Grises') then {
 	"colorCorrections" ppEffectCommit 0;
 };
 
+//Black and White theme
+if (_colorTheme == 'Blanco_Negro') then {
+	"colorCorrections" ppEffectEnable true;
+	"colorCorrections" ppEffectAdjust [1.0, 1.0, 0.0,[1.0, 1.0, 1.0, 0.0],[1.0, 1.0, 0.9, 0.15],[0.3,0.3,0.3,-0.1]];
+	"colorCorrections" ppEffectCommit 0;
+};
+
 //Cold Tone theme
 if (_colorTheme == 'Frío') then {
 	"colorCorrections" ppEffectEnable true;

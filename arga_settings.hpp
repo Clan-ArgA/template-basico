@@ -58,6 +58,7 @@ SETUP_PERSONALIZADO_RADIOS = 1;                     // 1: Activa el setup de las
      - Invierno_Blanco
      - Mediterraneo
      - Post_Soviético
+     - Blanco_Negro
 */
 CORRECION_COLOR = 0;                                // 1: Activa la correción de color, 0: Desactiva.
 TEMA_CORRECCION_COLOR = "Nightstalkers";

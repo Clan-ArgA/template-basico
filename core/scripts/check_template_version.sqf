@@ -16,7 +16,7 @@ private _dataDB          = [(_versionDB select 1) select 0, (_versionDB select 1
 private _dataTemplate    = _templateData splitString "-";
 private _intVersion      = [_templateVersion]call MIV_fnc_versionToNumber;
 private _intVersionDB    = [_versionDB select 0]call MIV_fnc_versionToNumber;
-private _arrayUIDs       = if (count _authorUID > 0) then { _arrayUIDs = _authorUID + _reviewerUID} else {[]};
+private _arrayUIDs       = if (count _authorUID > 0) then { _authorUID + _reviewerUID } else { [] };
 
 _dataTemplate = [parseNumber (_dataTemplate select 0), parseNumber (_dataTemplate select 1), parseNumber (_dataTemplate select 2), 0, 0];
 
