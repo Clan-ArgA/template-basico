@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 #define NAME "Op. Template Basico"                  // Colocar nombre de mision
-#define COMPLETE_NAME "Op. Template Basico v0.9.16" // Nombre y versión de la misión
+#define COMPLETE_NAME "Op. Template Basico v0.9.18" // Nombre y versión de la misión
 #define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
@@ -58,6 +58,7 @@ SETUP_PERSONALIZADO_RADIOS = 1;                     // 1: Activa el setup de las
      - Invierno_Blanco
      - Mediterraneo
      - Post_Soviético
+     - Blanco_Negro
 */
 CORRECION_COLOR = 0;                                // 1: Activa la correción de color, 0: Desactiva.
 TEMA_CORRECCION_COLOR = "Nightstalkers";

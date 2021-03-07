@@ -53,3 +53,11 @@ _role;
 */
 
 
+this addAction["Recargar bengalas en mortero",
+{
+    mortero_2 setVehicleAmmo 0.0;
+    {
+        mortero_2 addMagazine "8Rnd_82mm_Mo_Flare_white";
+    } forEach [1,2,3,4];
+
+},[],1.5,true,true,"","true",3];

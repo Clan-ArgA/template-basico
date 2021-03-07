@@ -17,6 +17,7 @@ _unit addWeapon "ACFAA_FAMCA";
 _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 _unit addPrimaryWeaponItem "acfaa_20Rndfal_762x51";
 _unit addWeapon "launch_RPG32_F";
+_unit addSecondaryWeaponItem "RPG32_F";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
 
