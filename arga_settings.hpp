@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 #define NAME "Op. Template Basico"                  // Colocar nombre de mision
-#define COMPLETE_NAME "Op. Template Basico v0.9.18" // Nombre y versión de la misión
+#define COMPLETE_NAME "Op. Template Basico v0.9.19" // Nombre y versión de la misión
 #define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
@@ -20,10 +20,10 @@ NOMBRE_CAMPANIA = "";
 INTRO_PERSONALIZADA = 0;                            // 1 Si la deseas cargar una intro personalizada (propia)
                                                     // y en el parametro INTRO la dirección del archivo entre comillas
                                                     // EJ. INTRO_PERSONALIZADA = 1; INTRO = "scripts\intro_propia.sqf";
-INTRO = 0;                                          // Intros: 1 y 2. Para desactivar: 0
+INTRO = 2;                                          // Intros: 1 y 2. Para desactivar: 0
 
-MAX_DIST_VISION = 2500;
-MIN_DIST_VISION = 800;                              // Distancia de visión reducida por marcador.
+MAX_DIST_VISION = 3000;
+MIN_DIST_VISION = 1000;                              // Distancia de visión reducida por marcador.
 EQUIPAMIENTO_PERSONALIZADO = 0;                     // 1: Permite cargar equipamiento guardado en arsenal virtual, 0: No Permite.
 COMPUTADORA_ARTILLERIA = 1;                         // 1: Habilita computadora artilleria,0: Desabilita.
 ROL_AUTOMATICO = 0;                                 // 1: Habilita la carga de rol al entrar a la misión por descripción de rol. 0: Desabilita.
@@ -77,7 +77,6 @@ EQUIPAMIENTO
          Las opciones Personalizada y No editar pueden llevar a comportamientos inesperados.
          Por lo que el editor queda a cargo de checkear y revisar el correcto funcionamiento.
 */
-//CAMUFLAJE = ["Negro", "Multicam"];
 CAMUFLAJE = ["Bosque", "Multicam"];
 GAFAS_INICIALES = "";
 UNIFORME_PERSONALIZADO = "";
@@ -124,14 +123,14 @@ COEFICIENTE_CAMUFLAJE = 1;                          // Valores menores hacen al 
 IA_DE_GRUPO = 0;                                    // 1: No desactiva la IA del Grupo de los jugadores, 0: la desactiva.
 IA_BLUFOR = 0;                                      // 1: No desactiva la IA Blufor, 0: la desactiva.
 DIFICULTAD_IA_PERSONALIZADA = 0;                    // 1: Activada. 0: Desactivada.
-AIMING_ACCURACY = 0.01;                             // Precision de apuntado
-AIMING_SHAKE = 0.99; 	                            // Dispersión de apuntado
-AIMING_SPEED = 0.1; 	                            // Velocidad de apuntado
-SPOT_DISTANCE = 0.3; 	                            // Distancia de avistamiento
-SPOT_TIME = 0.5; 		                            // Tiempo de avistamiento
-COURAGE = 0.25; 		                            // Coraje
-RELOAD_SPEED = 0.25; 	                            // Velocidad de recarga
-COMMANDING = 0.75; 		                            // Liderazgo
+AIMING_ACCURACY = 0.10;                             // Precision de apuntado
+AIMING_SHAKE = 0.90; 	                            // Dispersión de apuntado
+AIMING_SPEED = 0.10; 	                            // Velocidad de apuntado
+SPOT_DISTANCE = 0.40; 	                            // Distancia de avistamiento
+SPOT_TIME = 0.40; 		                            // Tiempo de avistamiento
+COURAGE = 0.30; 		                            // Coraje
+RELOAD_SPEED = 0.20; 	                            // Velocidad de recarga
+COMMANDING = 0.60; 		                            // Liderazgo
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Modificar desde los define que estan arriba de todo.
