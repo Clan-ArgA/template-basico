@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 TEMPLATE_VERSION     = "0.9.19";
-TEMPLATE_LAST_UPDATE = "2020-6-27";                  // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
+TEMPLATE_LAST_UPDATE = "2021-6-27";                  // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
 
 /* Log system */
 DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Deshabilita.
