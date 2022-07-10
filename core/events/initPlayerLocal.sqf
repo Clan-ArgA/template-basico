@@ -16,6 +16,7 @@ private _enableAcreSetup         = getMissionConfigValue ["SETUP_PERSONALIZADO_R
 private _enableHALO              = getMissionConfigValue ["HALO",  1] == 1;
 private _functionWasCalled       = [player,"core\scripts\init_intro.sqf"] call MIV_fnc_wasFuntionCalled;
 private _colorCorrection         = getMissionConfigValue ["CORRECION_COLOR",  0] == 1; 
+private _enableFlareEnhance      = getMissionConfigValue ["ACTIVAR_BENGALAS_MEJORADAS",  0] == 1; 
 
 setTerrainGrid 25;
 
@@ -61,6 +62,10 @@ if (hasInterface) then {
     execVM "core\scripts\setup_ACRE2_displays.sqf";
   };
 
+  if (_enableFlareEnhance) then {
+    execVM "core\scripts\flares\init_flare_granadier.sqf";
+  };
+
   enableEngineArtillery (_enableArtilleryComputer);
 };
 
@@ -88,7 +93,7 @@ if (_disableBluforIA) then {
 };
 
 if (_enableHALO) then {
-  execVM  "core\scripts\halo.sqf";
+  execVM "core\scripts\halo.sqf";
 };
 
 if(!(hasInterface || isDedicated)) then {
