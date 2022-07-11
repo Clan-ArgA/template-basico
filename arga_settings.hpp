@@ -20,10 +20,10 @@ NOMBRE_CAMPANIA = "";
 INTRO_PERSONALIZADA = 0;                            // 1 Si la deseas cargar una intro personalizada (propia)
                                                     // y en el parametro INTRO la dirección del archivo entre comillas
                                                     // EJ. INTRO_PERSONALIZADA = 1; INTRO = "scripts\intro_propia.sqf";
-INTRO = 2;                                          // Intros: 1 y 2. Para desactivar: 0
+INTRO = 0;                                          // Intros: 1 y 2. Para desactivar: 0
 
 MAX_DIST_VISION = 3000;
-MIN_DIST_VISION = 1000;                              // Distancia de visión reducida por marcador.
+MIN_DIST_VISION = 1000;                             // Distancia de visión reducida por marcador.
 EQUIPAMIENTO_PERSONALIZADO = 0;                     // 1: Permite cargar equipamiento guardado en arsenal virtual, 0: No Permite.
 COMPUTADORA_ARTILLERIA = 1;                         // 1: Habilita computadora artilleria,0: Desabilita.
 ROL_AUTOMATICO = 0;                                 // 1: Habilita la carga de rol al entrar a la misión por descripción de rol. 0: Desabilita.
@@ -34,10 +34,14 @@ TIPO_VN = "ACE_NVG_Wide";                           // Tipo de visión nocturna 
 HALO = 0;                                           // 1: Guarda en contenido de la mochila y pone un paracaidas en la unidad al inicio de la misión. Al tocar tierra se vuelve a poner la mochila automáticamente. 0: Desactiva
 HALO_ALTURA_MINIMA_ACTIVACION = 1000;               // Altura en metros mínima que se le pone un paracaidas si HALO esta activado. Todas las unidades por debajo de esa altura no reciben paracaidas al inicio
 
-INSIGNIA_AUTOMATICA = 1;                            // 1: Añade insignias por pelotón o médicas, 0: No Añade.
-INSIGNIA_IR = 0;                                    // 1: Coloca insignias IR, 2: Insignias normales.
+INSIGNIA_AUTOMATICA = 1;                            // 1: Añade insignia por pelotón o médica, 0: No Añade.
+INSIGNIA_IR = 0;                                    // 1: Coloca insignias IR, 0: Insignias normales.
 
 SETUP_PERSONALIZADO_RADIOS = 1;                     // 1: Activa el setup de las radios de ACRE2, 0: Desactiva.
+ACTIVAR_BENGALAS_MEJORADAS = 1;                     // 1: Activa la intensificación de la iluminación de las bengalas, 0: Desactiva.
+                                                    // Esto mejora la iluminación de las bengalas vanilla de los granaderos.
+                                                    // Para que funcione con las bengalas de los morteros se debe poner lo siguiente en el init del mortero:
+                                                    // this addEventHandler ["Fired",{[[getPosASL (_this select 0), velocity (_this select 6), _this select 4],"core\scripts\flares\mortar_flare_enhance.sqf"] remoteExec ["execVM",0,true]; private _enableFlareEnhance = getMissionConfigValue ["ACTIVAR_BENGALAS_MEJORADAS",  0] == 1; if (_enableFlareEnhance) then {deleteVehicle (_this select 6);};}];
 
 /*
      Temas correción de color: (Colocar entre las comillas)
@@ -131,6 +135,15 @@ SPOT_TIME = 0.40; 		                            // Tiempo de avistamiento
 COURAGE = 0.30; 		                            // Coraje
 RELOAD_SPEED = 0.20; 	                            // Velocidad de recarga
 COMMANDING = 0.60; 		                            // Liderazgo
+////////////////////////////////////////////////////////////////////////////////
+
+/* Bengalas */
+MIV_FLARE_INTENSITY = 30;                           // Intensidad de la luz de las bengalas de granadero.
+MIV_FLARE_RANGE = 200;                              // Rango de la luz de las bengalas de granadero.
+MIV_MORTAR_FLARE_INTENSITY = 50;                    // Intensidad de la luz de las bengalas de mortero.
+MIV_MORTAR_FLARE_RANGE = 350;                       // Rango de la luz de las bengalas de mortero.
+MIV_MORTAR_FLIGHT_TIME = 8;                         // Tiempo de vuelo hasta encenderse
+MIV_MORTAR_FALL_SPEED = 4;                          // Velocidad de caida en m/s
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Modificar desde los define que estan arriba de todo.
