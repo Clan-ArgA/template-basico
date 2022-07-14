@@ -41,7 +41,6 @@ SETUP_PERSONALIZADO_RADIOS = 1;                     // 1: Activa el setup de las
 ACTIVAR_BENGALAS_MEJORADAS = 1;                     // 1: Activa la intensificación de la iluminación de las bengalas, 0: Desactiva.
                                                     // Esto mejora la iluminación de las bengalas vanilla de los granaderos.
                                                     // Para que funcione con las bengalas de los morteros se debe poner lo siguiente en el init del mortero:
-                                                    // this addEventHandler ["Fired",{[[getPosASL (_this select 0), velocity (_this select 6), _this select 4],"core\scripts\flares\mortar_flare_enhance.sqf"] remoteExec ["execVM",0,true]; private _enableFlareEnhance = getMissionConfigValue ["ACTIVAR_BENGALAS_MEJORADAS",  0] == 1; if (_enableFlareEnhance) then {deleteVehicle (_this select 6);};}];
 
 /*
      Temas correción de color: (Colocar entre las comillas)
