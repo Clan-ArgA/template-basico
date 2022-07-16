@@ -11,7 +11,7 @@ CARACTER = "No Oficial";                            // Tipos válidos: "Oficial"
 
 author = "ArgA";                                    // Editor (Pone tu nombre)
 AUTHOR_UID = [];                                    // Colocar entre las comillas el numero que aparece en la lista de abajo. Si son mas de un autor poner con la forma ["nro 1", "nro 2"]
-                                                    // Axel: "76561198869072681", Camello: "76561198197706543", Ignacio: "76561198026915573", Joaco: "76561198090717772", Maxi: "76561198091139370", Maxtor: "76561198824233052", Nico: "76561198077670923", Night: "76561198090664588", Nogo: "76561198849038806", Ñato: "76561199027826936", Paco: "76561198030163544", Peta: "76561198279642154", Roke: "76561198883929795", Shaggy: "76561198030188168", Soda: "76561198122043854", Vultur: "76561198010777357", Zorro: "76561198027580786"
+                                                    // Checho: "76561198831148763", Echazu: "76561198153322025", Fred: "76561198969153208", Hernan: "76561198968787485", Pescador: "76561198216131373", Shigeru: "76561198015789544", Axel: "76561198869072681", Ignacio: "76561198026915573", Joaco: "76561198090717772", Maxi: "76561198091139370", Maxtor: "76561198824233052", Nico: "76561198077670923", Night: "76561198090664588", Nogo: "76561198849038806", Paco: "76561198030163544", Peta: "76561198279642154", Roke: "76561198883929795", Shaggy: "76561198030188168", Vultur: "76561198010777357", Zorro: "76561198027580786"
 
 IMG_LOGO = "imgs\logo.paa";                         // Nota: Las imagenes deberian estar en
 COLOR_AUTOR = "#76a8f7";                            // formato .paa y en proporcion 2x1 (1024x512)
@@ -40,8 +40,7 @@ INSIGNIA_IR = 0;                                    // 1: Coloca insignias IR, 0
 SETUP_PERSONALIZADO_RADIOS = 1;                     // 1: Activa el setup de las radios de ACRE2, 0: Desactiva.
 ACTIVAR_BENGALAS_MEJORADAS = 1;                     // 1: Activa la intensificación de la iluminación de las bengalas, 0: Desactiva.
                                                     // Esto mejora la iluminación de las bengalas vanilla de los granaderos.
-                                                    // Para que funcione con las bengalas de los morteros se debe poner lo siguiente en el init del mortero:
-                                                    // this addEventHandler ["Fired",{[[getPosASL (_this select 0), velocity (_this select 6), _this select 4],"core\scripts\flares\mortar_flare_enhance.sqf"] remoteExec ["execVM",0,true]; private _enableFlareEnhance = getMissionConfigValue ["ACTIVAR_BENGALAS_MEJORADAS",  0] == 1; if (_enableFlareEnhance) then {deleteVehicle (_this select 6);};}];
+                                                    // Para que funcione con las bengalas de los morteros leer el archivo README.md:
 
 /*
      Temas correción de color: (Colocar entre las comillas)
