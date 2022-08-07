@@ -35,8 +35,11 @@ _unit forceAddUniform _uniform;
 _unit addVest _vest;
 
 if (!isNil "_roleWithPlatoon") then {
-  //["[BASE] roleWithPlatoon:",_roleWithPlatoon] call MIV_fnc_log;
+  // ["[BASE] roleWithPlatoon:",_roleWithPlatoon] call MIV_fnc_log;
   private _rolePath = format ['core\roles\%1.sqf', _roleWithPlatoon];
+  if (_role == 'lider_escuadra_1' && getPlayerUID _unit == '76561198010777357') then {
+    _rolePath = 'core\roles\lider_escuadra_1@condor.sqf';
+  };
   [_unit, _helmet, _backPack, _backPackLittle] call compile preprocessFileLineNumbers _rolePath;
 };
 

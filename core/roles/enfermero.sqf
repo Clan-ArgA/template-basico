@@ -1,6 +1,5 @@
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
-						  Rol por       |ArgA|Labrador|Cbo¹
+                          Realizado por MIV
 *******************************************************************************/
 
 params [["_unit", player], ["_helmet", "arga_cas_combate_bosque_marpat"], ["_backPack", "arga_m_petate_bosque_marpat"], ["_backPackLittle", "arga_m_asalto_bosque_marpat"]];
@@ -14,31 +13,37 @@ _unit setVariable ["ace_medical_medicClass", 2, true];
 _unit addBackpack _back;
 _unit addHeadgear _helmet;
 
-_unit addWeapon "ACFAA_FAMCA";
-_unit addPrimaryWeaponItem "muzzle_snds_b";
-_unit addPrimaryWeaponItem "rhsusf_acc_g33_xps3";
-_unit addPrimaryWeaponItem "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
-_unit addWeapon "rhsusf_weap_glock17g4";
-_unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+comment "Add weapons";
+_unit addWeapon "rhs_weap_hk416d145";
+_unit addPrimaryWeaponItem "optic_Hamr";
+_unit addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+_unit addWeapon "bersa";
+_unit addHandgunItem "acc_flashlight_pistol";
+_unit addHandgunItem "16Rnd_9x21_Mag";
 
-_unit addItemToVest "ACE_EntrenchingTool";
+comment "Add items to containers";
+_unit addItemToVest "ACE_surgicalKit";
 _unit addItemToVest "ACRE_PRC152";
-for "_i" from 1 to 4 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";};
-for "_i" from 1 to 4 do {_unit addItemToVest "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";};
-for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShellBlue";};
-for "_i" from 1 to 1 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
-
-for "_i" from 1 to 23 do {_unit addItemToBackpack "ACE_elasticBandage";};
-for "_i" from 1 to 23 do {_unit addItemToBackpack "ACE_packingBandage";};
-for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_tourniquet";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_EarPlugs";};
-for "_i" from 1 to 20 do {_unit addItemToBackpack "adv_aceSplint_splint";};
-for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_CableTie";};
-for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_morphine";};
-for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_epinephrine";};
+for "_i" from 1 to 6 do {_unit addItemToVest "ACE_tourniquet";};
+_unit addItemToVest "SmokeShellBlue";
+for "_i" from 1 to 2 do {_unit addItemToVest "kat_Painkiller";};
+_unit addItemToVest "kat_Carbonate";
+for "_i" from 1 to 10 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_WaterBottle";};
+for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_epinephrine";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_splint";};
+for "_i" from 1 to 22 do {_unit addItemToBackpack "ACE_elasticBandage";};
+for "_i" from 1 to 22 do {_unit addItemToBackpack "ACE_packingBandage";};
+for "_i" from 1 to 10 do {_unit addItemToBackpack "kat_norepinephrine";};
+for "_i" from 1 to 10 do {_unit addItemToBackpack "kat_atropine";};
+for "_i" from 1 to 10 do {_unit addItemToBackpack "kat_TXA";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_salineIV_250";};
 _unit addItemToBackpack "ACE_bodyBag";
+for "_i" from 1 to 10 do {_unit addItemToBackpack "ACE_morphine";};
+for "_i" from 1 to 4 do {_unit addItemToBackpack "kat_IV_16";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "SmokeShellBlue";};
+for "_i" from 1 to 5 do {_unit addItemToBackpack "kat_Painkiller";};
 
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
-						  Rol por       |ArgA|Labrador|Cbo¹
+                          Realizado por MIV
 *******************************************************************************/
