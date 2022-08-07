@@ -42,6 +42,7 @@ ACTIVAR_BENGALAS_MEJORADAS = 1;                     // 1: Activa la intensificac
                                                     // Esto mejora la iluminación de las bengalas vanilla de los granaderos.
                                                     // Para que funcione con las bengalas de los morteros leer el archivo README.md:
 
+
 /*
      Temas correción de color: (Colocar entre las comillas)
 
