@@ -19,8 +19,9 @@ _unit forceAddUniform "arga_u_coverall_verde_liso";
 
 _unit addWeapon "acfaa_mp5sd_base";
 _unit addPrimaryWeaponItem "acfaa_32Rnd_9x19_FMJ_Mag";
-_unit addWeapon "rhsusf_weap_m9";
-_unit addHandgunItem "rhsusf_mag_15Rnd_9x19_JHP";
+_unit addWeapon "bersa";
+_unit addHandgunItem "acc_flashlight_pistol";
+_unit addHandgunItem "16Rnd_9x21_Mag";
 
 for "_i" from 1 to 2 do {_unit addItemToVest "ACRE_PRC152";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_splint";};
