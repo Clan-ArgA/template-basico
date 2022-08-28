@@ -13,28 +13,29 @@ _unit addBackpack _back;
 _unit addHeadgear _helmet;
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_hk416d145";
-_unit addPrimaryWeaponItem "rhsusf_acc_SF3P556";
-_unit addPrimaryWeaponItem "optic_Hamr";
-_unit addPrimaryWeaponItem "150Rnd_556x45_Drum_Mag_F";
-_unit addPrimaryWeaponItem "rhsusf_acc_grip1";
+_unit addWeapon "rhs_weap_mk17_LB";
+_unit addPrimaryWeaponItem "rhsusf_acc_aac_scarh_silencer";
+_unit addPrimaryWeaponItem "rhsusf_acc_M8541_mrds";
+_unit addPrimaryWeaponItem "rhs_mag_20Rnd_SCAR_762x51_mk316_special";
+_unit addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
 _unit addWeapon "bersa";
+_unit addHandgunItem "muzzle_snds_L";
 _unit addHandgunItem "acc_flashlight_pistol";
+_unit addHandgunItem "optic_MRD";
 _unit addHandgunItem "16Rnd_9x21_Mag";
 
 comment "Add binoculars";
-_unit addWeapon "Binocular";
+_unit addWeapon "ACE_Vector";
 
 comment "Add items to containers";
-_unit addItemToVest "ACE_Canteen";
-_unit addItemToVest "ACE_SpareBarrel";
-for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShellBlue";};
-for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_FMJ";};
-_unit addItemToVest "150Rnd_556x45_Drum_Mag_F";
-_unit addItemToBackpack "ACE_SpareBarrel_Item";
-for "_i" from 1 to 4 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51_m61_ap";};
-for "_i" from 1 to 3 do {_unit addItemToBackpack "150Rnd_556x45_Drum_Mag_F";};
-
+for "_i" from 1 to 2 do {_unit addItemToVest "ACE_Canteen";};
+for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShellBlue";};
+for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_20Rnd_SCAR_762x51_m61_ap";};
+for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_20Rnd_SCAR_762x51_m62_tracer";};
+_unit addItemToBackpack "ACE_RangeCard";
+_unit addItemToBackpack "ACE_wirecutter";
+_unit addItemToBackpack "rhsusf_acc_ACOG_RMR";
+for "_i" from 1 to 8 do {_unit addItemToBackpack "rhs_mag_20Rnd_SCAR_762x51_mk316_special";};
 
 /*******************************************************************************
                           Realizado por MIV
