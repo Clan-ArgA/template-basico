@@ -6,7 +6,7 @@ params ["_mortar"];
 
 _mortar setVehicleAmmo 0.0; 
 {
-	_mortar addmagazine "8Rnd_82mm_Mo_Flare_white"
+    _mortar addmagazine "8Rnd_82mm_Mo_Flare_white"
 } forEach [1,2,3,4];
 
 _mortar addEventHandler [
