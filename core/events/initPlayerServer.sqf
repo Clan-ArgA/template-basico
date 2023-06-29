@@ -31,7 +31,6 @@ if (_enableAcreSetup) then {
 execVM "core\scripts\check_template_version.sqf";
 
 private _player_uid = getPlayerUID _playerUnit;
-["ACCESS_DENIAL_LIST", MIV_ACCESS_DENIAL_LIST, "PLAYER_UID", _player_uid] call MIV_fnc_log;
 
 if (_player_uid in MIV_ACCESS_DENIAL_LIST) then {
   [[], "core\scripts\kick_player_in_debt.sqf"] remoteExec  ["BIS_fnc_execVM", owner _playerUnit, false];
