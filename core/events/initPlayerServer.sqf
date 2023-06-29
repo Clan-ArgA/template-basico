@@ -8,7 +8,7 @@ private _enableAutomaticRole = getMissionConfigValue ["ROL_AUTOMATICO",  1] == 1
 private _enableAcreSetup     = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 private _functionWasCalled   = [_playerUnit,"core\scripts\set_role.sqf"] call MIV_fnc_wasFuntionCalled;
 
-waitUntil { time > 5 };
+waitUntil { time > 10 };
 
 if (call MIV_fnc_isLogSystemEnabled) then {
     [[_playerUnit]] call MIV_fnc_write_alternative_role;
@@ -30,6 +30,12 @@ if (_enableAcreSetup) then {
 
 execVM "core\scripts\check_template_version.sqf";
 
+private _player_uid = getPlayerUID _playerUnit;
+["ACCESS_DENIAL_LIST", MIV_ACCESS_DENIAL_LIST, "PLAYER_UID", _player_uid] call MIV_fnc_log;
+
+if (_player_uid in MIV_ACCESS_DENIAL_LIST) then {
+  [[], "core\scripts\kick_player_in_debt.sqf"] remoteExec  ["BIS_fnc_execVM", owner _playerUnit, false];
+};
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
