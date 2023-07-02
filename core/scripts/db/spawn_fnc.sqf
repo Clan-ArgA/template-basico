@@ -7,6 +7,7 @@ MIV_fnc_connect_db             = compile preprocessFileLineNumbers "core\scripts
 MIV_fnc_get_role_list          = compile preprocessFileLineNumbers "core\scripts\db\querys\get_role_list.sqf";
 MIV_fnc_get_info_log           = compile preprocessFileLineNumbers "core\scripts\db\querys\get_info_log.sqf";
 MIV_fnc_write_alternative_role = compile preprocessFileLineNumbers "core\scripts\db\querys\write_alternative_role.sqf";
+MIV_fnc_get_access_denial_list = compile preprocessFileLineNumbers "core\scripts\db\querys\get_access_denial_list.sqf";
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
