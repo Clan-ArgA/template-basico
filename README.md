@@ -15,7 +15,10 @@ Para que funcione el script de aumento de intensidad de las bengalas en los mort
 1. Crear un PR con los cambios a realizar
 2. Cambiar la version del template en `./core/private_settings.hpp`. Modificar las constantes `TEMPLATE_VERSION` y `TEMPLATE_LAST_UPDATE`
 3. Si el PR es aprobado, mergear a master
-4. Actualizar la version del template en la base de datos: `UPDATE arga-log.version_template SET version_number = [TEMPLATE_VERSION] and version_date = [TEMPLATE_LAST_UPDATE];`
+4. Una vez mergeado, borrar la branch
+5. En tu repositorio local, volver a master y hacer un `git pull`
+6. Actualizar la version del template en la base de datos: `UPDATE arga-log.version_template SET version_number = [TEMPLATE_VERSION] and version_date = [TEMPLATE_LAST_UPDATE];`
+
 
 
 ### Como actualizar el template-basico en el panel manualmente
