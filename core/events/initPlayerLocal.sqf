@@ -104,6 +104,9 @@ if(_colorCorrection) then {
     execVM "core\scripts\init_correction_color.sqf";
 };
 
+if (!hasInterface and !isServer) then {
+  player enableSimulation false;
+};
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
