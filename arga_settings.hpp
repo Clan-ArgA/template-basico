@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 #define NAME "Op. Template Basico"                  // Colocar nombre de mision
-#define COMPLETE_NAME "Op. Template Basico v0.9.22" // Nombre y versión de la misión
+#define COMPLETE_NAME "Op. Template Basico v0.9.23" // Nombre y versión de la misión
 #define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
@@ -21,6 +21,17 @@ INTRO_PERSONALIZADA = 0;                            // 1 Si la deseas cargar una
                                                     // y en el parametro INTRO la dirección del archivo entre comillas
                                                     // EJ. INTRO_PERSONALIZADA = 1; INTRO = "scripts\intro_propia.sqf";
 INTRO = 0;                                          // Intros: 1 y 2. Para desactivar: 0
+
+HAS_INTEL = "0";                                     /// Valores de 0 a 3 - En caso de querer agregar "Inteligencia" en forma de imágenes, colocar un número del 1 al 3 siendo cada uno de estos valores la cantidad de imágenes que desea agregar.
+
+Intel_One = "";                                     /// Si agregó una inteligencia, complete IntelOne, dos IntelOne e IntelTwo, tres IntelOne, IntelTwo e IntelThree - Agregar imágenes en formato .JPG o .JPEG / Se sugiere imágen en
+LeyendaOne = "False";                                    /// Aquellos acompañados con "Leyenda" corresponden al texto que querrán desplegar junto a la imágen en cuestión
+                                                    /// El tamaño de la imágen deberá ser de 400x225
+Intel_Two = "";
+LeyendaTwo = "False";
+
+Intel_Three = "";
+LeyendaThree = "False";
 
 MAX_DIST_VISION = 3000;
 MIN_DIST_VISION = 1000;                             // Distancia de visión reducida por marcador.
@@ -67,10 +78,10 @@ ACTIVAR_BENGALAS_MEJORADAS = 1;                     // 1: Activa la intensificac
 CORRECION_COLOR = 0;                                // 1: Activa la correción de color, 0: Desactiva.
 TEMA_CORRECCION_COLOR = "Nightstalkers";
 
-/* 
+/*
 EQUIPAMIENTO
     Camuflajes disponibles:          Tipos disponibles:
-       - Bosque                        - Multicam 
+       - Bosque                        - Multicam
        - Desierto                      - Marpat
        - Selva                         - Liso
        - Negro
@@ -90,10 +101,10 @@ MOCHILA_PERSONALIZADO = "";
 MOCHILA_CHICA_PERSONALIZADO = "";
 ////////////////////////////////////////////////////////////////////////////////
 
-/* 
+/*
 BRIEFING
     Cada elemento del array es un parrafo
-    Ejemplo: ["Primer parrafo", "Segundo parrafo"] 
+    Ejemplo: ["Primer parrafo", "Segundo parrafo"]
 */
 BRIEFING = 1;                                       // 1: Muestra, 0: No muestra
 HORARIO = "";
