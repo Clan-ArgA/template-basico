@@ -22,17 +22,6 @@ INTRO_PERSONALIZADA = 0;                            // 1 Si la deseas cargar una
                                                     // EJ. INTRO_PERSONALIZADA = 1; INTRO = "scripts\intro_propia.sqf";
 INTRO = 0;                                          // Intros: 1 y 2. Para desactivar: 0
 
-HAS_INTEL = "0";                                     /// Valores de 0 a 3 - En caso de querer agregar "Inteligencia" en forma de imágenes, colocar un número del 1 al 3 siendo cada uno de estos valores la cantidad de imágenes que desea agregar.
-
-Intel_One = "";                                     /// Si agregó una inteligencia, complete IntelOne, dos IntelOne e IntelTwo, tres IntelOne, IntelTwo e IntelThree - Agregar imágenes en formato .JPG o .JPEG / Se sugiere imágen en
-LeyendaOne = "False";                                    /// Aquellos acompañados con "Leyenda" corresponden al texto que querrán desplegar junto a la imágen en cuestión
-                                                    /// El tamaño de la imágen deberá ser de 400x225
-Intel_Two = "";
-LeyendaTwo = "False";
-
-Intel_Three = "";
-LeyendaThree = "False";
-
 MAX_DIST_VISION = 3000;
 MIN_DIST_VISION = 1000;                             // Distancia de visión reducida por marcador.
 EQUIPAMIENTO_PERSONALIZADO = 0;                     // 1: Permite cargar equipamiento guardado en arsenal virtual, 0: No Permite.
@@ -117,6 +106,7 @@ EXTRACTO_INTELIGENCIA = [""];
 OBJETIVOS = ["", ""];
 RECURSOS = ["", ""];
 ENEMIGOS = ["", ""];
+INTEL = [["imgs\logo.paa", "Imagen 1"], ["imgs\logo.paa", "Imagen 2"]];
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Borrado de IAs enemigas muertas y vehículos destruidos */
