@@ -2,8 +2,8 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-TEMPLATE_VERSION     = "0.9.22";
-TEMPLATE_LAST_UPDATE = "2024-4-27";                  // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
+TEMPLATE_VERSION     = "0.9.23";
+TEMPLATE_LAST_UPDATE = "2024-6-19";                 // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
 
 /* Log system */
 DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Deshabilita.
