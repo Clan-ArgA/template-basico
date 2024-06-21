@@ -29,5 +29,5 @@ El panel cuando recibe una solicitud de descarga del template-basico (por ejempl
 
 Si esto no sucede podemos actualizarlo manualmente:
 
-1. `cd /opt/traefik/odoo-arga-docker/odoo-arga-addons/arga/data/template-basico`
+1. `cd /opt/traefik/odoo-arga-docker/web/odoo/addons/arga/data/template-basico`
 2. `git pull`
