@@ -2,7 +2,7 @@
 
 Template básico de scripts para misiones ArgA
 
-### Bengalas en morteros
+### Bengalas en morteros (NO USAR. Caen mucho los FPS)
 
 Para que funcione el script de aumento de intensidad de las bengalas en los morteros se debe poner lo siguiente en el init del mortero:
 
