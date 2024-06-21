@@ -94,6 +94,7 @@ MOCHILA_CHICA_PERSONALIZADO = "";
 BRIEFING
     Cada elemento del array es un parrafo
     Ejemplo: ["Primer parrafo", "Segundo parrafo"]
+   INTEL = [["Ruta de Imágen", "Leyenda de Imágen"],["Ruta de Imágen2", "Leyenda de Imágen2"]]; Así con la cantidad de IMGS necesaria
 */
 BRIEFING = 1;                                       // 1: Muestra, 0: No muestra
 HORARIO = "";
@@ -106,7 +107,7 @@ EXTRACTO_INTELIGENCIA = [""];
 OBJETIVOS = ["", ""];
 RECURSOS = ["", ""];
 ENEMIGOS = ["", ""];
-INTEL = [["imgs\logo.paa", "Imagen 1"], ["imgs\logo.paa", "Imagen 2"]];
+INTEL = [];
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Borrado de IAs enemigas muertas y vehículos destruidos */
