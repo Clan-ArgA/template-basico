@@ -66,8 +66,6 @@ execVM "core\scripts\init_objs_server.sqf";
 
 execVM "core\scripts\db\init_log_system.sqf";
 
-execVM "core\scripts\init_garbage_collector.sqf";
-
 if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };
 
 execVM "core\scripts\show_fps.sqf";

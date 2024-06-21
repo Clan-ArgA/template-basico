@@ -15,6 +15,23 @@ class Header {
     minPlayers=1;
 };
 
+// Garbage collector
+// https://community.bistudio.com/wiki/Description.ext#Corpse_&_Wreck_Management
+
+corpseManagerMode = RECOLECTOR_BASURA_HOMBRES;
+corpseLimit = 0;
+corpseRemovalMinTime = RB_TIEMPO_ESPERA_HOMBRES;
+
+weaponholderManagerMode = RECOLECTOR_BASURA_ARMAS;
+weaponholderLimit = 0;
+weaponholderRemovalMinTime = RB_TIEMPO_ESPERA_ARMAS;
+
+wreckManagerMode = RECOLECTOR_BASURA_VEHICULOS;
+wreckLimit = 0;
+wreckRemovalMinTime = RB_TIEMPO_ESPERA_VEHICULOS;
+
+minPlayerDistance = RB_DISTANCIA_JUGADORES;
+
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
