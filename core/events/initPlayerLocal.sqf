@@ -65,7 +65,7 @@ if (hasInterface) then {
   if (_enableFlareEnhance) then {
     execVM "core\scripts\flares\init_flare_granadier.sqf";
   };
-
+  execVM "core\scripts\assignRol.sqf";
   enableEngineArtillery (_enableArtilleryComputer);
 };
 
