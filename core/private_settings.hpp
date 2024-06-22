@@ -1,10 +1,8 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-
-template-update-review
 TEMPLATE_VERSION     = "0.9.24";
-TEMPLATE_LAST_UPDATE = "2024-6-21";                  // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
+TEMPLATE_LAST_UPDATE = "2024-6-22";                  // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
 /* Log system */
 DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Deshabilita.
 LOG_SYSTEM = 1;                                     // 1: Habilita el sistema de log, 0: Deshabilita.
