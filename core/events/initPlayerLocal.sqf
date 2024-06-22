@@ -24,6 +24,7 @@ if (hasInterface) then {
   MANDI_ENABLE_DIST = true;
   [_maxDistanciaVision, _minDistanciaVision] execVM "core\scripts\view_distance.sqf";
   execVM "core\scripts\check_view.sqf";
+  execVM "core\scripts\checkMedic.sqf";
 
   if (!_functionWasCalled) then {
     execVM "core\scripts\init_intro.sqf";
@@ -65,7 +66,7 @@ if (hasInterface) then {
   if (_enableFlareEnhance) then {
     execVM "core\scripts\flares\init_flare_granadier.sqf";
   };
-
+  execVM "core\scripts\assignRol.sqf";
   enableEngineArtillery (_enableArtilleryComputer);
 };
 

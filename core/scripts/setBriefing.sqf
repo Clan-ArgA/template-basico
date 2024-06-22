@@ -18,6 +18,7 @@ private _objectives = getMissionConfigValue ["OBJETIVOS", "[]"];
 private _loadout = getMissionConfigValue ["RECURSOS", "[]"];
 private _enemyForces = getMissionConfigValue ["ENEMIGOS", "[]"];
 private _author = getMissionConfigValue ["AUTHOR", "ArgA"];
+private _intel = getMissionConfigValue ["INTEL", "[]"];
 
 private _info = [
     "Caracter: " + _mode,
@@ -34,6 +35,7 @@ private _params = [
     parseSimpleArray _situation, 
     parseSimpleArray _intelligence,
     parseSimpleArray _storySituation,
+    parseSimpleArray _intel,
     _info,
     _author
 ];

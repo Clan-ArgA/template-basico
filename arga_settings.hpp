@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 #define NAME "Op. Template Basico"                  // Colocar nombre de mision
-#define COMPLETE_NAME "Op. Template Basico v0.9.23" // Nombre y versión de la misión
+#define COMPLETE_NAME "Op. Template Basico v0.9.24" // Nombre y versión de la misión
 #define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
@@ -67,10 +67,10 @@ ACTIVAR_BENGALAS_MEJORADAS = 1;                     // 1: Activa la intensificac
 CORRECION_COLOR = 0;                                // 1: Activa la correción de color, 0: Desactiva.
 TEMA_CORRECCION_COLOR = "Nightstalkers";
 
-/* 
+/*
 EQUIPAMIENTO
     Camuflajes disponibles:          Tipos disponibles:
-       - Bosque                        - Multicam 
+       - Bosque                        - Multicam
        - Desierto                      - Marpat
        - Selva                         - Liso
        - Negro
@@ -90,10 +90,11 @@ MOCHILA_PERSONALIZADO = "";
 MOCHILA_CHICA_PERSONALIZADO = "";
 ////////////////////////////////////////////////////////////////////////////////
 
-/* 
+/*
 BRIEFING
     Cada elemento del array es un parrafo
-    Ejemplo: ["Primer parrafo", "Segundo parrafo"] 
+    Ejemplo: ["Primer parrafo", "Segundo parrafo"]
+   INTEL = [["Ruta de Imágen", "Leyenda de Imágen"],["Ruta de Imágen2", "Leyenda de Imágen2"]]; Así con la cantidad de IMGS necesaria
 */
 BRIEFING = 1;                                       // 1: Muestra, 0: No muestra
 HORARIO = "";
@@ -106,6 +107,7 @@ EXTRACTO_INTELIGENCIA = [""];
 OBJETIVOS = ["", ""];
 RECURSOS = ["", ""];
 ENEMIGOS = ["", ""];
+INTEL = [];
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Borrado de IAs enemigas muertas y vehículos destruidos */
