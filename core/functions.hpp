@@ -59,6 +59,9 @@ class MANDI {
       class getEquipment {
         file = "core\functions\fnc_getEquipment.sqf";
       };
+      class getEquipmentItems {
+        file = "core\functions\fnc_getEquipmentItems.sqf";
+      };
       class parseRole {
         file = "core\functions\fnc_parseRole.sqf";
       };

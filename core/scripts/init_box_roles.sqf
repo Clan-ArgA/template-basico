@@ -6,8 +6,9 @@ params ["_box"];
 
 if(isNil "_box") exitWith {};
 
-private _boxRoleList = parseSimpleArray getMissionConfigValue ["BOX_ROLE_LIST", []];
-private _equipment   = call MIV_fnc_getEquipment;
+private _boxRoleList    = parseSimpleArray getMissionConfigValue ["BOX_ROLE_LIST", []];
+private _equipment      = call MIV_fnc_getEquipment;
+private _equipmentItems = call MIV_fnc_getEquipmentItems;
 
 removeAllActions _box;
 

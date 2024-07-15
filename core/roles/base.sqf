@@ -2,7 +2,22 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
-params [["_unit", player], "_role", ["_uniform", "arga_u_gen3_bosque_marpat"], ["_helmet", "arga_cas_combate_bosque_marpat"], ["_vest", "arga_c_pesado_bosque_marpat"], ["_backPack", "arga_m_petate_bosque_marpat"], ["_backPackLittle", "arga_m_asalto_bosque_marpat"]];
+params [
+  ["_unit", player], 
+  "_role", 
+  ["_uniform", "arga_u_gen3_bosque_marpat"], 
+  ["_helmet", "arga_cas_combate_bosque_marpat"], 
+  ["_vest", "arga_c_pesado_bosque_marpat"], 
+  ["_backPack", "arga_m_petate_bosque_marpat"], 
+  ["_backPackLittle", "arga_m_asalto_bosque_marpat"],
+  "_uniform_items", 
+  "_weapons_items", 
+  "_primary_weapon_items", 
+  "_secondary_weapon_items", 
+  "_hand_gun_items", 
+  "_vest_items", 
+  "_backpack_items"
+];
 
 if (!local _unit) exitWith {};
 
@@ -12,7 +27,8 @@ private _rolesNeedingPlatoon = parseSimpleArray getMissionConfigValue ["ROLES_NE
 private _enableHALO          = getMissionConfigValue ["HALO",  1] == 1;
 private _roleInList          = "";
 private _roleWithPlatoon     = _role;
-private _scuadLeader = [["lider_escuadra",["lider_escuadra_1","lider_escuadra_2","lider_escuadra_3","lider_escuadra_4","lider_escuadra_5"]],["sublider_escuadra",["sublider_escuadra_1","sublider_escuadra_2","sublider_escuadra_3","sublider_escuadra_4","sublider_escuadra_5"]]];
+private _scuadLeader         = [["lider_escuadra",["lider_escuadra_1","lider_escuadra_2","lider_escuadra_3","lider_escuadra_4","lider_escuadra_5"]],["sublider_escuadra",["sublider_escuadra_1","sublider_escuadra_2","sublider_escuadra_3","sublider_escuadra_4","sublider_escuadra_5"]]];
+private _items               = [];
 
 //["[BASE] Role:",_role] call MIV_fnc_log;
 private _roleInList = ( _rolesNeedingPlatoon select {_role isEqualTo _x }) select 0;
@@ -36,14 +52,23 @@ _unit addVest _vest;
 
 if (!isNil "_roleWithPlatoon") then {
   // ["[BASE] roleWithPlatoon:",_roleWithPlatoon] call MIV_fnc_log;
-  private _rolePath = format ['core\roles\%1.sqf', _roleWithPlatoon];
-  if (_role == 'lider_escuadra_1' && getPlayerUID _unit == '76561198010777357') then {
-    _rolePath = 'core\roles\lider_escuadra_1@condor.sqf';
-  };
-  [_unit, _helmet, _backPack, _backPackLittle] call compile preprocessFileLineNumbers _rolePath;
+  _roleEquipment = [_role];
+  _roleEquipment append [_weapons_items];
+  _roleEquipment append [_primary_weapon_items];
+  _roleEquipment append [_secondary_weapon_items];
+  _roleEquipment append [_hand_gun_items];
+  _roleEquipment append [_vest_items];
+  _roleEquipment append [_backpack_items];
+
+  ["[base.sqf] _roleEquipment:", _roleEquipment] call MIV_fnc_log;
+  ["[base.sqf] _weapons_items:", _weapons_items] call MIV_fnc_log;
+
+  _items = _roleEquipment call compile preprocessFileLineNumbers "core\roles\get_role_equipment_items.sqf";
+  ["[base.sqf] _items:", _items] call MIV_fnc_log;
+  [_unit, _helmet, _backPack, _backPackLittle, _items] call compile preprocessFileLineNumbers "core\roles\set_role_items.sqf";
 };
 
-call compile preprocessFileLineNumbers 'core\roles\uniform.sqf';
+[_uniform_items] call compile preprocessFileLineNumbers 'core\roles\uniform.sqf';
 
 if(_initialGoggles != "") then {
     _unit addGoggles _initialGoggles;
