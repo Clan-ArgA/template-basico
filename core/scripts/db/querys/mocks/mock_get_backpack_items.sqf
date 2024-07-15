@@ -1,12 +1,11 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-private _weapon_items=[
-    ["granadero", [["rhs_weap_m4a1", 1], ["rhsusf_weap_glock17g4", 1], ["Rangefinder", 1]]],
-    ["lanzador_at", [["rhs_weap_m4a1", 1], ["launch_RPG32_F", 1], ["rhsusf_weap_glock17g4", 1], ["Rangefinder", 1]]]
+private _backpack_items = [
+    ["granadero", [["ACRE_PRC117F", 1], ["ACRE_VHF30108SPIKE", 1], ["arga_g_bo_capitan", 1], ["SmokeShellBlue", 3], ["HandGrenade", 2], ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", 4]]]
 ];
 
-_weapon_items
+_backpack_items
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

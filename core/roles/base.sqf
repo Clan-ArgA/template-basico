@@ -30,6 +30,9 @@ private _roleWithPlatoon     = _role;
 private _scuadLeader         = [["lider_escuadra",["lider_escuadra_1","lider_escuadra_2","lider_escuadra_3","lider_escuadra_4","lider_escuadra_5"]],["sublider_escuadra",["sublider_escuadra_1","sublider_escuadra_2","sublider_escuadra_3","sublider_escuadra_4","sublider_escuadra_5"]]];
 private _items               = [];
 
+MIV_GET_ROLE_EQUPMENT_ITEMS = compile preprocessFileLineNumbers "core\roles\get_role_equipment_items.sqf";
+MIV_SET_ROLE_ITEMS = compile preprocessFileLineNumbers "core\roles\set_role_items.sqf";
+
 //["[BASE] Role:",_role] call MIV_fnc_log;
 private _roleInList = ( _rolesNeedingPlatoon select {_role isEqualTo _x }) select 0;
 
@@ -60,12 +63,9 @@ if (!isNil "_roleWithPlatoon") then {
   _roleEquipment append [_vest_items];
   _roleEquipment append [_backpack_items];
 
-  ["[base.sqf] _roleEquipment:", _roleEquipment] call MIV_fnc_log;
-  ["[base.sqf] _weapons_items:", _weapons_items] call MIV_fnc_log;
-
-  _items = _roleEquipment call compile preprocessFileLineNumbers "core\roles\get_role_equipment_items.sqf";
-  ["[base.sqf] _items:", _items] call MIV_fnc_log;
-  [_unit, _helmet, _backPack, _backPackLittle, _items] call compile preprocessFileLineNumbers "core\roles\set_role_items.sqf";
+  _items = _roleEquipment call MIV_GET_ROLE_EQUPMENT_ITEMS;
+  // ["[base.sqf] _items:", _items] call MIV_fnc_log;
+  [_unit, _helmet, _backPack, _backPackLittle, _items] call MIV_SET_ROLE_ITEMS;
 };
 
 [_uniform_items] call compile preprocessFileLineNumbers 'core\roles\uniform.sqf';

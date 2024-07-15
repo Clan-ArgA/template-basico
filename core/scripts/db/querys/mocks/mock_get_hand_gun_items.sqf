@@ -1,12 +1,11 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-private _weapon_items=[
-    ["granadero", [["rhs_weap_m4a1", 1], ["rhsusf_weap_glock17g4", 1], ["Rangefinder", 1]]],
-    ["lanzador_at", [["rhs_weap_m4a1", 1], ["launch_RPG32_F", 1], ["rhsusf_weap_glock17g4", 1], ["Rangefinder", 1]]]
+private _hand_gun_items = [
+    ["granadero", [["acc_flashlight_pistol", 1], ["rhsusf_mag_17Rnd_9x19_JHP", 1]]]
 ];
 
-_weapon_items
+_hand_gun_items
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

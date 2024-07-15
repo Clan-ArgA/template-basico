@@ -7,13 +7,11 @@ params [
     ["_helmet", "arga_cas_combate_bosque_marpat"], 
     ["_backPack", "arga_m_petate_bosque_marpat"], 
     ["_backPackLittle", "arga_m_asalto_bosque_marpat"],
-    ["_weapons_items", []], 
-    ["_primary_weapon_items", []], 
-    ["_secondary_weapon_items", []], 
-    ["_hand_gun_items", []], 
-    ["_vest_items", []], 
-    ["_backpack_items", []]
+    ["_equipmentItems", []]
 ];
+
+if (count _equipmentItems == 0) exitWith { hint "_items es []"; };
+_equipmentItems params ["_weapons_items","_primary_weapon_items","_secondary_weapon_items","_hand_gun_items","_vest_items","_backpack_items"];
 
 private _useBigBackPack = true;
 private _back = if (_useBigBackPack) then {_backPack} else {_backPackLittle};
@@ -35,15 +33,18 @@ private _items = [
 
 comment "Add items";
 {
+    // ["[set_role_items] _x:", _x] call MIV_fnc_log;
     if (count _x > 0 && count (_x select 0) > 0) then {
         private _accesory =_x select 0 select 0;
         private _addFunction = _x select 1;
         if (count _accesory > 0) then {
             {
-                ["[set_role_items] _x:", _x] call MIV_fnc_log;
+                // ["[set_role_items] _x:", _x] call MIV_fnc_log;
                 if (count _x > 0) then {
                     private _item = _x select 0;
                     private _count = _x select 1;
+                    // ["[set_role_items] _item:", _item] call MIV_fnc_log;
+                    // ["[set_role_items] _count:", _count] call MIV_fnc_log;
                     for "_i" from 1 to _count do {
                         [_unit, _item] call _addFunction;
                     };
@@ -56,3 +57,10 @@ comment "Add items";
 /*******************************************************************************
                           Realizado por MIV
 *******************************************************************************/
+
+// ["[set_role_items] _weapons_items:", _weapons_items] call MIV_fnc_log;
+// ["[set_role_items] _primary_weapon_items:", _primary_weapon_items] call MIV_fnc_log;
+// ["[set_role_items] _secondary_weapon_items:", _secondary_weapon_items] call MIV_fnc_log;
+// ["[set_role_items] _hand_gun_items:", _hand_gun_items] call MIV_fnc_log;
+// ["[set_role_items] _vest_items:", _vest_items] call MIV_fnc_log;
+// ["[set_role_items] _backpack_items:", _backpack_items] call MIV_fnc_log;

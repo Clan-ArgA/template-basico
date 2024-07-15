@@ -1,12 +1,18 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-private _weapon_items=[
-    ["granadero", [["rhs_weap_m4a1", 1], ["rhsusf_weap_glock17g4", 1], ["Rangefinder", 1]]],
-    ["lanzador_at", [["rhs_weap_m4a1", 1], ["launch_RPG32_F", 1], ["rhsusf_weap_glock17g4", 1], ["Rangefinder", 1]]]
-];
+MIV_MOCK_BACKPACK_ITEMS = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_get_backpack_items.sqf";
 
-_weapon_items
+private _is_test = true;
+private _backpackItems = [];
+
+if (!_is_test) then {
+    hint "es false";
+} else {
+    _backpackItems = call MIV_MOCK_BACKPACK_ITEMS;
+};
+
+_backpackItems
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV
