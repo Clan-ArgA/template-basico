@@ -21,7 +21,7 @@ if (!_keepRole) then {
     _equipmentItems = call MIV_fnc_getEquipmentItems;
     _unitRoleEquipment append _equipmentItems;
 
-    // ["set_role.sqf:",_unitRoleEquipment] call MIV_fnc_log;
+    //["[set_role]: _unitRoleEquipment",_unitRoleEquipment] call MIV_fnc_log;
 
     _unitRoleEquipment call compile preprocessFileLineNumbers "core\roles\base.sqf";
 

@@ -5,6 +5,7 @@ GET_EQUIPMENT_BY_ROLE = compile preprocessFileLineNumbers 'core\roles\get_equipm
 
 params [
     "_role", 
+    ["_uniform_items", []],
     ["_weapons_items", []], 
     ["_primary_weapon_items", []], 
     ["_secondary_weapon_items", []], 
@@ -28,6 +29,7 @@ _role_vest_items =             [_role, _vest_items]             call GET_EQUIPME
 _role_backpack_items =         [_role, _backpack_items]         call GET_EQUIPMENT_BY_ROLE;
 
 [
+    [_uniform_items],
     _role_weapons_items, 
     _role_primary_weapon_items, 
     _role_secondary_weapon_items, 

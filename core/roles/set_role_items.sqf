@@ -4,25 +4,26 @@
 
 params [
     ["_unit", player], 
-    ["_helmet", "arga_cas_combate_bosque_marpat"], 
-    ["_backPack", "arga_m_petate_bosque_marpat"], 
-    ["_backPackLittle", "arga_m_asalto_bosque_marpat"],
     ["_equipmentItems", []]
 ];
 
-if (count _equipmentItems == 0) exitWith { hint "_equipmentItems es []"; };
-_equipmentItems params ["_weapons_items","_primary_weapon_items","_secondary_weapon_items","_hand_gun_items","_vest_items","_backpack_items"];
+// ["[set_role_items] _equipmentItems:", _equipmentItems] call MIV_fnc_log;
 
-private _useBigBackPack = true;
-private _back = if (_useBigBackPack) then {_backPack} else {_backPackLittle};
+if (count _equipmentItems == 0) exitWith { hint "_equipmentItems es []"; };
+_equipmentItems params ["_uniform_items","_weapons_items","_primary_weapon_items","_secondary_weapon_items","_hand_gun_items","_vest_items","_backpack_items"];
+
+["[set_role_items] _uniform_items:", _uniform_items] call MIV_fnc_log;
+["[set_role_items] _weapons_items:", _weapons_items] call MIV_fnc_log;
+// ["[set_role_items] _primary_weapon_items:", _primary_weapon_items] call MIV_fnc_log;
+// ["[set_role_items] _secondary_weapon_items:", _secondary_weapon_items] call MIV_fnc_log;
+// ["[set_role_items] _hand_gun_items:", _hand_gun_items] call MIV_fnc_log;
+// ["[set_role_items] _vest_items:", _vest_items] call MIV_fnc_log;
+// ["[set_role_items] _backpack_items:", _backpack_items] call MIV_fnc_log;
 
 if (!local _unit) exitWith {};
 
-_unit addBackpack _back;
-_unit addHeadgear _helmet;
-
-
 private _items = [
+    [_uniform_items, {(_this select 0) addItemToUniform (_this select 1)}],
     [_weapons_items, {(_this select 0) addWeapon (_this select 1)}],
     [_primary_weapon_items, {(_this select 0) addPrimaryWeaponItem (_this select 1)}],
     [_secondary_weapon_items, {(_this select 0) addSecondaryWeaponItem (_this select 1)}],
@@ -58,6 +59,7 @@ comment "Add items";
                           Realizado por MIV
 *******************************************************************************/
 
+// ["[set_role_items] _uniform_items:", _uniform_items] call MIV_fnc_log;
 // ["[set_role_items] _weapons_items:", _weapons_items] call MIV_fnc_log;
 // ["[set_role_items] _primary_weapon_items:", _primary_weapon_items] call MIV_fnc_log;
 // ["[set_role_items] _secondary_weapon_items:", _secondary_weapon_items] call MIV_fnc_log;

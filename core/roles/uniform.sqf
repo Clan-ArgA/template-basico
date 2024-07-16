@@ -21,20 +21,7 @@ private _watch    = "ItemWatch";
     };
 } forEach _uniform_items;
 
-_unit linkItem "ItemMap";
 
-if (_group in ["condor", "fog"]) then {
-    _watch = "ACE_Altimeter";
-};
-
-_unit linkItem "ItemCompass";
-_unit linkItem _watch;
-if (_allowGPS) then {
-    _unit linkItem "ItemGPS";
-};
-if (_allowNV) then {
-    _unit linkItem _NVClass;
-};
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV

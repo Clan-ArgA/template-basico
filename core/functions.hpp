@@ -98,6 +98,9 @@ class MANDI {
       class getActiveRoleList {
         file = "core\functions\fnc_getActiveRoleList.sqf";
       };
+      class getRoleExtras {
+        file = "core\functions\fnc_getRoleExtras.sqf";
+      };
     };
   };
   class MAC {

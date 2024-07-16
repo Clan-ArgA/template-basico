@@ -1,6 +1,7 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
+
 //format: [ ["name (str)", _uniform (str), _helmet (str), _vest (str), _backPack (str), _backPackLittle (str), _useBigBackPack (bool), setVariable ([str or empty])]]
 private _activeRoleList = [
     ["Líder", "", "", "", "", "", true, []],
