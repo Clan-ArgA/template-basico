@@ -10,7 +10,7 @@ params [
     ["_equipmentItems", []]
 ];
 
-if (count _equipmentItems == 0) exitWith { hint "_items es []"; };
+if (count _equipmentItems == 0) exitWith { hint "_equipmentItems es []"; };
 _equipmentItems params ["_weapons_items","_primary_weapon_items","_secondary_weapon_items","_hand_gun_items","_vest_items","_backpack_items"];
 
 private _useBigBackPack = true;

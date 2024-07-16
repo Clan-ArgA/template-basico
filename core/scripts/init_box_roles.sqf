@@ -6,7 +6,7 @@ params ["_box"];
 
 if(isNil "_box") exitWith {};
 
-private _boxRoleList    = parseSimpleArray getMissionConfigValue ["BOX_ROLE_LIST", []];
+private _activeRoleList = call MIV_fnc_getActiveRoleList;
 private _equipment      = call MIV_fnc_getEquipment;
 private _equipmentItems = call MIV_fnc_getEquipmentItems;
 
@@ -15,24 +15,24 @@ removeAllActions _box;
 private ["_roleCode","_role"];
 
 {
-    _role = _x;
-    
+    _role = _x select 0;
     _roleCode = [toLower _role, []] call MIV_fnc_getRoleCode;
 	
-	_box addAction ["<t color='#ffffff'>" + _x + "</t>", {  
-            params ["_target", "_caller", "_actionId", "_arguments"];
-            private _role =  (_arguments select 0);
-            private _params = [_caller, (_role select 1)];
-            _params append (_arguments select 1);
-            _params execVM "core\roles\base.sqf";
-            hint format ["Rol: %1", _role select 0];
-        }, [[_role, _roleCode], _equipment], 1.5, true, true, "","true", 4, false, "", ""
-    ];
-} forEach _boxRoleList;
+	// _box addAction ["<t color='#ffffff'>" + _x + "</t>", {  
+    //         params ["_target", "_caller", "_actionId", "_arguments"];
+    //         private _role =  (_arguments select 0);
+    //         private _params = [_caller, (_role select 1)];
+    //         _params append (_arguments select 1);
+    //         _params execVM "core\roles\base.sqf";
+    //         hint format ["Rol: %1", _role select 0];
+    //     }, [[_role, _roleCode], _equipment, _equipmentItems], 1.5, true, true, "","true", 4, false, "", ""
+    // ];
+} forEach _activeRoleList;
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV
 *******************************************************************************/
-//["_roleCode:",_roleCode] call MIV_fnc_log;
-//["_arguments:",_arguments] call MIV_fnc_log;
-//["_params:",_params] call MIV_fnc_log;
+// ["_role:",_role] call MIV_fnc_log;
+// ["_roleCode:",_roleCode] call MIV_fnc_log;
+// ["_arguments:",_arguments] call MIV_fnc_log;
+// ["_params:",_params] call MIV_fnc_log;

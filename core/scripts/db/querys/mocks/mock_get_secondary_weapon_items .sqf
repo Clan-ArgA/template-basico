@@ -2,7 +2,8 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 private _secondary_weapon_items = [
-    ["granadero", []]
+    ["granadero", []],
+    ["ingeniero", []]
 ];
 
 _secondary_weapon_items

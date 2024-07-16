@@ -3,11 +3,10 @@
 *******************************************************************************/
 MIV_MOCK_SECUNDARY_WEAPON_ITEMS = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_get_secondary_weapon_items .sqf";
 
-private _is_test = true;
 private _secondary_weapon_items  = [];
 
-if (!_is_test) then {
-    hint "es false";
+if (isDedicated) then {
+    hint "TODO: query";
 } else {
     _secondary_weapon_items  = call MIV_MOCK_SECUNDARY_WEAPON_ITEMS;
 };

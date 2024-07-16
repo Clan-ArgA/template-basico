@@ -27,7 +27,7 @@ private _rolesNeedingPlatoon = parseSimpleArray getMissionConfigValue ["ROLES_NE
 private _enableHALO          = getMissionConfigValue ["HALO",  1] == 1;
 private _roleInList          = "";
 private _roleWithPlatoon     = _role;
-private _scuadLeader         = [["lider_escuadra",["lider_escuadra_1","lider_escuadra_2","lider_escuadra_3","lider_escuadra_4","lider_escuadra_5"]],["sublider_escuadra",["sublider_escuadra_1","sublider_escuadra_2","sublider_escuadra_3","sublider_escuadra_4","sublider_escuadra_5"]]];
+private _scuadLeader         = [["lider_escuadra",["lider_escuadra_1","lider_escuadra_2","lider_escuadra_3","lider_fog"]],["sublider_escuadra",["sublider_escuadra_1","sublider_escuadra_2","sublider_escuadra_3","sublider_fog"]]];
 private _items               = [];
 
 MIV_GET_ROLE_EQUPMENT_ITEMS = compile preprocessFileLineNumbers "core\roles\get_role_equipment_items.sqf";
@@ -38,7 +38,7 @@ private _roleInList = ( _rolesNeedingPlatoon select {_role isEqualTo _x }) selec
 
 if (!isNil "_roleInList") then {
   //["[BASE] roleInList:", _roleInList] call MIV_fnc_log;
-  _roleWithPlatoon = [player, _role]call MIV_fnc_addPlatoonToRole;
+  _roleWithPlatoon = [player, _role] call MIV_fnc_addPlatoonToRole;
 };
 
 if (_role isEqualTo _roleWithPlatoon) then {

@@ -95,6 +95,9 @@ class MANDI {
       class HCData {
         file = "core\functions\fnc_HCData.sqf";
       };
+      class getActiveRoleList {
+        file = "core\functions\fnc_getActiveRoleList.sqf";
+      };
     };
   };
   class MAC {

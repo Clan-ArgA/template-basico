@@ -1,20 +1,17 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-MIV_MOCK_UNIFORM_ITEMS = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_get_uniform_items.sqf";
+MIV_MOCK_ACTIVE_ROLE_LIST = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_active_role_list.sqf";
 
-private _uniformItems = [];
+private _activeRoleList = [];
 
 if (isDedicated) then {
-    hint "TODO: query";
+    hint "es false";
 } else {
-    _uniformItems = call MIV_MOCK_UNIFORM_ITEMS;
+    _activeRoleList = call MIV_MOCK_ACTIVE_ROLE_LIST;
 };
 
-// ["[get_uniform_items.sqf] _uniformItems:", _uniformItems] call MIV_fnc_log;
-
-_uniformItems
-
+_activeRoleList
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/

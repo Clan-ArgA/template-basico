@@ -3,11 +3,10 @@
 *******************************************************************************/
 MIV_MOCK_VEST_ITEMS = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_vest_items.sqf";
 
-private _is_test = true;
 private _vestItems = [];
 
-if (!_is_test) then {
-    hint "es false";
+if (isDedicated) then {
+    hint "TODO: query";
 } else {
     _vestItems = call MIV_MOCK_VEST_ITEMS;
 };
