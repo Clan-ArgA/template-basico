@@ -60,7 +60,7 @@ if (!isNil "_roleWithPlatoon") then {
   _roleEquipment append [_backpack_items];
 
   _items = _roleEquipment call MIV_GET_ROLE_EQUPMENT_ITEMS;
-  ["[BASE] _items:", _items] call MIV_fnc_log;
+  //["[BASE] _items:", _items] call MIV_fnc_log;
   [_unit, _items] call MIV_SET_ROLE_ITEMS;
 };
 
