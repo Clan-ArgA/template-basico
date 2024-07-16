@@ -12,14 +12,6 @@ params [
 if (count _equipmentItems == 0) exitWith { hint "_equipmentItems es []"; };
 _equipmentItems params ["_uniform_items","_weapons_items","_primary_weapon_items","_secondary_weapon_items","_hand_gun_items","_vest_items","_backpack_items"];
 
-["[set_role_items] _uniform_items:", _uniform_items] call MIV_fnc_log;
-["[set_role_items] _weapons_items:", _weapons_items] call MIV_fnc_log;
-// ["[set_role_items] _primary_weapon_items:", _primary_weapon_items] call MIV_fnc_log;
-// ["[set_role_items] _secondary_weapon_items:", _secondary_weapon_items] call MIV_fnc_log;
-// ["[set_role_items] _hand_gun_items:", _hand_gun_items] call MIV_fnc_log;
-// ["[set_role_items] _vest_items:", _vest_items] call MIV_fnc_log;
-// ["[set_role_items] _backpack_items:", _backpack_items] call MIV_fnc_log;
-
 if (!local _unit) exitWith {};
 
 private _items = [

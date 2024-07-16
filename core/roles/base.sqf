@@ -13,7 +13,7 @@ params [
   ["_vest", "arga_c_pesado_bosque_marpat"], 
   ["_backPack", "arga_m_petate_bosque_marpat"], 
   ["_backPackLittle", "arga_m_asalto_bosque_marpat"],
-  "_uniform_items", 
+  "_uniform_items",
   "_weapons_items", 
   "_primary_weapon_items", 
   "_secondary_weapon_items", 
