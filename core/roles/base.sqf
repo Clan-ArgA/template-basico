@@ -2,7 +2,6 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 MIV_GET_ROLE_EQUPMENT_ITEMS = compile preprocessFileLineNumbers "core\roles\get_role_equipment_items.sqf";
-//MIV_SET_ROLE_EQUPMENT       = compile preprocessFileLineNumbers "core\roles\set_role_equipment.sqf"
 MIV_SET_ROLE_ITEMS          = compile preprocessFileLineNumbers "core\roles\set_role_items.sqf";
 
 params [
