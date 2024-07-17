@@ -1,7 +1,7 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-MIV_MOCK_VEST_ITEMS = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_vest_items.sqf";
+MIV_MOCK_VEST_ITEMS = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_get_vest_items.sqf";
 
 private _vestItems = [];
 

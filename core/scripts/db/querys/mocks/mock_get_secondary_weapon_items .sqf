@@ -3,7 +3,8 @@
 *******************************************************************************/
 private _secondary_weapon_items = [
     ["granadero", []],
-    ["ingeniero", []]
+    ["ingeniero", []],
+    ["piloto", []]
 ];
 
 _secondary_weapon_items
