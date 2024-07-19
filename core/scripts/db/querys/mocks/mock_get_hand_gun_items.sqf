@@ -1,20 +1,13 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {[]};
+private _hand_gun_items = [
+    ["granadero", [["acc_flashlight_pistol", 1], ["rhsusf_mag_17Rnd_9x19_JHP", 1]]],
+    ["ingeniero", [["muzzle_snds_L", 1], ["acc_flashlight_pistol", 1], ["16Rnd_9x21_Mag", 1]]],
+    ["piloto", []]
+];
 
-private _query = "SELECT player_uid FROM access_denial_list;";
-private _playersInDebtRows = _query call compile preprocessFileLineNumbers "core\scripts\db\connect_db.sqf";
-
-private _playersInDebt = [];
-
-// transformar el array de arrays en un array de strings
-{
-    _playersInDebt pushback (_x select 0);
-    
-} forEach _playersInDebtRows;
-
-_playersInDebt;
+_hand_gun_items
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

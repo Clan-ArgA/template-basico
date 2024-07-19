@@ -1,20 +1,18 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {[]};
+MIV_MOCK_PRIMARY_WEAPON_ITEMS = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_get_primary_weapon_items.sqf";
 
-private _query = "SELECT player_uid FROM access_denial_list;";
-private _playersInDebtRows = _query call compile preprocessFileLineNumbers "core\scripts\db\connect_db.sqf";
+private _is_test = true;
+private _primary_weapon_items = [];
 
-private _playersInDebt = [];
+if (!_is_test) then {
+    hint "es false";
+} else {
+    _primary_weapon_items = call MIV_MOCK_PRIMARY_WEAPON_ITEMS;
+};
 
-// transformar el array de arrays en un array de strings
-{
-    _playersInDebt pushback (_x select 0);
-    
-} forEach _playersInDebtRows;
-
-_playersInDebt;
+_primary_weapon_items
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

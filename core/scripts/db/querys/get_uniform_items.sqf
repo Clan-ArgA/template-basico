@@ -1,20 +1,19 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {[]};
+MIV_MOCK_UNIFORM_ITEMS = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_get_uniform_items.sqf";
 
-private _query = "SELECT player_uid FROM access_denial_list;";
-private _playersInDebtRows = _query call compile preprocessFileLineNumbers "core\scripts\db\connect_db.sqf";
+private _uniformItems = [];
 
-private _playersInDebt = [];
+if (isDedicated) then {
+    hint "TODO: query";
+} else {
+    _uniformItems = call MIV_MOCK_UNIFORM_ITEMS;
+};
 
-// transformar el array de arrays en un array de strings
-{
-    _playersInDebt pushback (_x select 0);
-    
-} forEach _playersInDebtRows;
+// ["[get_uniform_items.sqf] _uniformItems:", _uniformItems] call MIV_fnc_log;
 
-_playersInDebt;
+_uniformItems
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

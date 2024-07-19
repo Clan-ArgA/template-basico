@@ -1,21 +1,17 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {[]};
+MIV_MOCK_ACTIVE_ROLE_LIST = compile preprocessFileLineNumbers "core\scripts\db\querys\mocks\mock_active_role_list.sqf";
 
-private _query = "SELECT player_uid FROM access_denial_list;";
-private _playersInDebtRows = _query call compile preprocessFileLineNumbers "core\scripts\db\connect_db.sqf";
+private _activeRoleList = [];
 
-private _playersInDebt = [];
+if (isDedicated) then {
+    hint "es false";
+} else {
+    _activeRoleList = call MIV_MOCK_ACTIVE_ROLE_LIST;
+};
 
-// transformar el array de arrays en un array de strings
-{
-    _playersInDebt pushback (_x select 0);
-    
-} forEach _playersInDebtRows;
-
-_playersInDebt;
-
+_activeRoleList
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/

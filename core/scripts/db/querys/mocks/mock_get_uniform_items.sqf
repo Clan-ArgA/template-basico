@@ -1,20 +1,9 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {[]};
+private _uniform_items=[["ACE_epinephrine", 4], ["ACE_Flashlight_MX991", 1], ["ACE_MapTools", 1], ["ACE_IR_Strobe_Item", 1], ["ACE_morphine", 6], ["ACE_CableTie", 3], ["ACE_tourniquet", 2], ["ACE_elasticBandage", 6], ["ACE_packingBandage", 6]];
 
-private _query = "SELECT player_uid FROM access_denial_list;";
-private _playersInDebtRows = _query call compile preprocessFileLineNumbers "core\scripts\db\connect_db.sqf";
-
-private _playersInDebt = [];
-
-// transformar el array de arrays en un array de strings
-{
-    _playersInDebt pushback (_x select 0);
-    
-} forEach _playersInDebtRows;
-
-_playersInDebt;
+_uniform_items
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

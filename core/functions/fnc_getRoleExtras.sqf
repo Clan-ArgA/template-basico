@@ -1,20 +1,12 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {[]};
 
-private _query = "SELECT player_uid FROM access_denial_list;";
-private _playersInDebtRows = _query call compile preprocessFileLineNumbers "core\scripts\db\connect_db.sqf";
+params ["_role", "_activeRolesList"];
 
-private _playersInDebt = [];
+private _index = _activeRolesList findIf { _x select 0 == _role };
 
-// transformar el array de arrays en un array de strings
-{
-    _playersInDebt pushback (_x select 0);
-    
-} forEach _playersInDebtRows;
-
-_playersInDebt;
+if (_index == -1) then { nil } else { _activeRolesList select _index };
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

@@ -59,6 +59,9 @@ class MANDI {
       class getEquipment {
         file = "core\functions\fnc_getEquipment.sqf";
       };
+      class getEquipmentItems {
+        file = "core\functions\fnc_getEquipmentItems.sqf";
+      };
       class parseRole {
         file = "core\functions\fnc_parseRole.sqf";
       };
@@ -91,6 +94,12 @@ class MANDI {
       };
       class HCData {
         file = "core\functions\fnc_HCData.sqf";
+      };
+      class getActiveRoleList {
+        file = "core\functions\fnc_getActiveRoleList.sqf";
+      };
+      class getRoleExtras {
+        file = "core\functions\fnc_getRoleExtras.sqf";
       };
     };
   };
