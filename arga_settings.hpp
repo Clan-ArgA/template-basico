@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 #define NAME "Op. Template Basico"                  // Colocar nombre de mision
-#define COMPLETE_NAME "Op. Template Basico v0.9.24" // Nombre y versión de la misión
+#define COMPLETE_NAME "Op. Template Basico v0.9.25" // Nombre y versión de la misión
 #define IMAGE "imgs\portada.paa"                    // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                              // Colocar descripcion de la mision entre las comillas
 
@@ -82,7 +82,6 @@ EQUIPAMIENTO
          Por lo que el editor queda a cargo de checkear y revisar el correcto funcionamiento.
 */
 CAMUFLAJE = ["Bosque", "Multicam"];
-GAFAS_INICIALES = "";
 UNIFORME_PERSONALIZADO = "";
 CASCO_PERSONALIZADO = "";
 CHALECO_PERSONALIZADO = "";

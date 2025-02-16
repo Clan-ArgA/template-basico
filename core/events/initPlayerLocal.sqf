@@ -4,7 +4,6 @@
 
 private _maxDistanciaVision      = getMissionConfigValue ["MAX_DIST_VISION", 4000];
 private _minDistanciaVision      = getMissionConfigValue ["MIN_DIST_VISION", 800];
-private _initialGoggles          = getMissionConfigValue ["GAFAS_INICIALES", ""];
 private _disableCustomLoadout    = getMissionConfigValue ["EQUIPAMIENTO_PERSONALIZADO", 0] == 0;
 private _disableGroupIA          = getMissionConfigValue ["IA_DE_GRUPO", 0] == 0;
 private _disableBluforIA         = getMissionConfigValue ["IA_BLUFOR", 1] == 0;
@@ -15,28 +14,31 @@ private _camouflageCoef          = getMissionConfigValue ["COEFICIENTE_CAMUFLAJE
 private _enableAcreSetup         = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 private _enableHALO              = getMissionConfigValue ["HALO",  1] == 1;
 private _functionWasCalled       = [player,"core\scripts\init_intro.sqf"] call MIV_fnc_wasFuntionCalled;
-private _colorCorrection         = getMissionConfigValue ["CORRECION_COLOR",  0] == 1; 
-private _enableFlareEnhance      = getMissionConfigValue ["ACTIVAR_BENGALAS_MEJORADAS",  0] == 1; 
+private _colorCorrection         = getMissionConfigValue ["CORRECION_COLOR",  0] == 1;
+private _enableFlareEnhance      = getMissionConfigValue ["ACTIVAR_BENGALAS_MEJORADAS",  0] == 1;
+private _caracter                = getMissionConfigValue ["CARACTER",  ""];
+
 
 setTerrainGrid 25;
 
 if (hasInterface) then {
   MANDI_ENABLE_DIST = true;
   [_maxDistanciaVision, _minDistanciaVision] execVM "core\scripts\view_distance.sqf";
+
   execVM "core\scripts\check_view.sqf";
-  execVM "core\scripts\checkMedic.sqf";
+  execVM "core\scripts\assignRole.sqf";
+
+  if (_caracter == "No oficial") then {
+    execVM "core\scripts\get_combat_role_clientside.sqf";
+  };
 
   if (!_functionWasCalled) then {
     execVM "core\scripts\init_intro.sqf";
     [[player,"core\scripts\init_intro.sqf"],"core\functions\fnc_setFuntionCalled.sqf"] remoteExec ["BIS_fnc_execVM", 2, false];
   };
-  
+
   execVM "core\scripts\setBriefing.sqf";
   call MIV_fnc_setInsignia;
-  removeGoggles player;
-  if(_initialGoggles != "") then {
-    player addGoggles _initialGoggles;
-  };
 
   // Deshabilita las opciones de Cargar y Guardar Equipo en el arsenal
   if(_disableCustomLoadout) then {
@@ -66,11 +68,10 @@ if (hasInterface) then {
   if (_enableFlareEnhance) then {
     execVM "core\scripts\flares\init_flare_granadier.sqf";
   };
-  execVM "core\scripts\assignRol.sqf";
   enableEngineArtillery (_enableArtilleryComputer);
 };
 
-// Deshabilita el movimiento de la IA para todas las IA que 
+// Deshabilita el movimiento de la IA para todas las IA que
 // esten en el mismo grupo que un jugador humano
 if(_disableGroupIA) then {
   private _units = units (group player);
@@ -108,6 +109,17 @@ if(_colorCorrection) then {
 if (!hasInterface and !isServer) then {
   player enableSimulation false;
 };
+
+if (_caracter in ["Oficial", "No Oficial", "Entrenamiento reclutas"]) then {
+    [missionNamespace, "ArsenalOpened", {
+        params ["_display"];
+
+        private _loadButton = _display displayCtrl 44147;
+        _loadButton ctrlEnable false;
+        _loadButton ctrlSetTooltip localize "str_disabled";
+    }] call BIS_fnc_addScriptedEventHandler;
+};
+
 
 /*******************************************************************************
                              Realizado por |ArgA|MIV

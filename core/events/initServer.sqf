@@ -17,6 +17,7 @@ private _commanding      = getMissionConfigValue ["COMMANDING", 0.75];
 private _disableGroupIA  = getMissionConfigValue ["IA_DE_GRUPO", 1] == 0;
 private _disableBluforIA = getMissionConfigValue ["IA_BLUFOR", 0] == 0;
 private _enableAcreSetup = getMissionConfigValue ["SETUP_PERSONALIZADO_RADIOS",  1] == 1;
+private _caracter        = getMissionConfigValue ["CARACTER",  ""];
 
 if(_customSkillsIA) then {
     {
@@ -35,7 +36,7 @@ if(_customSkillsIA) then {
     }forEach allUnits;
 };
 
-// Deshabilita el movimiento de la IA para todas las IA que 
+// Deshabilita el movimiento de la IA para todas las IA que
 // esten en el mismo grupo que un jugador humano
 if (_disableGroupIA) then {
     {
@@ -47,7 +48,7 @@ if (_disableGroupIA) then {
             // _x enableSimulationGlobal false;
             // _x hideObjectGlobal true;
           };
-        } forEach units _group;     
+        } forEach units _group;
     } forEach allPlayers;
 };
 
@@ -69,6 +70,10 @@ execVM "core\scripts\db\init_log_system.sqf";
 if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };
 
 execVM "core\scripts\show_fps.sqf";
+
+if (_caracter == "No oficial") then {
+    execVM "core\scripts\get_combat_role_serverside.sqf";
+};
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV
