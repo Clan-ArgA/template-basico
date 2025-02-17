@@ -1,5 +1,5 @@
 /*******************************************************************************
-           -- Test script slots misiónes no oficiales by Zeller -- v3.0
+           -- Script slots misiónes no oficiales by Zeller -- v3.0
                           Sólo muestra bando BLUFOR
 *******************************************************************************/
 
@@ -35,15 +35,15 @@ private _markerTexto = format ["%1 (%2)", _playerName, _rolDescription]; // Text
 private _groupColor = missionNamespace getVariable [format ["GVAR_ARGA_GRUPO_COLOR_%1", _groupId], "ColorBlack"]; // Color del grupo si existe variable
 
 private _markerPos = [0,0,0];
-if (_slotPosition > 0) then { 
+if (_slotPosition > 0) then {
     // Jugadores tempranos con espacio asignado
-    _markerPos = [_XdeMapa, _YdeMapa - (_slotPosition * 100), 0];
-} else { 
+    _markerPos = [_XdeMapa, _YdeMapa - (_slotPosition * 50), 0];
+} else {
     // Jugadores tardíos sin espacio asignado
     private _IndexTardios = missionNamespace getVariable ["GVAR_ARGAIndexTardios", 0];
-    missionNamespace setVariable ["GVAR_ARGAIndexTardios", _IndexTardios + 1, true]; 
+    missionNamespace setVariable ["GVAR_ARGAIndexTardios", _IndexTardios + 1, true];
     // La actualización de la variable debería manejarla el server pero dudo que 2 jugadores ejecuten esto a la vez y de última sólo se pisan los marcadores
-    _markerPos = [_XdeMapa, _YdeMapa - (100 * _IndexTardios), 0];
+    _markerPos = [_XdeMapa, _YdeMapa - (50 * _IndexTardios), 0];
 };
 
 // Crear o actualizar un marcador
@@ -67,5 +67,3 @@ if (_existingMarkerColor != "") then { // Si tiene color entonces existe
     _markerName setMarkerTypeLocal "mil_dot_noShadow";
     _markerName setMarkerColor _groupColor;
 }};
-
-
