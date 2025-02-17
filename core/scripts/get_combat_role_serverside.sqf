@@ -51,12 +51,12 @@
 
             // Crea marcador con el nombre del grupo
             private _groupMarkerPos = [_worldSize + 300, _worldSize - ((_index - 1) * 50), 0];
-            private _MarkerGrupo = format ["_USER_DEFINED_ARGA_%1/-1", _groupId]; // Nombre único de marcador
-            createMarkerLocal [_MarkerGrupo, _groupMarkerPos];
-            _MarkerGrupo setMarkerTextLocal (toUpper _groupId); // Nombre del grupo en mayúsculas
-            _MarkerGrupo setMarkerTypeLocal "mil_box_noShadow"; // Ícono cuadrado de grupo
-            _MarkerGrupo setMarkerSizeLocal [0.5, 0.5]; // Tamaño del cuadradito
-            _MarkerGrupo setMarkerColor _color; // Color del grupo    ULTIMA ORDEN GLOBAL PARA DISMINUIR BROADCAST
+            private _MarkerGroup = format ["_USER_DEFINED_ARGA_%1/-1", _groupId]; // Nombre único de marcador
+            createMarkerLocal [_MarkerGroup, _groupMarkerPos];
+            _MarkerGroup setMarkerTextLocal (toUpper _groupId); // Nombre del grupo en mayúsculas
+            _MarkerGroup setMarkerTypeLocal "mil_box_noShadow"; // Ícono cuadrado de grupo
+            _MarkerGroup setMarkerSizeLocal [0.5, 0.5]; // Tamaño del cuadradito
+            _MarkerGroup setMarkerColor _color; // Color del grupo    ULTIMA ORDEN GLOBAL PARA DISMINUIR BROADCAST
 
             missionNamespace setVariable [format ["GVAR_ARGA_GRUPO_COLOR_%1", _groupId], _color, true]; // Guarda una variable con el color del grupo
         };  // ASIGNA COLORES SOLO A GRUPOS CON GENTE ADENTRO ANTES DE PANTALLA DE MAPA
