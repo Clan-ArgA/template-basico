@@ -1,6 +1,7 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
+allowProfileGlasses = 0; // It stops the user from being able to utilise their profile mask features while allowing the mission editor to customise each slot with a unique facial accesory.
 
 enableDebugConsole = 1;
 

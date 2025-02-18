@@ -1,15 +1,13 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
-
-TEMPLATE_VERSION     = "0.9.23";
-TEMPLATE_LAST_UPDATE = "2024-6-19";                 // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
-
+TEMPLATE_VERSION     = "0.9.24";
+TEMPLATE_LAST_UPDATE = "2025-2-17";                  // Escribir la fecha en formato AAAA-M-D sin ceros en el mes o el día.
 /* Log system */
 DEBUG = 1;                                          // 1: Habilita el modo debug, 0: Deshabilita.
 LOG_SYSTEM = 1;                                     // 1: Habilita el sistema de log, 0: Deshabilita.
 LOG_SYSTEM_ONLY_DEDICATED = 1;                      // 1: Habilita el sistema de log sólo si el servidor es dedicado (requiere LOG_SYSTEM = 1), 0: Deshabilita.
-PLAYERS_LOG = 1;                                    // 1: Habilita el log de los jugadores (deshabilitar solo para persistentes). 0: Deshabilita 
+PLAYERS_LOG = 1;                                    // 1: Habilita el log de los jugadores (deshabilitar solo para persistentes). 0: Deshabilita
 FPS_MAP = 0;                                        // 1: Muestra fps en mapa del servidor y los headless client, 0: Deshabilita.
 FPS_LOG = 0;                                        // 1: Habilita loguear fps en archivo rpt del servidor y los headless client, 0: Deshabilita.
 FPS_DB = 1;                                         // 1: Habilita loguear fps en la base de datos del servidor y los headless client, 0: Deshabilita.
@@ -32,7 +30,7 @@ RADIO_CHANNEL_SETUP = [["lider",[["ACRE_PRC117F",6],["ACRE_PRC152",5],["ACRE_PRC
 
 ROLES_NEEDING_PLATOON = ["lider_peloton","lider_escuadra_1","lider_escuadra_2","lider_escuadra_3","sublider_escuadra_1","sublider_escuadra_2","sublider_escuadra_3"];
 
-REVIEWER_UID = ["76561198026915573", "76561198091139370", "76561198030188168", "76561198010777357"];
+REVIEWER_UID = ["76561198026915573", "76561198091139370", "76561198030188168", "76561198010777357", "76561198094009057"]; // Ignacio, Maxi, Shaggy, Vultur, Reynolds
 ////////////////////////////////////////////////////////////////////////////////
 
 /*******************************************************************************
