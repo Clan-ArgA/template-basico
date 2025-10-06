@@ -63,7 +63,7 @@ private _querys = [];
 	if (_logType == "info") then {
 		_logInfo = _uid call MIV_fnc_get_info_log;
 		if (count _logInfo > 0 ) then {
-			_id = _logInfo select 0;
+			_id = (_logInfo select 0) toFixed 0;
 			_createdAt = format["'%1'", ([_logInfo select 1] call MANDI_fnc_formatDate)];
 		};
 	}; 

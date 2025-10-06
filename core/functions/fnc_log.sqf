@@ -17,12 +17,21 @@ if (typeName _strData != "ARRAY") then {
 };
 
 _strData = _strData apply {
-                if (isNil "_x") then {
-                    "isNil";
-                } else {
-                    if (typeName _x != "STRING") then { str _x } else { _x };
-                };
+    if (isNil "_x") then {
+        "isNil";
+    } else {
+        if (typeName _x != "STRING") then {
+            private _rounded = round _x;
+            if (_rounded == _x) then {
+                _x toFixed 0;
+            } else {
+                str _x
             };
+        } else {
+            _x
+        };
+    };
+};
 
 {
 	_data = _data + " " + _x;
