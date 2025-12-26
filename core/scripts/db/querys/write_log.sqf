@@ -11,6 +11,9 @@ private _isplayerLogEnabled = getMissionConfigValue ["PLAYERS_LOG", 1] == 1;
 
 params [["_unit", []], ["_logType", "connected"]];
 
+["write_log _unit: ", _unit] call MIV_fnc_log;
+["write_log _logType: ", _logType] call MIV_fnc_log;
+
 if (!(call MIV_fnc_isLogSystemEnabled) || (!_isplayerLogEnabled)) exitWith { };
 
 
@@ -60,11 +63,14 @@ private _querys = [];
 	_id = "NULL";
 	_createdAt = "NOW()";
 	
+	["write_log _query: ", _query] call MIV_fnc_log;
 	if (_logType == "info") then {
 		_logInfo = _uid call MIV_fnc_get_info_log;
+		["write_log _logInfo info: ", _logInfo] call MIV_fnc_log;
 		if (count _logInfo > 0 ) then {
-			_id = (_logInfo select 0) toFixed 0;
+			_id = [_logInfo select 0] call MIV_fnc_numberToString;
 			_createdAt = format["'%1'", ([_logInfo select 1] call MANDI_fnc_formatDate)];
+			["write_log _createdAt info: ", _createdAt] call MIV_fnc_log;
 		};
 	}; 
 
