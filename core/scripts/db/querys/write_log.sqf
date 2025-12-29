@@ -63,14 +63,14 @@ private _querys = [];
 	_id = "NULL";
 	_createdAt = "NOW()";
 	
-	["write_log _query: ", _query] call MIV_fnc_log;
 	if (_logType == "info") then {
 		_logInfo = _uid call MIV_fnc_get_info_log;
-		["write_log _logInfo info: ", _logInfo] call MIV_fnc_log;
 		if (count _logInfo > 0 ) then {
-			_id = [_logInfo select 0] call MIV_fnc_numberToString;
+			_raw_id = (_logInfo select 0);
+			["write_log _id info: ", _raw_id] call MIV_fnc_log;
+			_id = _raw_id toFixed 0;
+			["write_log _id info toFixed 0: ", _id] call MIV_fnc_log;
 			_createdAt = format["'%1'", ([_logInfo select 1] call MANDI_fnc_formatDate)];
-			["write_log _createdAt info: ", _createdAt] call MIV_fnc_log;
 		};
 	}; 
 

@@ -21,10 +21,13 @@ _strData = _strData apply {
         "isNil";
     } else {
         if (typeName _x != "STRING") then {
-            ["Variable _x: ", _x] call MIV_fnc_log;
-            private _rounded = round _x;
-            if (typeName _x == "SCALAR" && _rounded == _x) then {
-                _x toFixed 0;
+            if (typeName _x == "SCALAR") then {
+                private _rounded = round _x;
+                if (_rounded == _x) then {
+                    _x toFixed 0;
+                } else {
+                    str _x
+                };
             } else {
                 str _x
             };

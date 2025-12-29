@@ -9,9 +9,14 @@ que SQF podría convertir a notación científica. Útil para IDs de base de dat
 
 params [["_number", 0, [0]]];
 
+// Manejar valores nil o tipos incorrectos
+if (isNil "_number") exitWith { "0" };
 if (typeName _number != "SCALAR") exitWith { str _number };
 
 private _numStr = str _number;
+
+// Si el string está vacío o es inválido, devolver "0"
+if (_numStr == "" || isNil "_numStr") exitWith { "0" };
 
 // Si el número está en notación científica (contiene 'e' o 'E')
 if (_numStr find "e" != -1 || _numStr find "E" != -1) then {
@@ -23,8 +28,9 @@ if (_numStr find "e" != -1 || _numStr find "E" != -1) then {
         private _exponent = parseNumber _exponentStr;
         
         // Detectar si el número es negativo
-        private _isNegative = _baseStr select [0, 1] == "-";
-        if (_isNegative) then {
+        private _isNegative = false;
+        if (count _baseStr > 0 && _baseStr select [0, 1] == "-") then {
+            _isNegative = true;
             _baseStr = _baseStr select [1]; // Remover el signo negativo temporalmente
         };
         

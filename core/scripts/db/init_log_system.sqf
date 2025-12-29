@@ -2,10 +2,10 @@
                           Realizado por |ArgA|MIV
 *******************************************************************************/
 
+["init_log_system:"] call MIV_fnc_log;
+
 execVM "core\scripts\db\spawn_fnc.sqf";
 
-// ["init_log_system:"] call MIV_fnc_log;
-// ["MIV_fnc_isLogSystemEnabled init_log_system: ", (call MIV_fnc_isLogSystemEnabled)] call MIV_fnc_log;
 if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
 addMissionEventHandler ["HandleDisconnect", {
