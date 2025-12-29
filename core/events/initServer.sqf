@@ -65,7 +65,6 @@ if (_disableBluforIA) then {
 
 execVM "core\scripts\init_objs_server.sqf";
 
-["init_log_system.sqf: "] call MIV_fnc_log;
 execVM "core\scripts\db\init_log_system.sqf";
 
 if (!isDedicated) then { execVM "core\scripts\check_roles.sqf" };

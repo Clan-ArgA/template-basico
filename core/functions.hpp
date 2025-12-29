@@ -92,9 +92,6 @@ class MANDI {
       class HCData {
         file = "core\functions\fnc_HCData.sqf";
       };
-      class numberToString {
-        file = "core\functions\fnc_numberToString.sqf";
-      };
     };
   };
   class MAC {

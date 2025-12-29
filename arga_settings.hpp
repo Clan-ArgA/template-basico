@@ -14,7 +14,7 @@ AUTHOR_UID = [];                                    // Colocar entre las comilla
                                                     // Checho: "76561198831148763", Echazu: "76561198153322025", Fred: "76561198969153208", Hernan: "76561198968787485", Pescador: "76561198216131373", Shigeru: "76561198015789544", Axel: "76561198869072681", Ignacio: "76561198026915573", Joaco: "76561198090717772", Maxi: "76561198091139370", Maxtor: "76561198824233052", Nico: "76561198077670923", Night: "76561198090664588", Nogo: "76561198849038806", Paco: "76561198030163544", Peta: "76561198279642154", Roke: "76561198883929795", Shaggy: "76561198030188168", Vultur: "76561198010777357", Zorro: "76561198027580786"
 
 IMG_LOGO = "imgs\logo.paa";                         // Nota: Las imagenes deberian estar en
-COLOR_AUTOR = "#76a8f7";                            // formato .paa y en proporcion 2x1 (1024x512)
+COLOR_AUTOR = "#76a8f7";                          // formato .paa y en proporcion 2x1 (1024x512)
 ES_CAMPANIA = 0;                                    // tamaño logo: 323px x 323px
 NOMBRE_CAMPANIA = "";
 INTRO_PERSONALIZADA = 0;                            // 1 Si la deseas cargar una intro personalizada (propia)
