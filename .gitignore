@@ -3,3 +3,6 @@
 debug.log
 .vscode
 .history
+.codegraph/
+docs-ref/
+odd/
