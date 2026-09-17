@@ -6,8 +6,8 @@ if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
 private _query = _this;
 
-// Devuelve los datos si la consulta salio bien, o "" si fallo
-// (mismo valor por defecto que usaba OO_EXTDB3 executeQuery).
+// Devuelve los datos si la consulta salio bien, o "" si fallo:
+// es el valor por defecto que esperan los scripts que llaman.
 private _fnc_execute = {
     private _response = _this call MIV_fnc_query_db;
     if ((_response select 0) isEqualTo 1) exitWith { _response select 1 };
