@@ -4,7 +4,7 @@
 if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {[]};
 
 private _query = "SELECT player_uid FROM access_denial_list;";
-private _playersInDebtRows = _query call compile preprocessFileLineNumbers "core\scripts\db\connect_db.sqf";
+private _playersInDebtRows = _query call MIV_fnc_connect_db;
 
 private _playersInDebt = [];
 

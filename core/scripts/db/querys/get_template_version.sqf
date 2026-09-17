@@ -4,17 +4,8 @@
 
 if (!(call MIV_fnc_isLogSystemEnabled)) exitWith {[]};
 
-// Llamamos a la db
-call MIV_fnc_oo_extdb3;
-
-private _extdb3 = "new" call OO_EXTDB3;
-["setIniSectionDatabase", "Database"] call _extdb3;
-["setDatabaseName", "arga-log"] call _extdb3;
-["setQueryType", "SQL"] call _extdb3;
-_result = "connect" call _extdb3;
-
 private _query = "SELECT version_number, version_date FROM version_template ORDER BY id ASC LIMIT 1;";
-private _versionList = ["executeQuery", _query] call _extdb3;
+private _versionList = _query call MIV_fnc_connect_db;
 
 _versionList select 0;
 
