@@ -6,3 +6,5 @@ debug.log
 .codegraph/
 docs-ref/
 odd/
+# Local Pi runtime state
+.atl/
