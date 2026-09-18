@@ -96,8 +96,8 @@ if (!isNil "hc4") then {
 };
 
 if (!isNil "HC_1") then {
-	if (!isNull HC1) then {
-		if (local HC1) then {
+	if (!isNull HC_1) then {
+		if (local HC_1) then {
 			_sourcestr = "HC1";
 			_position = 1;
 		};
