@@ -27,7 +27,7 @@ _values = format [
 
 _query = [_query, _values] joinString " ";
 
-_query execVM "core\scripts\db\connect_db.sqf";
+_query spawn MIV_fnc_connect_db;
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

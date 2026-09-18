@@ -6,15 +6,13 @@ if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
 private _query = _this;
 
-// Llamamos a la db
-call MIV_fnc_oo_extdb3;
-
-private _extdb3 = "new" call OO_EXTDB3;
-["setIniSectionDatabase", "Database"] call _extdb3;
-["setDatabaseName", "arga-log"] call _extdb3;
-["setQueryType", "SQL"] call _extdb3;
-"connect" call _extdb3;
-/////////////////////
+// Devuelve los datos si la consulta salio bien, o "" si fallo:
+// es el valor por defecto que esperan los scripts que llaman.
+private _fnc_execute = {
+    private _response = _this call MIV_fnc_query_db;
+    if ((_response select 0) isEqualTo 1) exitWith { _response select 1 };
+    ""
+};
 
 private ["_result", "_response"];
 
@@ -22,13 +20,13 @@ if (typeName _query == "ARRAY") then {
     _result = [];
     {
         ["QUERY:", _x] call MIV_fnc_log;
-        _response = ["executeQuery", _x] call _extdb3;
+        _response = _x call _fnc_execute;
         ["RESULT", _response] call MIV_fnc_log;
         _result pushBack _response;
     } forEach _query;
 } else {
     ["QUERY:", _query] call MIV_fnc_log;
-    _result = ["executeQuery", _query] call _extdb3;
+    _result = _query call _fnc_execute;
     ["RESULT:", _result] call MIV_fnc_log;
 };
 

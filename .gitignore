@@ -3,3 +3,8 @@
 debug.log
 .vscode
 .history
+.codegraph/
+docs-ref/
+odd/
+# Local Pi runtime state
+.atl/

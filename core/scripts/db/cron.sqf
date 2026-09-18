@@ -5,6 +5,11 @@
 // ["MIV_fnc_isLogSystemEnabled cron: ", (call MIV_fnc_isLogSystemEnabled)] call MIV_fnc_log;
 if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
 
+// get_info_log.sqf busca el ultimo mission_begin: esperar a que este escrito.
+while { isNil "MIV_MISSION_BEGIN_LOGGED" } do {
+	uiSleep 1;
+};
+
 private _count = 0;
 
 while { _count < 5000} do {

@@ -19,7 +19,7 @@ Para que funcione el script de aumento de intensidad de las bengalas en los mort
 4. Si el PR es aprobado, mergear a master
 5. Una vez mergeado, borrar la branch
 6. En tu repositorio local, volver a master y hacer un `git pull`
-7. Actualizar la version del template en la base de datos: `UPDATE arga-log.version_template SET version_number = [TEMPLATE_VERSION] and version_date = [TEMPLATE_LAST_UPDATE];`
+7. Actualizar la version del template en la base de datos: `` UPDATE `arga-log`.version_template SET version_number = '[TEMPLATE_VERSION]', version_date = '[TEMPLATE_LAST_UPDATE]'; ``
 8. Si corresponde, actualizar los scripts base de `persistentes-arga`: https://github.com/Clan-ArgA/persistentes-arga. Recordar actualizar `TEMPLATE_VERSION`, `TEMPLATE_LAST_UPDATE` y `COMPLETE_NAME`.
 9. Si corresponde, actualizar los scripts base de `entrenamientos-arga`: https://github.com/Clan-ArgA/entrenamientos-arga. Recordar actualizar `TEMPLATE_VERSION`, `TEMPLATE_LAST_UPDATE` y `COMPLETE_NAME`.
 

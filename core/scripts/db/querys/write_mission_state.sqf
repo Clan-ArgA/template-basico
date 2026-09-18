@@ -26,7 +26,13 @@ _values = format [
 
 _query = [_query, _values] joinString " ";
 
-_query execVM "core\scripts\db\connect_db.sqf";
+// call espera a que termine la escritura (este script corre con execVM).
+_query call MIV_fnc_connect_db;
+
+// cron.sqf espera esta marca antes de escribir los "info" de la mision.
+if (_missionState == 'mission_begin') then {
+	missionNamespace setVariable ["MIV_MISSION_BEGIN_LOGGED", true];
+};
 
 _query = "INSERT INTO fps (`log_type_id`,`source`, `mission_name`, `server_name`) VALUES";
 
@@ -40,7 +46,7 @@ _values = format [
 
 _query = [_query, _values] joinString " ";
 
-_query execVM "core\scripts\db\connect_db.sqf";
+_query spawn MIV_fnc_connect_db;
 
 /*******************************************************************************
                           Realizado por |ArgA|MIV

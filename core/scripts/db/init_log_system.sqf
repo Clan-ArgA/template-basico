@@ -4,9 +4,11 @@
 
 ["init_log_system:"] call MIV_fnc_log;
 
-execVM "core\scripts\db\spawn_fnc.sqf";
+call compile preprocessFileLineNumbers "core\scripts\db\spawn_fnc.sqf";
 
 if (!(call MIV_fnc_isLogSystemEnabled)) exitWith { };
+
+call compile preprocessFileLineNumbers "core\scripts\db\init_db.sqf";
 
 addMissionEventHandler ["HandleDisconnect", {
     params ["_unit", "_id", "_uid", "_name"];
